@@ -15,6 +15,7 @@ llab.TRANSLATIONS = {
     'ifTime': {
       en: 'If There Is Time…',
       es: 'Si hay tiempo…',
+      'pt-br': 'Se houver tempo…',
     },
     'takeItFurther': {
       en: 'Take It Further…',
@@ -27,10 +28,12 @@ llab.TRANSLATIONS = {
     'backText': {
       en: 'previous page',
       es: 'Anterior',
+      'pt-br': 'Anterior',
     },
     'nextText': {
       en: 'next page',
       es: 'Siguiente',
+      'pt-br': 'Pr&oacute;xima',
     },
     'selfCheckTitle': {
       en: 'Self-Check Question',
@@ -51,7 +54,8 @@ llab.TRANSLATIONS = {
       es: 'Este es tu intento n.º %{number}.',
     },
     'Go to Table of Contents': {
-      es: 'Ir a la tabla de contenido'
+      es: 'Ir a la tabla de contenido',
+      'pt-br': 'Ir para o sum&aacute;rio de unidades',
     }
 };
 
