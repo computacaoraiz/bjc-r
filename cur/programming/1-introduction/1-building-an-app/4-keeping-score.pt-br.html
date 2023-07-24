@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <script type="text/javascript" src="/bjc-r/utilities/gifffer.min.js"></script>
+        <script type="text/javascript">window.onload = function() {Gifffer();}</script>
+        <link rel="stylesheet" type="text/css" href="/bjc-r/css/bjc-gifffer.css">
+        <title>Unidade 1, Lab 1: Jogo "Clique no Alonzo", Página 4</title>
+	</head>
+
+	<body>
+        <h2>Dar feedback ao jogador</h2>
+        <div class="learn">Agora o jogo está mais difícil, mas os jogadores não
+        saber dizer se estão indo bem porque o Alonzo fica pulando se o jogador
+        conseguir acertar o clique nele ou não. <strong>Nesta página</strong>,
+        você criará uma maneira para o jogador saber como está se saindo.</div>
+
+        <h3>Confirmando se o Alonzo foi clicado</h3>
+        <p>Com certeza a pessoa que está jogando o seu jogo quer saber,
+        imediatamente, se ela conseguiu clicar no Alonzo antes que ele pulasse
+        para outro lugar.</p>
+        <div class="vocabFullWidth"><strong>: Personagens (Sprites) e Fantasias (Costumes)</strong>
+            <p>O personagem Alonzo tem esse nome por causa do Alonzo Church, um
+            grande contribuidor na era inicial da ciência da computação. Neste
+            projeto existem três objetos relacionados ao Alonzo:
+                <ul>
+                    <li>O primeiro é o <em><strong>personagem
+                    (sprite)</strong></em>, que é como se fosse um ator que está
+                    no palco e sabe como fazer muitas coisas diferentes como,
+                    por exemplo, andar pelo palco e recitar as falas da peça.</li>
+                    <li>Os outros são as <em><strong>fantasias
+                    (costumes)</strong></em>, figuras que podem ser "utilizadas"
+                    pelo personagem.</li>
+                </ul>
+            </p>
+        </div>
+        <div class="forYouToDo">Programe o Alonzo para virar para o outro lado
+        quando for clicado.
+        <img src="/bjc-r/img/1-introduction/alonzo.png" alt="personagem Alonzo"
+        title="Personagem Alonzo character" height="60">
+        <img src="/bjc-r/img/1-introduction/alonzo-flipped-other-way.png"
+        alt="Personagem Alonzo virado para o outro lado"
+        title="Personagem Alonzo virado para o outro lado" height="60">
+			<!--<a class="index-term anchor" id="next costume</code>">&nbsp;</a>-->
+        <ol>
+          <li>O projeto que você carregou para trabalhar já tem duas fantasias
+          (costumes) para o Alonzo &mdash; uma com ele virado para a direita e a
+          outra com ele virado para a esquerda &mdash; e, assim, você pode usar
+          o bloco <img src="/bjc-r/img/blocks/next-costume.png" alt="next
+          costume"> (próxima fantasia) para fazer o personagem virar para o
+          outro lado. Adicione o bloco <code>next costume</code> (próxima
+          fantasia) para local no seu programa que verifica (ou "sente") que o
+          usuário acabou de clicar no Alonzo.</li>
+        <li>Teste o seu programa. Certifique-se que de que o Alonzo só vira para
+        o outro lado quando ele for clicado pelo usuário, e não quando ele ficar
+        pulando sem ser clicado.</li>
+      </ol>
+    </div>
+    
+    <h3>Mantendo uma pontuação</h3>
+    <!--<a class="index-term anchor" id="change effect</code>">&nbsp;</a>-->
+    <p>O jogador também irá querer saber quanto progresso ele fez no jogo. Ele
+    está ganhando ou está perdendo o jogo? O comando
+    <img src="/bjc-r/img/1-introduction/ghosteffect.png"
+    alt="alterar o efeito [fantasma] por ()" title="alterar o efeito [fantasma] por ()" />
+    pode controlar a <em>transparência</em> do Alonzo.</p>
+    <div class="vocabFullWidth">
+      <p>A <strong>transparência</strong> de uma imagem diz respeito ao quanto
+      que você consegue enxergar o que está por trás dessa imagem. Por exemplo,
+      aqui está o personagem Alonzo com três diferentes transparências (que
+      foram ajustadas com o bloco <code>ghost effect</code> (efeito
+      fantasma).<br />
+      <img class="indent" src="/bjc-r/img/1-introduction/transparency2.png"
+      title="três figuras do Alonzo, com efeitos fantasma de 0%, 25% e 50%, com
+      uma parede de tijolos ao fundo"
+      alt="três figuras do Alonzo, com efeitos fantasma de 0%, 25% e 50%, com
+      uma parede de tijolos ao fundo" /></p>
+    </div>
+    <div class="forYouToDo">
+      <p>Use a transparência para informar ao usuário se ele está ganhando o
+      jogo: toda vez que o usuário acertar o clique, o Alonzo ficará mais
+      invisível e, quando o ele sumir completamente, o usuário ganhou o jogo.</p>
+      <!--<a class="index-term anchor" id="clear graphics effects</code>">&nbsp;</a>-->
+      <ol start="3">
+        <li>Arraste o bloco <code>change (ghost) effect</code> (alterar o efeito
+        [fantasma] por) para a área central de scripts, e experimente diferentes
+        números (clicando no bloco repetidamente) para ver exatamente o que esse
+        bloco faz. Em qual valor do efeito fantasma o Alonzo se torna
+        completamente invisível? Você pode usar o comando
+        <img src="/bjc-r/img/1-introduction/clear-graphic-effects.png"
+        alt="limpar efeitos gráficos" title="limpar efeitos gráficos"> para
+        tornar o Alonzo totalmente visível novamente.</li>    
+        <li>Depois, modifique seu script para que a cada vez que o Alonzo for
+        clicado, ele se torne um pouco mais transparente. Pense como a entrada
+        que você usar afetará a duração do jogo. Teste o seu jogo.</li>
+      </ol>
+    </div>
+    
+    <h3>Deixando o jogo mais difícil</h3>
+    <p>Até agora mesmo um jogador ruim irá, <em>eventualmente</em> fazer o
+    Alonzo desaparecer. O jogo ficaria muito mais interessante se o jogador
+    fosse penalizado quando errasse um clique.</p>
+    <div class="forYouToDo">
+      <ol start="5">
+        <li>Descubra onde adicionar um bloco <code>change (ghost) effect by
+        (-5)</code> (alterar o efeito [fantasma] por (-5)) no script de seu
+        programa para tornar o Alonzo menos transparente toda vez que ele se
+        mover <em>sem ter sido clicado</em>.</li>
+        <li>Jogue você mesmo o seu jogo algumas vezes, e ajuste o código de seu
+        jogo até alcançar um nível de dificuldade que você goste.</li>
+        <div class="endnote">Você pode alterar o número informado ao
+        bloco <code>change effect</code> e/ou o time no bloco <code>wait</code>
+        para tornar seu jogo mais fácil ou mais difícil.</div>
+      </ol>
+    </div>
+    
+    <h3>Terminando o jogo</h3>
+    <div class="forYouToDo">
+    <p>Quando o Alonzo ficar totalmente transparente o jogo
+    deve <em>terminar</em>.</p>
+    <ol start="7">
+      <li>Adicione este código ao local correto do código de seu programa para
+      terminar o jogo.<br />
+      <img class="indent" src="/bjc-r/img/1-introduction/if-done-stop.png"
+      alt="se ((o efeito fantasma) = 100) {limpar efeitos gráficos, parar tudo}"
+      title='se ((o efeito fantasma) = 100)
+             {
+             limpar efeitos gráficos
+             parar tudo
+             }' />
+    </li>
+    <li><img class="inline" src="/bjc-r/img/icons/save-now.png" alt="Salve seu  trabalho"
+        title="Salve seu trabalho" /></li>
+  </ol>
+</div>
+
+</body>
+</html>

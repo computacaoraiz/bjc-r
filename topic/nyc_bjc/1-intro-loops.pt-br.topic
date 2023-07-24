@@ -6,9 +6,9 @@ heading:  Lab 1: Jogo "Clique no Alonzo"
 	raw-html:<img class="imageRight noshadow" src="/bjc-r/img/1-introduction/U1ImageVideoAddendum_img/U1L1P6_AlonzoFading.gif" height="175" alt="animação do jogo Clique no Alonzo em funcionamento" title="animação do jogo Clique no Alonzo em funcionamento" />
 	resource: Primeiros passos com o Snap<em>!</em> [/bjc-r/cur/programming/1-introduction/1-building-an-app/1-creating-a-snap-account.pt-br.html]
 	resource: Programar o jogo [/bjc-r/cur/programming/1-introduction/1-building-an-app/2-start-your-first-snap-app.pt-br.html]
-	resource: Compartilhar seu jogo [/bjc-r/cur/programming/1-introduction/1-building-an-app/3-loading-mobile-device.html]
-	resource: Dar feedback ao jogador [/bjc-r/cur/programming/1-introduction/1-building-an-app/4-keeping-score.html]
-	resource: Melhorar seu jogo [/bjc-r/cur/programming/1-introduction/1-building-an-app/5-finish-your-first-snap-app.html]
+	resource: Compartilhar seu jogo [/bjc-r/cur/programming/1-introduction/1-building-an-app/3-loading-mobile-device.pt-br.html]
+	resource: Dar feedback ao jogador [/bjc-r/cur/programming/1-introduction/1-building-an-app/4-keeping-score.pt-br.html]
+	resource: Melhorar seu jogo [/bjc-r/cur/programming/1-introduction/1-building-an-app/5-finish-your-first-snap-app.pt-br.html]
 
 heading: Lab 2: Gossip
 	raw-html: <img class="imageRight noshadow" src="/bjc-r/img/1-introduction/U1L2-Gossip.jpg" alt="Image of stage with two characters talking. One says, 'my cat is in a band with Jake,' and the other says 'Oh, but... Mr. C loves my cat.'" title="Image of stage with two characters talking. One says, 'my cat is in a band with Jake,' and the other says 'Oh, but... Mr. C loves my cat.'"/>

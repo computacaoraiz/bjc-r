@@ -9,3 +9,9 @@ es:
   on_ap_exam: En el examen AP
   self_check: Preguntas de Autocomprobacion
   vocab: Vocabulario
+
+pt-br:
+  unit_review: Revisão da Unidade %{num}
+  on_ap_exam: No exame AP
+  self_check: Perguntas de auto-avaliação
+  vocab: Vocabulário
