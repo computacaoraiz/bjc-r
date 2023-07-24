@@ -715,6 +715,13 @@ html[lang="es"] .vocabSummary:before {
   content: "Vocabulario";
 }
 
+html[lang="pt-br"] .vocab:before,
+html[lang="pt-br"] .vocabBig:before,
+html[lang="pt-br"] .vocabFullWidth:before,
+html[lang="pt-br"] .vocabSummary:before {
+  content: "Vocabulário";
+}
+
 html[lang="es"] .dialogue:before {
   content: "Pensando en voz alta";
 }
