@@ -703,6 +703,13 @@ html[lang="es"] .examSummary:before {
   content: "En el examen AP...";
 }
 
+html[lang="pt-br"] .exam:before,
+html[lang="pt-br"] .examBig:before,
+html[lang="pt-br"] .examFullWidth:before,
+html[lang="pt-br"] .examSummary:before {
+  content: "No exame AP...";
+}
+
 html[lang="es"] .atwork:before,
 html[lang="es"] .atworkFullWidth:before {
   content: "Científicos informáticos en el trabajo";
