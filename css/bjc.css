@@ -722,7 +722,7 @@ html[lang="pt-br"] .vocabSummary:before {
   content: "Vocabulário";
 }
 
-html[lang="es"] .dialogue:before {
+html[lang="pt-br"] .dialogue:before {
   content: "Pensando en voz alta";
 }
 
