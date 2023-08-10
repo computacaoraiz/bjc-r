@@ -11,12 +11,12 @@ heading:  Lab 1: Jogo "Clique no Alonzo"
 	resource: Melhorar seu jogo [/bjc-r/cur/programming/1-introduction/1-building-an-app/5-finish-your-first-snap-app.pt-br.html]
 
 heading: Lab 2: Fofoca
-	raw-html: <img class="imageRight noshadow" src="/bjc-r/img/1-introduction/U1L2-Gossip.jpg" alt="Imagem do palco com dois personagens conversando. O primeiro diz: 'meu cato está em uma banda com o Jake'; o segundo diz: 'Oh, mas... o Sr. C adora meu gato.'" title="Imagem do palco com dois personagens conversando. O primeiro diz: 'meu cato está em uma banda com o Jake'; o segundo diz: 'Oh, mas... o Sr. C adora meu gato.'"/>
+	raw-html: <img class="imageRight noshadow" src="/bjc-r/img/1-introduction/U1L2-Gossip.jpg" alt="Imagem do palco com dois personagens conversando. O primeiro diz: 'meu gato está em uma banda com o Jake'; o outro diz: 'Oh, mas... o Sr. C adora meu gato.'" title="Imagem do palco com dois personagens conversando. O primeiro diz: 'meu cato está em uma banda com o Jake'; o segundo diz: 'Oh, mas... o Sr. C adora meu gato.'"/>
 	resource: Programação em pares [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/1-pair-programming.pt-br.html]
 	resource: Fazendo seus programas conversarem [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.pt-br.html]
-	resource: Customizing and Debugging [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.html]
-	resource: Making Your Own Block [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/4-making-a-new-block.html]
-	quiz: Adding Variety to <code>Gossip</code> [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.html]
+	resource: Personalizando e depurando [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.pt-br.html]
+	resource: Fazendo seu próprio bloco [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/4-making-a-new-block.pt-br.html]
+	quiz: Adicionando variedade a <code>Fofoca</code> [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.pt-br.html]
 
 heading: Lab 3: Modern Art with Polygons
 	resource: Exploring Motion [/bjc-r/cur/programming/1-introduction/3-drawing/1-exploring-motion.html]
