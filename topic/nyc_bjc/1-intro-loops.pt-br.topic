@@ -39,13 +39,13 @@ heading: Lab 5: Siga o Líder
 	resource: Sprite Seguindo um Sprite [/bjc-r/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.pt-br.html]
 
 	raw-html: <img class="imageRight noshadow" src="/bjc-r/img/1-introduction/Pong_img/pongAnimation.gif" width="250" alt="Jogo do Pong" title="Jogo do Pong"/>
-heading: Optional Projects
-	resource: Line Art Toy [/bjc-r/cur/programming/1-introduction/optional-projects/1-sprite-line-art.html]
-	resource: Row of Houses [/bjc-r/cur/programming/1-introduction/optional-projects/2-row-of-houses.html]
-	resource: The Game of Pong [/bjc-r/cur/programming/1-introduction/optional-projects/3-pong.html]
-	resource: Daisy Design [/bjc-r/cur/programming/1-introduction/optional-projects/4-daisy.html]
-	resource: Modeling Language [/bjc-r/cur/programming/1-introduction/optional-projects/5-sentence-builder.html]
 
+heading: Projetos Opcionais
+	resource: Brinquedo Artístico [/bjc-r/cur/programming/1-introduction/optional-projects/1-sprite-line-art.pt-br.html]
+	resource: Fileira de Casas [/bjc-r/cur/programming/1-introduction/optional-projects/2-row-of-houses.pt-br.html]
+	resource: O Jogo de Pong [/bjc-r/cur/programming/1-introduction/optional-projects/3-pong.pt-br.html]
+	resource: Design Margarida [/bjc-r/cur/programming/1-introduction/optional-projects/4-daisy.pt-br.html]
+	resource: Linguagem de Modelagem [/bjc-r/cur/programming/1-introduction/optional-projects/5-sentence-builder.pt-br.html]
 
 heading: Unit 1 Review
 	resource: Vocabulary [/bjc-r/cur/programming/summaries/vocab1.html]

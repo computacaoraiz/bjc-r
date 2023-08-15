@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Unidade 1 Projetos Opcionais, Página 2</title>
+	</head>
+
+	<body>
+		<h2>Fila de Casas</h2>
+        <div class="learn">
+            <p>
+                <strong>Neste projeto,</strong> você usará abstrações dentro de abstrações para construir uma fileira de casas.<br />
+                <img class="indent noshadow" style="height: 119px;" src="/bjc-r/img/1-introduction/row-of-houses-size-100.png" alt="um desenho de uma internação de casas" title="um desenho de uma internação de casas" />
+            </p>
+        </div>
+    
+        
+        <div class="forYouToDo" id="first">
+			<ol>
+				<li><div class="newProject"><span class="text">"U1-Row-of-Houses"</span><img src="/bjc-r/img/icons/new-project-called.png" alt="Crie um novo projeto chamado U1-Row-of-Houses" title="Crie um novo projeto chamado U1-Row-of-Houses" /></div></li>
+            	<li>
+                    Create a <code>draw square</code> block that takes a <var>size</var> as input. Be sure to test it with different inputs.<br />
+                    <div class="sidenote">You learned how to create a block with an input on <a href="/bjc-r/cur/programming/1-introduction/3-drawing/3-blocks-with-inputs.pt-br.html?topic=nyc_bjc%2F1-intro-loops.pt-br.topic&course=bjc4nyc.pt-br.html&novideo&noassignment" title="Laboratório 3 Página 3: Blocos com entradas">Laboratório 3 Página 3: Blocos com entradas</a>.</div>
+                    <img class="indent" src="/bjc-r/img/1-introduction/draw-square-size.png" alt="desenhar quadrado, tamanho: ()" title="desenhar quadrado, tamanho: ()" />
+                    <img class="indent noshadow" src="/bjc-r/img/1-introduction/square-size-100.png" alt="um desenho de um quadrado" title="um desenho de um quadrado" />
+                    <div class="endnote">
+                        <a href="#hint-square" data-toggle="collapse" title="Clique para ver uma maneira de construir um quadrado de desenho sem uma entrada.">Clique para ver uma maneira de construir <code>desenhar quadrado</code> <em>sem</em> uma entrada.</a>
+                        <div id="hint-square" class="collapse">
+                            <img class="indent" src="/bjc-r/img/1-introduction/draw-square-def-repeat-4(move-50-turn-right-90).png" alt="repetir-4(mover-50-girar no sentido horário-90)" title="caneta para baixo, repita 4 (mova 50 passos, vire CW 90 graus)" />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    Usando o quadrado <code>desenhar</code> como um exemplo de onde começar, crie e teste um bloco <code>desenhar triângulo</code> que usa um <var>tamanho</var> como entrada e desenha um triângulo equilátero .<br />
+                    <div class="sidenote">Você aprendeu sobre como virar ângulos <a href="/bjc-r/cur/programming/1-introduction/3-drawing/2-exploring-snap-drawing-motion.pt-br.html?topic=nyc_bjc%2F1-intro-loops.pt-br.topic&course=bjc4nyc.pt-br.html&novideo&noassignment" title="Laboratório 3 Página 2: Ângulos e torneamento">Laboratório 3 Página 2: Ângulos e torneamento</a>.</div>
+                    <img class="indent" src="/bjc-r/img/1-introduction/draw-triangle-size.png" alt="desenhar triângulo, tamanho: ()" title="desenhar triângulo, tamanho: ()" />
+                    <img class="indent noshadow" src="/bjc-r/img/1-introduction/triangle-size-100.png" alt="um desenho de um triângulo" title="um desenho de um triângulo" />
+                </li>  
+                <li>
+                    Agora, use <code>desenhar quadrado</code> e <code>desenhar triângulo</code> juntos para criar blocos <code>desenhar casa</code> que aceitam um <var>tamanho</var> como entrada e desenha a forma de uma casa: um quadrado com um telhado triangular no topo.<br />
+                    <div class="sidenote">Talvez seja necessário depurar para que as duas formas se conectem corretamente.</div>
+                    <img class="indent" src="/bjc-r/img/1-introduction/draw-house-size.png" alt="desenhar casa, tamanho: ()" title="desenhar casa, tamanho: () " />
+                    <img class="indent noshadow" src="/bjc-r/img/1-introduction/house-size-100.png" alt="um desenho de uma casa, que é um quadrado com um triângulo acima dele" title ="um desenho de uma casa, que é um quadrado com um triângulo acima dele" />
+                </li>
+            </ol>
+        </div>
+        
+        <div class="takeNote">Usar um bloco dentro de outro bloco é uma forma de <em>abstração</em>.</div>
+        
+        <div class="forYouToDo">
+			<ol start="5">
+                <li>
+                    Finalmente, use seu bloco <code>desenhar casa</code> junto com <code>repetir até</code> para criar um bloco <code>desenhar linha de casas</code> que desenha uma linha de casas anexadas a cada nova um à direita do anterior. Seu programa deve continuar desenhando casas até que o sprite se mova muito perto da borda direita da tela. Para isso, você precisará <code>repetir até</code>.<br />
+                    <img class="indent" src="/bjc-r/img/1-introduction/draw-row-of-houses-size.png" alt="desenhar fileira de casas, tamanho: ()" title="desenhar fileira de casas, tamanho: ()" />
+                    <img class="indent noshadow" src="/bjc-r/img/1-introduction/row-of-houses-size-100.png" alt="um desenho de uma fileira de casas" title="um desenho de uma fileira de casas" /><br />
+                    <img class="indent" src="/bjc-r/img/1-introduction/repeat-until-(x-position+size-greater-than-240).png" title="repetir até (((x posição) + (tamanho)) > 240)" alt="repetir até (((posição x) + (tamanho)) > 240)">
+                </li>
+                <li>
+                    <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Fale com seu parceiro" title="Fale com seu parceiro" />O <em As posições >x</em> no estágio Snap<em>!</em> vão de -240 a 240. Como o código <code>repetir até</code> evita que o sprite se aproxime demais da borda do a tela?
+                    <img class="inline" src="/bjc-r/img/icons/save-mini.png" alt="Agora é um bom momento para economizar" title="Agora é um bom momento para economizar" />
+                </li>
+            </ol>
+        </div>
+        
+        <div class="takeItFurther">
+            <ol type="A">
+                <li>
+                    Use seu bloco <code>desenhar quadrado</code> para criar um bloco <code>desenhar flor com pétalas quadradas</code> que desenhará uma flor com pétalas quadradas com qualquer número especificado de pétalas do tamanho especificado.<br />
+                    <img class="indent" src="/bjc-r/img/1-introduction/draw-flower-with-6-petals-of-size-50.png" alt="desenhe flor com (6) pétalas quadradas de tamanho (50)" title="desenhar flor com (6) pétalas quadradas de tamanho (50)" />
+                    <img class="indent" src="/bjc-r/img/1-introduction/flower-with-6-square-petals.png" alt="um desenho de uma flor com 6 pétalas quadradas" title="a desenho de uma flor com 6 pétalas quadradas" /><br />
+                </li>
+                <div class="endnote"><img class="inline" src="/bjc-r/img/icons/talk-with-another-pair-mini.png" alt="Fale com outro par" title=" Fale com outro par" />Depois de trabalhar um pouco nisso, reserve um momento para ver o que os outros fizeram. Se você vir algo de que gosta, pense em como poderia usar essa ideia em seu programa.</div>
+                <li>
+                    Agora, desenhe um campo de flores e dê a cada flor um tamanho diferente, número de pétalas e posição.<br />
+                    <div class="sidenote">Você precisará usar <img class="inline" src="/bjc-r/img/blocks/pen-up-full-size.png" alt="pen up" title= "caneta para cima" />.</div>
+                    <img class="indent noshadow" src="/bjc-r/img/1-introduction/field-of-flowers.png" alt="um desenho de um campo de flores, cada uma com um número aleatório de pétalas quadradas" title ="um desenho de um campo de flores, cada uma com um número aleatório de pétalas quadradas" /><br />
+                </li>
+            </ol>
+        </div>
+
+
+	</body>
+</html>
