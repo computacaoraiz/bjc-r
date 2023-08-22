@@ -28,11 +28,11 @@ heading: Lab 3: Modern Art with Polygons
 	resource: Looping with a Counter [/bjc-r/cur/programming/1-introduction/3-drawing/6-the-for-block.html]
 	resource: Keeping a Programming Journal [/bjc-r/cur/programming/1-introduction/3-drawing/7-programming-journal.html]
 
-heading: Lab 4: Protecting Your Privacy
-	resource: Your Image in the Cloud [/bjc-r/cur/programming/1-introduction/4-privacy/1-your-image-in-the-cloud.html]
-	resource: Examining Privacy [/bjc-r/cur/programming/1-introduction/4-privacy/2-examining-privacy.html]
-	resource: Tanya Rider's Story [/bjc-r/cur/programming/1-introduction/4-privacy/3-tanya-rider.html]
-	resource: Innovations and Privacy [/bjc-r/cur/programming/1-introduction/4-privacy/4-privacy-affected.html]
+heading: Lab 4: Protegendo a sua privacidade
+	resource: Sua imagem na nuvem [/bjc-r/cur/programming/1-introduction/4-privacy/1-your-image-in-the-cloud.pt-br.html]
+	resource: Examinando sua privacidade [/bjc-r/cur/programming/1-introduction/4-privacy/2-examining-privacy.pt-br.html]
+	resource: A história de Tanya Rider [/bjc-r/cur/programming/1-introduction/4-privacy/3-tanya-rider.pt-br.html]
+	resource: Inovações e Privacidade [/bjc-r/cur/programming/1-introduction/4-privacy/4-privacy-affected.pt-br.html]
 
 heading: Lab 5: Siga o Líder
 	resource: Sprite seguindo o Rato [/bjc-r/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.pt-br.html]
