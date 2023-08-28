@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r/utilities/gifffer.min.js"></script>
+        <script type="text/javascript">window.onload = function() {Gifffer();};</script>
+        <link rel="stylesheet" type="text/css" href="/bjc-r/css/bjc-gifffer.css">
+	    <title>Unidade 2 Laboratório 1: Jogos, Página 3</title>
+	</head>
+
+	<body>
+    	<h2>Depuração e Expansão do Seu Jogo de Adivinhação de Números</h2>
+        
+        <div class="learn">
+            <p><strong>Nesta página,</strong> você praticará a depuração e fará o computador dar dicas aos jogadores.</p>
+        </div>
+        
+        <div class="forYouToDo" id="first">
+			<ol>
+				<li>
+                    <a class="run" href="/bjc-r/prog/2-complexity/U2L1-Buggy-Secret-Number.xml" target="_blank"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Clique aqui para carregar o arquivo. Em seguida, salve-o na sua conta Snap!" title="Clique aqui para carregar o arquivo. Em seguida, salve-o na sua conta Snap!" /></a> No arquivo há uma definição de um bloco <code>jogo de adivinhação de números</code>. Ele contém um <strong>bug</strong>&mdash;um erro no código que faz o programa se comportar de forma diferente do esperado. Este código, se você continuar jogando várias vezes, funcionará na maioria das vezes, mas <em>às vezes</em> (não frequentemente) ele o parabenizará <em>antes mesmo de você adivinhar</em>.
+                    <p><img class="inline" src="/bjc-r/img/icons/talk-with-another-pair-mini.png" alt="Converse com Outro Par" title="Converse com Outro Par" /> Analise o código, explique como isso pode acontecer, corrija o bug e salve o projeto.</p>
+                </li>
+				<div class="endnote">
+                    <p>Deixe-o escolher seu número aleatório apenas de 1 a 3 para que o bug ocorra com mais frequência.</p>
+                    <p>
+                        Se você quiser adicionar mais variáveis de script, use o triângulo apontando para a direita. (O triângulo esquerdo as removerá.)<br />
+                        <img class="indent" data-gifffer="/bjc-r/img/2-complexity/script-variables-adding.gif" alt="clicando nos triângulos para adicionar e remover variáveis de script" title="clicando nos triângulos para adicionar e remover variáveis de script" height="70"/>
+                    </p>
+                </div>
+            	<li>Agora reabra o seu projeto U2L1-NumberGuessing. Certifique-se de que sua versão não tenha o mesmo bug.</li>
+            </ol>
+		</div>
+		
+		<div class="atworkFullWidth">
+			<img class="noshadow imageRight" height="200px" src="/bjc-r/img/atwork/Jerry_Lawson.png" alt="foto de Jerry Lawson" title="foto de Jerry Lawson" />
+			<p>Jerry Lawson (1940-2011) foi um engenheiro eletrônico e pioneiro dos jogos americano, conhecido como o "pai do cartucho de videogame". Nascido na cidade de Nova York, Jerry fez cursos tanto no Queens College quanto no City College of New York. Enquanto trabalhava como Engenheiro-Chefe de Hardware na Fairchild Semiconductor, ele liderou o desenvolvimento do console Channel F e foi pioneiro na tecnologia do cartucho de videogame, que se popularizou com o Atari 2600.</p>
+			<p><a href="https://www.cnbc.com/2021/10/30/jerry-lawson-black-silicon-valley-pioneer-changed-video-games-forever.html" title="Artigo: Um dos pioneiros mais importantes do Vale do Silício que você nunca ouviu falar" target="_blank">Artigo: Um dos pioneiros mais importantes do Vale do Silício que você nunca ouviu falar</a></p>
+		</div>
+        
+        <h3>Expandindo o Programa com Respostas Mais Específicas</h3>
+        <div class="forYouToDo">
+            <ol start="3">
+                <li>Use mais blocos condicionais e predicados para fazer o computador dizer ao jogador se um palpite é muito grande ou muito pequeno: "Isso é muito grande. Tente novamente." <br /><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Converse com o Seu Parceiro" title="Converse com o Seu Parceiro" /> Onde no código esses condicionais deveriam ser inseridos?</li>
+                <li>
+                    <strong>Teste e depure.</strong> Jogue seu jogo o suficiente para ver se ele funciona como você deseja. Ele deve:
+                    <ul>
+                        <li>pedir ao jogador para adivinhar seu número secreto;</li>
+                        <li>dizer se um palpite incorreto é muito grande ou muito pequeno, e depois pedir novamente;</li>
+                        <li>parabenizar o jogador por uma resposta correta.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        
+		<p>A variável de script <var>número secreto</var> existe apenas até que o script termine de ser executado. Quando o jogo é jogado novamente, o programa criará uma nova variável <var>número secreto</var> e lhe atribuirá um novo número aleatório.</p>
+		<img class="imageRight" src="/bjc-r/img/icons/save-now.png" alt="Salve o seu trabalho" title="Salve o seu trabalho" />
+		<p>Em uma unidade posterior, você ensinará o computador a adivinhar um número secreto que <em>você</em> escolheu.</p>
+        
+        <div class="ifTime">
+			<ol start="5">
+				<li>Neste momento, o script sempre escolhe um número entre 1 e 10. No início do jogo, pergunte ao jogador qual deve ser o número máximo, e faça o seu programa escolher um número entre 1 e <var>máximo</var>.</li>
+				<li>Use outra variável de script para acompanhar quantas tentativas o jogador faz antes de acertar o número correto. Quando o jogador adivinhar o número secreto, diga quantas tentativas foram necessárias.</li>
+            </ol>
+        </div>
+        
+        <div class="takeItFurther">
+            <ol type="A">
+                <li>Encontre uma maneira de variar um pouco a linguagem para que seu programa não repita exatamente as mesmas palavras na mesma situação sempre. Por exemplo, se um jogador der um palpite muito alto duas vezes seguidas, o programa poderia dizer "Ainda é muito grande. Tente outro número."</li>
+            </ol>
+        </div>
+
+
+	</body>
+</html>

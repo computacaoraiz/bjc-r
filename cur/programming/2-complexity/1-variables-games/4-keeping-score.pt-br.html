@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <script type="text/javascript" src="/bjc-r/utilities/gifffer.min.js"></script>
+        <script type="text/javascript">window.onload = function() {Gifffer();};</script>
+        <link rel="stylesheet" type="text/css" href="/bjc-r/css/bjc-gifffer.css">
+	    <title>Unidade 2 Laboratório 1: Jogos, Página 4</title>
+	</head>
+
+	<body>
+    	<h2>Mantendo a Pontuação com Variáveis Globais</h2>
+		<div class="learn">
+          <p><strong>Nesta página,</strong> você usará uma <em>variável global</em> para manter a pontuação no seu jogo Click Alonzo.</p>
+        </div>
+
+        <p>No seu Jogo de Adivinhação de Números, você usou <em>variáveis de script</em> para armazenar informações (o valor do <var>número secreto</var>) que eram necessárias apenas por um script. Para manter a pontuação no Click Alonzo, mais de um script precisará acessar essa informação, então você usará uma <em>variável global</em>.</p>
+        <div class="vocabFullWidth">: <strong>Variável Global</strong>
+            <p>Uma <strong>variável global</strong> é uma variável utilizável por todos os scripts no programa.</p>
+        </div>
+        <div class="endnote">
+            <h4><strong>Quando as variáveis globais são necessárias?</strong></h4>
+            <p>Na maioria das vezes, variáveis de script são uma escolha melhor, porque não podem ser alteradas por outra parte do programa, reduzindo assim a chance de bugs. Mas <strong>se vários scripts precisarem acessar</strong> uma variável ou <strong>se as informações naquela variável precisarem ser salvas</strong> com o seu projeto, então use uma variável global.</p>
+        </div>
+
+        <div class="forYouToDo" id="first">
+			<ol>
+				<li>Abra o seu projeto U1L1-ClickAlonzo, jogue o jogo e revise o código para lembrar como ele funciona.</li>
+                <li><div class="saveAs"><span class="text">"U2L1-ClickAlonzo"</span><img src="/bjc-r/img/icons/save-this-as.png" alt="Salve o seu trabalho como U2L1-ClickAlonzo" title="Salve o seu trabalho como U2L1-ClickAlonzo" /> Certifique-se de <strong>renomear o seu projeto</strong> com "U2" no nome do arquivo. </div></li>
+                <div class="takeNote">Se você salvar um novo trabalho com um nome antigo de arquivo, o Snap<em>!</em> irá substituir o seu projeto original. Use a opção "Salvar como..." no menu Arquivo do Snap<em>!</em> para salvar com o novo nome. Quando você carregar um projeto antigo e estiver prestes a fazer uma grande alteração, adquira o hábito de <em>salvar primeiro, com o novo nome, antes de fazer qualquer alteração</em>. </div>
+                <li>Crie uma variável global chamada <var>pontuação</var>. Veja como fazer isso.</li>
+                <div class="narrower">
+                    <h4><strong>Criando uma Variável Global</strong></h4>
+                    <ol type="a">
+                        <li>Clique em  <img class="inline" src="/bjc-r/img/1-introduction/make-a-variable.png" alt="botão criar variável" title="botão criar variável" />  na paleta de Variáveis. (Não é um bloco; você não pode arrastá-lo para a área de programação.)</li>
+                        <li>Digite o título da sua variável. Neste caso, é <var>pontuação</var>.</li>
+                        <li>Clique em "OK".</li>
+                    </ol>
+                </div>
+        		<li>
+                    Use a variável <var>pontuação</var> para acompanhar a pontuação do jogador:
+                    <ol>
+                        <li>Inicialize <var>pontuação</var> como 0 no início do jogo.</li>
+                        <div class="vocabFullWidth">
+                            <p>Definir o valor inicial de uma variável é conhecido como <strong>inicializar</strong><a name="inicializar" class="anchor">&nbsp;</a> a variável.</p>
+                        </div>
+                        <div class="ap-standard">AAP-1.B.1</div>
+                        <li>Faça o programa <code>alterar</code> a pontuação em 1 sempre que o sprite for clicado.</li>
+                        <div class="examFullWidth">
+                            <div class="pseudop">
+                                <img class="inline nopadtb" src="/bjc-r/img/2-complexity/change-score-by-1.png"  height="26" alt="alterar (pontuação) por (1)" title="alterar (pontuação) por (1)" /> (o que significa <img src="/bjc-r/img/2-complexity/set-score-to-score-plus-one.png" height="40" alt="definir(pontuação) como (pontuação+1)" title="definir(pontuação) como (pontuação+1)">) seria escrito como <pre class="inline">pontuação &leftarrow; pontuação + 1</pre> ou <img class="inline" src="/bjc-r/img/2-complexity/score-increment-blocktran.png" alt="pontuação ← pontuação + 1" title="pontuação ← pontuação + 1" />.
+                            </div>
+                        </div>
+                    </ol>
+                </li>
+                <img class="imageRight" src="/bjc-r/img/icons/pair-programming-swap.png" alt="Troca de Programação em Pares" title="Troca de Programação em Pares" />
+                <li><strong>Teste e depure.</strong> Jogue o jogo o suficiente para garantir que a variável de pontuação funcione. <img class="inline" src="/bjc-r/img/icons/save-mini.png" alt="Salve o seu trabalho" title="Salve o seu trabalho" /></li>
+                <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner-mini.png" alt="Converse com o Seu Parceiro" title="Converse com o Seu Parceiro" /> Neste momento, o jogo não tem uma maneira de vencer, mas você vai mudar isso. Decida a pontuação que você usará para testar se o jogador venceu.</li>
+                <li>
+                	Use uma condicional para determinar quando o jogador atinge essa pontuação. Quando eles atingirem:
+                      <ol>
+
+                        <li>Faça Alonzo parar de pular.</li>
+                    	<li>Faça Alonzo aparecer novamente. (Você terá que redefinir o efeito fantasma.)</li>
+                        <li>Parabenize o jogador por alguns segundos.</li>
+                        <!--<li>If necessary, use another <code>stop</code> block to stop the running script.  (Whether you need this will depend on your program structure.)</li>-->
+                    </ol>
+                </li>
+                <li>
+                    <strong>Teste e depure.</strong> Alternem-se jogando e corrigindo quaisquer bugs. <img class="inline" src="/bjc-r/img/icons/save-mini.png" alt="Salve o seu trabalho" title="Salve o seu trabalho" /><br />
+                    <div class="takeNote">
+                        <h4><strong>Dica de Depuração: Exibição de Variáveis</strong></h4>
+                        <p>
+                            Ao depurar o seu código, pode ser útil ver o valor de uma variável em diferentes pontos do programa. Isso é feito de forma diferente para variáveis locais e globais:
+                            <ul>
+                                <li>As variáveis globais têm caixas de seleção que controlam a exibição do <em>observador</em> da variável no palco (mostrado abaixo).<br />
+                                <img class="indent" src="/bjc-r/img/2-complexity/Debugging/golbal-variables-checked.png"  height="300" alt="Marcando as variáveis globais na paleta." title="Marcando as variáveis globais na paleta."/><img class="indent" src="/bjc-r/img/2-complexity/Debugging/global-variables-displayed.png"  height="300" alt="Exibindo a variável global no palco" title="Exibindo a variável global no palco"/></li>
+                                <li>Se for uma variável <em>local</em> (de script), você pode <strong>usar o bloco <code>exibir variável</code></strong> dentro do script para exibir um observador no palco (e usar <code>ocultar variável</code> para escondê-lo novamente).</li>
+                            </ul>
+                        </p>
+                    </div>
+                </li>
+            </ol>
+		</div>
+
+
+        <div class="ifTime">
+            <ol start="9">
+                <li>Se o sprite se mover sem ser clicado, faça a pontuação diminuir 1.</li>
+                <li>Jogo muito difícil? Aumente a pontuação em 2 por acerto. Mudança muito grande? Aumente em 3 por acerto, diminua em 2 por erro. Você pode fazer ajustes arbitrariamente finos. Esse processo é chamado de <em>ajuste de jogo</em>.</li>
+            </ol>
+		</div>
+
+
+	</body>
+</html>
