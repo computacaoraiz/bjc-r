@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+
+		<script type="text/javascript" src="/bjc-r/utilities/gifffer.min.js"></script>
+
+        <script type="text/javascript">window.onload = function() {Gifffer();}</script>
+
+        <link rel="stylesheet" type="text/css" href="/bjc-r/css/bjc-gifffer.css">
+
+<title>Unidade 1 Perguntas do exame</title>
+	</head>
+
+
+
+<h2>Unidade 1 Laboratório 2: Fofoca, Página 2</h2>
+<h3>Laboratório 2: Fofoca</h3>
+<div class="examFullWidth">
+    <a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.pt-br.html">1.2.2</a>
+    <!--<div class="index-term anchor" id="say</code>">&nbsp;</div>-->
+    <div class="ap-standard">AAP-3.A.6</div>
+    <div class="pseudop">
+        Não há algo exatamente igual a <img class="nopadtb" src="/bjc-r/img/1-introduction/say-gossip.png" alt="say (gossip)" title="say (gossip)"> ou <img class="nopadtb" src="/bjc-r/img/1-introduction/say-gossip-for-3-secs.png" alt="say (gossip) for (3) secs" title="say (gossip) for (3) secs"> no Exame do AP, pois eles não possuem sprites e balões de fala, mas a maneira como eles mostram esse texto ao usuário é
+        <pre class="inline">EXIBIR(fofoca())</pre> se for escrito como texto ou <img class="nopadtb" src="/bjc-r/img/1-introduction/display(gossip).png" alt="um retângulo arredondado branco contendo primeiro a palavra 'EXIBIR' em caixa alta e depois um retângulo branco menor contendo a palavra 'fofoca' em caixa baixa" title="um retângulo arredondado branco contendo primeiro a palavra 'EXIBIR' em caixa alta e depois um retângulo branco menor contendo a palavra 'fofoca' em caixa baixa"> se for mostrado como blocos.
+    </div>
+    <p>Você não precisará ser capaz de <em>escrever</em> código nessa notação no Exame do AP. Você só precisa ser capaz de <em>ler</em> para poder responder perguntas sobre isso.</p>
+</div>
+
+<div class="examFullWidth">
+    <a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/4-making-a-new-block.pt-br.html">1.2.4</a>
+    <ul>
+        <div class="ap-standard">AAP-3.A.7, AAP-3.C.2</div>
+        <li>
+            A definição do procedimento <img class="inline" src="/bjc-r/img/1-introduction/double-block-definition.png" alt="PROCEDURE double (x){    RETURN (2 * x)}" title="PROCEDURE double (x){    RETURN (2 * x)}"> seria escrita como <div class="pre-container"><pre class="inline">PROCEDURE double(x){    RETORNAR(2 * x)}</pre></div> ou <img class="" src="/bjc-r/img/1-introduction/double-blocktran.png" alt="PROCEDURE double(x){    RETURN(2 * x)}" title="PROCEDURE double(x){    RETURN(2 * x)}">.
+            <p>Muitas linguagens (e o Exame de Princípios de Ciência da Computação do AP) usam <code>return</code> em vez de <code>report</code> como o nome do comando para retornar um valor no final de uma chamada de função.</p>
+        </li>
+        <div class="ap-standard">AAP-3.A.9</div>
+        <li>O exame utiliza "valor de um procedimento" para se referir ao valor que o procedimento retorna quando chamado. Por exemplo, "o valor de <pre class="inline">double(5)</pre>" significa 10.</li>
+    </ul>
+</div>
+
+<div class="examFullWidth">
+    <a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.pt-br.html">1.2.5</a>
+    <!--<div class="index-term" id="pick random</code>"></div>-->
+    <div class="ap-standard">AAP-3.E.1, AAP-3.E.2</div>
+    <div class="pseudop">
+        A expressão <img class="inline" src="/bjc-r/img/blocks/pick-random-1-to-10-full-size.png" alt="pick random (1) to (10)" title="pick random (1) to (10)"> seria escrita como <pre class="inline">ALEATÓRIO(1, 10)</pre> ou <img class="inline" src="/bjc-r/img/1-introduction/random-blocktran.png" alt="ALEATÓRIO(1, 10)" title="ALEATÓRIO(1, 10)">. Toda vez que você executar este código, obterá um número aleatório diferente entre 1 e 10.
+    </div>
+</div>
+
+<h3>Laboratório 3: Arte Moderna com Polígonos</h3>
+<div class="examFullWidth">
+    <a href="/bjc-r/cur/programming/1-introduction/3-drawing/4-modify-your-pinwheel.pt-br.html">1.3.4</a>
+    <div class="ap-standard">AAP-3.C.1, AAP-2.K.2</div>
+    <div class="pseudop">
+        A definição do procedimento personalizado <code>pinwheel</code><br>
+        <img class="indent" src="/bjc-r/img/1-introduction/pinwheel-definition.png" alt="pinwheel, branches: (number of branches){    repeat(number of branches)    {        move (100) steps        move (-37) steps        turn clockwise (360 / number of branches) degrees    }}" title="pinwheel, branches: (number of branches){    repeat(number of branches)    {        move (100) steps        move (-37) steps        turn clockwise (360 / number of branches) degrees    }}"><br>
+        seria escrita como<br>
+        <div class="pre-container indent"><pre>PROCEDURE pinwheel(numeroDeRamos){    REPETIR numeroDeRamos VEZES    {        mover(100)        mover(-37)        girar_sentido_horario(360 / numeroDeRamos)    }}</pre></div>
+        ou <img class="inline" src="/bjc-r/img/1-introduction/pinwheel-blocktran.png" alt="PROCEDURE pinwheel(numberOfBranches){    REPEAT numberOfBranches TIMES    {        move (100)        move (-37)        turn_clockwise (360 / numberOfBranches)    }}" title="PROCEDURE pinwheel(numberOfBranches){    REPEAT numberOfBranches TIMES    {        move (100)        move (-37)        turn_clockwise (360 / numberOfBranches)    }}">
+    </div>
+    <div class="endnote">
+        <div class="pseudop">
+            Os procedimentos <pre class="inline">mover()</pre> e <pre class="inline">girar_sentido_horario()</pre> não são incorporados à linguagem do AP, portanto, são escritos em letras minúsculas como outros procedimentos definidos pelo programador.
+        </div>
+        <div class="pseudop">
+            Observe que o bloco de encaixe, <img class="inline nopadtb" src="/bjc-r/img/1-introduction/pinwheel-hat-block.png" alt="pinwheel, branches: (number of branches)" title="pinwheel, branches: (number of branches)">, seria escrito como <pre class="inline">PROCEDURE pinwheel(numeroDeRamos)</pre>. A palavra <pre class="inline">PROCEDURE</pre> indica que essa linha de código é como um bloco de encaixe; o nome da variável entre parênteses nessa linha é a entrada que o procedimento aceita.
+        </div>
+    </div>
+</div>
+
+<div class="examFullWidth">
+    <a href="/bjc-r/cur/programming/1-introduction/3-drawing/4-modify-your-pinwheel.pt-br.html">1.3.4</a>
+    <div class="ap-standard">AAP-3.A.5</div>
+    <div class="pseudop">
+        Esta instrução <img class="inline" src="/bjc-r/img/1-introduction/U1ImageVideoAddendum_img/U1L3-PinwheelwithInputs1.png" height="50" alt="setup; pinwheel, branches: (6) size: (80) backup: (20)" title=" pinwheel, branches: (6) size: (80) backup: (20)"> seria escrita como <pre class="inline">pinwheel(6, 80, 20)</pre> ou <img class="nopadtb" src="/bjc-r/img/2-complexity/pinwheel-blocktran.png" alt="um retângulo arredondado branco contendo primeiro a palavra 'pinwheel' em caixa alta e depois um retângulo branco menor contendo as entradas '6, 80, 20'" title="um retângulo arredondado branco contendo primeiro a palavra 'pinwheel' em caixa alta e depois um retângulo branco menor contendo as entradas '6, 80, 20'">.
+    </div>
+    <p>Você pode ouvir as pessoas usarem o termo "pseudocódigo" para se referir a essa pseudo-linguagem usada no Exame de Princípios de Ciência da Computação do AP, mas não é pseudocódigo. Pseudocódigo não é uma linguagem de programação, é o uso da linguagem humana normal para descrever um algoritmo.</p>
+</div>
+
+<h3>Laboratório 5: Siga o Líder</h3>
+<div class="examFullWidth">
+    <a href="/bjc-r/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.pt-br.html">1.5.2</a>
+    <div class="ap-standard">AAP-2.K.3</div>
+    <div class="sidenoteBig">
+        <div class="pseudop">
+            A linguagem usada no Exame do AP não permite espaços nos nomes de entradas (como <var>number of fish</var>) ou em procedimentos definidos pelo programador (como <code>mouse y</code>, que não está incorporado à linguagem deles). Portanto, este exemplo os traduz para <pre class="inline">numFish</pre> e <pre class="inline">MouseY()</pre>.
+        </div>
+        <div class="pseudop">
+            A razão para o <pre class="inline">()</pre> ou o retângulo após <pre class="inline">MouseY</pre> é que <pre class="inline">MouseY()</pre> é uma chamada de procedimento, mesmo que não aceite nenhuma entrada.
+        </div>
+    </div>
+    <p>O script<br>                <img class="indent" src="/bjc-r/img/1-introduction/example-repeat-until.png" alt="repeat until (mouse y &lt; 0) {say (number of fish)}" title="repeat until (mouse y &lt; 0) {say (number of fish)}"><br>                seria escrito como<br></p><div class="pre-container indent"><pre>REPETIR ATÉ(mouseY() &lt; 0){    EXIBIR(numFish)}</pre></div>                ou                <img class="inline" src="/bjc-r/img/1-introduction/repeat-until-blocktran.png" alt="a gray rounded rectangle containing all of the following: on the first line, first the words 'REPEAT UNTIL' in all caps and then a smaller gray rounded rectangle containing 'mouseY () &lt; 0' and on the second line, a white rounded rectangle with a smaller white rounded rectangle inside that contains first the word 'DISPLAY' in all caps and then a smaller white rectangle containing 'numFish'" title="a gray rounded rectangle containing all of the following: on the first line, first the words 'REPEAT UNTIL' in all caps and then a smaller gray rounded rectangle containing 'mouseY () &lt; 0' and on the second line, a white rounded rectangle with a smaller white rounded rectangle inside that contains first the word 'DISPLAY' in all caps and then a smaller white rectangle containing 'numFish'">
+    <p>Lembre-se, você não precisa aprender a escrever a linguagem inventada usada no Exame do AP. Você só precisa ser capaz de ler e responder perguntas sobre ela.</p>
+</div>
