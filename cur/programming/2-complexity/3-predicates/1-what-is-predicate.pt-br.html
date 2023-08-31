@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <script type="text/javascript" src="/bjc-r/utilities/gifffer.min.js"></script>
+        <script type="text/javascript">window.onload = function() {Gifffer();}</script>
+        <link rel="stylesheet" type="text/css" href="/bjc-r/css/bjc-gifffer.css">
+        <title>Unidade 2 Laboratório 3: Tomando Decisões, Página 1</title>
+</head>
+<body>
+    <h2>O que é um Predicado?</h2>
+
+    <div class="ap-standard">AAP-2.H.1</div>
+    <p>Neste laboratório, você desenvolverá ferramentas para ajudar a resolver quebra-cabeças de palavras, buscando palavras que correspondam a características específicas.</p>
+    <p>Nesta página, você revisará predicados e construirá alguns que poderá usar em outros projetos.</p>
+
+    <p>Como você sabe, predicados são blocos de reportagem (funções) que sempre relatam um <em>valor booleano</em> (eles relatam apenas os valores <img class="inline nopadtb" src="/bjc-r/img/blocks/true.png" alt="verdadeiro" title="verdadeiro" /> ou <img class="inline nopadtb" src="/bjc-r/img/blocks/false.png" alt="falso" title="falso" />). No Snap<em>!</em>, predicados são representados por blocos hexagonais. Eles calculam a <em>condição</em> usada por <em>condicionais</em> (como <code>se</code>, <code>se não</code> ou <code>repetir até</code>) para decidir quando fazer algo.</p>
+
+    <div class="takeNote">
+        <p>Então, o <em>tipo de entrada</em> de um condicional é Booleans, e o <em>tipo de saída</em> de um predicado também é Booleans.
+            <div class="vocabFullWidth"><strong>: Domínio e Imagem</strong>
+                <ul>
+                    <li>O <strong>tipo de entrada</strong> (frequentemente chamado de <strong>domínio</strong> por programadores) de uma função é o tipo de dados que ela aceita como entrada.</li>
+                    <li>O <strong>tipo de saída</strong> (frequentemente chamado de <strong>imagem</strong>) de uma função é o tipo de dados que ela relata como saída.</li>
+                </ul>
+            </div>
+            Junto com a "abstração", essas duas ideias estão entre as mais importantes na ciência da computação. Se você adquirir o hábito de usá-las em seu pensamento, terá muitos menos erros em seus programas, pois verificará automaticamente se o tipo de saída de um reporter corresponde ao tipo de entrada do bloco em que está tentando usá-lo.
+        </p>
+    </div>
+    
+    <p>Os predicados fazem uma pergunta de verdadeiro/falso, como "O número aleatório é 3?" ou "Este sprite está tocando o sprite chamado 'Líder'?"</p>
+    <p>Cada bloco <code>se senão</code> tem dois scripts dentro dele, exatamente um dos quais será executado dependendo do valor que o predicado relata. Em seguida, o computador continua com o que vem depois do bloco <code>se senão</code>.</p>
+    <p>
+        <a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.pt-br.html?topic=nyc_bjc%2F1-intro-loops.pt-br.topic&course=bjc4nyc.pt-br.html&novideo&noassignment"><img class="indent" src="/bjc-r/img/2-complexity/more-complicated-who-conditional.png" alt="se (escolha aleatória (1) a (4)) = (3) {
+        relatar (juntar (quem) (', quem') (faz o que) ( ) (quem) (,))
+    } senão {
+        relatar (quem)
+    }" title="se (escolha aleatória (1) a (4)) = (3) {
+        relatar (juntar (quem) (', quem') (faz o que) ( ) (quem) (,))
+    } senão {
+        relatar (quem)
+    }" /></a>
+        <a href="/bjc-r/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.pt-br.html?topic=nyc_bjc%2F1-intro-loops.pt-br.topic&course=bjc4nyc.pt-br.html&novideo&noassignment"><img class="indent" src="/bjc-r/img/1-introduction/move-tiny-no-comment.png" alt="quando a bandeira verde for clicada:
+repita até (tocando (Líder)?)
+{
+    apontar em direção a (Líder)
+    mover (1) passos
+}" title="quando a bandeira verde for clicada:
+repita até (tocando (Líder)?)
+{
+    apontar em direção a (Líder)
+    mover (1) passos
+}" /></a>
+    </p>
+
+    <div class="forYouToDo" id="first">
+        <ol>
+            <li><div class="newProject"><span class="text">"U2L3-Predicados"</span><img src="/bjc-r/img/icons/new-project-called.png" alt="Criar um novo projeto chamado U2L3-Predicados" title="Criar um novo projeto chamado U2L3-Predicados" /></div></li>
+            <li>
+                Em <a href="/bjc-r/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.pt-br.html?topic=nyc_bjc%2F1-intro-loops.pt-br.topic&course=bjc4nyc.pt-br.html&novideo&noassignment">Laboratório 5 da Unidade 1</a>, você criou um script para fazer o sprite seguir o mouse. <br />
+				<img class="indent" src="/bjc-r/img/2-complexity/U2-follow-that-mouse.png" alt="ir para (apontador do mouse)" title="ir para (apontador do mouse)"><br />
+                <div class="ap-standard">AAP-2.E parte a</div>
+                Agora, use um ou mais dos seguintes <em>operadores relacionais</em> para criar um script que permita usar o mouse para escrever no palco em duas cores, dependendo da posição do mouse no palco.<br />
+                <img class="indent" src="/bjc-r/img/2-complexity/relations.jpg" alt="blocos de predicado menos que, igual a e maior que" title="blocos de predicado menos que, igual a e maior que" />
+                <div class="endnote">
+                    <a href="#hint-two-colors" data-toggle="collapse" title="Clique para um exemplo de escrita no palco em duas cores.">Clique para um exemplo de escrita no palco em duas cores.</a>
+                    <div id="hint-two-colors" class="collapse">
+                        <img class="indent" data-gifffer="/bjc-r/img/2-complexity/writing-mouse-on-stage.gif" alt="usando o mouse para escrever 'mouse' no palco" title="usando o mouse para escrever 'mouse' no palco" />
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <div class="examFullWidth">
+        <div class="ap-standard">AAP-2.E.2</div>
+        <div class="pseudop">
+            Você pode ver esses cinco operadores relacionais: <pre class="inline">=, &gt;, &lt;, &ge;, &le;</pre> assim como um sexto: <pre class="inline">&ne;</pre>, que significa "não igual" e relata <code>falso</code> se as duas entradas forem iguais e caso contrário relata <code>verdadeiro</code> (se elas não forem iguais). Quando você escreve o bloco <img class="inline" src="/bjc-r/img/2-complexity/not-equal.png" alt="() não igual ()" title="() não igual ()" />, ele funcionará assim:<br />
+            <img class="indent" src="/bjc-r/img/2-complexity/not-equal-reporting-true.png" alt="(3) não igual (4) relatando verdadeiro" title="(3) não igual (4) relatando verdadeiro" />
+            <img class="indent" src="/bjc-r/img/2-complexity/not-equal-reporting-false.png" alt="(3) não igual (3) relatando falso" title="(3) não igual (3) relatando falso" />
+        </div>
+        <p>Esses seis operadores relacionais relatam todos um valor booleano (<code>verdadeiro</code> ou <code>falso</code>).</p>
+    </div>
+
+    <div class="forYouToDo">
+        <ol start="3">
+            <li>
+                <img class="imageRight" src="/bjc-r/img/2-complexity/draggable-check-box.png" alt="caixa arrastável marcada" title="caixa arrastável marcada">
+                Faça o sprite desenhar somente se o botão do mouse estiver pressionado, para que você possa desenhar formas desconectadas. Você precisará desmarcar a caixa "arrastável" acima da área de programação (mostrada à direita) antes de tentar isso (para que o Snap<em>!</em> não pense que você está tentando arrastar o sprite quando clicar).<br />
+				<div class="sidenote">Provavelmente, você desejará usar o bloco <img class="inline" src="/bjc-r/img/blocks/mouse-down.png" alt="mouse pressionado? bloco de predicado" title="mouse pressionado? bloco de predicado" />, que você pode encontrar na paleta Sensing.</div>
+                <img class="indent" src="/bjc-r/img/2-complexity/bicolor-hello.png" style="height:200px;" alt="olá bicolor impresso" title="olá bicolor impresso">
+            </li>
+        </ol>
+    </div>
+
+    <div class="vocabFullWidth">: <strong>Sequenciamento, Seleção, Iteração</strong>
+        <div class="ap-standard">Seleção: AAP-2.G.1; sequenciamento, seleção, iteração: AAP-2.A.4</div>
+        <p><strong>Seleção</strong> significa decidir (selecionar) qual parte de um algoritmo executar com base se uma condição é verdadeira ou falsa.</p>
+        <p>Todo algoritmo pode ser construído usando <strong>sequenciamento</strong> (seguindo etapas em ordem), <strong>seleção</strong> (decidindo) e <strong>iteração</strong> (repetindo).</p>
+    </div>
+
+</body>
+</html>

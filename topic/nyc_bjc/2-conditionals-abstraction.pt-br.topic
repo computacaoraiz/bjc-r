@@ -16,13 +16,13 @@ heading: Lab 2: Making Lists
     resource: Planning a Quiz App [/bjc-r/cur/programming/2-complexity/2-data-structures-art/2-quizzes.html]
     quiz: Checking Each Quiz Answer [/bjc-r/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.html]
 
-heading: Lab 3: Making Decisions
-    resource: What's a Predicate? [/bjc-r/cur/programming/2-complexity/3-predicates/1-what-is-predicate.html]
-    resource: Combining Predicates [/bjc-r/cur/programming/2-complexity/3-predicates/2-combining-predicates.html]
-    resource: Combining Conditionals [/bjc-r/cur/programming/2-complexity/3-predicates/3-combining-conditionals.html]
-	resource: Boolean Expression Experiments [/bjc-r/cur/programming/2-complexity/3-predicates/4-boolean-experiments.html]
-    resource: <code>Keep</code>ing Items from a List [/bjc-r/cur/programming/2-complexity/3-predicates/5-keeping-list-items.html]
-	resource: Solving a Word Puzzle [/bjc-r/cur/programming/2-complexity/3-predicates/6-solving-word-puzzle.html]
+heading: Lab 3: Tomando decisões
+    resource: O que é um predicado? [/bjc-r/cur/programming/2-complexity/3-predicates/1-what-is-predicate.pt-br.html]
+    resource: Combinando Predicados [/bjc-r/cur/programming/2-complexity/3-predicates/2-combining-predicates.pt-br.html]
+    resource: Combinando Condicionais [/bjc-r/cur/programming/2-complexity/3-predicates/3-combining-conditionals.pt-br.html]
+	resource: Experimentos de expressão booleana [/bjc-r/cur/programming/2-complexity/3-predicates/4-boolean-experiments.pt-br.html]
+    resource: <code>Manter</code>itens de uma lista [/bjc-r/cur/programming/2-complexity/3-predicates/5-keeping-list-items.pt-br.html]
+	resource: Resolvendo um quebra-cabeça de palavras [/bjc-r/cur/programming/2-complexity/3-predicates/6-solving-word-puzzle.pt-br.html]
 
 heading: Lab 4: Making Computers Do Math
     resource: The <code>Mod</code> Operator [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.html]

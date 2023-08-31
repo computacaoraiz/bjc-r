@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+    <title>Unidade 2 Laboratório 3: Tomando Decisões, Página 5</title>
+</head>
+
+<body>
+    <h2>Mantendo Itens de uma Lista</h2>
+    <div class="learn">
+        <p><strong>Nesta página</strong>, você usará predicados com o bloco <code>keep</code> para manter os itens em uma lista que possuem características específicas.</p>
+    </div>
+
+    <p>Como você sabe, predicados podem ser usados com condicionais para decidir <em>quando</em> fazer algo; eles também podem ser usados com o bloco <code>keep</code> para decidir <em>quais</em> coisas manter. O bloco <img class="inline" src="/bjc-r/img/blocks/keep.png" alt="manter itens 'entrada de predicado' de 'entrada de lista'" title="manter itens 'entrada de predicado' de 'entrada de lista'" /> recebe uma lista e um predicado como entrada e relata uma nova lista mantendo apenas os itens da lista de entrada que atendem à condição descrita pelo predicado.</p>
+
+    <p>
+        Por exemplo, a seguinte expressão encontrará palavras da <var>lista de palavras</var> cuja primeira letra é v. O <em>espaço em branco na entrada</em> é onde cada item da lista vai para decidir se ele será mantido.<br>
+        <img class="indent" src="/bjc-r/img/2-complexity/keep-example-6.png" alt="manter itens  ((letra(1) de ( )) = (v)) de (lista de palavras)" title="manter itens  ((letra(1) de ( )) = (v)) de (lista de palavras)">
+    </p>
+
+    <div class="vocabFullWidth"><strong>String</strong> e <strong>Índice</strong>
+        <ul>
+            <div class="ap-standard">AAP-1.C.4</div>
+            <li>Uma <strong>string</strong> é uma sequência ordenada de caracteres.</li>
+            <div class="ap-standard">AAP-1.C.3 (strings)</div>
+            <li><a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/2-quizzes.pt-br.html?topic=nyc_bjc%2F2-conditionals-abstraction.pt-br.topic&course=bjc4nyc.pt-br.html&novideo&noassignment" title="Você já aprendeu a palavra índice">Você já aprendeu</a> a palavra <strong>índice</strong> para a posição de um elemento em uma lista. A mesma palavra é usada para a posição de um caractere em uma string (por exemplo, uma letra em uma palavra). Portanto, a primeira entrada para o bloco <code>letra</code> é o índice.</li>
+        </ul>
+    </div>
+
+    <div class="takeNote">
+        <p><strong>Você escreve o predicado que faz a verificação e o <code>keep</code> aplica o predicado a cada item na lista de entrada e, em seguida, relata a lista de itens que tornam seu predicado <code>verdadeiro</code></strong>.</p>
+        <p>Observe que o espaço em branco na entrada do predicado é <em>obrigatório</em>; é aqui que cada item da lista vai à medida que é verificado pelo predicado.</p>
+        <div class="endnote">O bloco <code>letra</code> na paleta parece com <img src="/bjc-r/img/blocks/letter-1-of-world.png" alt="letra (1) de (mundo)" title="letra (1) de (mundo)" />. Você precisa excluir o "mundo" para que haja um espaço em branco onde você precisa.</div>
+    </div>
+
+    <div class="forYouToDo" id="first">
+        <ol>
+            <li>
+                <a class="run" href="/bjc-r/prog/2-complexity/U2L3-KeepingData.xml" target="_blank"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!" title="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!"></a>
+                <div class="endnote">Este projeto contém dois exemplos de expressões <code>keep</code> e um procedimento <code>inicializar lista</code> (você pode olhar dentro dele para ver o que ele faz).</div>
+            </li>
+            <li>
+                <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Converse com seu parceiro" title="Converse com seu parceiro" /> Experimente esses exemplos de <code>keep</code>. Discuta e, em seguida, explique <em>por escrito</em> o que essas expressões estão fazendo.<br />
+                <img class="indent" src="/bjc-r/img/2-complexity/keep-example-4.png" alt="manter itens  ((comprimento de ( )) = (5)) de {maçã, banana, laranja, uva, kiwi, manga, melancia} relatando {maçã, uva, manga}" title="manter itens  ((comprimento de ( )) = (5)) de {maçã, banana, laranja, uva, kiwi, manga, melancia} relatando {maçã, uva, manga}"><br />
+                <img class="indent" src="/bjc-r/img/2-complexity/keep-example-7.png" alt="manter itens  (não(é () um (número)?)) de {5, :), seis, 7, elefante, 3} relatando {5,7,3}" title="manter itens  (não(é () um (número)?)) de {5, :), seis, 7, elefante, 3} relatando {5,7,3}">
+            </li>
+        </ol>
+    </div>
+
+    <p>O primeiro exemplo mantém entradas de um certo <em>comprimento</em>; cada palavra na lista é perguntada se seu comprimento é 5 e apenas aquelas com cinco letras são relatadas. O segundo exemplo mantém entradas que <em>não são números</em>; cada item nesta lista é perguntado "Este item é <em>não</em> um número?" e apenas os elementos que não são números são relatados.</p>
+    <p>Existem dois blocos <code>comprimento</code> no Snap<em>!</em>. Um (<img class="inline" src="/bjc-r/img/blocks/length-of-blank-operator.png" alt="comprimento ()" title="comprimento ()" />) é projetado para strings, e o outro (<img class="inline" src="/bjc-r/img/blocks/length-list.png" alt="comprimento ()" title="comprimento ()" />) é projetado para listas.</p>
+
+    <div class="forYouToDo">
+        <ol start="3">
+            <li>
+                Se você não vir uma lista de palavras no palco, execute <code>inicializar lista</code>. Em seguida, use o <code>keep</code> para responder a estas perguntas:
+                <ol>
+                    <li>Quantas palavras de 12 letras estão na <var>lista de palavras</var>?</li>
+                    <li>Quantas palavras de 15 letras estão na <var>lista de palavras</var>?</li>
+                    <li>Quantas palavras de 17 letras estão na <var>lista de palavras</var>?</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

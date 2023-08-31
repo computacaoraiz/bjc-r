@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Unit 2 Lab 3: Making Decisions, Page 4</title>
+</head>
+<body>
+    <h2>Experiências de Expressões Booleanas</h2>
+    <div class="learn">
+        <p><strong>Nesta página,</strong> você vai associar expressões booleanas às imagens que elas ajudam a criar.</p>
+    </div>
+
+    <div class="forYouToDo">
+        <ol>
+            <li>
+                <img src="/bjc-r/img/icons/talk-with-your-partner-mini.png" alt="Converse com seu parceiro" title="Converse com seu parceiro" />
+                Leia este script com atenção, discuta com seu parceiro e certifique-se de entender por que ele produz essa imagem no palco:<br />
+                <img class="indent" src="/bjc-r/img/2-complexity/dotscript.png" alt="limpar
+levantar caneta
+para sempre {
+    ir para (posição aleatória)
+    se (posição x < posição y) {
+        definir cor da caneta como roxa
+    } senão {
+        definir cor da caneta como laranja
+    }
+    fazer um ponto
+}" title="limpar
+levantar caneta
+para sempre {
+    ir para (posição aleatória)
+    se (posição x < posição y) {
+        definir cor da caneta como roxa
+    } senão {
+        definir cor da caneta como laranja
+    }
+    fazer um ponto
+}" />
+                <img class="indent" src="/bjc-r/img/2-complexity/y-gtr-x.png" alt="Imagine uma linha inclinada a 45 graus para cima à direita, passando pelo centro do palco. A área acima e à esquerda dessa linha é roxa; a área abaixo e à direita é laranja." title="Imagine uma linha inclinada a 45 graus para cima à direita, passando pelo centro do palco. A área acima e à esquerda dessa linha é roxa; a área abaixo e à direita é laranja." />
+            </li>
+            <li>
+                Alterar a expressão booleana no bloco <code>se</code> muda a imagem.
+                Discuta por que a expressão <img src="/bjc-r/img/2-complexity/apple-script.png" alt="(posição x > 0) e (distância para a maçã > 100)" title="(posição x > 0) e (distância para a maçã > 100)" /> gera esta imagem:<br />
+                <img class="indent" src="/bjc-r/img/2-complexity/apple.png" alt="Há uma maçã no centro. Metade esquerda do palco é laranja; um círculo em torno da maçã também é laranja. O que resta é roxo." title="Há uma maçã no centro. Metade esquerda do palco é laranja; um círculo em torno da maçã também é laranja. O que resta é roxo." />
+            </li>
+            <div class="ap-standard">AAP-2.E parte b, AAP.-2.C</div>
+            <li>
+                Associe as expressões booleanas às imagens. Há mais expressões do que imagens.<br />
+                <div style="display: grid; grid-template-columns: auto auto;">
+                    <div>
+                        <ol type="A">
+                            <li><img src="/bjc-r/img/2-complexity/x-lt--100-script.png" alt="posição x < -100" title="posição x < -100" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/x-lt-100-script.png" alt="posição x < 100" title="posição x < 100" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/x+y-lt-100-script.png" alt="posição x + posição y < 100" title="posição x + posição y < 100" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/y-gt--100-script.png" alt="posição y > -100" title="posição y > -100" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/x+y-lt--100-script.png" alt="posição y < (-100 - posição x)" title="posição y < (-100 - posição x)" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/y-lt--100-script.png" alt="posição y < -100" title="posição y < -100" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/dist-gt-100-script.png" alt="distância para a maçã > 100" title="distância para a maçã > 100" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/x-gt--100-script.png" alt="posição x > -100" title="posição x > -100" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/x+y-gt-100-script.png" alt="posição y > (100 - posição x)" title="posição y > (100 - posição x)" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/xy-gt-0-script.png" alt="(posição x * posição y) > 0" title="(posição x * posição y) > 0" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/x+y-gt--100-script.png" alt="(posição x + posição y) > -100" title="(posição x + posição y) > -100" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/xy-lt-0-script.png" alt="(posição x * posição y) < 0" title="(posição x * posição y) < 0" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/quadratic.png" alt="posição y > ((posição x ^ 2) / 100)" title="posição y > ((posição x ^ 2) / 100)" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/dir-to-apple-gt-135-script.png" alt="direção para a maçã > 135" title="direção para a maçã > 135" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/y-lt-100-script.png" alt="posição y < 100" title="posição y < 100" /></li>
+                            <li><img src="/bjc-r/img/2-complexity/y-gt-100-script.png" alt="posição y > 100" title="posição y > 100" /></li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <ol class="horizontal">
+                            <li><img src="/bjc-r/img/2-complexity/xy-gt-0.png" alt="Palco dividido em quartos por seus eixos x e y. O canto superior esquerdo e o canto inferior direito são laranjas; o canto superior direito e o canto inferior esquerdo são roxos." title="Palco dividido em quartos por seus eixos x e y. O canto superior esquerdo e o canto inferior direito são laranjas; o canto superior direito e o canto inferior esquerdo são roxos." /></li>
+                            <li><img src="/bjc-r/img/2-complexity/x-lt--100.png" alt="Barra roxa vertical estreita no lado esquerdo do palco, o resto do palco é laranja." title="Barra roxa vertical estreita no lado esquerdo do palco, o resto do palco é laranja." /></li>
+                            <li><img src="/bjc-r/img/2-complexity/dist-gt-100.png" alt="Maçã no centro do palco, círculo laranja ao seu redor, e roxo por todo o resto do palco." title="Maçã no centro do palco, círculo laranja ao seu redor, e roxo por todo o resto do palco." /></li>
+                            <li><img src="/bjc-r/img/2-complexity/x-gt-100.png" alt="Barra laranja vertical estreita no lado esquerdo do palco, o resto do palco é roxo." title="Barra laranja vertical estreita no lado esquerdo do palco, o resto do palco é roxo." /></li>
+                            <li><img src="/bjc-r/img/2-complexity/xy-lt-0.png" alt="Palco dividido em quartos por seus eixos x e y. O canto superior esquerdo e o canto inferior direito são roxos; o canto superior direito e o canto inferior esquerdo são laranjas." title="Palco dividido em quartos por seus eixos x e y. O canto superior esquerdo e o canto inferior direito são roxos; o canto superior direito e o canto inferior esquerdo são laranjas." /></li>
+                            <li><img src="/bjc-r/img/2-complexity/y-lt-100.png" alt="Barra laranja horizontal estreita na parte superior do palco, o resto do palco é roxo." title="Barra laranja horizontal estreita na parte superior do palco, o resto do palco é roxo." /></li>
+                            <li><img src="/bjc-r/img/2-complexity/dir-to-apple-gt-135.png" alt="Maçã no centro do palco. A área ao redor da maçã no lado esquerdo entre o sul (para baixo) e noroeste (para cima e à esquerda) é laranja. A área entre o sul e o noroeste, mas à direita, é roxa." title="Maçã no centro do palco. A área ao redor da maçã no lado esquerdo entre o sul (para baixo) e noroeste (para cima e à esquerda) é laranja. A área entre o sul e o noroeste, mas à direita, é roxa." /></li>
+                            <li><img src="/bjc-r/img/2-complexity/y-gt--100.png" alt="Barra laranja horizontal estreita na parte inferior do palco, o resto do palco é roxo." title="Barra laranja horizontal estreita na parte inferior do palco, o resto do palco é roxo." /></li>
+                            <li><img src="/bjc-r/img/2-complexity/parabola.png" alt="O interior de uma parábola que toca o centro do palco e abre para cima é roxo. A área abaixo da parábola é laranja." title="O interior de uma parábola que toca o centro do palco e abre para cima é roxo. A área abaixo da parábola é laranja." /></li>
+                            <li><img src="/bjc-r/img/2-complexity/x+y-lt--100.png" alt="Imagine uma linha inclinada a 45 graus para baixo da esquerda para a direita. A linha atinge a borda esquerda do palco, mas não exatamente no canto superior; ela atinge a borda inferior do palco cerca de 2/3 do caminho a partir da esquerda. A área abaixo e à esquerda dessa linha é roxa; a área acima e à direita é laranja." title="Imagine uma linha inclinada a 45 graus para baixo da esquerda para a direita. A linha atinge a borda esquerda do palco, mas não exatamente no canto superior; ela atinge a borda inferior do palco cerca de 2/3 do caminho a partir da esquerda. A área abaixo e à esquerda dessa linha é roxa; a área acima e à direita é laranja." /></li>
+                            <li><img src="/bjc-r/img/2-complexity/y-gt-100.png" alt="Barra roxa horizontal estreita na parte superior do palco, o resto do palco é laranja." title="Barra roxa horizontal estreita na parte superior do palco, o resto do palco é laranja." /></li>
+                        </ol>
+                    </div>
+                </div>
+            </li>
+            <li>Compare as respostas com outro par e resolva quaisquer desacordos.</li>
+            <li>No papel, faça esboços das imagens para as expressões que você não associou a imagens no problema anterior (sem usar o Snap<em>!</em>).</li>
+            <li>
+                <a href="/bjc-r/prog/2-complexity/U2L3-Dots.xml" class="run"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!" title="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!"></a>
+            </li>
+            <div class="ap-standard">AAP-2.F parte a</div>
+            <li>
+                Invente expressões booleanas que você possa inserir no script da imagem de ponto para gerar estas imagens:<br />
+                <ol class="horizontal">
+                    <li><img src="/bjc-r/img/2-complexity/x-lt-100-or-y-gt-100.png" alt="O palco é principalmente roxo, exceto por um retângulo laranja alto na borda direita, que não vai até o topo (então há roxo acima dele)." title="O palco é principalmente roxo, exceto por um retângulo laranja alto na borda direita, que não vai até o topo (então há roxo acima dele)." /></li>
+                    <li><img src="/bjc-r/img/2-complexity/x-lt-100-and-y-gt-100.png" alt="O palco é principalmente laranja, exceto por um retângulo roxo largo no canto superior esquerdo, que se estende cerca de 2/3 do caminho até a direita." title="O palco é principalmente laranja, exceto por um retângulo roxo largo no canto superior esquerdo, que se estende cerca de 2/3 do caminho até a direita." /></li>
+                    <li><img src="/bjc-r/img/2-complexity/x-y-lt--100.png" alt="Imagine uma linha inclinada a 45 graus para cima da esquerda para a direita. A linha atinge a borda esquerda do palco quase na parte inferior e atinge a borda superior cerca de 2/3 do caminho a partir da esquerda. A área acima e à esquerda dessa linha é roxa; a área abaixo e à direita é laranja." title="Imagine uma linha inclinada a 45 graus para cima da esquerda para a direita. A linha atinge a borda esquerda do palco quase na parte inferior e atinge a borda superior cerca de 2/3 do caminho a partir da esquerda. A área acima e à esquerda dessa linha é roxa; a área abaixo e à direita é laranja." /></li>
+                </ol>
+                <p style="clear: both; height: 0px;"></p>
+				</li>
+			</ol>
+		</div>
+
+
+
+	</body>
+</html>
