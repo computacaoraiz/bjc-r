@@ -24,10 +24,10 @@ heading: Lab 3: Tomando decisões
     resource: <code>Manter</code>itens de uma lista [/bjc-r/cur/programming/2-complexity/3-predicates/5-keeping-list-items.pt-br.html]
 	resource: Resolvendo um quebra-cabeça de palavras [/bjc-r/cur/programming/2-complexity/3-predicates/6-solving-word-puzzle.pt-br.html]
 
-heading: Lab 4: Making Computers Do Math
-    resource: The <code>Mod</code> Operator [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.html]
-    resource: Making a Mathematical Library [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.html]
-    resource: More Mathematical Reporters [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.html]
+heading: Lab 4: Fazendo computadores fazerem matemática
+    resource: O operador <code>Mod</code> [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.pt-br.html]
+    resource: Fazendo uma biblioteca matemática [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.pt-br.html]
+    resource: Mais repórteres matemáticos [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.pt-br.html]
 
 heading: Lab 5: Copyrights
 	resource: Copyright [/bjc-r/cur/programming/2-complexity/5-copyrights/1-copyright.html]
