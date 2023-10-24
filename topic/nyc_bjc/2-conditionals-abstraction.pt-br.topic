@@ -2,7 +2,7 @@ title: Unidade 2: Abstrações
 
 {
 
-heading: Lab 1: Jogos xxx
+heading: Lab 1: Jogos
 	quiz: Iniciando um jogo de adivinhação de números [/bjc-r/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.pt-br.html]
 	quiz: Verificando o palpite do jogador [/bjc-r/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.pt-br.html]
 	resource: Depurando e ampliando seu jogo de adivinhação de números [/bjc-r/cur/programming/2-complexity/1-variables-games/3-debugging-extending.pt-br.html]
