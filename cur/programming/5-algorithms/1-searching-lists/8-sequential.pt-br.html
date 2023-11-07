@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+    <title>Unidade 5 Laboratório 1: Algoritmos de Busca e Eficiência, Página 8</title>
+</head>
+
+<body>
+    <h2>Paralelismo</h2>
+    <div class="learn">
+        <p><strong>Nesta página,</strong> você aprenderá como executar vários scripts em paralelo pode reduzir o tempo total necessário para executar um algoritmo.</p>
+    </div>
+    <p>No Snap<em>!</em>, você está acostumado a ver vários scripts que são executados independentemente, possivelmente associados a diferentes sprites. Isso é algo semelhante à <em>computação paralela</em>. Assim, se tivéssemos um computador diferente para cada sprite, isso seria verdadeiro paralelismo. No entanto, há apenas um computador, e ele divide sua atenção entre os processos, executando um pouco de um e depois um pouco do próximo. Especificamente, ele faz alternâncias no final dos loops (<code>forever</code>, <code>repeat</code>, etc.).</p>
+
+    <div class="vocabFullWidth">: <strong>Computação Sequencial</strong> e <strong>Paralela</strong>
+        <div class="ap-standard">CSN-2.A.1, CSN-2.A.2</div>
+        <p>
+            Esta seção aborda dois modelos computacionais:
+            <ul>
+                <li>Na <strong>computação sequencial</strong>, as operações são realizadas uma de cada vez em ordem.</li>
+                <li>Na <strong>computação paralela</strong>, o programa é dividido em etapas menores, algumas das quais são executadas ao mesmo tempo. Computadores modernos têm múltiplos processadores (2, 4 ou 8) em um único computador, permitindo que você faça processamento paralelo em pequena escala na máquina em sua mesa.</li>
+            </ul>
+        </p>
+    </div>
+    <div class="ap-standard">CSN-2.A.4</div>
+    <p>Você pode comparar a eficiência de duas soluções algorítmicas diferentes para um problema ao comparar o tempo que elas levam para realizar a mesma tarefa.</p>
+
+    <div class="forYouToDo" id="first">
+        <ol>
+            <li>
+                <!-- Questão 1 -->
+                <div class="assessment-data" type="multiplechoice" identifier="Quanto tempo levará para executar este script sequencial?"
+                    hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri1" shuffle="true">
+                    <div class="prompt">
+                        <div class="ap-standard">CSN-2.A parte b, CSN-2.A.5</div>
+                        Quanto tempo levará para executar este programa <em>sequencial</em>?<br />
+                        <img class="indent" src="/bjc-r/img/5-algorithms/quizlet-sequential.png" alt="wait (6), wait (4), wait (8)" title="wait (6), wait (4), wait (8)" />
+                    </div>
+                    <div class="choice" identifier="c1">
+                        <div class="text">18</div>
+                        <div class="feedback">Correto!</div>
+                    </div>
+                    <div class="choice" identifier="c2">
+                        <div class="text">8</div>
+                        <div class="feedback">Uma solução sequencial leva tanto tempo quanto a soma dos tempos de execução de todas as etapas.</div>
+                    </div>
+                    <div class="choice" identifier="c3">
+                        <div class="text">4</div>
+                        <div class "feedback">Uma solução sequencial leva tanto tempo quanto a soma dos tempos de execução de todas as etapas.</div>
+                    </div>
+                    <div class="choice" identifier="c4">
+                        <div class="text">6</div>
+                        <div class="feedback">Uma solução sequencial leva tanto tempo quanto a soma dos tempos de execução de todas as etapas.</div>
+                    </div>
+                    <div class="responseDeclaration" identifier="ri1">
+                        <div class="correctResponse" identifier="c1"></div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <div class="ap-standard">CSN-2.A.5</div>
+    <p>O tempo de execução de um algoritmo sequencial é a soma dos tempos de execução de todas as etapas.</p>
+
+    <div class="forYouToDo">
+        <ol start="2">
+            <li>
+                <!-- Questão 2 -->
+                <div class="assessment-data" type="multiplechoice" identifier="Quanto tempo levará para executar este script paralelo?"
+                    hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri2" shuffle="true">
+                    <div class="prompt">
+                        <div class="ap-standard">CSN-2.A parte b, CSN-2.A.6</div>
+                        Quanto tempo levará para executar este programa <em>paralelo</em>?<br />
+                        <img class="indent" src="/bjc-r/img/5-algorithms/quizlet-parallel-1.png" alt="broadcast (go) and wait, wait (6) secs" title="broadcast (go) and wait, wait (6) secs" />
+                        <img class="indent" src="/bjc-r/img/5-algorithms/quizlet-parallel-2.png" alt="when I receive (go): wait (4) secs" title="when I receive (go): wait (4) secs" />
+                        <img class="indent" src="/bjc-r/img/5-algorithms/quizlet-parallel-3.png" alt="when I receive (go): wait (8) secs" title="when I receive (go): wait (8) secs" />
+                    </div>
+                    <div class="choice" identifier="c1">
+                        <div class="text">18</div>
+                        <div class="feedback">As duas tarefas <code>when I receive</code> ocorrem em paralelo, não uma após a outra.</div>
+                    </div>
+                    <div class="choice" identifier="c2">
+                        <div class="text">8</div>
+                        <div class="feedback">O tempo paralelo mais longo importa, mas não é a única coisa que contribui para o tempo total.</div>
+                    </div>
+                    <div class="choice" identifier="c3">
+                        <div class="text">6</div>
+                        <div class="feedback"><code>Broadcast and wait</code> aguarda até que todas as tarefas que iniciou tenham terminado.</div>
+                    </div>
+                    <div class="choice" identifier="c4">
+                        <div class="text">14</div>
+                        <div class="feedback">Correto!</div>
+                    </div>
+                    <div class="responseDeclaration" identifier="ri2">
+                        <div class="correctResponse" identifier="c4"></div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+
+    <div class="ap-standard">CSN-2.B.1, CSN-2.B.2, CSN-2.B.3, CSN-2.B.4</div>
+    <div class="vocabBig">
+        <div class="ap-standard">CSN-2.A.3</div>
+        <p><strong>Computação distribuída</strong> é uma forma de computação paralela que utiliza vários computadores (possivelmente espalhados ao redor do mundo).</p>
+    </div>
+    <p>Escrever um programa que faz nada além de esperar é, claro, irrealista, mas o que <em>é</em> realista é que na maioria dos problemas, não há uma solução puramente paralela. Alguma parte da computação deve ser feita sequencialmente. Na pergunta anterior, a parte sequencial é modelada por <code>esperar 6 segundos</code>. A paralelização com esse exemplo bobo parece trivial, mas imagine que você trabalha para o Google. Milhões de consultas de pesquisa e edições de páginas da web aconteceram hoje, e é seu trabalho processá-las. Se eles não tivessem enormes fazendas de servidores com milhares de computadores em cada edifício, eles não dariam conta. A computação distribuída permite que você <em>dimensione</em> problemas muito grandes.</p>
+    <div class="ap-standard">CSN-2.A.6</div>
+    <p>
+        <img class="noshadow imageRight" src="/bjc-r/img/5-algorithms/sequential-parallel-parts.png" alt="diagrama do algoritmo para encontrar o comprimento médio das palavras em uma lista de 100.000 palavras: as duas primeiras etapas (Dividir a lista de palavras, Enviar tarefas para cada outro computador) são rotuladas como 'sequenciais'; em seguida, setas indicam ramificação em várias tarefas (Contar todas as palavras 'A', Contar todas as palavras 'B', ..., Contar todas as palavras 'Z') que são rotuladas como 'paralelas'; finalmente, setas indicam a reunião desses resultados de volta em uma única sequência de três etapas (Adicionar os 26 resultados parciais, Dividir essa soma pelo número total de palavras, Relatar a média) rotuladas como 'sequenciais'" title="diagrama do algoritmo para encontrar o comprimento médio das palavras em uma lista de 100.000 palavras: as duas primeiras etapas (Dividir a lista de palavras, Enviar tarefas para cada outro computador) são rotuladas como 'sequenciais'; em seguida, setas indicam ramificação em várias tarefas (Contar todas as palavras 'A', Contar todas as palavras 'B', ..., Contar todas as palavras 'Z') que são rotuladas como 'paralelas'; finalmente, setas indicam a reunião desses resultados de volta em uma única sequência de três etapas (Adicionar os 26 resultados parciais, Dividir essa soma pelo número total de palavras, Relatar a média) rotuladas como 'sequenciais'" style="background: white;"/>
+        Como exemplo mais específico, suponha que você queira saber o comprimento médio das palavras em uma lista de 100.000 palavras. Você pode dividir a tarefa entre vários computadores (um para cada letra inicial). Cada computador adiciona os comprimentos de todas as palavras atribuídas a ele (todas as palavras "A", todas as palavras "B", etc.). Em seguida, um computador precisa adicionar os 26 resultados parciais e dividir pelo número total de palavras para encontrar a média. Para calcular o tempo de execução dessa solução paralela, você somaria o tempo de execução da parte paralela mais longa (o tempo de execução para a letra com mais palavras) ao tempo de execução da parte sequencial (adicionar os 26 resultados parciais e dividir a soma pelo número total de palavras).
+    </p>
+    <div class="forYouToDo" style="clear: right;">
+        <p>Porque cada cálculo inclui uma parte sequencial, há um limite para o quanto você pode acelerar uma tarefa adicionando <em>processadores</em>.</p>
+        <div class="vocab">
+            <p>Um <strong>processador</strong> é uma peça de circuito dentro de um computador que processa as instruções dos programas de computador.</p>
+            <p class="center"><img src="/bjc-r/img/6-computers/Hardware_img/CPU_small.jpg" alt="CPU" title="CPU"/></p>
+            <p><small>Créditos da imagem: Usuário da Wikipedia Solipsist</small></p>
+        </div>
+        <ol start="3">
+            <div class="ap-standard">CSN-2.A partes a e b, CSN-2.A.4, CSN-2.B.5</div>
+            <li>
+                Suponha que uma tarefa inclua um minuto de etapas sequenciais e uma parte paralelizável que levaria uma hora se fosse feita sequencialmente. Preencha esta tabela:
+                <table class="bordered standard nowrap center" summary="Tabela de número de processadores versus tempo total de execução do programa">
+                    <tr>
+                        <th scope="col">Número de Processadores</th>
+                        <th scope="col">Tempo Total Necessário</th>
+                        <th scope="col">Tipo de Solução</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>61 minutos (1 h + 1 min)</td>
+                        <td>Solução sequencial</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>31 minutos (30 min + 1 min)</td>
+                        <td rowspan="10">Soluções paralelas</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>60</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>120</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>240</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>480</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </li>
+            <div class="ap-standard">CSN-2.B.5</div>
+            <li>Considere a lei dos retornos decrescentes:
+                <ol>
+                    <li>Se você tem um processador e adiciona mais um, quanto tempo você economiza?</li>
+                    <li>Se você tem 240 processadores e adiciona mais 240, quanto tempo você economiza?</li>
+                    <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Converse com seu parceiro" title="Converse com seu parceiro" /> Quantos processadores você acha que valem a pena ter para este problema?</li>
+                </ol>
+            </li>
+            <div class="endnote">
+                <a href="#hint-diminishing" data-toggle="collapse" title="O que é a lei dos retornos decrescentes?">O que é a lei dos retornos decrescentes?</a>
+                <div id="hint-diminishing" class="collapse">A lei dos retornos decrescentes é uma ideia da economia que basicamente diz que, após certo ponto, mais não é necessariamente melhor. Por exemplo, se você ganhasse cinco presentes de aniversário, você poderia ficar mais feliz do que se ganhasse apenas um, mas receber mais presentes não significa necessariamente que seja melhor. Imagine que você recebesse cem presentes. Você ficaria entediado abrindo todos eles e provavelmente se sentiria sobrecarregado. E receber mil ou um milhão de presentes não tornaria seu aniversário mais feliz. A mesma regra se aplica ao bolo de aniversário!</div>
+            </div>
+        </ol>
+    </div>
+    <div class="vocabFullWidth">
+        <div class "ap-standard">CSN-2.A.7</div>
+        <p>
+            Programadores se referem ao <strong>speedup</strong> de uma solução paralela para descrever o quão mais rápido a solução paralela é em comparação com a solução sequencial:<br />
+            <span class="katex indent">\text{speedup} = \frac{\text{tempo sequencial}}{\text{tempo paralelo}}</span>
+        </p>
+    </div>
+    <p>O hardware de computador é muito confiável; é raro que o hardware quebre durante a execução de um programa. Mas na computação distribuída com dezenas de milhares de computadores trabalhando no mesmo problema, é <em>provável</em> que um deles falhe. (Se a probabilidade de um computador falhar durante a execução de um programa for 0,0001, e você usar 10.000 computadores, então a probabilidade de um deles falhar é cerca de 0,368&mdash;cerca de um terço do tempo!) Portanto, o software deve compensar verificando se as máquinas estão funcionando e reatribuindo as tarefas de um computador com defeito para um que esteja funcionando.</p>
+    <p>Também, quando você faz coisas em paralelo, os processos paralelos podem interferir uns com os outros.
+        <div class="endnote">
+            <a href="#hint-banking" data-toggle="collapse" title="Um exemplo de processos interferentes com operações bancárias...">Um exemplo de processos interferentes com operações bancárias...</a>
+            <div id="hint-banking" class="collapse">
+                <p>
+                    Se uma pessoa sacar dinheiro de um caixa eletrônico ao mesmo tempo que outra pessoa em outro caixa eletrônico sacar dinheiro da mesma conta, você poderá se deparar com uma situação como esta:
+                    <table class="bordered standard nowrap center" summary="Sequência de eventos possível quando duas transações de caixa eletrônico ocorrem em paralelo">
+                    <tr>
+                        <td rowspan="9" style="vertical-align: middle; border-left: 0; border-top: 0; border-bottom: 0;"><img class="inline noshadow" src="/bjc-r/img/5-algorithms/time-arrow.png" alt="seta apontando para baixo rotulada 'tempo'" title="seta apontando para baixo rotulada 'tempo'" /></td>
+                        <th scope="col">Caixa Eletrônico 1</th>
+                        <th scope="col">Caixa Eletrônico 2</th>
+                    </tr>
+                    <tr>
+                        <td>verifica o saldo (US$100)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>verifica o saldo (US$100)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>verifica se o valor solicitado (US$40) está disponível</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>ajusta o saldo (US$60)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>entrega o dinheiro</td>
+                    </tr>
+                    <tr>
+                        <td>verifica se o valor solicitado (US$20) está disponível</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ajusta o saldo (US$80)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>entrega o dinheiro</td>
+                        <td></td>
+                    </tr>
+                </table>
+                </p>
+                <p>Porque o Caixa Eletrônico 2 alterou o saldo da conta após o Caixa Eletrônico 1 verificar o saldo, o Caixa Eletrônico 1 não sabia que o saldo havia sido alterado. A conta bancária acabou com um saldo de US$80, mesmo que tenha começado com US$100 e um total de US$60 tenha sido sacado.</p>
+            </div>
+        </div>
+    </p>
+    <p>Por essas razões e outras, um programa paralelo é mais difícil de escrever e depurar do que um programa sequencial.</p>
+    
+    <div class="forYouToDo">
+        <ol start="5">
+            <div class="ap-standard">CSN-2.B</div>
+            <li>
+                <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Converse com Seu Parceiro" title="Converse com Seu Parceiro" />
+                Identifique alguns benefícios e desafios potenciais da computação paralela e distribuída.
+                <img class="inline" src="/bjc-r/img/icons/write-out-thoughts.png" alt="Registre Seus Pensamentos" title="Registre Seus Pensamentos" />
+            </li>
+        </ol>
+    </div>
+    
+    <div class="ifTime">
+        <ol start="6">
+            <li>
+                <!-- Questão 3 -->
+                <div class="assessment-data" type="multiplechoice" identifier="Qual é a aceleração para esta solução paralela em comparação com a solução sequencial?"
+                    hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri3" shuffle="true">
+                    <div class="prompt">
+                        Qual é a <em>aceleração</em> para esta solução paralela em comparação com a solução sequencial?<br />
+                        <ul>
+                            <li>Solução sequencial: <img class="inline" src="/bjc-r/img/5-algorithms/quizlet-sequential.png" alt="esperar (6), esperar (4), esperar (8)" title="esperar (6), esperar (4), esperar (8)" /></li>
+                            <li>
+                                Solução paralela:
+                                <img class="inline" src="/bjc-r/img/5-algorithms/quizlet-parallel-1.png" alt="transmitir (ir) e esperar, esperar (6) segundos" title="transmitir (ir) e esperar, esperar (6) segundos" />
+                                <img class="inline" src="/bjc-r/img/5-algorithms/quizlet-parallel-2.png" alt="quando eu receber (ir): esperar (4) segundos" title="quando eu receber (ir): esperar (4) segundos" />
+                                <img class "inline" src = "/bjc-r/img/5-algorithms/quizlet-parallel-3.png" alt = "quando eu receber (ir): esperar (8) segundos" title = "quando eu receber (ir): esperar (8) segundos" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="choice" identifier="c1">
+                        <div class="text"><span class="katex">\frac{18}{14}</span></div>
+                        <div class="feedback">
+                            Correto!
+                        </div>
+                    </div>
+                    <div class="choice" identifier="c2">
+                        <div class="text"><span class="katex">\frac{14}{18}</span></div>
+                        <div class="feedback">
+                            A aceleração é calculada dividindo o tempo sequencial pelo tempo paralelo.
+                        </div>
+                    </div>
+                    <div class="choice" identifier="c3">
+                        <div class="text"><span class="katex">\frac{18}{6}</span></div>
+                        <div class="feedback">
+                            <code>Transmitir e esperar</code> aguarda até que todas as tarefas que iniciou tenham terminado.
+                        </div>
+                    </div>
+                    <div class="choice" identifier="c4">
+                        <div class="text"><span class="katex">\frac{18}{8}</span></div>
+                        <div class="feedback">
+                            O tempo paralelo mais longo importa, mas não é a única coisa que contribui para o tempo paralelo total.
+                        </div>
+                    </div>
+                    <div class="responseDeclaration" identifier="ri3">
+                        <div "responseDeclaration" identifier="c1"></div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+    </div>
+    

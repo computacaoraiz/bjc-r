@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Unidade 5 Laboratório 1: Algoritmos de Busca e Eficiência, Página 7</title>
+	</head>
+
+	<body>
+    	<h2>Removendo Duplicatas</h2>
+		<div class="learn">
+        	<p>
+                <strong>Nesta página,</strong> você aprenderá uma técnica recursiva para remover duplicatas de uma lista.<br />
+                <img class="indent" src="/bjc-r/img/5-algorithms/distinct-reporter-reporting.png" alt="itens distintos de (lista (maçãs) (cenouras) (bananas) (laranjas) (bananas) (pão) (cenouras)) relatando { maçãs, laranjas, bananas, pão, cenouras }" title="itens distintos de (lista (maçãs) (cenouras) (bananas) (laranjas) (bananas) (pão) (cenouras)) relatando { maçãs, laranjas, bananas, pão, cenouras }" />
+		    </p>
+        </div>
+
+        <p>Suponha que você tenha uma lista de itens e deseje saber se os elementos da lista são <em>distintos</em>. Por exemplo, você pode querer ter certeza de que nada na sua lista de compras se repete.</p>
+        <p>Como primeiro passo, vamos apenas responder à pergunta sim/não: existem duplicatas na sua lista?<br />
+            <img class="indent" src="/bjc-r/img/5-algorithms/distinct-predicate-reporting.png" alt="os itens de (lista (maçãs) (cenouras) (bananas) (laranjas) (bananas) (pão) (cenouras)) são distintos? relatando falso" title="os itens de (lista (maçãs) (cenouras) (bananas) (laranjas) (bananas) (pão) (cenouras)) são distintos? relatando falso" />
+        </p>
+
+		<div class="forYouToDo" id="first">
+			<ol>
+                <li>Experimente com o bloco <img class="inline nopadtb" src="/bjc-r/img/blocks/all-but-first.png" alt="todos exceto o primeiro de 'slot de entrada da lista'" title="todos exceto o primeiro de 'slot de entrada da lista'" /> usando algumas listas de entrada diferentes. <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner-mini.png" alt="Converse com Seu Parceiro" title="Converse com Seu Parceiro" /> O que esse bloco relata?</li>
+                <li>
+                    Termine de construir o predicado <code>os itens são distintos?</code>, que está iniciado abaixo. Como você está escrevendo um predicado, seu procedimento deve sempre relatar <code>verdadeiro</code> ou <code>falso</code>.<br />
+                    <div class="sidenote">
+                        <a href="#hint-predicate" data-toggle="collapse" title="Tente fazer isso sem esta dica sobre o predicado 'os itens são distintos?'">Tente fazer isso sem esta dica.</a>
+                        <div id="hint-predicate" class="collapse">Se o programa chegar ao terceiro bloco <code>report</code> no final, o que isso lhe diz sobre os itens na lista?</div>
+                    </div>
+                    <img class="indent" src="/bjc-r/img/5-algorithms/distinct-predicate-starter.png" alt="os itens de (dados) são distintos?
+{
+	if (é (dados) vazio?)
+	{
+		report ()
+	}
+	if ((todos exceto o primeiro de (dados)) contém ())
+	{
+		report ()
+	}
+	report (os itens de () são distintos?)
+}" title="os itens de (dados) são distintos?
+{
+	if (é (dados) vazio?)
+	{
+		report ()
+	}
+	if ((todos exceto o primeiro de (dados)) contém ())
+	{
+		report ()
+	}
+	report (os itens de () são distintos?)
+}" />
+                    <div class="endnote">
+                        Observe que este procedimento chama a si mesmo no final. (É <em>recursivo</em.) Isso não funcionará se a entrada para essa chamada for a mesma que a entrada original. Portanto, você não pode dizer <img class="inline" src="/bjc-r/img/5-algorithms/report-are-items-of-data-distinct.png" alt="relatório (os itens de (dados) são distintos?)" title="relatório (os itens de (dados) são distintos?)" />. Em vez disso, você deve usar um valor de entrada menor.
+                    </div>
+                </li>
+				<li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Converse com Seu Parceiro" title="Converse com Seu Parceiro" /> Se você duplicasse o tamanho da lista, esse algoritmo levaria o mesmo tempo? O dobro do tempo? Mais do que o dobro do tempo? </li>
+            </ol>
+        </div>
+
+        <p>Para sua lista de compras, você não gostaria apenas de saber se há duplicatas. Você gostaria de ter uma nova lista com as duplicatas removidas.</p>
+
+        <div class="forYouToDo">
+			<ol start="4">
+                <li>Experimente com o bloco <img class="inline nopadtb" src="/bjc-r/img/blocks/in-front-of-full-size.png" alt="() na frente do 'slot de entrada da lista'" title="() na frente do 'slot de entrada da lista'" /> usando algumas entradas diferentes. <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner-mini.png" alt="Converse com Seu Parceiro" title="Converse com Seu Parceiro" /> O que esse bloco relata?</li>
+                <li>
+                    Construa um relatório <code>itens distintos de</code> usando uma estrutura semelhante à do predicado <code>os itens são distintos?</code>.
+                    <div class="endnote">
+                        <img class="imageRight" src="/bjc-r/img/5-algorithms/distinct-reporter-starter.png" alt="itens distintos de (dados)
+{
+	if (é (dados) vazio?)
+	{
+		report ()
+	}
+	if ((todos exceto o primeiro de (dados)) contém ())
+	{
+		report ()
+	}
+	report ()
+}" title="itens distintos de (dados)
+{
+	if (é (dados) vazio?)
+	{
+		report ()
+	}
+	if ((todos exceto o primeiro de (dados)) contém ())
+	{
+		report ()
+	}
+	report ()
+}" /><p>O algoritmo para este bloco tomará as mesmas decisões que no <code>os itens são distintos?</code>. Mas esse era um predicado. Este deve relatar uma lista. Portanto, examine os três blocos <code>report</code> em seu código para o predicado <code>os itens são distintos?</code> e decida o que eles devem relatar para o relatório <code>itens distintos de</code>.</p>
+                        <p>
+                            <a href="#hint-reporter" data-toggle="collapse" title="Precisa de outra dica sobre o relatório <code>itens distintos de</code>?">Precisa de outra dica?</a>
+                            <div id="hint-reporter" class="collapse">
+                                <ul>
+                                    <li>Se a lista estiver vazia, o que o <code>itens distintos de</code> deve relatar?</li>
+                                    <li>
+                                        Se o primeiro item da lista aparecer no resto da lista, não importa qual cópia você deixa de fora. Existe uma maneira fácil de obter uma versão da lista sem uma dessas cópias?
+                                        <ul>
+                                            <li>E se houver outras duplicatas nessa lista?</li>
+                                        </ul>
+                                    </li>
+                                    <li>Se o computador chegar ao terceiro bloco <code>report</code>, o que isso lhe diz sobre o primeiro item da lista? Você deseja que o primeiro item faça parte da lista que você relata?</li>
+                                </ul>
+                            </div>
+                        </p>
+                        <p style="clear: both; height: 0px;"></p>
+                    </div>
+                </li>
+                <li>Teste-o. Certifique-se de escolher bons casos de teste: mais de um par de duplicatas, mais de dois itens do mesmo valor, duplicatas lado a lado na lista, etc.</li>
+				<li><div class="saveAs"><span class="text">"U5L1-Removendo-Duplicatas"</span><img src="/bjc-r/img/icons/save-this-as.png" alt="Salve seu trabalho como U5L1-Removendo-Duplicatas" title="Salve seu trabalho como U5L1-Removendo-Duplicatas" /></div></li>
+            </ol>
+        </div>
+
+    </body>
+</html>

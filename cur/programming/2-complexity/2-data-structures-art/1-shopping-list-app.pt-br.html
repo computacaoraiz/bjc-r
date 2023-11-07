@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Unidade 2 Laboratório 2: Fazendo listas, página 1</title>
+	</head>
+
+	<body>
+        <h2>Aplicativo de lista de compras</h2>
+		<div class="todo">Adicione em algum lugar: "você pode clicar duas vezes em um observador de lista para abri-lo em uma caixa de diálogo que você pode manter por perto..." --Jens SnapCon 2023</div>
+        <div class="learn">
+            <p><strong>Neste laboratório,</strong> você criará ferramentas para armazenar e acessar dados.</p>
+            <p><strong>Nesta página,</strong> você criará um aplicativo de lista de compras. </p>
+        </div>
+
+        <div class="sidenoteBig">Algumas linguagens de programação usam a palavra <em>array</em> em vez de <em>lista</em>. </div>
+        <p>
+            Muitos aplicativos de computador – listas de contatos, listas de reprodução, calendários, lembretes – envolvem a manipulação de <em>listas</em> de informações usando ferramentas que pesquisam, classificam ou alteram os itens da lista. Você já trabalhou com listas antes ao personalizar o projeto de fofoca.<br />
+        </p>
+
+        <div class="examFullWidth">
+            <div class="ap-standard">AAP-1.C.1 segunda frase, AAP-1.D.7</div>
+            <div class="pseudop">A expressão de lista<img class="inline" src="/bjc-r/img/1-introduction/list-from-who.png" alt="list{Señora, Sra. C, meu gato, Hannah, Jake}" title="list{Señora, Sra. C, meu gato, Hannah, Jake}" /> wdeve ser escrito como <pre class="inline">[Señora, Sra. C, meu gato, Hannah, Jake]</pre>. Os itens são posicionados na lista na ordem em que aparecem no texto: "Señora" possui índice 1, "Sra. C" possui índice 2 e assim por diante.</div>
+        </div>
+
+
+        <div class="forYouToDo" id="first">
+			<ol>
+                <img class="imageRight" src="/bjc-r/img/icons/pair-programming-swap-reminder.png" alt="Lembre-se de fazer trocas de programação em pares" title="Lembre-se de fazer trocas de programação em pares" />
+				<li><a class="run" href="/bjc-r/prog/2-complexity/U2L2-ShoppingList.xml" target="_blank"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Clique aqui para carregar este arquivo. Em seguida, salve-o no seu Snap! conta." title="Clique aqui para carregar este arquivo. Em seguida, salve-o no seu Snap! conta."></a> Este projeto contém fantasias de botões para os sprites nos quais o usuário clicará para controlar os itens de sua lista de compras.</li>
+                <div class="endnote">
+                    <a href="#hint-shopping-list-example" data-toggle="collapse" title="Clique para assistir a um vídeo que mostra como seria o aplicativo de lista de compras.">Clique para ver um vídeo que mostra como isso seria.</a>
+                    <div id="hint-shopping-list-example" class="collapse">
+                        <img class="indent" data-gifffer="/bjc-r/img/3-lists/shopping-list-project-v3.gif" alt="animação do aplicativo de lista de compras">
+                    </div>
+                </div>
+                <div class="sidenoteBig">Você aprendeu como inicializar (criar e definir) uma variável global em <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/4-keeping-score.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 2 Laboratório 1 Página 4: Mantendo a pontuação com variáveis ​​globais">Unidade 2 Laboratório 1 Página 4: Mantendo a pontuação com variáveis ​​globais</a>.</div>
+                <li>
+                    <div class="ap-standard">AAP-1.C</div>
+                    Inicialize uma variável <var>lista de compras</var> para armazenar as informações.
+                    <ol>
+                        <li>Crie uma variável global chamada <var>lista de compras</var>.</li>
+                        <li>
+                            Defina <var>lista de compras</var> como uma lista <em>vazia</em> (uma lista sem nada). Você precisará de um <img class="inline" src="/bjc-r/img/blocks/list-full-size.png" alt="lista ()" título = "lista ()"> bloco.
+                            <div class="narrower">Use a seta para a esquerda para se livrar do slot de entrada para que fique assim: <img src="/bjc-r/img/blocks/empty-list-block.png" alt="lista" title="lista">. Dessa forma, você terá uma lista vazia em vez de uma lista com um item vazio.</div>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+        <div class="examFullWidth">
+            <div class="ap-standard">AAP-1.D.7 marcador 2</div>
+            <div class="pseudop">A instrução de atribuição <img class="inline" src="/bjc-r/img/2-complexity/example-blank-list-assignment.png" alt="set (lista de compras) para (lista)" title="definir (lista de compras) para (lista)" /> seria escrito como<pre class="inline">lista de compras &leftarrow; []</pre>ou <img class="" src="/bjc-r/img/2-complexity/shoppinglist-empty-list-assignment-blocktran.png" alt="listadecompras ← []" title="listadecompras ← []" />.</div>
+            <div class="ap-standard">AAP-1.D.7 marcador 1</div>
+            <div class="pseudop">A instrução de atribuição <img class="inline" src="/bjc-r/img/2-complexity/example-list-assignment.png" alt="set (lista de compras) para {maçãs, pão, cenoura, arroz, macarrão}" title="set (lista de compras) para {maçãs, pão, cenoura, arroz, macarrão}" /> seria escrito como <pre class="inline">lista de compras &leftarrow; [maçãs, pão, cenoura, arroz, macarrão]</pre> ou <img class="" src="/bjc-r/img/2-complexity/shoppinglist-full-list-assignment-blocktran.png" alt="shoppingList ← [maçãs, pão, cenoura, arroz, macarrão]" title="shoppingList ← [maçãs, pão, cenoura, arroz, macarrão]" />. (Neste aplicativo, você deseja que a <code>lista de compras</code> comece vazia e, em seguida, o usuário <code>adicionar</code> ou <code>inserir</code> itens de mercearia adicionais, um de cada uma vez.)</div>
+        </div>
+
+        <h3>Adicionando itens a uma lista</h3>
+        <p>
+            <div class="vocabBig">
+                <div class="commentBig">AAP-1.C.2</div>
+                <p>Um <strong>elemento</strong> é outro nome para um item em uma lista. (Se o mesmo valor estiver na lista duas vezes, isso conta como dois elementos diferentes.) Cada elemento possui um <em>índice</em> (posição) exclusivo na lista. </p>
+            </div>
+            Você pode usar o <img class="inline" src="/bjc-r/img/blocks/insert.png" alt="inserir (coisa) em (1) do 'slot de entrada da lista'" title="inserir (coisa) em (1) do 'slot de entrada da lista'" /> ou<img class="inline" src="/bjc-r/img/blocks/add.png" alt="add (thing) to 'list input slot'" title="add (thing) to 'list input slot'" /> bloco para adicionar elementos a uma lista.
+            <ul>
+                <li><code>Inserir</code> coloca o novo item <em>antes</em> do local especificado.</li>
+                <li><code>Adicionar</code> coloca o item <em>depois</em> do último item existente.</li>
+            </ul>
+        </p>
+        <div class="ap-standard">AAP-1.D.6</div>
+        <p>Atribuir uma lista a uma variável permite usar um nome para representar todos os elementos de uma lista como uma unidade.</p>
+
+        <div class="examFullWidth">
+            <div class="ap-standard">AAP-2.N.1 marcador 4</div>
+            <div class="pseudop"><img class="inline" src="/bjc-r/img/2-complexity/insert-tomatoes-at-2-of-shopping-list.png" alt="inserir (tomates) em (2) de (lista de compras)" title="inserir (tomates) em (2) de (lista de compras)" /> seria escrito como <pre class="inline">INSERT( shoppingList, 2, "tomates")</pre> ou <img class="inline" src="/bjc-r/img/2-complexity/insert-blocktran.png" alt="INSERT(listadecompras, 2, 'tomates')" title="INSERT(listadecompras, 2, 'tomates')"/>.</div>
+            <div class="ap-standard">AAP-2.N.1 marcador 5</div>
+            <div class="pseudop"><img class="inline" src="/bjc-r/img/2-complexity/add-tomatoes-to-shopping-list.png" alt="adicionar (tomates) à (lista de compras)" title="adicionar (tomates) à (lista de compras)" /> seria escrito como <pre class="inline">APPEND(shoppingList, "tomates")</pre> ou<img class="inline" src="/bjc-r/img/2-complexity/add-blocktran.png" alt="APPEND(shoppingList, 'tomates')" title="APPEND(shoppingList, 'tomates')" />.</div>
+        </div>
+
+        <div class="forYouToDo">
+            <ol start="3">
+                <div class="ap-standard">AAP-2.N part a</div>
+                <div class="sidenoteBig">
+                    <p>Você viu os blocos <code>ask</code> e <code>answer</code> em <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 2 Laboratório 1 Página 2: Verificando a suposição do jogador">Unidade 2 Laboratório 1 Página 2: Verificando a suposição do jogador</a>.</p>
+                    <p>Você trabalhou com vários sprites em<a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 1 Laboratório 2 Página 2: Fazendo os programas falarem">Unidade 1 Laboratório 2 Página 2: Fazendo os programas falarem</a>.</p>
+                </div>
+                <li>
+                    Escreva um script para o sprite do botão "Adicionar item" para que, quando esse sprite for clicado, ele <code>solicite</code> ao usuário um novo item e, em seguida, coloque a <code>resposta</code> do usuário em a lista de compras.
+                </li>
+                <li>Teste o botão "Adicionar item" várias vezes e corrija quaisquer problemas.</li>
+            </ol>
+        </div>
+
+
+        <h3>Removendo itens de uma lista</h3>
+        <div class="forYouToDo">
+			<ol start="5">
+                <li>Escreva um script para o sprite do botão "Limpar lista" que pergunte ao usuário se ele tem certeza e então defina <var>lista de compras</var> como uma lista vazia.</li>
+                <li>Teste o botão "Limpar lista" e corrija-o, se necessário.</li>
+			</ol>
+		</div>
+
+        <p>Você também pode remover itens de uma lista usando <img class="inline" src="/bjc-r/img/blocks/delete.png" alt="excluir (1) do 'slot de entrada da lista'" title="excluir (1) do 'slot de entrada da lista'" />. O bloco <code>delete</code> recebe um número de item e uma lista como entrada e remove o item nessa posição da lista.</p>
+
+        <div class="examFullWidth">
+            <div class="pseudop">
+                <div class="ap-standard">AAP-2.N.1 marcador 6</div>
+                <img class="inline" src="/bjc-r/img/2-complexity/delete-item-2-of-shopping-list.png" alt="excluir item (2) de (lista de compras)" title="excluir item (2) de (lista de compras)" /> seria escrito como <pre class="inline">REMOVER(lista de compras, 2)</pre> ou <img class="inline" src="/bjc-r/img/2-complexity/remove-blocktran.png" alt="REMOVE(lista de compras, 2)" title="REMOVE(lista de compras, 2)" />.
+            </div>
+        </div>
+
+        <div class="forYouToDo">
+			<ol start="7">
+				<li>Escreva um script para o sprite do botão "Excluir item" para que, quando esse sprite for clicado, ele peça ao usuário "Insira o número do item de mercearia que deseja excluir" e, em seguida, remova o item com esse número da lista de compras.</li>
+                <li>Teste o botão "Excluir item".</li>
+			</ol>
+		</div>
+
+        <div class="examFullWidth">
+            <div class="pseudop">
+                Os itens em uma lista são <em>valores</em>, então <strong>você pode usar <code>item de</code> em qualquer lugar onde possa usar qualquer outra expressão</strong>. Por exemplo:
+                <ul>
+                    <div class="ap-standard">AAP-2.N.1 marcadores 2 e 3</div>
+                    <li>
+                        Você pode atribuir um item de lista a uma variável.
+                        <a href="#hint-assigning-element-to-variable" data-toggle="collapse" title="Você pode atribuir um item da lista a uma variável. No exame...">No exame...</a>
+                        <div id="hint-assigning-element-to-variable" class="collapse">
+                            <ul>
+                                <li><img class="inline" src="/bjc-r/img/2-complexity/assigning-element-to-variable.png" alt="definir (minha comida favorita) para o item (3) da (lista de compras)" title="definir (minha comida favorita) para o item (3) da (lista de compras)" /> seria escrito como <pre class="inline">minha comida favorita &leftarrow; lista de compras[3]</pre>ou <img class="inline" src="/bjc-r/img/2-complexity/assigning-element-to-variable-blocktran.png" alt="minha comida favorita &leftarrow; lista de compras[3]" title="minha comida favorita &leftarrow; lista de compras[3]" /></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        Você pode atribuir <em>qualquer</em> valor a um item da lista (um número, uma string, um sprite, uma fantasia, um script, outra lista, etc.). <um href="#hint-assigning-anything-to-element" data-toggle="collapse" title="Você pode atribuir <em>qualquer</em> valor a um item da lista (um número, uma string, um sprite, uma fantasia, um script, outra lista, etc.). No exame..."> No exame...</a>
+                        <div id="hint-assigning-anything-to-element" class="collapse">
+                            <ul>
+                                <li>
+                                    <img class="inline" src="/bjc-r/img/2-complexity/assigning-variable-to-element.png" alt="substitua o item (2) da (lista de compras) por (sua comida favorita)" title="substitua o item (2) da (lista de compras) por (sua comida favorita)" /> seria escrito como<pre class="inline">lista de compras[2] &leftarrow; a tua comida favorita</pre> ou <img class="inline" src="/bjc-r/img/2-complexity/assigning-variable-to-element-blocktran.png" alt="shoppingList[2] &leftarrow; suaComida Favorita" title="shoppingList[2] &leftarrow; suaComida Favorita"/>.
+                                </li>
+                                <li>
+                                    <img class="inline" src="/bjc-r/img/2-complexity/assigning-element-to-element.png" alt="substituir item (1) de (lista de compras) por (item (3) de (lista de compras))" title="substituir item (1) de (lista de compras) por (item (3) de (lista de compras) )" /> seria escrito como <pre class="inline">shoppingList[1] &leftarrow; lista de compras[3]</pre> or <img class="inline" src="/bjc-r/img/2-complexity/assigning-element-to-element-blocktran.png" alt="lista de compras[1] &leftarrow; lista de compras[3]" title="lista de compras[1] &leftarrow; lista de compras[3]" />.
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="examFullWidth">
+            <p>
+                Quando você executa esse script no Snap<em>!</em>, a segunda linha do código atribui à <var>lista de compras 2</var> o valor de <var>lista de compras</var> (ou seja, o mesma lista, não uma cópia). Portanto, a terceira linha do código modifica <em>ambas</em> variáveis: <br />
+                <img class="indent" src="/bjc-r/img/2-complexity/example-list-by-reference.png" alt="definir(lista de compras) para (lista(maçã)(banana))
+                definir (lista de compras 2) para (lista de compras)
+                adicione (cenoura) a (lista de compras)" title="definir(lista de compras) a (lista(maçã)(banana))
+                definir (lista de compras 2) para (lista de compras)
+                adicione (cenoura) a (lista de compras)" />
+                <img class="indent" src="/bjc-r/img/2-complexity/example-list-by-reference-stage.png" alt="observador da lista de compras mostrando o conteúdo da variável como maçã, banana, cenoura; e o observador da lista de compras 2 mostrando o conteúdo da variável como maçã, banana, cenoura" title="observador da lista de compras mostrando o conteúdo de a variável será maçã, banana, cenoura; e o observador da lista de compras 2 mostrando o conteúdo da variável como maçã, banana, cenoura" /><br />
+            </p>
+            <div class="ap-standard">AAP-1.D.7 bullet 3, AAP-2.N.2</div>
+            <div class="pseudop">Porém, no exame, a afirmação <pre class="inline">shoppingList2 &leftarrow; shoppingList</pre> faz uma <em>cópia</em> da lista. Portanto, modificar um deles <em>não</em> modifica o outro.</div>
+            <p>As regras sobre como usar listas e como elas se comportam diferem dependendo da linguagem de programação que você está usando.</p>
+        </div>
+	</body>
+</html>

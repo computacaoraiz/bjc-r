@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+		<meta charset="utf-8">
+        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Projetos Opcionais da Unidade 2, Página 2</title>
+    </head>
+
+    <body>
+        <h2>Motivo Egípcio</h2>
+        <div class="todo">
+            <p>Precisamos reconstruir imagens com rótulos de protótipo simples. --MF, 26/09/18</p>
+        </div>
+        <div class="todo">
+            <p>PG: A arte islâmica é uma ótima candidata para desenho de computador, e as amostras em TiF B parecem ser boas. Eu preferiria ter algumas ilustrações reais de qualidade. Não vejo como o conteúdo anterior a TiF B seja egípcio. Parece mais uma referência a "alguma cultura" sem autenticidade. Mas o projeto é bonito, então podemos dar a ele um propósito de aprendizado?</p>
+            <p>BH: A maneira óbvia de desenhar a imagem na caixa rosa é como um hexágono decorado.</p>
+            <p>MF: Quero revisar esta página. Algumas sugestões adicionadas à página.</p>
+        </div>
+
+        <div class="learn">
+            <img class="indent" src="/bjc-r/img/2-complexity/EgyptianMotif_img/HexalDesign1.png" height="250" alt="Design Hexagonal" title="Design Hexagonal" />
+            <img src="/bjc-r/img/2-complexity/EgyptianMotif_img/HexaDesign2.png"  height="250" alt="Design Hexagonal em cores" title "Design Hexagonal em cores" />
+            <p>Grande parte da arte islâmica aplica princípios de geometria e repete padrões simples para formar formas complexas. Por exemplo, o Motivo Egípcio acima consiste em seis retângulos sobrepostos.</p>
+            <p><strong>Neste projeto,</strong> você aprenderá como estender o seu código de <code>pinwheel</code> da Unidade 1 para criar padrões tão intrincados.</p>
+        </div>
+
+        <div class="forYouToDo" id="first">
+            <ol>
+                <div class="todo">
+                    <p>Por que estamos dando a eles o código para esses blocos em vez de pedir que eles os construam e/ou importem? Sugiro cortar o número 1 e 2 e mesclar a primeira parte do número 3 na caixa rosa (gosto mais das imagens do número 3 do que da caixa rosa de qualquer maneira). O trabalho começa na metade do problema número 3. <strong>Quero revisar esta página</strong>, mas por enquanto, apenas movi o número 10 de um FYTD solo para a caixa ITIT. --MF, 26/09/18</p>
+                </div>
+                <li>
+                    Neste projeto, você usará repetidamente retângulos, então primeiro relembre como criar um bloco <code>rectangle</code>. <br />
+                    <img class="indent" src="/bjc-r/img/2-complexity/EgyptianMotif_img/rectangleCode.png" height="275" alt="retângulo, largura:(largura) comprimento:(comprimento){caneta baixo; repita(2){mova(largura) passos; gire no sentido horário (90) graus; mova(comprimento) passos; gire no sentido horário (90) graus};caneta acima}" title="retângulo, largura:(largura) comprimento:(comprimento){caneta baixo; repita(2){mova(largura) passos; gire no sentido horário (90) graus; mova(comprimento) passos; gire no sentido horário (90) graus};caneta acima}"/>
+                    <div class="endnote"> Observe o uso dos blocos <code>caneta baixo</code> e <code>caneta acima</code> dentro da definição do retângulo. Normalmente, não fazemos isso, mas aqui é feito para simplificar o código mais complexo que vem a seguir. Isso garantirá que, uma vez que um retângulo seja desenhado, a caneta estará suspensa e você não precisará se preocupar com rabiscos indesejados à medida que seu sprite de desenho continua se movendo para executar o restante do código.</div>
+                </li>
+                <li>
+                    Lembre-se também do código <code>pinwheel</code> que você escreveu na Unidade 1.<br />
+                    <img class="indent" src="/bjc-r/img/2-complexity/EgyptianMotif_img/pinwheelCode.png"  height="225" alt="pinwheel, ramos:(número de ramos) tamanho:(tamanho) backup:(backup){repita(número de ramos){mova(tamanho) passos; mova(-1Xbackup) passos; gire no sentido horário(360/número de ramos) graus}}" title="pinwheel, ramos:(número de ramos) tamanho:(tamanho) backup:(backup){repita(número de ramos){mova(tamanho) passos; mova(-1Xbackup) passos; gire no sentido horário(360/número de ramos) graus}}" />
+                </li>
+                <li>
+                    Neste projeto, você substituirá os <em><strong>ramos do pinwheel</strong></em> por <em><strong>retângulos</strong></em>, conforme mostrado abaixo. A utilização de cores é opcional e é usada aqui para maior clareza.<br />
+                    <img class="indent" src="/bjc-r/img/2-complexity/EgyptianMotif_img/multiColorPinwheel.png"  height="250" alt="Pinwheel multicolorido" title="Pinwheel multicolorido"/>
+                    <img src="/bjc-r/img/2-complexity/EgyptianMotif_img/multiColorPinwheelwithRectangles.png" height="250" alt="Pinwheel multicolorido com retângulos" title="Pinwheel multicolorido com retângulos" /> <br />
+                    Agora, crie um bloco <code>pinwheel com retângulos</code>. Ele terá mais duas entradas, <var>largura</var> e <var>comprimento</var> para a largura e o comprimento dos retângulos.<br />
+                    <img class="indent" src="/bjc-r/img/2-complexity/EgyptianMotif_img/pinwheelWithRectanglesCodeHeader.png"  height="100" alt="pinwheel com retângulos, ramos:(número de ramos) tamanho:(tamanho) backup:(backup) largura:(largura) comprimento:(comprimento)" title="pinwheel com retângulos, ramos:(número de ramos) tamanho:(tamanho) backup:(backup) largura:(largura) comprimento:(comprimento)"/><br />
+                    Seu código será idêntico ao código do <code>pinwheel</code>, exceto que ele tem o bloco <code>retângulo</code> inserido entre os dois blocos <code>mova</code> que criam os ramos do pinwheel. <br />
+                    <img class="indent" src="/bjc-r/img/2-complexity/EgyptianMotif_img/rectangleInBetween.png"  height="175" alt="mova(tamanho) passos; retângulo, largura:(largura) comprimento:(comprimento); move(-1Xbackup) passos" title="mova(tamanho) passos; retângulo, largura:(largura) comprimento:(comprimento); move(-1Xbackup) passos"/><br />
+
+                </li>
+                <li>
+                    Agora, use o menu "Variáveis" para criar variáveis que permitirão variar todos os aspectos dos desenhos que você criar e não se esqueça de inicializar essas variáveis imediatamente após o bloco <code>quando a bandeira verde clicada</code><br />
+                    <img class="indent" src="/bjc-r/img/2-complexity/EgyptianMotif_img/makeVariables.png"  height="175" alt="Criar variáveis: comprimento, largura, backup, tamanho, número de ramos" title="Criar variáveis: comprimento, largura, backup, tamanho, número de ramos"/><img src="/bjc-r/img/2-complexity/EgyptianMotif_img/initializeVariables.png" height="175" alt="Inicializar variáveis" title="Inicializar variáveis"/>
+                </li>
+                <li>
+                	Você pode transformar essas variáveis em controles deslizantes ajustáveis clicando com o botão direito no ícone da variável que é exibido no palco e escolhendo a opção "controle deslizante". Em seguida, você pode definir os valores mínimos e máximos de um controle deslizante, conforme mostrado.<br />
+                    <img src="/bjc-r/img/2-complexity/EgyptianMotif_img/turnToSlider.png" height="150" alt="Converter variáveis em controles deslizantes" title="Converter variáveis em controles deslizantes"/><img src="/bjc-r/img/2-complexity/EgyptianMotif_img/sliderMax.png"  height="150" alt="Valor máximo do controle deslizante" title="Valor máximo do controle deslizante"/><img src="/bjc-r/img/2-complexity/EgyptianMotif_img/setSliderMax.png"  height="150" alt="Definir valor máximo do controle deslizante" title="Definir valor máximo do controle deslizante"/><br />
+                    Os seguintes valores devem ser razoáveis para os valores mínimos e máximos de cada variável:<br />
+                    <div class="sidenote">Você pode alterar esses valores mínimos e máximos à medida que gera e explora novos desenhos.</div>
+                    <table class="indent bordered" summary="tabela de valores mínimos e máximos para cada variável">
+                        <tr><th style="text-align:center" scope="col">Variável</th><th scope="col">Mínimo</th><th scope="col">Máximo</th></tr>
+                        <tr><td><var>número de ramos</var> </td> <td>3</td> <td>36</td></tr>
+                        <tr><td><var>tamanho </var> </td> <td>0</td> <td>100</td></tr>
+                        <tr><td><var>backup </var> </td> <td>0</td> <td>100</td></tr>
+                        <tr><td><var>largura </var> </td> <td>0</td> <td>150</td></tr>
+                        <tr><td><var>comprimento </var> </td> <td>0</td> <td>150</td></tr>
+                    </table>
+                </li>
+                <li>
+                    Clique na animação abaixo para ver um exemplo de como você pode usar a funcionalidade de controle deslizante no Snap<em>!</em> para gerar e explorar uma grande quantidade de variações de seus desenhos. <br />
+                    <img class="indent" data-gifffer="/bjc-r/img/2-complexity/EgyptianMotif_img/sliderAnimationDemo.gif"  height="400" alt="Demonstração de animação de controle deslizante" title="Demonstração de animação de controle deslizante"/>
+                </li>
+                <li>
+                	Seu código precisa garantir que o computador esteja sempre atento caso alguma das variáveis seja alterada pelo usuário por meio dos controles deslizantes. Você pode fazer isso com um bloco <code>para sempre</code>.<br />
+                    <img class="indent" src="/bjc-r/img/2-complexity/EgyptianMotif_img/foreverLoop2.png"  height="175" alt="para sempre{warp{limpar; pinwheel com retângulos, ramos:(número de ramos) tamanho:(tamanho) backup:(backup) largura:(largura) comprimento:(comprimento) }}" title="para sempre{warp{limpar; pinwheel com retângulos, ramos:(número de ramos) tamanho:(tamanho) backup:(backup) largura:(largura) comprimento:(comprimento) }}"/>
+                    <div class="endnote">O bloco <code>warp</code> garante que o <code>pinwheel com retângulos</code> seja desenhado de uma só vez, em vez de passo a passo.</div>
+                </li>
+
+                <li>Depois que o código estiver escrito, verifique se tudo funciona como pretendido. Você pode precisar posicionar sua imagem de desenho adequadamente para aproveitar ao máximo o palco que você tem. Agora mova cada um dos seus controles deslizantes para gerar e explorar uma grande variedade de designs inspirados na arte islâmica.</li>
+                <div class="endnote">
+                    Use esses botões para maximizar o seu palco e dar espaço suficiente para os seus controles deslizantes.<br />
+                    <img class="indent" src="/bjc-r/img/2-complexity/EgyptianMotif_img/stagemaximize.png" height="50" alt="Botões de maximização do palco" title="Botões de maximização do palco"/>
+                </div>
+            </ol>
+        </div>
+
+                <div class="ifTime">
+                <ol start="9">
+                    <li>Adicione cor aos seus retângulos inserindo <img src="/bjc-r/img/2-complexity/EgyptianMotif_img/setColor.png" height="40" alt="definir cor da caneta para (vermelho)" title="definir cor da caneta para (vermelho)"/> no início do bloco <code>warp</code> no loop infinito e inserindo <img src="/bjc-r/img/2-complexity/EgyptianMotif_img/changeColor.png" height="40" alt="mudar cor da caneta por (10)" title="mudar cor da caneta por (10)"/> no código <code>pinwheel with rectangles</code>.</li>
+                    <li>
+                        Tire capturas de tela das suas criações e compartilhe com a turma. Coloque-as em uma página da turma, se tiver uma. Abaixo estão alguns exemplos dos tipos de variações que você pode gerar.<br />
+                        <div class="sidenote">Você pode querer <img src="/bjc-r/img/2-complexity/EgyptianMotif_img/hide.png" height="30" alt="esconder" title="esconder"/> a imagem de desenho (seta) antes de tirar capturas de tela dos seus designs.</div>
+                        <img src="/bjc-r/img/2-complexity/EgyptianMotif_img/multiColorDesignA.png" height="175" alt="Design Multicor A" title="Design Multicor A"/>
+                        <img src="/bjc-r/img/2-complexity/EgyptianMotif_img/multiColorDesignB.png" height="175" alt="Design Multicor B" title="Design Multicor B"/><img src="/bjc-r/img/2-complexity/EgyptianMotif_img/multiColorDesignC.png" height="175" alt="Design Multicor C" title="Design Multicor C"/><br />
+                        <img src="/bjc-r/img/2-complexity/EgyptianMotif_img/multiColorDesignD.png" height="175" alt="Design Multicor D" title="Design Multicor D"/><img src="/bjc-r/img/2-complexity/EgyptianMotif_img/multiColorDesignE.png" height="175" alt="Design Multicor E" title="Design Multicor E"/><img src="/bjc-r/img/2-complexity/EgyptianMotif_img/multiColorDesignF.png" height="175" alt="Design Multicor F" title="Design Multicor F"/>
+                    </li>
+                </ol>
+                </div>
+
+                <div class="takeItFurther">
+                <ol type="A">
+                    <li>Repita todos os passos deste projeto, mas, em vez de usar retângulos, use outros polígonos.<br />
+                        <img src="/bjc-r/img/2-complexity/EgyptianMotif_img/TrianglePinwheel.png" height="200" alt="Pinwheel de Triângulos" title="Pinwheel de Triângulos"/>
+                        <img src="/bjc-r/img/2-complexity/EgyptianMotif_img/HexagonPinwheel.png" height="200" alt="Pinwheel Hexagonal" title="Pinwheel Hexagonal"/><img src="/bjc-r/img/2-complexity/EgyptianMotif_img/DodecaPinwheel.png" height="200" alt="Pinwheel Dodecagonal" title="Pinwheel Dodecagonal"/></li>
+                    <li>
+                    Leia mais sobre a arte islâmica e encontre outros padrões que possam se prestar a explorações por meio de programação.<br />
+                        <img  src="/bjc-r/img/2-complexity/EgyptianMotif_img/islamicpattern1.jpg"  height="300" alt="Padrão Islâmico 1" title="Padrão Islâmico 1"/> <img src="/bjc-r/img/2-complexity/EgyptianMotif_img/islamicpattern2.png"  height="300" alt "Padrão Islâmico 2" title="Padrão Islâmico 2"/>  
+                    </li>
+                </ol>
+            </div>
+    </body>
+</html>
+
+               
