@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<<<<<<< HEAD
     <head>
 		<meta charset="utf-8">
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
@@ -141,5 +142,140 @@ if (é (par) uma (lista)?) {
         </div>
 
 
+=======
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+    <title>Projetos Opcionais da Unidade 2, Página 5</title>
+</head>
+
+<body>
+    <h2>Modelagem de Linguagem: Plurais, Parte 2</h2>
+    <div class="todo">Precisa refazer as imagens do "KEEP". --MF, 27/06/20</div>
+    <div class="todo">
+        <ul>
+            <li>NOTA DE REVISÃO: Os alunos AMPLIAM sua <strong>lista</strong> de substantivos conforme necessário. Em cada estágio de teste, peça a eles para <strong>mapear</strong> seu "bloco especializado" ou seu bloco <strong>plural</strong> sobre toda a lista e observe quais palavras estão e não estão corretamente pluralizadas.</li>
+            <li>Reconstrua as imagens sem fundos brancos. --MF</li>
+        </ul>
+    </div>
+
+    <p>Você pode melhorar o código <code>plural</code> para funcionar corretamente com mais palavras. Se o projeto ainda não estiver aberto, recarregue-o. (O nome de arquivo sugerido foi <code>U2-Plural</code>.)</p>
+
+    <div class="forYouToDo" id="first">
+        <ol>
+            <li>
+                <strong>Abstração: </strong> Crie um bloco de <img src="/bjc-r/img/2-complexity/plural_h.png" alt="plural-h ()" title="plural-h ()"> que "se especializa" em apenas uma categoria, palavras que terminam com a letra "h".
+                <ul>
+                    <li>Comece com uma <code>lista</code> das palavras que você deseja que ele funcione.</li>
+                    <li>Este bloco especializado deve funcionar corretamente para palavras que se encaixam em sua especialidade
+                        <img src="/bjc-r/img/2-complexity/plural_h-crutch-with-result.png" alt="plural-h (crutch) relatando 'crutches'" title="plural-h (crutch) relatando 'crutches'">
+                        <img src="/bjc-r/img/2-complexity/plural_h-moth-with-result.png" alt="plural-h (moth) relatando 'moths'" title="plural-h (moth) relatando 'moths'">, <img src="/bjc-r/img/2-complexity/plural_h-bush-with-result.png" alt="plural-h (bush) relatando 'bushes'" title="plural-h (bush) relatando 'bushes'">. Ele pode estar completamente errado em relação a palavras que <em>não</em> se encaixam em sua especialidade <img src="/bjc-r/img/2-complexity/plural_h-mouse-with-(wrong)result.png" alt="plural-h (mouse) relatando 'mousees'" title="plural-h (mouse) relatando 'mousees'"> porque o bloco <code>plural</code> nunca deve fornecer palavras para <code>plural-h</code> a menos que essas palavras terminem com "h". </li>
+                    <li>
+                        Teste <img src="/bjc-r/img/2-complexity/plural_h.png" alt="plural-h ()" title="plural-h ()" > com uma variedade de palavras para garantir que ele funcione da maneira desejada. Em seguida, use <code>map</code> para testá-lo em toda a lista que você fez anteriormente.
+                        <div class="endnote">
+                            <a href="#hint-just-hwords" data-toggle="collapse" title="Clique para obter uma dica sobre a criação de uma lista de teste de palavras que começam com 'h'">Clique para obter uma dica sobre a criação de uma lista de teste de palavras que começam com "h".</a>
+                            <div id="hint-just-hwords" class="collapse">
+                                Como você sabe o que <img src="/bjc-r/img/2-complexity/keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list.png" alt="keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list" title="keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list"> faz, você pode usar sua saída como entrada para um teste de <code>plural</code> ou <code>plural-h</code>:<br />
+                                <img class="indent" src="/bjc-r/img/2-complexity/map-plural(with-input)-over-(keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list).png" alt="map-plural(with-input)-over-(keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list)" title="map-plural(with-input)-over-(keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list)">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <div class="takeNote">
+                <p><strong>Abstração:</strong> A linguagem frequentemente possui casos especiais. Em inglês, os plurais de alguns substantivos adicionam "s"; alguns adicionam "es"; substantivos como "calf" e "fly" se tornam "calves" e "flies", alterando suas últimas letras antes de adicionar "es". E muito mais. Para uma tarefa de programação tão complexa, é (geralmente) melhor dividi-la em partes, lidar com cada parte separadamente com seu próprio procedimento (seu próprio bloco) e depois fazer o bloco "de nível superior"—neste caso, <code>plural</code>—usar esses especialistas. Ou seja, em vez de codificar todos os pequenos detalhes diretamente em <code>plural</code>, é mais limpo e claro fazer com que <code>plural</code> se pareça com isto.<br />
+                    <img class="indent noshadow" src="/bjc-r/img/2-complexity/plural-abstract-definition.png" alt="definição abstrata de plural: se h = última letra da palavra, relate o plural de caso h; se y = última letra da palavra, relate o plural de caso y; se for algum outro caso, use um bloco que se especializa nesse caso; etc.; senão relate a junção da palavra com s" title="definição abstrata de plural: se h = última letra da palavra, relate o plural de caso h; se y = última letra da palavra, relate o plural de caso y; se for algum outro caso, use um bloco que se especializa nesse caso; etc.; senão relate a junção da palavra com s"></p>
+                <p>Mostrar<a name="abstraction" class="anchor">&nbsp;</a> a <em>estrutura</em> do método—apenas a estratégia geral—no bloco "de nível superior" e deixar os detalhes para blocos separados é parte de uma ideia importante da ciência da computação chamada <em>abstração</em>. A abstração mantém seu código claro, legível e mais facilmente depurável. Também ajudará seu código a ser mais flexível.</p>
+            </div>
+            <li>Quando você confiar no novo bloco especializado, edite <code>plural</code> para usá-lo. Teste (você pode usar <code>map</code>) para garantir que <code>plural</code> ainda funcione para todas as palavras para as quais costumava funcionar, além das novas.</li>
+            <li>Crie <code>plural-y</code> para lidar com palavras como
+                <img src="/bjc-r/img/2-complexity/plural_y-tray-with-result.png" alt="plural-y (tray) relatando 'trays'" title="plural-y (tray) relatando 'trays'"> e
+                <img src="/bjc-r/img/2-complexity/plural_y-sky-with-result.png" alt="plural-y (sky) relatando 'skies'" title="plural-y (sky) relatando 'skies'">
+            </li>
+            <div class="endnote">
+                Lembre-se, qualquer especialista pode cometer erros se for solicitado a fazer um trabalho que não é de sua especialidade. Por exemplo:<br />
+                <img class="indent" src="/bjc-r/img/2-complexity/plural_y-mouse-with-(wrong)result.png" alt="plural-y (mouse) relatando 'mousies'" title="plural-y (mouse) relatando 'mousies'"><br />
+                Certifique-se de que <code>plural</code> forneça a <code>plural-y</code> apenas palavras que ele sabe como lidar corretamente.
+            </div>
+            <img class="inline" src="/bjc-r/img/icons/save-now.png" alt="Salve seu trabalho" title="Salve seu trabalho" />
+        </ol>
+    </div>
+
+    <div class="takeItFurther">
+        <div class="todo">Não estou satisfeito com a maneira como isso impõe uma implementação específica por um motivo que está oculto até que eles cheguem lá e não faz sentido por si só. bh
+            <p>Está melhor agora? Aliás, movi o que era TIF A para uma nota de rodapé em 1. --MF, 11/01/21</p>
+        </div>
+        <div class="todo">
+            <p>Limpei um pouco isso e adicionei um ícone "coisa difícil" na parte B. Acho que a parte B é <em>muito</em> difícil. Mais pode ser feito para torná-la mais clara, mas não tenho tempo para isso agora. Uma preocupação que devemos abordar agora é não usar "..." onde precisamos de "jaggies". <strong>Você pode substituir essas duas imagens pelas imagens completas, e eu vou adicioná-las?</strong> <br />
+                <img class="" src="/bjc-r/img/2-complexity/plural-specialists-list.png" alt="" title="" />
+                <img class="" src "/bjc-r/img/2-complexity/match-vowels.png" alt="" title="" />
+            </p>
+            <p>Também, <strong>certifique-se de que o TG e as soluções coincidem</strong> com esta versão depois de revisá-la? Obrigado! --MF, 11/01/21</p>
+        </div>
+
+
+        <ol type="A">
+            <li>
+                Estenda a função <code>plural</code> para lidar corretamente com uma palavra de entrada que tem um espaço no final.
+                <div class="endnote">
+                    <p>
+                        Atualmente, se a função <code>plural</code> receber uma palavra com um espaço no final, ele deixa esse espaço na forma plural:<br />
+                        <img class="indent" src="/bjc-r/img/2-complexity/plural-bulldog[espaço]-com-resultado(bulldog[espaço]s).png" alt="plural (bulldog ) relatando 'bulldog s'. Há um espaço após 'bulldog' na entrada e um espaço entre 'bulldog' e 's' no valor relatado." title="plural (bulldog ) relatando 'bulldog s'. Há um espaço após 'bulldog' na entrada e um espaço entre 'bulldog' e 's' no valor relatado."><br />
+                        Descubra como lidar com esse caso especial e edite a função <code>plural</code> para que o resultado seja<br />
+                        <img class="indent" src="/bjc-r/img/2-complexity/plural-bulldog[espaço]-com-resultado(bulldogs).png" alt="plural (bulldog ) relatando 'bulldogs'. Há um espaço após 'bulldog' na entrada, mas nenhum espaço no valor relatado." title="plural (bulldog ) relatando 'bulldogs'. Há um espaço após 'bulldog' na entrada, mas nenhum espaço no valor relatado."><br />
+                        Você já tem um bloco que se <em>especializa</em> em fazer plurais de palavras que <em>não</em> têm um espaço no final. <em>Use-o</em>.
+                    </p>
+                </div>
+                <p>Surpresa! Depois que a função <code>plural</code> funcionar para um único espaço no final de uma palavra, tente usá-la com <img src="/bjc-r/img/2-complexity/plural-bulldog[quatro-espaços].png" alt="plural (bulldog      ). Há seis espaços após 'bulldog' na entrada." title="plural (bulldog      ). Há seis espaços após 'bulldog' na entrada.">. Isso também funciona! Mas por quê?
+                </p>
+            </li>
+            <li>
+                <img class="imageRight" src="/bjc-r/img/icons/tough-stuff.png" alt="Coisas Difíceis" title="Coisas Difíceis" />
+                A função <code>plurais</code> ainda parece confusa, mesmo que os detalhes sobre como lidar com cada possível última letra sejam abstraídos em blocos especializados? Uma maneira de melhorar essa situação é usar outro tipo de abstração chamada programação <em>data-directed</em>.
+                <ol style="list-style-type: lower-roman">
+                    <li>
+                        Comece fazendo uma lista de <em>pares chave-valor</em>, com as últimas letras como chaves e procedimentos especializados como valores:<br />
+                        <img class="indent" src="/bjc-r/img/2-complexity/lista-de-especialistas-plural.png" alt="defina (especialistas-plural) como (lista (lista (h) (bloco plural-h ( ) blockado)) (lista (y) (bloco plural-y ( ) blockado)) (lista (f) (bloco plural-f ( ) blockado)) (lista (x) (bloco (junte ( ) (es)) blockado)) (lista (...) (...)))" title="defina (especialistas-plural) como (lista (lista (h) (bloco plural-h ( ) blockado)) (lista (y) (bloco plural-y ( ) blockado)) (lista (f) (bloco plural-f ( ) blockado)) (lista (x) (bloco (junte ( ) (es)) blockado)) (lista (...) (...)))" /><br />
+                        <div class="narrowpurple">Para criar o segundo item de cada pequena lista, encontre o bloco que você deseja, coloque-o na segunda entrada da função <code>lista</code>, e clique com o botão direito no bloco para escolher "tornar em anel." Como o exemplo "x" mostra, não precisa ser um bloco com o nome <code>plural-</code>algo. Ele só precisa ter um espaço vazio onde você deseja que a palavra vá.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="comment">Nota: Isso quebra a regra de não ensinar mais de uma coisa ao mesmo tempo, estamos ensinando associação chave-valor, FIND FIRST e CALL. Como resultado, você está sendo direto demais aqui. --MF, 11/01/21</div>
+                        Então, na sua função <code>plural</code>, você pode substituir a maioria dos blocos <code>if</code> por<br />
+                        <img class="indent" src="/bjc-r/img/2-complexity/dispensa-de-especialista-plural.png" alt="variáveis de script (par)
+    defina (par) como (encontre o primeiro item (anel ((item (1) de ( )) = (última letra de (palavra)))) em (especialistas-plural))
+    se (é (par) uma (lista)?) {
+        relatório (chamada (item (2) de (par)) com entradas (palavra))
+    }" title="variáveis de script (par)
+    defina (par) como (encontre o primeiro item (anel ((item (1) de ( )) = (última letra de (palavra)))) em (especialistas-plural))
+    se (é (par) uma (lista)?) {
+        relatório (chamada (item (2) de (par)) com entradas (palavra))
+    }" /><br />
+                        <div class="narrowpurple">
+                            <div class="todo">Ainda não ensinamos FIND FIRST. Portanto, eu olhei em <a href="/bjc-r/cur/programming/3-lists/3-tic-tac-toe/3-checking-for-ties.html?topic=nyc_bjc%2F3-lists.topic&course=bjc4nyc.html&novideo&noassignment">3.3.3</a>, onde o usamos pela primeira vez, e não o ensinamos lá também. :/ Na verdade, ensinamos em <a href="/bjc-r/cur/programming/5-algorithms/3-turning-data-information/4-filtering-data.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment">5.3.4</a>. Então, arrastei parte desse conteúdo de volta para a Unidade 3 e também aqui. --MF, 11/01/21</div>
+                            <p>O <code>Find First</code> é uma função de alta ordem que funciona de maneira semelhante ao <code>keep</code>, mas relata apenas o primeiro item encontrado. É equivalente a <code>item (1) de (keep)</code>.</p>
+                            <div class="commentBig">A ringificação não está clara aqui. O que significa ter o anel? O que significa não tê-lo? Se eles não sabem, estão "apenas fazendo o que o livro diz para fazer". --MF, 11/01/21</div>
+                            <p>O bloco <code>chamada</code> na paleta não inclui o "<code>com entradas</code>" na imagem; quando você clica na seta direita, essas palavras aparecerão juntamente com um espaço de entrada. A primeira entrada do bloco <code>chamada</code> é o anel cinza vazio, o que significa que <code>chamada</code> deseja um bloco nessa entrada. Quando você arrasta <code>item 2 de par</code> para essa entrada, o anel permanece ao seu redor. Isso geralmente é o que queremos ao usar <code>chamada</code>, mas não desta vez. Clique com o botão direito no bloco <code>item de</code> e escolha "desanexar" no menu.
+                            </p>
+                            <div class="endnote">Você pode experimentar o uso de <code>chamada</code> para ver o que mais pode fazer com ele. O que acontece se você não desanexar o bloco <code>item</code>? O que acontece se você omitir o "<code>com entradas</code>" e a segunda entrada?
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="comment">Aqui é onde você realmente começa a me perder. Na verdade, não estou construindo isso no Snap<em>!</em> agora, pois já gastei tempo demais nisso, mas o texto não explica isso adequadamente para mim. --MF, 11/01/21</div>
+                        Se você modificar o teste de <em>substring final</em> para que, em vez de desistir se não puder encontrar a última letra da palavra como chave, ele vá mais um passo adiante e procure uma chave <em>vazia</em> na lista de especialistas, e você adicionar<br />
+                        <img class="indent" src="/bjc-r/img/2-complexity/dispensa-padrão.png" alt="(item ( ) (bloco anel (junte ( ) (s))))" title="(item ( ) (bloco anel (junte ( ) (s))))" /><br />
+                        à lista, então você pode ter certeza de que todas as palavras possíveis corresponderão a isso, se nada mais for encontrado, para que você não precise mais do <code>if</code>. Sua função <code>plural</code> agora pode ser apenas uma linha: <code>relatório (chamada (item 2 de (substring final mais longo ...
+                        </code>.
+                    </li>
+                    <li>
+                        Para um desafio extra, modifique seu teste de <em>substring final</em> para que um sinal de adição na chave corresponda a qualquer vogal (ele servirá como um caractere coringa), para que você possa fazer o seguinte:<br />
+                        <img class="indent" src="/bjc-r/img/2-complexity/corresponder-vogais.png" alt="lista (...) (lista (+y) (anel (junte ( ) (s)))) (lista (y) (anel (junte (todos exceto a última letra de ( )) (ies)))) (...)" title="lista (...) (lista (+y) (anel (junte ( ) (s)))) (lista (y) (anel (junte (todos exceto a última letra de ( )) (ies)))) (...)" />
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <img class="inline" src="/bjc-r/img/icons/save-now.png" alt="Salve seu trabalho" title="Salve seu trabalho" />
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
     </body>
 </html>

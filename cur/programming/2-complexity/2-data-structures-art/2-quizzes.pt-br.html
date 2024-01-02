@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="pt">
+=======
+<html lang="pt-br">
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
     <head>
         <meta charset="utf-8">
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
@@ -8,16 +12,28 @@
 
 	<body>
         <h2>Planejando um aplicativo de teste</h2>
+<<<<<<< HEAD
         <div class="aprender">
+=======
+        <div class="learn">
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
             <p><strong>Nesta página,</strong> você começará a desenvolver um aplicativo de teste criando um <em>tipo de dados abstrato</em> para combinar as perguntas com suas respostas.</p>
         </div>
 
         <div class="forYouToDo" id="first">
+<<<<<<< HEAD
         <ol>
             <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Fale com seu parceiro" title="Fale com seu parceiro" /> Decida que tipo de questionário você gostaria de criar e escreva de três a cinco perguntas e suas respostas corretas.</li>
             <li><img class="inline" src="/bjc-r/img/icons/take-turns-speaking-mini.gif" alt="Reveze-se para falar" title="Reveze-se para falar">Leia o seguinte seção. (Não crie isso no Snap<em>!</em>. Você criará seu próprio questionário posteriormente na página.)</li>
         </ol>
         </div>
+=======
+			<ol>
+                <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Fale com seu parceiro" title="Fale com seu parceiro" />Decida que tipo de questionário você gostaria de criar e escreva de três a cinco perguntas e suas respostas corretas.</li>
+                <li><img class="inline" src="/bjc-r/img/icons/take-turns-speaking-mini.gif" alt="Revezar-se para falar" title="Revezar-se para falar">Leia a seção a seguir. (Não crie isso no Snap<em>!</em>. Você criará seu próprio questionário posteriormente na página.)</li>
+			</ol>
+		</div>
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
 
         <p>
             <div class="vocab">: <strong>Sublista</strong>
@@ -25,6 +41,7 @@
 <p>(A palavra sublista também é usada para se referir a algum subconjunto de uma lista.)</p>
             </div>
             Você usará uma lista para armazenar os itens do questionário em uma variável global e usará uma <em>sublista</em> para cada par de perguntas/respostas. Depois, você pode escolher apenas um par de cada vez para trabalhar.
+<<<<<<< HEAD
                 <img class="indent" src="/bjc-r/img/2-complexity/quiz-questions-list-of-lists.png" alt="set (teste de ciência da computação) para (lista (lista (O que é o termo da ciência da computação para loop ou repetição?) (iteração)) (lista (Qual é o nome da abstração em um programa que pode conter um valor?) (variável)) (lista (Que tipo de variável está disponível apenas no parte do programa onde é definido?) (variável local)))" title="set (teste de ciência da computação) to (list (list (Qual é o termo da ciência da computação para loop ou repetição?) (iteração)) (lista (Qual é o nome da abstração em um programa que pode conter um valor?) (variável)) (lista (Que tipo de variável está disponível apenas na parte do programa onde está definida?) (variável local))) ">
                 <img class="indent" src="/bjc-r/img/2-complexity/item-of-item-of-script.png" alt="ask (item(1) de (item (3) de ( teste de ciência da computação))) e espere
 if (item (2) de (item (3) de (teste de ciência da computação)) = resposta) {
@@ -45,11 +62,34 @@ if (resposta = resposta do item do questionário (item (3) de (teste de ciência
 if (resposta = resposta do item do questionário (item (3) de (teste de ciência da computação))) {
      diga (Isso mesmo!) por (2) segundos
 }" />
+=======
+                <img class="indent" src="/bjc-r/img/2-complexity/quiz-questions-list-of-lists.png" alt="set (teste de ciência da computação) to (list (list (Qual é o termo da ciência da computação para loop ou repetição?) (iteração)) (list (Qual é o nome da abstração em um programa que pode conter um valor? ) (variável)) (lista (Que tipo de variável está disponível apenas na parte do programa onde está definida?) (variável local)))" title="set (questionário de ciência da computação) to (list (lista (O que é o termo da ciência da computação para loop ou repetição?) (iteração)) (lista (Qual é o nome da abstração em um programa que pode conter um valor?) (variável)) (lista (Que tipo de variável está disponível apenas em a parte do programa onde está definido?) (variável local)))">
+                <img class="indent" src="/bjc-r/img/2-complexity/item-of-item-of-script.png" alt="pergunte (item(1) de (item (3) de (teste de ciência da computação))) e espere
+                if (item (2) de (item (3) de (teste de ciência da computação)) = resposta) {
+                    diga (Isso mesmo!) por (2) segundos
+                }" title="pergunte (item(1) de (item (3) de (teste de ciência da computação))) e espere
+                if (item (2) de (item (3) de (teste de ciência da computação)) = resposta) {
+                    diga (Isso mesmo!) por (2) segundos
+                }" />
+        </p>
+        <div class="ap-standard">AAP.1.D.2, AAP.1.D.3, AAP.1.D.4</div>
+        <p>
+            Mas código como<img class="inline" src="/bjc-r/img/2-complexity/item-1-of-item-3-of.png" alt="item (1) de (item (3) de (teste de ciência da computação))" title="item (1) de (item (3) de (teste de ciência da computação))" /> é difícil de ler e entender . A melhor maneira é <em>usar abstração</em> para organizar os itens do questionário. A abstração apenas oculta os blocos <code>list</code> e <code>item of</code>, por isso não é complicado de construir, mas pode tornar seu código muito mais fácil de escrever, ler e depurar.<br />
+            <img class="indent" src="/bjc-r/img/2-complexity/quiz-questions-list-of-adts.png" alt="set (teste de ciência da computação) to (list (pergunta: (Qual é o termo da ciência da computação para loop ou repetição?) resposta: (iteração)) (pergunta: (Qual é o nome da abstração em um programa que pode contém um valor?) resposta: (variável)) (pergunta: (Que tipo de variável está disponível apenas na parte do programa onde está definida?) resposta: (variável local)))" title="set (ciência da computação) quiz para (lista (pergunta: (Qual é o termo da ciência da computação para loop ou repetição?) resposta: (iteração)) (pergunta: (Qual é o nome da abstração em um programa que pode conter um valor?) resposta: (variável)) (pergunta: (Que tipo de variável está disponível apenas na parte do programa onde está definida?) resposta: (variável local)))">
+            <img class="indent" src="/bjc-r/img/2-complexity/abstracted-quiz-script.png" alt="pergunte (pergunta do item do questionário (item (3) de (teste de ciência da computação))) e espere
+            if (resposta = resposta do item do questionário (item (3) de (teste de ciência da computação))) {
+                diga (Isso mesmo!) por (2) segundos
+            }" title="ask (pergunta do item do questionário (item (3) de (teste de ciência da computação))) e aguarde
+            if (resposta = resposta do item do questionário (item (3) de (teste de ciência da computação))) {
+                diga (Isso mesmo!) por (2) segundos
+            }" />
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
         </p>
 
         <div class="vocabFullWidth"><strong>: Tipos de dados</strong>
             <ul>
                 <li>
+<<<<<<< HEAD
                     Um <strong>tipo de dados</strong> é o tipo de dado que algo é (número, string de texto, lista, etc.). Por exemplo, <em>número</em> é o tipo de dados para a primeira entrada para <img src="/bjc-r/img/blocks/item.png" height="35" alt="item (1) of ()" title="item (1) of ()"> e <em>list</em> é o tipo de dados para sua segunda entrada.
                 </li>
                 <div class="ap-standard">AAP-1.A.3 segunda frase</div>
@@ -57,11 +97,24 @@ if (resposta = resposta do item do questionário (item (3) de (teste de ciência
                     Cada linguagem de programação fornece alguns <strong>tipos de dados primitivos</strong> (tipos de dados integrados). Por exemplo, Snap<em>!</em> fornece números, texto (palavras e frases), booleanos (verdadeiro ou falso), listas e alguns que você ainda não usou como dados (como sprites e fantasias). <a href="#hint-primitive" data-toggle="collapse" title="Este menu mostra todos os tipos primitivos do Snap!.">Este menu mostra todos os tipos primitivos do Snap<em>!</em> tipos primitivos.</a>
                     <div id="hint-primitive" class="collapse">
                         <img class="indent" src="/bjc-r/img/2-complexity/isa-menu.png" alt="tipos primitivos: número, texto, booleano, lista, sprite, comando, repórter, predicado" título ="tipos primitivos: número, texto, booleano, lista, sprite, comando, repórter, predicado"/>
+=======
+                    Um <strong>tipo de dados</strong> é o tipo de dado que algo é (número, string de texto, lista, etc.). Por exemplo, <em>número</em> é o tipo de dados da primeira entrada a ser<img src="/bjc-r/img/blocks/item.png" height="35" alt="item (1) de()" title="item (1) de ()"> e <em>list</em> é o tipo de dados para sua segunda entrada.
+                </li>
+                <div class="ap-standard">AAP-1.A.3 segunda frase</div>
+                <li>
+                    Cada linguagem de programação fornece alguns <strong>tipos de dados primitivos</strong> (tipos de dados integrados). Por exemplo, Snap<em>!</em> fornece números, texto (palavras e frases), booleanos (verdadeiro ou falso), listas e alguns que você ainda não usou como dados (como sprites e fantasias). <um href="#hint-primitive" data-toggle="collapse" title="Este menu mostra todos os tipos primitivos do Snap!.">Este menu mostra todos os tipos primitivos do Snap<em>!</em>.</a>
+                    <div id="hint-primitive" class="collapse">
+                    <img class="indent" src="/bjc-r/img/2-complexity/isa-menu.png" alt="tipos primitivos: número, texto, booleano, lista, sprite, comando, repórter, predicado" title="tipos primitivos: número, texto, booleano, lista, sprite, comando, repórter, predicado"/>
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                     </div>
                 </li>
             </ul>
         </div>
+<<<<<<< HEAD
         <div class="vocabFullWidth"><strong>: Tipos de dados abstratos</strong>
+=======
+        <div class="vocabFullWidth"><strong>:Tipos de dados abstratos</strong>
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
             <ul>
                 <div class="ap-standard">AAP.1.D.1</div>
                 <div class="sidenoteBig">
@@ -71,11 +124,19 @@ if (resposta = resposta do item do questionário (item (3) de (teste de ciência
                     Um <strong>tipo de dados abstrato (ADT)</strong> é um tipo de dados personalizado que é significativo para o seu programa. Não está embutido na linguagem; você o desenvolve à medida que codifica. Isto é uma abstração porque esconde os detalhes dentro do construtor e dos seletores para que o programador que usa um <code>item de questionário</code> tenha que pensar apenas em perguntas e respostas, não em índices de lista.
                 </li>
                 <li>
+<<<<<<< HEAD
                     O <img class="inline" src="/bjc-r/img/2-complexity/quiz-item-constructor.png" alt="item de questionário, pergunta: () resposta: ()" title="item de questionário , pergunta: () resposta: ()" /> bloco é o <strong>construtor</strong>; ele <em>constrói</em> um exemplo da estrutura de dados. Ao nomear as peças da estrutura, o construtor garante que cada vez que você usá-lo, você construirá a estrutura na ordem certa.<br />
                     <!--<img class="indent" src="/bjc-r/img/2-complexity/quiz-questions-constructor-definition.png" alt="item do questionário, pergunta: (pergunta) resposta: (resposta ) {relatório (lista (pergunta) (resposta))}" title="item do questionário, pergunta: (pergunta) resposta: (resposta) {relatório (lista (pergunta) (resposta))}">-->
                 </li>
                 <li>
                     A <img class="inline" src="/bjc-r/img/2-complexity/question-selector.png" alt="pergunta do item do questionário: ()" title="pergunta do item do questionário: ()" /> e <img class="inline" src="/bjc-r/img/2-complexity/answer-selector.png" alt="resposta do item do questionário: ()" title="resposta do item do questionário: ( )"/> são os <strong>seletores</strong>; cada um deles <em>seleciona</em> uma parte da estrutura de dados.<br />
+=======
+                    The <img class="inline" src="/bjc-r/img/2-complexity/quiz-item-constructor.png" alt="item do questionário, pergunta: () resposta: ()" title="item do questionário, pergunta: () resposta: ()" /> bloco é o <strong>construtor</strong>; ele <em>constrói</em> um exemplo da estrutura de dados. Ao nomear as peças da estrutura, o construtor garante que cada vez que você usá-lo, você construirá a estrutura na ordem certa.<br />
+                    <!--<img class="indent" src="/bjc-r/img/2-complexity/quiz-questions-constructor-definition.png" alt="item do questionário, pergunta: (pergunta) resposta: (resposta ) {relatório (lista (pergunta) (resposta))}" title="item do questionário, pergunta: (pergunta) resposta: (resposta) {relatório (lista (pergunta) (resposta))}">-->
+                </li>
+                <li>
+                    O<img class="inline" src="/bjc-r/img/2-complexity/question-selector.png" alt="pergunta do item do questionário: ()" title="pergunta do item do questionário: ()"/> e<img class="inline" src="/bjc-r/img/2-complexity/answer-selector.png" os blocos alt="resposta do item do questionário: ()" title="resposta do item do questionário: ()"/> são os <strong>seletores</strong>; cada um deles <em>seleciona</em> uma parte da estrutura de dados.<br />
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                     <!--<img class="indent" src="/bjc-r/img/2-complexity/question-definition.png" alt="pergunta do item do questionário: (item do questionário) {relatório (item (1) de (item do questionário)}" title="pergunta do item do questionário: (item do questionário) {relatório (item (1) de (item do questionário)}" />
                     <img class="indent" src="/bjc-r/img/2-complexity/answer-definition.png" alt="resposta do item do questionário: (item do questionário) {relatório (item (2) de (item do questionário) )}" title="resposta do item do questionário: (item do questionário) {relatório (item (2) de (item do questionário)}" />-->
                 </li>
@@ -87,6 +148,7 @@ if (resposta = resposta do item do questionário (item (3) de (teste de ciência
             </ul>
         </div>
 
+<<<<<<< HEAD
         <div class="atworkFullWidth">
             <div class="imageRight">
             <img class="noshadow" height="200px" src="/bjc-r/img/atwork/Reshma Saujani.jpeg" alt="foto de Reshma Saujani" title="foto de Reshma Saujani" />
@@ -94,6 +156,15 @@ if (resposta = resposta do item do questionário (item (3) de (teste de ciência
             <p>Reshma Saujani (nascida em 1975) fundou a organização sem fins lucrativos Girls Who Code em resposta ao declínio histórico no número de mulheres empregadas nas áreas de ciência da computação. Segundo o site deles, em 1995, 37% dos cientistas da computação eram mulheres. Em 2023, eram apenas 24%. Reshma e Girls Who Code pretendem corrigir esse desequilíbrio administrando clubes que ensinam ciência da computação para meninas. Além de ativista, Reshma foi a primeira mulher índio-americana a concorrer ao Congresso e atuou como Defensora Pública Adjunta da cidade de Nova York, onde criou parcerias inovadoras para apoiar os DREAMers e promover a reforma do financiamento de campanhas, entre outras iniciativas.</p >
             <p><a href="https://www.ted.com/talks/reshma_saujani_teach_girls_bravery_not_perfection?language=en" title="Vídeo: Ensine coragem às meninas, não perfeição" target="_blank">Vídeo: Ensine coragem às meninas, não é perfeição</a></p>
         </div>
+=======
+			<div class="atworkFullWidth">
+				<div class="imageRight">
+					<img class="noshadow" height="200px" src="/bjc-r/img/atwork/Reshma Saujani.jpeg" alt="foto de Reshma Saujani" title="foto de Reshma Saujani" />
+                </div>
+                <p>Reshma Saujani (nascida em 1975) fundou a organização sem fins lucrativos Girls Who Code em resposta ao declínio histórico no número de mulheres empregadas nas áreas de ciência da computação. Segundo o site deles, em 1995, 37% dos cientistas da computação eram mulheres. Em 2023, eram apenas 24%. Reshma e Girls Who Code pretendem corrigir esse desequilíbrio administrando clubes que ensinam ciência da computação para meninas. Além de ser ativista, Reshma foi a primeira mulher índio-americana a concorrer ao Congresso e atuou como Defensora Pública Adjunta da cidade de Nova Iorque, onde criou parcerias inovadoras para apoiar os DREAMers e promover a reforma do financiamento de campanhas, entre outras iniciativas.</p>
+				<p><a href="https://www.ted.com/talks/reshma_saujani_teach_girls_bravery_not_perfection?language=en" title="Vídeo: Ensine às meninas coragem, não perfeição" target="_blank">Vídeo: Ensine coragem às meninas, não perfeição</a></p>
+			</div>
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
 
         <div class="forYouToDo">
 
@@ -109,13 +180,18 @@ if (resposta = resposta do item do questionário (item (3) de (teste de ciência
                         <ol style="list-style-type:lower-alpha">
                             <li>
                                 Clique na seta à direita do nome da entrada:<br />
+<<<<<<< HEAD
                                 <img class="indent" src="/bjc-r/img/2-complexity/create-input-name-right_arrow.png" height="125" alt="criar nome de entrada seta para a direita" title="criar entrada nome seta para a direita" />
+=======
+                                <img class="indent" src="/bjc-r/img/2-complexity/create-input-name-right_arrow.png" height="125" alt="criar nome de entrada seta para a direita" title="criar nome de entrada seta para a direita"/>
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                             </li>
                             <li>Escolha o tipo de dados desejado para essa entrada. (Para este projeto, você usará os tipos de entrada "texto" e "lista".)</li>
                             <li>Clique em "OK".</li>
                         </ol>
                     </p>
                 </div>
+<<<<<<< HEAD
 <li>
 Crie uma variável global para armazenar seus itens do questionário e inicialize-a como uma lista de itens, usando seu construtor quando apropriado.</li> <a id="two-views">
 <a id="duas visualizações"> </a>
@@ -158,90 +234,198 @@ exibe é uma tabela.</p>
 uma lista de listas, em que cada sublista é uma
 linha da tabela.</p>
 </div>
+=======
+                <li>
+                    Crie uma variável global para armazenar os itens do seu questionário e inicialize-a como uma lista de itens, usando seu construtor quando apropriado.</li><a id="two-views">
+						<a id="two-views"> </a>
+                        <div class="narrower">
+                            Snap<em>!</em> possui duas visualizações diferentes para listas dentro de listas. Você pode mudar a visualização clicando com o botão direito (ou control-clique) no observador <var>quiz</var> (ou como você chamou a variável) no palco.
+
+                            <div class="endnote">
+                                Se você não vir o observador no palco, certifique-se de que a caixa de seleção ao lado da variável <var>quiz</var> na paleta Variáveis ​​esteja marcada.
+                                <img class="inlinde" src="/bjc-r/img/2-complexity/quiz-watcher.png" alt="observador de questionário verificado" title="observador de questionário verificado" />
+                            </div>
+                            <ul style="list-style-type: disc;">
+                                <li>
+                                    <strong>Table View</strong> para o <var>teste de ciências da computação</var> Watcher (seu teste será diferente):<br />
+                                    <img class="indent" src="/bjc-r/img/2-complexity/csquiz-big.png" alt="observador de quiz cs com a primeira coluna expandida" title="observador de quiz cs com a primeira coluna expandida" />
+									<div class="endnote">
+									<a href="#table-hint" data-toggle="collapse" title="">Meu observador é muito estreito.</a>
+						            <div id="table-hint" class="collapse">
+                                        A princípio o observador ficará assim:<br />
+                                    <img class="indent" src="/bjc-r/img/2-complexity/csquiz-small.png" alt="cs quiz watcher no tamanho inicial" title="cs quiz watcher no tamanho inicial" /><br />
+                                    Arraste a alça de redimensionamento no canto inferior direito para obter isto:<br />
+                                    <img class="indent" src="/bjc-r/img/2-complexity/csquiz-med.png" alt="cs quiz watcher redimensionado" title="cs quiz watcher redimensionado" /><br />
+                                    Em seguida, passe o mouse sobre a letra A perto do topo. Ele se transformará no dígito 1. Agarre-o e arraste-o para a direita:<br />
+                                    <img class="indent" src="/bjc-r/img/2-complexity/csquiz-big.png"alt="cs quiz watcher com a primeira coluna expandida" title="cs quiz watcher com a primeira coluna expandida" />
+									</div>
+									</div>
+                                </li>
+                                <li>
+                                    <strong>Visualização de lista</strong> para <var>teste de ciência da computação</var> Observador:<br />
+                                    <img class="indent" src="/bjc-r/img/2-complexity/csquiz-list.png" alt="cs quiz watcher, visualização de lista" title="cs quiz watcher, visualização de lista" />
+                                </li>
+                            </ul>
+                        </div>
+
+						<div class="vocabFullWidth">: <strong>Tabela</strong>
+                            <p>Uma <strong>tabela</strong> é uma tabela bidimensional
+                            estrutura de dados com linhas e colunas. Se você tiver
+                            usou um programa de <em>planilha</em>, o que
+                            exibe é uma tabela.</p>
+                            <p>No Snap<em>!</em>, uma tabela é implementada como
+                            uma lista de listas, em que cada sublista é uma
+                            linha da tabela.</p>
+                            </div>
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
 
                 <img class="imageRight" src="/bjc-r/img/icons/save-now.png" alt="Salve seu trabalho" title="Salve seu trabalho" />
                 <li>Teste ambos os seletores para diferentes itens na sua lista de itens do questionário e depure quaisquer problemas.</li>
                 <li>
                     <!-- Question 1-->
+<<<<<<< HEAD
                     <div class="assessment-data" type="multiplechoice" identificador="capitals" hasinlinefeedback="true" maxchoices="8" responseIdentifier="ri1" shuffle="true">
                         <div class="prompt">
                             <p>
                                 Imagine que você coloque uma variável em <var>maiúsculas</var> e use <code>set</code> para dar um nome a esta lista de listas: <br />
                                 <img class="indent" src="/bjc-r/img/3-lists/check1capitals.png" alt="set (maiúsculas) para {{Augusta, Maine}, {Boise, Idaho}, {Columbia, South Carolina}, {Des Moines, Iowa}}" title="definido (maiúsculas) para {{Augusta, Maine}, {Boise, Idaho}, {Columbia, Carolina do Sul}, {Des Moines, Iowa}}"><br />
+=======
+                    <div class="assessment-data" type="multiplechoice" identifier="capitals" hasinlinefeedback="true" maxchoices="8" responseIdentifier="ri1" shuffle="true">
+                        <div class="prompt">
+                            <p>
+                                Imagine que você coloque uma variável em <var>maiúsculas</var> e use <code>set</code> para dar um nome a esta lista de listas: <br />
+                                <img class="indent" src="/bjc-r/img/3-lists/check1capitals.png" alt="definir (maiúsculas) para {{Augusta, Maine}, {Boise, Idaho}, {Columbia, Carolina do Sul}, {Des Moines, Iowa}}" title="definir (maiúsculas) para {{Augusta, Maine} , {Boise, Idaho}, {Columbia, Carolina do Sul}, {Des Moines, Iowa}}"><br />
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                                 Quais das seguintes afirmações são <strong>verdadeiras</strong>?<br />
                                 <br />
                                 Escolha <strong>todas</strong> as opções aplicáveis.
                             </p>
                         </div>
+<<<<<<< HEAD
                         <div class="choice" identificador="c1">
                             <div class="texto">
                                 <img border="0" src="/bjc-r/img/3-lists/check1capitalsc1.png" alt="item (1) de (maiúsculas)" title="item (1) de (maiúsculas)"> relata uma <strong>lista</strong> com dois itens: "Augusta" e "Maine".
+=======
+                        <div class="choice" identifier="c1">
+                            <div class="text">
+                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc1.png" alt="item (1) de (maiúsculas)" title="item (1) de (maiúsculas)"> reporta uma <strong>lista</strong> com dois itens: "Augusta" e "Maine".
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                             </div>
                             <div class="feedback">
                                 Correto.
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div class="choice" identificador="c2">
                             <div class="texto">
                                 <img border="0" src="/bjc-r/img/3-lists/check1capitalsc2.png" alt="item (1) de (item (1) de (maiúsculas))" title="item (1) ) de (item (1) de (maiúsculas))"> relata a palavra "Augusta".
+=======
+                        <div class="choice" identifier="c2">
+                            <div class="text">
+                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc2.png" alt="item (1) de (item (1) de (maiúsculas))" title="item (1) de (item (1) de (maiúsculas))"> relata a palavra "Augusta".
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                             </div>
                             <div class="feedback">
                                 Correto.
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div class="choice" identificador="c3">
                             <div class="texto">
                                 <img border="0" src="/bjc-r/img/3-lists/check1capitalsc3.png" alt="item (último) de (item (2) de (maiúsculas))" title="item (último) ) de (item (2) de (maiúsculas))"> relata a palavra "Iowa".
+=======
+                        <div class="choice" identifier="c3">
+                            <div class="text">
+                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc3.png" alt="item (último) de (item (2) de (maiúsculas))" title="item (último) de (item (2) de (maiúsculas))"> relata a palavra "Iowa".
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                             </div>
                             <div class="feedback">
                                 Não. O que é o item 2 de “maiúsculas”?
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div class="choice" identificador="c4">
                             <div class="texto">
                                 <img border="0" src="/bjc-r/img/3-lists/check1capitalsc4.png" alt="(comprimento) de (maiúsculas)" title="(comprimento) de (maiúsculas)"> relata o número 8.
+=======
+                        <div class="choice" identifier="c4">
+                            <div class="text">
+                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc4.png" alt="(comprimento) de (maiúsculas)" title="(comprimento) de (maiúsculas)"> informa o número 8.
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                             </div>
                             <div class="feedback">
                                 Não. Cada uma das pequenas listas é um único item na lista "maiúsculas" .
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div class="choice" identificador="c5">
                             <div class="texto">
                                 <img border="0" src="/bjc-r/img/3-lists/check1capitalsc5.png" alt="todos menos o primeiro de (item (último) de (maiúsculas))" title="todos menos o primeiro de (item (último) de (maiúsculas))"> reporta uma <strong>lista</strong> com um item: "Iowa".
+=======
+                        <div class="choice" identifier="c5">
+                            <div class="text">
+                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc5.png" alt="todos, exceto o primeiro de (item (último) de (maiúsculas))" title="todos, exceto o primeiro de (item (último) de (maiúsculas))"> relata uma <strong>lista</strong> com um item : "Iowa".
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                             </div>
                             <div class="feedback">
                                 Correto.
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div class="choice" identificador="c6">
                             <div class="texto">
                                 <img border="0" src="/bjc-r/img/3-lists/check1capitalsc6.png" alt="item (3) de (maiúsculas)" title="item (3) de (maiúsculas))" > relata a string "Boise".
+=======
+                        <div class="choice" identifier="c6">
+                            <div class="text">
+                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc6.png" alt="item (3) de (maiúsculas)" title="item (3) de (maiúsculas)"> reporta a string "Boise".
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                             </div>
                             <div class="feedback">
                                 Os itens de <var>maiúsculas</var> são listas.
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div class="choice" identificador="c7">
                             <div class="texto">
                                 <img border="0" src="/bjc-r/img/3-lists/check1capitalsc7.png" alt="item (último) de (todos menos o primeiro de (maiúsculas))" title="item (último) de (todos, exceto o primeiro de (maiúsculas))"> relata a string "Iowa".
+=======
+                        <div class="choice" identifier="c7">
+                            <div class="text">
+                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc7.png" alt="item (último) de (todos, exceto o primeiro de (maiúsculas))" title="item (último) de (todos, exceto o primeiro de (maiúsculas))"> relata a string "Iowa".
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                             </div>
                             <div class="feedback">
                                 Os itens de <code>todos exceto o primeiro de (maiúsculas)</code> são listas.
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div class="choice" identificador="c8">
                             <div class="texto">
                                 <img border="0" src="/bjc-r/img/3-lists/check1capitalsc8.png" alt="(comprimento) de (item (1) de (maiúsculas))" title="(comprimento) de (item (1) de (maiúsculas))"> informa o número 2.
+=======
+                        <div class="choice" identifier="c8">
+                            <div class="text">
+                                <img border="0" src="/bjc-r/img/3-lists/check1capitalsc8.png" alt="(comprimento) de (item (1) de (maiúsculas))" title="(comprimento) de (item (1) de (maiúsculas))"> relata o número 2.
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                             </div>
                             <div class="feedback">
                                 Correto.
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div class="responseDeclaration" identificador="ri1">
                             <div class="correctResponse" identificador="c1"></div>
                             <div class="correctResponse" identificador="c2"></div>
                             <div class="correctResponse" identificador="c5"></div>
                             <div class="correctResponse" identificador="c8"></div>
+=======
+                        <div class="responseDeclaration" identifier="ri1">
+                            <div class="correctResponse" identifier="c1"></div>
+                            <div class="correctResponse" identifier="c2"></div>
+                            <div class="correctResponse" identifier="c5"></div>
+                            <div class="correctResponse" identifier="c8"></div>
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
                         </div>
                     </div>
                 </li>

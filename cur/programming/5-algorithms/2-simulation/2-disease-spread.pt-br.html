@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <script type="text/javascript" src="/bjc-r/utilities/gifffer.min.js"></script>
+		<script type="text/javascript">window.onload = function() {Gifffer();}</script>
+        <link rel="stylesheet" type="text/css" href="/bjc-r/css/bjc-gifffer.css">
+		<title>Unidade 5 Laboratório 2: Simulações, Página 2</title>
+	</head>
+
+	<body>
+        <h2>Projeto de Propagação de Doenças</h2>
+        <div class="commentBig">
+            <p>Paul sugeriu que revisássemos o texto de Cálculo de DHH, que faz um ótimo trabalho na construção de um modelo intelectual que poderia ser programado no Snap. --MF, 27/06/21 com BH</p>
+        </div>
+
+		<div class="learn">
+            <p><strong>Nesta página,</strong> você modelará a propagação de uma doença em uma população.</p>
+            <img class="indent" data-gifffer="/bjc-r/img/5-algorithms/img_disease-spread/disease-spread.gif" alt="Simulação da propagação de uma doença em uma população. Um indivíduo infectado eventualmente faz com que todos sejam infectados." title="Simulação da propagação de uma doença em uma população. Um indivíduo infectado eventualmente faz com que todos sejam infectados."/>
+	    <p><strong>Nota:</strong> Havia uma simulação de propagação de doenças em BJC muito antes do covid-19, mas queremos reconhecer que, atualmente, a propagação de uma doença não é uma questão abstrata. Todos foram afetados pelo isolamento em casa, e alguns alunos podem ter perdido entes queridos para essa doença. Pesquisadores médicos usam simulações (muito mais complexas do que esta) para tentar prever o curso futuro da doença.</p>
+        </div>
+
+        <p>Suponha que você seja um pesquisador médico e gostaria de entender os fatores que contribuem para a propagação de doenças. Em particular, você deseja saber o efeito do tamanho da população no tempo necessário para que todos sejam infectados, sob a suposição simplificadora de que, uma vez infectada, uma pessoa permanece infectada.</p>
+
+        <div class="forYouToDo" id="first">
+            <ol>
+				<li><img class="imageRight" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Conversar com seu parceiro" title="Conversar com seu parceiro" /> Qual seria uma hipótese sensata sobre como o tamanho da população afeta o tempo decorrido?</li>
+                <li>E se as pessoas interagissem mais frequentemente entre si?</li>
+            </ol>
+        </div>
+
+        <p>Você pode não ter dados suficientes para testar sua hipótese, e seria antiético induzir a doença em uma população apenas para coletar novos dados. Uma simulação permitiria que você testasse suas hipóteses sem as restrições de tempo, custo e ética.</p>
+
+        <div class="forYouToDo" id="second">
+            <ol start="3">
+				<li>
+					<a href="/bjc-r/prog/5-algorithms/U5L2-Simulation.xml" class="run"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!" title="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!"></a><br />
+					Inclui:
+					<ul>
+						<li>uma variável <var>população</var> que armazena o número total de pessoas (representadas por clones de um sprite)</li>
+						<li>uma variável <var>percentual inicialmente infectado</var> que armazena a fração da população que está doente no início da simulação</li>
+						<li>uma variável <var>velocidade</var> que armazena o ritmo com que os clones se movem</li>
+						<li>uma variável <var>sprites prontos?</var> que armazena um Boolean que acompanha se todos os clones foram criados e a simulação pode começar</li>
+						<li>uma variável <var>número infectados</var> que controla quantos clones estão atualmente infectados</li>
+						<li>uma variável <var>infectado?</var> <em>sprite-local</em> que armazena um Boolean que acompanha se um clone está doente (cada clone terá sua própria variável separada com esse nome)</li>
+						<li>duas fantasias, doente (<img class="inline" src="/bjc-r/img/5-algorithms/img_disease-spread/sick.png" height="40" alt="Fantasia de sprite 'doente': uma pessoa vermelha pequena" title="Fantasia de sprite 'doente': uma pessoa vermelha pequena" />) e saudável (<img class="inline" src="/bjc-r/img/5-algorithms/img_disease-spread/well.png" height="40" alt="Fantasia de sprite 'saudável': uma pessoa azul pequena" title="Fantasia de sprite 'saudável': uma pessoa azul pequena" />), que exibem o status de cada clone</li>
+						<li>
+							<div class="sidenoteBig">
+								<p>Você aprendeu a clonar um sprite em <a href="/bjc-r/cur/programming/3-lists/1-abstraction/5-building-tic-tac-toe.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 3 Laboratório 1 Página 5: Construção de um Tabuleiro de Jogo da Velha">Unidade 3 Laboratório 1 Página 5: Construção de um Tabuleiro de Jogo da Velha</a>.</p>
+								<p>O bloco primitivo <img class="inline" src="/bjc-r/img/blocks/my-neighbors.png" alt="meus (vizinhos)" title="meus (vizinhos)" /> relata uma lista de sprites que estão próximos ao sprite que o utiliza.</p>
+							</div>
+							uma função <code>simular doença</code> <strong>para você completar</strong> que recebe três entradas: população total, percentual inicialmente infectado e velocidade do sprite; cria os clones que executam a simulação; e gera o tempo até que toda a população seja infectada
+						</li>
+						<li>um bloco <code>inicializar simulação</code> que inicializa as variáveis globais e define a fantasia do sprite principal</li>
+						<li>um predicado <code>tocando pessoa infectada?</code> <strong>para você completar</strong> que verifica se o clone atual está sendo exposto à doença</li>
+						<li>um bloco <code>inicializar clone</code> que decide se um clone começará doente e o posiciona aleatoriamente no palco</li>
+						<li>um script <code>quando eu começar como clone</code> <strong>para você completar</strong> que move os clones até que todos estejam infectados</li>
+					</ul>
+				</li>
+                <li>Complete a função <code>simular doença</code>, o predicado <code>tocando pessoa infectada?</code> e o script <code>quando eu começar como clone</code>.</li>
+				<li><img class="imageRight" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Conversar com seu parceiro" title="Conversar com seu parceiro" /> Discuta como sua simulação é semelhante e diferente de um surto de doença na vida real. Identifique as <em>suposições simplificadoras</em> que você fez nesta simulação.</li>
+			</ol>
+		</div>
+		<p>Você deseja saber o efeito do tamanho da população no tempo decorrido. Como há alguma aleatoriedade na simulação, você obterá alguma variação no tempo relatado. (Isso não é um erro; na vida real, eventos aleatórios afetam o tempo decorrido.)</p>
+		<div class="forYouToDo">
+			<ol start="6">
+                <li>
+                    <div class="ap-standard">AAP-3.F.8</div>
+					Escreva uma função que recebe o tamanho da população como entrada, executa a simulação dez vezes, mantém o percentual inicialmente infectado em 10 e a velocidade de infecção em 2, e relata o tempo médio decorrido.<br />
+                    <img class="indent" src="/bjc-r/img/5-algorithms/average-of-disease-spread.png" alt="tempo médio para a propagação da doença com tamanho da população: ()" title="tempo médio para a propagação da doença com tamanho da população: ()" />
+                </li>
+                <div class="ap-standard">AAP-3.F.7</div>
+                <div class="sidenoteBig">Usar clones é uma forma de paralelismo. Mas, como você aprendeu na <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/8-sequential.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 5 Laboratório 1 Página 8: Paralelismo">Unidade 5 Laboratório 1 Página 8: Paralelismo</a>, porque os clones estão todos sendo executados em um único processador, clonar não proporciona aceleração.</div>
+				<li>Chame esta função quatro vezes com diferentes tamanhos de população (50, 100, 150 e 200) e anote os resultados. Crie uma hipótese refinada sobre a relação entre o tamanho da população e o tempo para que toda a população seja infectada.</li>
+                <li>Em cenários de doenças reais, nem todo mundo acaba ficando doente. Como você decidiria se as simplificações que você usou em uma simulação invalidam as conclusões que você poderia tirar?</li>
+			</ol>
+        </div>
+
+        <p>Este é um modelo simplificado. Existem muitas coisas que você pode fazer para tornar o modelo mais realista. Por exemplo, você pode fazer com que as pessoas infectadas melhorem com o tempo ou algumas pessoas podem ser imunes à doença, mas você sempre terá que fazer algumas simplificações.</p>
+
+        <div class="takeItFurther">
+            <ol type="A">
+                <li>Conduza agora um experimento similar mantendo o tamanho da população constante e variando a porcentagem inicialmente infectada. Crie uma hipótese para essa relação.</li>
+                <li>Em seguida, realize outro experimento variando a velocidade de movimento e mantendo o tamanho da população e a porcentagem inicialmente infectada constantes, e crie uma terceira hipótese.</li>
+                <li>Adicione mais entradas ao bloco de simulação. Sugerimos pessoas se recuperando com o tempo ou sendo curadas por médicos, mas há muitas outras que você pode pensar.</li>
+                <li>Você tem hipóteses para alterar apenas uma variável, mas e se você mudar duas coisas? Elas afetam o resultado de forma independente, ou há um efeito cruzado (por exemplo, se as pessoas doentes se curarem rapidamente, isso muda a relação entre o tamanho da população e o tempo decorrido)? Execute experimentos para descobrir.</li>
+                <li>Projete e implemente uma simulação de predador e presa no Snap<em>!</em>. Por exemplo, você pode modelar um ambiente com populações de lobos e veados, onde os lobos caçam os veados. Quais são alguns parâmetros que você precisa incorporar ao seu modelo para simular flutuações realistas nas populações de predador e presa?</li>
+                <li>
+                    Imagine que você trabalha em um banco que deseja minimizar o tempo de espera do cliente na fila. O banco está considerando duas alternativas:
+                    <ul>
+                        <li>uma única fila onde os clientes aguardam na ordem de chegada e esperam pelo próximo atendente disponível, ou</li>
+                        <li>filas separadas para cada atendente.</li>
+                    </ul>
+                    Projete e implemente duas simulações no Snap<em>!</em> para ajudar o banco a determinar o <em>tempo médio de espera</em> para os clientes em cada cenário, a fim de escolher a melhor opção.</li>
+                <li>Faça alguma pesquisa: por que (a maioria) dos bancos usa uma única fila de atendimento, mas (a maioria) dos supermercados usa uma fila por estação de pagamento?</li>
+            </ol>
+        </div>
+        

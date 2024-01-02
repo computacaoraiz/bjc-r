@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Unidade 5 Laboratório 1: Algoritmos de Busca e Eficiência, Página 3</title>
+	</head>
+
+	<body>
+		<h2>A palavra "Separado" está escrita corretamente?</h2>
+        <div class="todo">
+            <h3>TG e soluções precisam ser verificados. --MF, 19/12/18</h3>
+        </div>
+        <div class="learn">
+            <p><strong>Nesta página</strong>, você usará um algoritmo de <em>busca binária</em> para realizar uma busca eficiente em uma lista <em>ordenada</em>.</p>
+        </div>
+        <p>Responder a esta pergunta é simples no Snap<em>!</em>, porque você pode simplesmente consultar um dicionário: <img class="inline nopadtb" src="/bjc-r/img/5-algorithms/100000-palavras-contem-separado.png" alt="100000-palavras-contem-separado.png" title="(100.000 palavras) contém (separado)" />. No entanto, <em>"simples" não significa rápido</em>. O bloco <code>contém</code> ainda precisa verificar cada item na lista até encontrar o que você procura (e dizer <code>verdadeiro</code>) ou alcançar o final da lista (e dizer <code>falso</code>). Ainda é uma busca linear.</p>
+        <p>Quando você está procurando apenas <em>uma</em> coisa em uma lista (por exemplo, verificando se uma palavra está escrita corretamente) em vez de encontrar <em>todas</em> as palavras com alguma característica (por exemplo, procurando todas as palavras de cinco letras), você pode usar a estratégia da <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Página 1: Adivinhe o Número">Página 1: Adivinhe o Número</a> para tornar seu algoritmo mais rápido. A melhor estratégia para esse problema é um algoritmo de <em>busca binária</em>: sempre adivinhe o valor <em>do meio</em> e ajuste sua suposição com base em se ela foi alta ou baixa demais. Dessa forma, você elimina metade das possibilidades a cada suposição. Podemos usar uma estratégia semelhante para procurar uma palavra em uma lista de palavras.</p>
+        <div class="endnote">Você poderia ter escrito um programa de adivinhação de números mais simples: o computador poderia adivinhar o número 1, depois 2, depois 3 e assim por diante até encontrar o número. Isso seria um algoritmo de busca <em>linear</em>; é mais fácil codificar, mas leva mais tempo para ser executado, porque a cada vez que faz uma suposição errada, elimina apenas essa suposição. Com a busca binária, cada suposição errada elimina <em>metade</em> das possibilidades de uma vez.</div>
+        <div class="vocabFullWidth">: <strong>Busca Binária</strong>
+        	<div class="ap-standard">AAP-2.P.1, AAP-2.P.2</div>
+            <p>Um algoritmo de <strong>busca binária</strong> começa no meio de uma lista <em>ordenada</em> e elimina repetidamente metade da lista até encontrar o valor desejado ou até que todos os elementos tenham sido eliminados.</p>
+            <div class="ap-standard">AAP-2.O.1</div>
+            <div class="sidenoteBig">Você aprendeu sobre a travessia de uma lista em <a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 2 Laboratório 2 Página 3: Verificando Cada Resposta de Quiz">Unidade 2 Laboratório 2 Página 3: Verificando Cada Resposta de Quiz</a>.</div>
+            <p>A busca linear faz uma travessia <em>completa</em> da lista. A busca binária economiza tempo fazendo uma travessia <em>parcial</em> da lista.</p>
+        </div>
+        <div class="endnote">A única coisa que quase todos sabem sobre computadores é que eles usam o sistema binário: uns e zeros. A busca binária não tem nada a ver com isso. A palavra "binário" apenas significa "dois", quer se trate de dois dígitos ou duas metades.</div>
+
+        <div class="forYouToDo" id="first">
+			<ol>
+                <li>
+                    <img class="inline" src="/bjc-r/img/icons/escreva-seus-pensamentos.png" alt="Escreva Seus Pensamentos" title="Escreva Seus Pensamentos" />
+                    Compare esse bloco de <code>busca binária</code> com o código da <a href="/bjc-r/cur/programming/5-algorithms/1-searching-lists/1-sorted-lists.html?topic=nyc_bjc%2F5-algorithms.topic&course=bjc4nyc.html&novideo&noassignment" title="Página 1: Adivinhe o Número">Página 1: Adivinhe o Número</a>. Quais partes são iguais? Quais partes são diferentes?<br />
+                    <img class="indent" src="/bjc-r/img/5-algorithms/definicao-do-bloco-de-busca-binaria.png" alt="busca binária para (valor) em (dados) {
+            variáveis do script (baixo) (alto) (índice atual) (item atual)
+            defina (baixo) como (1)
+            defina (alto) como (comprimento de (dados))
+            repita até ((baixo) > (alto)) {
+                        defina (índice atual) como (média de (baixo) e (alto)) #comentário: encontrar a palavra do meio
+                        defina (item atual) como (item (índice atual) de (dados))
+                        se ((item atual) = (valor)) { relatório (verdadeiro) }
+                        else {
+                                    se ((item atual) > (valor)) #comentário: eliminar metade da lista {
+                                                defina (alto) como ((índice atual) - (1))
+                                    } else { defina (baixo) como ((índice atual) + (1)) }
+                        }
+            }
+            relatório (falso)
+}" title="busca binária para (valor) em (dados) {
+            variáveis do script (baixo) (alto) (índice atual) (item atual)
+            defina (baixo) como (1)
+            defina (alto) como (comprimento de (dados))
+            repita até ((baixo) > (alto)) {
+                        defina (índice atual) como (média de (baixo) e (alto)) #comentário: encontrar a palavra do meio
+                        defina (item atual) como (item (índice atual) de (dados))
+                        se ((item atual) = (valor)) { relatório (verdadeiro) }
+                        else {
+                                    se ((item atual) > (valor)) #comentário: eliminar metade da lista {
+                                                defina (alto) como ((índice atual) - (1))
+                                    } else { defina (baixo) como ((índice atual) + (1)) }
+                        }
+            }
+            relatório (falso)
+}" />
+                    <div class="endnote">
+                        O bloco <code>&gt;</code> (bem como os blocos <code>&lt;</code> e <code>=</code>) compara palavras em ordem alfabética: <br />
+                        <img class="indent" src="/bjc-r/img/5-algorithms/carneiro-maior-que-banana-relatório-verdadeiro.png" alt="(carneiro) > (banana) relatando verdadeiro" title="(carneiro) > (banana) relatando verdadeiro" />
+                        <img class="indent" src="/bjc-r/img/5-algorithms/maçã-maior-que-banana-relatório-falso.png" alt="(maçã) > (banana) relatando falso" title="(maçã) > (banana) relatando falso" />
+                    </div>
+                </li>
+                <li>Verifique se "separado" está escrito corretamente usando a <code>busca binária</code> para procurar a palavra na lista ordenada <img class="inline" src="/bjc-r/img/5-algorithms/100000-palavras-(ordenadas).png" alt="100.000 palavras (ordenadas)" title="100.000 palavras (ordenadas)" />.</li>
+				<li>Tente a <code>busca binária</code> com algumas palavras que você sabe que estão escritas corretamente e algumas que você sabe que estão incorretas. </li>
+                <div class="todo">Talvez mude para "Pratique o uso da <code>busca binária</code>: Tente com algumas palavras que você sabe que estão escritas corretamente e algumas que você sabe que estão incorretas." --MF, 13/07/20</div>
+				<li>Agora use a <code>busca binária</code> para procurar as mesmas palavras na lista <var>100.000 palavras</var> não ordenada.</li>
+                <div class="ap-standard">AAP-2.P.2</div>
+				<li><img class="inline" src="/bjc-r/img/icons/converse-com-seu-parceiro.png" alt="Converse com Seu Parceiro" title="Converse com Seu Parceiro" /> Por que a busca binária funciona em uma lista, mas não na outra? Considere como o algoritmo de busca binária funciona.</li>
+			</ol>
+		</div>
+
+        <p>O bloco <code>contém</code> não pode fazer suposições sobre a ordenação na lista que você está pesquisando, mas se você está procurando uma coisa em uma lista <em>ordenada</em>, você pode usar a busca binária.</p>
+        <div class="takeNote">
+            <div class="ap-standard">AAP-2.P.2</div>
+            <p>
+                Duas coisas afetam se você pode usar um algoritmo de busca binária para tornar seu programa mais eficiente:
+                <ul>
+                    <li>Qual pergunta você está tentando responder? Você está procurando <em>uma</em> coisa em uma lista ou está encontrando <em>todas</em> as coisas na lista com alguma característica?</li>
+                    <li>Qual é a condição dos seus dados? Eles estão ordenados ou desordenados?</li>
+                </ul>
+                <table class="bordered center standard" summary="tabela mostrando que para usar a busca binária, você deve estar procurando um valor específico e procurando em dados ordenados">
+                    <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">encontrar um valor</th>
+                        <th scope="col">encontrar muitos valores</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">dados ordenados</th>
+                        <td style="color: green">pode usar busca binária</td>
+                        <td>deve usar busca linear</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">dados desordenados</th>
+                        <td>deve usar busca linear</td>
+                        <td>deve usar busca linear</td>
+                    </tr>
+                </table>
+            </p>
+        </div>
+        <div class="endnote">Se você estiver lidando com listas curtas, não é tão importante qual algoritmo você usa. É quando você está lidando com muitos dados que você deve pensar cuidadosamente sobre o algoritmo.</div>
+        <div class="forYouToDo">
+            <ol start="6">
+                <li>
+                    <!-- Questão 1 -->
+                    <div class="assessment-data" type="multiplechoice" identifier="Para usar uma busca binária, os dados devem estar..."
+                        hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri1" shuffle="true">
+                        <div class="prompt">
+                            <div class="ap-standard">AAP-2.P parte b, AAP-2.P.2</div>
+                            Para usar uma busca binária, os dados devem estar...
+                        </div>
+                        <div class="choice" identifier="c1">
+                            <div class="text">binários</div>
+                            <div class="feedback">
+                                Todos os dados em um computador são representados usando binários (uns e zeros), mas isso não tem nada a ver com buscas binárias, que comparam com o valor do meio para escolher qual metade eliminar.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text">ordenados</div>
+                            <div class="feedback">
+                                Correto! Se os dados estiverem ordenados, comparar com o valor do meio fornecerá boas informações sobre qual metade dos dados manter.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c3">
+                            <div class="text">desordenados</div>
+                            <div class="feedback">
+                                Se os dados estiverem desordenados, você não pode ter certeza de que tudo antes ou depois do valor do meio pode ser eliminado.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c4">
+                            <div class="text">lineares</div>
+                            <div class="feedback">
+                                "Linear" é o nome de outro algoritmo de busca, não uma propriedade dos dados.
+                            </div>
+                        </div>
+                        <div class="responseDeclaration" identifier="ri1">
+                            <div class="correctResponse" identifier="c2"></div>
+                        </div>
+                    </div>
+                    <!-- Questão 2 -->
+                    <div class="assessment-data" type="multiplechoice" identifier="Quais das seguintes perguntas podem ser respondidas com uma busca binária, assumindo que os dados estão ordenados?"
+                        hasinlinefeedback="true" maxchoices="2" responseIdentifier="ri2" shuffle="true">
+                        <div class="prompt">
+                            Quais das seguintes perguntas podem ser respondidas com uma busca binária, assumindo que os dados estão ordenados? Marque todas as que se aplicam:
+                        </div>
+                        <div class="choice" identifier="c1">
+                            <div class="text">Qual é o número de telefone do meu amigo Rasheed?</div>
+                            <div class="feedback">
+                                Correto! Você está procurando <strong>um</strong> número de telefone na lista.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text">Me dê uma lista de todas as músicas da Beyoncé.</div>
+                            <div class="feedback">
+                                Temos que encontrar <strong>todas</strong> as músicas da Beyoncé, não apenas uma.
+                            </div>
+                        </div>
+                        <div class "choice" identifier="c3">
+                            <div class="text">Diga-me se o pão está na minha lista de compras.</div>
+                            <div class="feedback">
+                                Correto! Você está procurando <strong>um</strong> item na lista.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c4">
+                            <div class="text">Quem na minha lista de contatos mora na Avenida Grand?</div>
+                            <div class="feedback">
+                                Sua lista de contatos provavelmente está <strong>ordenada por nome</strong>, não por endereço. Além disso, pode haver <strong>mais de uma</strong> pessoa que mora na Avenida Grand.
+                            </div>
+                        </div>
+                        <div class="responseDeclaration" identifier="ri2">
+                            <div class="correctResponse" identifier="c1"></div>
+                            <div class="correctResponse" identifier="c3"></div>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="ifTime">
+            <ol start="7">
+                <li>Crie um verificador ortográfico.</li>
+                <div class="endnote">Use <img class="inline" src="/bjc-r/img/blocks/split-by-whitespace.png" width="190" alt="split () por (espaço em branco)" title="split () por (espaço em branco)" /> para converter o texto de entrada em uma lista.</div>
+                <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Converse com seu parceiro" title="Converse com seu parceiro" />O seu verificador ortográfico deve procurar no dicionário por cada palavra do texto ou procurar no texto por cada palavra do dicionário?</li>
+            </ol>
+        </div>
