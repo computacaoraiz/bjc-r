@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+		<meta charset="utf-8">
+        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <title>Unidade 2 Projetos Opcionais, Página 4</title>
+    </head>
+
+    <body>
+		<h2>Linguagem de modelagem: plurais, parte 1</h2>
+         <div class="todo">
+             <p>PG: Isto /tem/ um propósito de aprendizagem. Está perdido em "opcional". O propósito de aprendizagem é expresso na geração de linguagem por máquina, mas os objetivos de conteúdo/programação também são a prática do antigo, o aprendizado do novo e o prenúncio. O "novo" importante é o elemento essencial da decomposição e abstração do problema: este problema é muito difícil /sem/ decompô-lo, mas perfeitamente tratável /com/ decomposição. E então, perfeitamente extensível para espanhol ou...</p>
+             <p>Brian e Mary estão considerando a possibilidade de um dia transformar essas duas páginas em um laboratório não opcional antes ou depois do Laboratório 4. --MF, 02/01/21</p>
+         </div>
+
+         <div class="aprender">
+            Siri e outros robôs são programados para gerar linguagem. Siri fala; alguns robôs escrevem. Você desenvolveu um programa, <code>fofoca</code>, que escreve. <b>Neste projeto,</b> você ampliará as habilidades do computador com a linguagem desenvolvendo um bloco repórter, <code>plural</code>, que recebe um substantivo como entrada e soletra e gera corretamente o plural <br / >
+            <img class="indent" src="/bjc-r/img/2-complexity/plural-day-with-result.png" alt="plural (dia) relatórios (dias)" title="plural (dia) relatório (dias)" />
+            <img src="/bjc-r/img/2-complexity/plural-boss-with-result.png" alt="plural (chefe) relatórios (chefes)" title="plural (chefe) relatórios (chefes)" /> <br /> Soletrar o plural pode parecer quase automático para uma pessoa, mas não é simples: um computador precisa de um algoritmo para realizar essa tarefa.
+        </div>
+
+        <div class="forYouToDo" id="first">
+            <div class="sidenote">Este projeto usa blocos já carregados para você na biblioteca "Palavras, frases" do Snap<em>!</em>. Você pode carregar uma biblioteca no menu Arquivo do Snap<em>!</em> <img src="/bjc-r/img/1-introduction/file_button.png" style="height:1.6em;" alt="Snap! Botão de menu Arquivo" title="Botão de menu Snap! Arquivo"/> em "Bibliotecas...".</div>
+            <ol>
+                <li>
+                    Para fazer este projeto, você precisará usar os novos blocos <img src="/bjc-r/img/2-complexity/last-letter-of-169x27.png" alt="última letra de ()" title= "última letra de ()" /> e <img src="/bjc-r/img/2-complexity/all-but-last-letter-of-231x27 pixels.png" alt="todas, exceto a última letra de ()" title="todas exceto a última letra de ()" />. Você também precisará de <img src="/bjc-r/img/2-complexity/(list-of-items)-contains-(some-item)-predicate.png" alt="(list () () ( ) ()) contém ()" title="(lista () () () ()) contém ()"> e <img src="/bjc-r/img/2-complexity/join-117x27.png" alt="join () ()" title="join () ()" />, que você usou na Unidade 1 Laboratório 2, Gossip and Greet.<br />
+                     <a class="run" href="/bjc-r/prog/2-complexity/U2-plural.xml"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!." title="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!."></a><br />
+                     Experimente todas as suas expressões (os nove scripts de uma linha) e experimente suas entradas até ter certeza de que entendeu o que elas fazem. Para cada expressão, diga o que o script faz <em>em geral</em> e não apenas o que faz com essa entrada específica. (Exemplo: <img src="/bjc-r/img/2-complexity/last-letter-of-butterfly-with-result-y.png" alt="última letra do título (borboleta) reportando 'y'" ="última letra de (borboleta) reportando 'y'" > reporta "y", mas você deseja dizer qual <code>última letra de</code> reportará se, digamos, "2017" for sua entrada.)
+                </li>
+                <div class="endnote">Você não precisará do estilo <img src="/bjc-r/img/2-complexity/join-t-all-but-first-letter-of-when-343x33.png" ="altura:2,6em;" alt="join (t) (all but first letter of (when))" title="join (t) (all but first letter of (when))" /> para o projeto, mas você pode achar interessante tentar não apenas com "quando" como entrada, mas com "onde", "o quê", "por que". Os linguistas usam evidências como esta para compreender a história de uma língua.</div>
+                 <div class="sidenote">
+                     Escolha o botão <em>repórter</em> ao tornar o <code>plural</code>.<br />
+                     <img src="/bjc-r/img/building-blocks/make-a-reporter.png" alt="Imagem da caixa de diálogo 'Criar um bloco' com a paleta 'Operadores' selecionada e o formato do bloco 'Repórter' selecionado. A paleta tem 10 menus (Movimento, Aparência, Som, Caneta, Listas, Controle, Sensoriamento, Operadores, Variáveis, Outros); uma caixa de texto; três opções de formato de bloco (em forma de quebra-cabeça/'Comando', oval/'Repórter ', e hexagonal/'Predicado') rotulado 'Selecione uma forma.'; duas caixas de opção ('para todos os sprites', que está marcada, e 'somente para este sprite', que não está marcada); e dois botões (OK e Cancelar)." title="Imagem da caixa de diálogo 'Criar um bloco' com a paleta 'Operadores' selecionada e a forma do bloco 'Repórter' selecionada. A paleta possui 10 menus (Movimento, Aparência, Som, Caneta, Listas, Controle, Detecção, Operadores, Variáveis, Outros); uma caixa de texto; três opções de formato de bloco (em forma de quebra-cabeça/'Comando', oval/'Repórter' e hexagonal/'Predicado') rotuladas como 'Selecione uma forma.'; duas caixas de rádio ('para todos sprites', que está marcado, e 'apenas para este sprite', que não está marcado); e dois botões (OK e Cancelar)." />
+                 </div>
+                 <li>Esta é uma maneira de começar a construir o bloco <code>plural</code>. Construa tudo isso e teste-o pelo menos em “dia” e “chefe” e “remédio”, para ter certeza de que funciona corretamente para eles. Caso contrário, edite e corrija. <br /> <img class="indent" src="/bjc-r/img/2-complexity/plural-(script).png" alt="plural (palavra) {
+                    if (s = última letra de (palavra)) {
+                        relatório (juntar (palavra) ('duas letras: es'))
+                    }
+                    relatório (juntar (palavra) ('uma letra: s'))
+               }" title="plural (palavra) {
+                    if (s = última letra de (palavra)) {
+                        relatório (juntar (palavra) ('duas letras: es'))
+                    }
+                    relatório (juntar (palavra) ('uma letra: s'))
+               }" /></li>
+               <li><strong>Depuração: </strong> Tente encontrar palavras para as quais esta versão do <code>plural</code> <em>não</em> funciona corretamente. Liste as palavras que você encontrar. <em>Organize essa lista</em>, classificando as palavras em categorias de acordo com a última letra. Por exemplo, algumas palavras que terminam com a letra “h” podem errar. Tente encontrar muitas palavras que erram. </li>
+               <li>
+                   <strong><em>Salve sua lista.</em></strong>
+                   <ol>
+                       <li>Crie uma lista Snap<em>!</em> como esta <img src="/bjc-r/img/2-complexity/noun-list-for-testing-plural2.png" alt="a list bloco contendo: dia, chefe, mariposa, caixa, borboleta, pincel... (o final da imagem está cortado)" title="um bloco de lista contendo: dia, chefe, mariposa, caixa, borboleta, pincel... (o final da imagem está cortado)"> contendo <em>todas</em> as palavras do seu teste (bem-sucedidas ou não).</li>
+                       <li> <div class="saveAs"><span class="text">"U2-Plural"</span><img src="/bjc-r/img/icons/save-this-as.png" alt="salve seu trabalho como U2-Plural" title="salve seu trabalho como U2-Plural" /> <em>Salve seu arquivo</em>. Você precisará desta lista. </div> </li>
+                   </ol>
+               </li>
+               <li>
+                Seu bloco <code>plural</code> agora deve funcionar corretamente para "dia" e "chefe" e "mariposa", mas provavelmente ainda não funciona corretamente para a palavra "caixa":<br />
+                <img class="indent" src="/bjc-r/img/2-complexity/plural-box-with-(wrong)-result.png" alt="caixa de sufixo (com resultado errado)" title=" caixa de sufixo (com resultado errado)" /><br />
+                Edite seu bloco <code>plural</code> para que funcione com palavras que terminam com "x". <em>Teste</em> para ter certeza de que funciona corretamente. <img class="inline" src="/bjc-r/img/icons/save-mini.png" alt="Salve seu trabalho" title="Salve seu trabalho" />
+            </li>
+            </ol>
+        </div>
+
+        <p>Você pode fazer o mesmo para conjugar verbos em espanhol ou em outro idioma de sua escolha. Consulte a seção Vá além na parte inferior.</p>
+         <p>Vale a pena aprender as próximas duas etapas — muito úteis para <em>testes</em> <code>plural</code> e em trabalhos mais avançados posteriormente — mas não essenciais para <em>construção</em> <code>plural</code>.</p>
+
+        <div class="forYouToDo">
+            <ol start="6">
+                <li>
+                    Use <code>map</code> para testar <em>todas</em> as palavras da sua lista. Deixe o espaço no <code>plural</code> <em>vazio</em>, como você vê aqui. O bloco <code>map</code> insere cada elemento da lista nesse slot e reporta uma lista dos resultados.<br />
+                     <img class="indent" src="/bjc-r/img/2-complexity/map-plural-over-list-of-nouns.png" alt="map (plural ( )) sobre 'um bloco de lista contendo : dia, chefe, mariposa, caixa, borboleta, pincel...' (o final da imagem está cortado)" title="mapa (plural ( )) sobre 'um bloco de lista contendo: dia, chefe, mariposa, caixa , borboleta, pincel...' (o final da imagem está cortado)"><br />
+                     Por enquanto, não se preocupe com as palavras que ainda estão erradas, desde que funcionem para “dia”, “chefe”, “mariposa” e “caixa”.
+                </li>
+                <li>Em seu script <code>mapa</code>, substitua <code>plural</code> por<img src="/bjc-r/img/2-complexity/join-()-y.png" alt="juntar()(y)" title="juntar()(y)">. Tente. Agora explique o que o bloco <code>map</code> faz, <em>em geral</em>. </li>
+                 <li>
+                     Experimente<br />
+                     <img class="indent" src="/bjc-r/img/2-complexity/keep-items-such-that-(last-letter-of-(input)-equals-h)-from-test-list.png" alt="mantenha os itens (última letra de 'slot de entrada vazio' = h) de 'um bloco de lista contendo: dia, chefe, mariposa, caixa, borboleta, pincel...' (o final da imagem é cortado off)" title="manter itens (última letra de 'slot de entrada vazio' = h) de 'um bloco de lista contendo: dia, chefe, mariposa, caixa, borboleta, pincel...' (o final da imagem é cortado desligado)"><br />
+                     e<br />
+                     <img class="indent" src="/bjc-r/img/2-complexity/keep-items-such-that-(last-letter-of-(input)-equals-y)-from-test-list.png" alt="mantenha os itens (última letra de 'slot de entrada vazio' = y) de 'um bloco de lista contendo: dia, chefe, mariposa, caixa, borboleta, pincel...' (o final da imagem é cortado off)" title="manter itens (última letra de 'slot de entrada vazio' = y) de 'um bloco de lista contendo: dia, chefe, mariposa, caixa, borboleta, pincel...' (o final da imagem é cortado desligado)"><br />
+                     para ver o que eles fazem. Novamente, deixe o espaço na <code>última letra</code> <em>vazio</em>, como você pode ver aqui. Esse é o espaço reservado para <code>keep</code> testar cada palavra da lista. Explique o que o bloco <code>keep</code> faz.
+                 </li>
+            </ol>
+        </div>
+
+        <div class="takeItFurther">
+        	<ol type="A">
+            	<li>
+                	Se você conhece outro idioma, construa um bloco que receba um pronome e um verbo como entrada e produza a forma correta desse verbo. Por exemplo:<br />
+                 <img class="indent" src="/bjc-r/img/2-complexity/conjugate-verb-(spanish)-for-nosotros-comer.png" alt="verbo conjugado (espanhol), pronome: (nosotros ) verbo: (comer) reportando 'comemos'" title="verbo conjugado (espanhol), pronome: (nosotros) verbo: (comer) reportando 'comemos'" />
+                     <img class="indent" src="/bjc-r/img/2-complexity/conjugate-verb-(spanish)-for-yo-tocar.png" alt="verbo conjugado (espanhol), pronome: (yo ) verbo: (tocar) reportando 'toco'" title="verbo conjugado (espanhol), pronome: (yo) verbo: (tocar) reportando 'toco'" />
+                </li>
+
+            </ol>
+        </div>
+
+	</body>
+</html>

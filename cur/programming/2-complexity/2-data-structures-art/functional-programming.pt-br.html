@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Lab #: Name</title>
+	</head>
+
+	<body>
+		<h3>Programação Funcional</h3>
+
+		<p>Na linguagem usada no exame, a única maneira de gerar dados de lista é com <em>comandos,</em> ações que <em>alteram</em> o conteúdo de uma lista: <code>Adicionar< /código>. <code>Inserir</code>. <code>Substituir</code>. <code>Excluir</code>. Eles adotam essa abordagem porque acham que é o estilo de programação mais fácil de entender, e também por incluir o Scratch, no qual esses comandos são o único mecanismo fornecido para trabalhar com listas. Mas existe uma maneira melhor, chamada <strong>programação funcional</strong>, na qual você nunca modifica uma estrutura de dados, mas em vez disso cria uma nova para conter os novos valores.</p>
+		
+				 <div class="todo">Ainda não estou convencido de que é <em>sempre</em> melhor. Certamente, em alguns casos é, mas às vezes é uma grande bagunça feia e confusa. Lembra quando você tentou provar que desenhar um quadrado poderia ser feito funcionalmente? (Além disso, precisarei ajustar um pouco esta linguagem para "eles" e "mais fácil", e a referência ao Scratch não é clara porque muitos usuários não saberão o que é.) --MF, 30/05/20 </div>
+		
+				 <div class="forYouToDo">
+		<ol start="10">
+		<div class="todo">Não usamos colchetes para conteúdo voltado para os alunos com muita frequência, se é que usamos, e não é a forma como o College Board anota as listas. Tenho certeza que eles usam colchetes. --MF, 30/05/20</div>
+						 <li>Você tem uma lista de compras e deseja ter o plural de todos os alimentos. (Você vai comprar algumas maçãs, não uma maçã.) O valor inicial da <var>lista de compras</var> é <code>{apple, banana}</code>. Considere estes cinco scripts:
+		<div class="todo">Esta é uma quantidade excessiva de código para analisar e que desvia o objetivo da página. Melhor apenas mostrar um NFP e um FP e falar-lhes sobre o que você quer que eles percebam (ou fazer-lhes perguntas significativas para ajudá-los a concluir o que você quer). --MF, 30/05/20</div>
+						 <ol type="A">
+		<li><img src="/bjc-r/img/2-complexity/plurals-1.png"></li>
+		<li><img src="/bjc-r/img/2-complexity/plurals-2.png"></li>
+		<li><img src="/bjc-r/img/2-complexity/plurals-3.png"></li>
+		<li><img src="/bjc-r/img/2-complexity/plurals-4a.png"><br />
+		<img src="/bjc-r/img/2-complexity/plurals-4b.png"></li>
+		<li><img src="/bjc-r/img/2-complexity/plurals-5.png"></li>
+		</ol>
+		Você ainda não conheceu <code>map</code>. É uma função de ordem superior que cria uma nova lista, com o mesmo comprimento de sua lista de entrada, na qual cada item é calculado aplicando sua função de entrada ao item correspondente da lista de entrada.
+							 <div class="todo">Não podemos usar <code>map</code> para cada FP antes que eles saibam o que é map.</div>
+		</li><li>
+			<ol type="a">
+				<img class="imageRight" src="/bjc-r/img/icons/talk-with-your-partner.png">
+				<li>Depois de cada um desses scripts, qual é o valor da <var>lista de compras plural</var>?</li>
+				<li>Depois de cada um desses scripts, qual é o valor da <var>lista de compras</var>?</li>
+				</ol>
+								 <div class="todo">OK, este é o início do que quero dizer com "perguntas significativas para ajudá-los a concluir o que você deseja". Também é necessário perguntar algo como "Você gostaria que o valor da lista de compras mudasse e fosse igual ao plural de...?" ou algo assim. --MF, 30/05/20</div>
+				</li>
+							 </ol>
+							</div>
+							<p>O objetivo desse exercício é que, para os três primeiros scripts, os de <em>programação imperativa</em>, é preciso muita atenção para ter certeza de qual é o valor final da <var>lista de compras</var> . (Em um caso é o mesmo que antes; em um caso é o mesmo que <var>lista de compras plural</var>; em um caso a resposta depende se você está programando em Snap<i>!</i> ou em linguagem AP. (Veja a caixa cinza logo antes do cabeçalho "Programação Funcional".)</p>
+									 <div class="todo">"imperativo"? Este mundo surge do nada. Se formos usá-lo, será necessária uma explicação, como em uma caixa de vocabulário. --MF, 30/05/20<p>Não entendo o final desse parágrafo. Está se referindo a algo que não existe?Além disso, se quisermos explicar por que é diferente no Snap<em>!</em> e no APtran (o que não acho que deveríamos), então esse texto poderia funciona, mas por outro lado, é confuso. --MF, 30/05/20</p></div>
+							<p>Por outro lado, nos dois últimos scripts deve ser fácil ver que nenhuma alteração foi feita na <var>lista de compras</var>. Isso ocorre porque esses dois últimos scripts usam um estilo de programação funcional: você cria uma nova lista sem nenhuma instrução <code>replace</code> ou <code>add</code>.</p>
+									 <div class="todo">Não diga "fácil" mesmo em uma página fácil - o que não é. --MF, 30/05/20</div>
+							<p>Você precisa reconhecer o estilo de programação imperativo para o exame. (Você não será solicitado a <em>escrever</em> código no exame.) Mas você também deve estar confortável com o estilo funcional. em particular, esperamos que você goste da elegância do quinto script, uma linha que cria a lista de plurais sem alterar a lista original.</p>
+									 <div class="todo">Vou parar de separar esta página. Eu tenho muitos receios. Principalmente, é muito e pouco ao mesmo tempo. Eu sinto que é confusamente complicado e complicado, mas ainda assim perde as coisas principais que queremos que as crianças obtenham. Acredito que precisamos de uma página (ou pelo menos conteúdo) como esta, mas ainda não chegamos lá e não tenho certeza do que fazer a esta hora ou aonde ela pertence... --MF, 5 /30/20</div>
+							<div class="takeNote">Ao mesmo tempo, a programação funcional era vista por programadores "reais" como algo de interesse apenas para professores de ciência da computação. Mas hoje é uma forma preferida de programar por causa do hardware de processamento paralelo, seja com racks cheios de computadores ou com chips de processador multicore que incluem quatro ou oito processadores dentro de um único chip. A razão é que com vários processos rodando em paralelo, é possível que dois deles tentem modificar a mesma variável ao mesmo tempo, com resultados ruins. Mas se o programa for escrito funcionalmente, nada será modificado, então isso não pode acontecer. Existem <em>linguagens funcionais</em> nas quais não há equivalentes para <code>set</code> ou <code>replace</code>.<div class="todo">Por que isso é uma nota? Isso é um erro? Na verdade, parece algo que deveria ser uma nota final (e não apenas porque deveria ser colocado em uma caixa). --MF, 30/05/20</div>
+							</div>
+							
+									 <div class="todo">Quando conversarmos, você pode me dizer qual é a solução para esse TIF? Isso precisa ser feito funcionalmente ou ter isso aqui é uma dica de que é melhor fazê-lo? --MF, 30/05/20</div>
+									 <div class="takeItFurther">
+										 <div class="sidenoteBig">Já existe um sprite do botão Pesquisar em seu arquivo. Você pode usar <img class="inline nopadtb" src="/bjc-r/img/blocks/show.png" alt="show" title="show" /> para vê-lo. </div>
+										 <ol type="A">
+											 <li>Escreva um script para o botão "Pesquisar" que informe ao usuário se um item já está na lista. Você pode usar <img class="inline nopadtb" src="/bjc-r/img/blocks/contains-empty.png" alt="'list input slot' contains ()" title="'list input slot' contém ()" /> para ver se um item já está na lista.</li>
+										 </ol>
+										 <p style="clear: ambos; altura: 0px;"></p>
+									 </div>
+									 <div class="todo">Aqui está o que deixo querendo saber: quais são as ideias centrais que você quer ensinar com uma página como essa?que FP não sofre mutação? algo mais? Será que realmente precisamos fazer uma distinção entre imperativo e funcional ou poderíamos apenas apontar que as crianças devem estar atentas se desejam que seu código altere a lista original, mostrar-lhes como não alterar a lista original e depois dizer, a propósito, isso é FP? Além disso, acho que me lembro que você colocou isso na lista de compras porque esse era, na verdade, o nosso contexto mais adequado para discutir PF; isso é verdade? E poderíamos também discutir que as <a href="/bjc-r/cur/programming/3-lists/2-contact-list/5-mapping-over-list.html?topic=nyc_bjc%2F3-lists reais .topic&course=bjc4nyc.html&novideo&noassignment">página MAP no U3</a> é algo que Paul e eu não gostamos e queremos consertar - então talvez isso esteja relacionado de alguma forma. Talvez isso pudesse ser incorporado como uma forma de fortalecer essa página... --MF, 30/05/20</div>
+
+	</body>
+</html>

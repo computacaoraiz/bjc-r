@@ -2,12 +2,13 @@ title: Unidade 2: Abstrações
 
 {
 
-heading: Lab 1: Jogos
+heading: Lab 1: Jogos games
 	quiz: Iniciando um jogo de adivinhação de números [/bjc-r/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.pt-br.html]
 	quiz: Verificando o palpite do jogador [/bjc-r/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.pt-br.html]
 	resource: Depurando e ampliando seu jogo de adivinhação de números [/bjc-r/cur/programming/2-complexity/1-variables-games/3-debugging-extending.pt-br.html]
 	resource: Mantendo a pontuação com variáveis globais [/bjc-r/cur/programming/2-complexity/1-variables-games/4-keeping-score.pt-br.html]
 	resource: Escolhendo uma fantasia [/bjc-r/cur/programming/2-complexity/1-variables-games/5-choosing-avatar.pt-br.html]
+	//resource: Mantendo um diário [/bjc-r/cur/programming/2-complexity/1-variables-games/6-keeping-a-journal.pt-br.html]
 
 	raw-html: <img class="imageRight noshadow" src="/bjc-r/img/2-complexity/U2ImageVideoAddendum_img/tri-color-bjc.gif" alt="usando o mouse para escrever em três cores no palco" height="300" title="usando o mouse para escrever em três cores no palco" />
 
@@ -15,6 +16,8 @@ heading: Lab 2: Criando Listas
     resource: Aplicativo de Lista de Compras [/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.pt-br.html]
     resource: Planejando um Aplicativo de Quiz [/bjc-r/cur/programming/2-complexity/2-data-structures-art/2-quizzes.pt-br.html]
     quiz: Verificação de Cada Resposta de Quiz [/bjc-r/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.pt-br.html]
+    //resource: programação funcional [/bjc-r/cur/programming/2-complexity/2-data-structures-art/functional-programming.pt-br.html]
+
 
 heading: Lab 3: Tomando Decisões
     resource: O que é um predicado? [/bjc-r/cur/programming/2-complexity/3-predicates/1-what-is-predicate.pt-br.html]

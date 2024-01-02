@@ -10,7 +10,7 @@
 		<h2>Mais Repórteres Matemáticos</h2>
         <div class="learn">
             <strong>Neste projeto</strong>, você criará blocos matemáticos que combinam vários números, como um bloco <code>soma</code>, que combina dois números usando a soma: <br />
-            <img class="indent" src="/bjc-r/img/3-lists/sum-from-4-to-6-reporting.pt-br.png" alt="soma de (4) a (6) reporta 15" title="soma de (4) a (6) reporta 15" />
+            <img class="indent" src="/bjc-r/img/3-lists/sum-from-4-to-6-reporting.png" alt="soma de (4) a (6) reporta 15" title="soma de (4) a (6) reporta 15" />
         </div>
 
         <div class="forYouToDo" id="first">
@@ -18,14 +18,14 @@
 				<li>Abra o seu projeto U2L4-BibliotecaMatemática, se ainda não estiver aberto.</li>
                 <li>
                     Crie blocos para <code>máximo</code> (que reportará o maior de dois números de entrada) e <code>mínimo</code> (que reportará o menor de dois números de entrada):<br />
-                    <img class="indent" src="/bjc-r/img/2-complexity/max-of-6-and-4-reporting.pt-br.png" alt="máximo de (6) e (4) reporta 6" title="máximo de (6) e (4) reporta 6" />
-                    <img class="indent" src="/bjc-r/img/2-complexity/min-of-3-and--4-reporting.pt-br.png" alt="mínimo de (3) e (-4) reporta -4" title="mínimo de (3) e (-4) reporta -4" />
+                    <img class="indent" src="/bjc-r/img/2-complexity/max-of-6-and-4-reporting.png" alt="máximo de (6) e (4) reporta 6" title="máximo de (6) e (4) reporta 6" />
+                    <img class="indent" src="/bjc-r/img/2-complexity/min-of-3-and--4-reporting.png" alt="mínimo de (3) e (-4) reporta -4" title="mínimo de (3) e (-4) reporta -4" />
                 </li>
 			</ol>
 		</div>
 
-        <p>O bloco <img class="inline" src="/bjc-r/img/blocks/combine.pt-br.png" alt="combinar 'ranura de entrada de lista' usando 'reportero ranura de entrada'" title="combinar 'ranura de entrada de lista' usando 'reportero ranura de entrada'" /> recebe duas entradas: uma lista e uma operação de <em>duas entradas</em> e reporta o resultado da combinação de todos os elementos na lista de entrada usando a operação de entrada. Por exemplo, a seguinte expressão relata: 0 + 1 + 2.<br />
-            <img class="indent" src="/bjc-r/img/3-lists/combine-simple-example.pt-br.png" alt="combinar (lista {0, 1, 2}) com (()+()) reporta 3" title="combinar (lista {0, 1, 2}) com (()+()) reporta 3" />
+        <p>O bloco <img class="inline" src="/bjc-r/img/blocks/combine.png" alt="combinar 'ranura de entrada de lista' usando 'reportero ranura de entrada'" title="combinar 'ranura de entrada de lista' usando 'reportero ranura de entrada'" /> recebe duas entradas: uma lista e uma operação de <em>duas entradas</em> e reporta o resultado da combinação de todos os elementos na lista de entrada usando a operação de entrada. Por exemplo, a seguinte expressão relata: 0 + 1 + 2.<br />
+            <img class="indent" src="/bjc-r/img/3-lists/combine-simple-example.png" alt="combinar (lista {0, 1, 2}) com (()+()) reporta 3" title="combinar (lista {0, 1, 2}) com (()+()) reporta 3" />
         </p>
 
         <div class="takeNote">
@@ -33,7 +33,7 @@
             <p>Observe que a função usada para <em>combinar</em> os elementos da lista sempre tem dois espaços em branco de entrada. O bloco <code>manter</code> requer apenas um espaço em branco em sua função de entrada, mas com <code>combinar</code>, são necessários dois.</p>
         </div>
         <div class="endnote">
-            <p><code>Combinar</code> é uma <em>função de alta ordem</em>; é uma função que aceita outra função como entrada. Você já viu outra função de alta ordem: <code>manter</code> (em <a href="/bjc-r/cur/programming/2-complexity/3-predicates/5-keeping-list-items.pt-br.html?topic=nyc_bjc%2F2-conditionals-abstraction.pt-br.topic&course=bjc4nyc.pt-br.html&novideo&noassignment" title="Unidade 2 Laboratório 3 Página 5: Manter elementos de uma lista">Unidade 2 Laboratório 3 Página 5: Manter elementos de uma lista</a>).</p>
+            <p><code>Combinar</code> é uma <em>função de alta ordem</em>; é uma função que aceita outra função como entrada. Você já viu outra função de alta ordem: <code>manter</code> (em <a href="/bjc-r/cur/programming/2-complexity/3-predicates/5-keeping-list-items.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 2 Laboratório 3 Página 5: Manter elementos de uma lista">Unidade 2 Laboratório 3 Página 5: Manter elementos de uma lista</a>).</p>
             <p>
                 Ao contrário de <code>manter</code>, a função <code>combinar</code> só é usada com algumas funções de entrada.
 
@@ -43,14 +43,14 @@
                         <code>Combinar</code> é principalmente usado com <em>apenas essas funções</em>:<br />
                         <img class="indent" src="/bjc-r/img/3-lists/plus.png" alt="+" title="+" /> <img src="/bjc-r/img/3-lists/times.png" alt="×" title="×" /><br />
                         <img class="indent" src="/bjc-r/img/3-lists/and-block.png" alt="e" title="e" /> <img src="/bjc-r/img/3-lists/or-block.png" alt="ou" title="ou" /><br />
-                        <img class="indent" src="/bjc-r/img/3-lists/join.png" alt="juntar" title="juntar" /> <img src="/bjc-r/img/3-lists/join-words.pt-br" alt="juntar palavras" title="juntar palavras" /><br />
-                        e os blocos <img class="inline" src="/bjc-r/img/3-lists/maximum.pt-br" alt="máximo de () ()" title="máximo de () ()" /> e <img class="inline" src="/bjc-r/img/3-lists/minimum.pt-br" alt="mínimo de () ()" title="mínimo de () ()" /> que você acabou de escrever.
+                        <img class="indent" src="/bjc-r/img/3-lists/join.png" alt="juntar" title="juntar" /> <img src="/bjc-r/img/3-lists/join-words" alt="juntar palavras" title="juntar palavras" /><br />
+                        e os blocos <img class="inline" src="/bjc-r/img/3-lists/maximum.pt-br" alt="máximo de () ()" title="máximo de () ()" /> e <img class="inline" src="/bjc-r/img/3-lists/minimum" alt="mínimo de () ()" title="mínimo de () ()" /> que você acabou de escrever.
                     </p>
                     <p>
                         <a data-toggle="collapse" href="#hint-3">Por que tão poucos?</a>
                         <div id="hint-3" class="collapse">
                             A função deve ser <em>associativa</em>, o que significa que a ordem dos elementos não importa. Por exemplo, a soma é associativa: (7&thinsp;+&thinsp;8)&thinsp;+&thinsp;1 é o mesmo que 7&thinsp;+&thinsp;(8&thinsp;+&thinsp;1) (resolva por si mesmo), mas a subtração não é: (7&thinsp;−&thinsp;8)&thinsp;−&thinsp;1 é diferente de 7&thinsp;−&thinsp;(8&thinsp;−&thinsp;1).
-                            Portanto, expressões como <img src="/bjc-r/img/3-lists/combine-minus.pt-br" alt="combinar com (-) elementos da (lista 7 8 1)"> seriam ambíguas.
+                            Portanto, expressões como <img src="/bjc-r/img/3-lists/combine-minus" alt="combinar com (-) elementos da (lista 7 8 1)"> seriam ambíguas.
                         </div>
                     </p>
                 </div>
@@ -61,16 +61,16 @@
             <ol start="3">
                 <li>
                     Use <code>combinar</code> para construir <code>máximo de lista</code> e <code>mínimo de lista</code>.<br />
-                    <img class="indent" src="/bjc-r/img/3-lists/max-of-list-reporting.pt-br.png" alt="máximo de lista {1, 22, 3, -4} reporta 22" title="máximo de lista {1, 22, 3, -4} reporta 22" />
-                    <img class="indent" src="/bjc-r/img/3-lists/min-of-list-reporting.pt-br.png" alt="mínimo de lista {1, 22, 3, -4} reporta -4" title="mínimo de lista {1, 22, 3, -4} reporta -4" />
+                    <img class="indent" src="/bjc-r/img/3-lists/max-of-list-reporting.png" alt="máximo de lista {1, 22, 3, -4} reporta 22" title="máximo de lista {1, 22, 3, -4} reporta 22" />
+                    <img class="indent" src="/bjc-r/img/3-lists/min-of-list-reporting.png" alt="mínimo de lista {1, 22, 3, -4} reporta -4" title="mínimo de lista {1, 22, 3, -4} reporta -4" />
                 </li>
                 <li>
                     Crie um bloco <code>soma de lista</code> que relata a soma dos elementos de uma lista.<br />
-                    <img class="indent" src="/bjc-r/img/3-lists/sum-of-list-reporting.pt-br.png" alt="soma de lista {1, 2, 3, 10} reporta 16" title="soma de lista {1, 2, 3, 10} reporta 16" />
+                    <img class="indent" src="/bjc-r/img/3-lists/sum-of-list-reporting.png" alt="soma de lista {1, 2, 3, 10} reporta 16" title="soma de lista {1, 2, 3, 10} reporta 16" />
                 </li>
                 <li>
                     Crie um bloco <code>média de lista</code> que calcula a média dos elementos em uma lista:<br />
-                    <img class="indent" src="/bjc-r/img/3-lists/average-of-list-reporting.pt-br.png" alt="média de lista {1, 2, 3, 4} reporta 2,5" title="média de lista {1, 2, 3, 4} reporta 2,5" />
+                    <img class="indent" src="/bjc-r/img/3-lists/average-of-list-reporting.png" alt="média de lista {1, 2, 3, 4} reporta 2,5" title="média de lista {1, 2, 3, 4} reporta 2,5" />
                     <div class="endnote">
                         <a href="#hint-average" data-toggle="collapse" title="Dica sobre a média de lista">Dica sobre <code>média de lista</code></a>
                         <div id="hint-average" class="collapse"><p>Primeiro, pense em como calcular a média. Em seguida, pense em quais blocos podem ajudá-lo a fazer isso no Snap<em>!</em>.</p></div>
@@ -89,7 +89,7 @@
                 <div class="sidenote">
                     <p>Em muitas linguagens (incluindo o Snap<em>!</em>), as variáveis devem ser <em>declaradas</em de alguma forma (no Snap<em>!</em>, você pode clicar no botão "Criar uma variável" ou usar o bloco <code>variável de programa</code>). No entanto, a linguagem do AP não inclui declarações de variáveis, por isso você não as verá no exame.</p>
                 </div>
-                <img class="indent" src="/bjc-r/img/3-lists/square-roots-definition.pt-br.png" alt="raiz quadrada de (número) {variáveis de programa (raiz positiva), atribuir a (raiz positiva) o valor ((raiz quadrada) de (número)), relatar (lista (raiz positiva) ((-1) * raiz positiva))" title="raiz quadrada de (número) {variáveis de programa (raiz positiva), atribuir a (raiz positiva) o valor ((raiz quadrada) de (número)), relatar (lista (raiz positiva) ((-1) * raiz positiva))" /><br />
+                <img class="indent" src="/bjc-r/img/3-lists/square-roots-definition.png" alt="raiz quadrada de (número) {variáveis de programa (raiz positiva), atribuir a (raiz positiva) o valor ((raiz quadrada) de (número)), relatar (lista (raiz positiva) ((-1) * raiz positiva))" title="raiz quadrada de (número) {variáveis de programa (raiz positiva), atribuir a (raiz positiva) o valor ((raiz quadrada) de (número)), relatar (lista (raiz positiva) ((-1) * raiz positiva))" /><br />
                 seria escrita como
                 <div class="pre-container"><pre class="inline">
 PROCEDIMENTO raizQuadrada(número)
@@ -97,7 +97,7 @@ PROCEDIMENTO raizQuadrada(número)
     raizPositiva &leftarrow; sqrt(número)
     RETORNO ([raizPositiva, -1 * raizPositiva])
 }</pre></div>
-                    ou <img src="/bjc-r/img/3-lists/square-roots-definition-blocktran.pt-br.png" alt="raiz quadrada de (número) {variáveis de programa (raiz positiva), atribuir a (raiz positiva) o valor ((raiz quadrada) de (número)), relatar (lista (raiz positiva) (() - raiz quadrada positiva)" title="raiz quadrada de (número) {variáveis de programa (raiz positiva), atribuir a (raiz positiva) o valor ((raiz quadrada) de (número)), relatar (lista (raiz positiva) (() - raiz quadrada positiva)" />
+                    ou <img src="/bjc-r/img/3-lists/square-roots-definition-blocktran.png" alt="raiz quadrada de (número) {variáveis de programa (raiz positiva), atribuir a (raiz positiva) o valor ((raiz quadrada) de (número)), relatar (lista (raiz positiva) (() - raiz quadrada positiva)" title="raiz quadrada de (número) {variáveis de programa (raiz positiva), atribuir a (raiz positiva) o valor ((raiz quadrada) de (número)), relatar (lista (raiz positiva) (() - raiz quadrada positiva)" />
                 <div class="ap-standard">AAP-3.A.7</div>
                 <div class="pseudop">Assim como com o <code>relatar</code> no Snap<em>!</em>, quando um <pre class="inline">RETORNO</pre> é executado, o fluxo de controle retorna ao local do código onde o procedimento foi chamado, e o procedimento retorna o valor da expressão dentro do comando <pre class="inline">RETORNO</pre> ou do bloco <code>relatar</code>.</div>
                 <div class="endnote">
@@ -108,7 +108,7 @@ PROCEDIMENTO raizQuadrada(número)
 
         <div class="examFullWidth">
             <div class="ap-standard">AAP-2.H.3</div>
-            <div class="pseudop">A expressão condicional <img class="inline" src="/bjc-r/img/2-complexity/ge-ifelse-no-hat.pt-br.png" alt="se (a &gt; b) {
+            <div class="pseudop">A expressão condicional <img class="inline" src="/bjc-r/img/2-complexity/ge-ifelse-no-hat.png" alt="se (a &gt; b) {
     relatar verdadeiro
 } senão {
     relatar (a = b)
@@ -124,7 +124,7 @@ PROCEDIMENTO raizQuadrada(número)
 SENÃO
 {
     RETORNO(a = b)
-}</pre></div> ou <img class="inline" src="/bjc-r/img/2-complexity/if-else-blocktran.pt-br.png" alt="SE(a &gt; b)
+}</pre></div> ou <img class="inline" src="/bjc-r/img/2-complexity/if-else-blocktran.png" alt="SE(a &gt; b)
 {
     RETORNO(verdadeiro)
 }

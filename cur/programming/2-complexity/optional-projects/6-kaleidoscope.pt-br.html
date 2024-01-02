@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+		<meta charset="utf-8">
+        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+        <title>Unidade 2 Projetos Opcionais, Página 6</title>
+    </head>
+
+    <body>
+        <h2>Making a Kaleidoscope</h2>
+        <div class="learn">
+            <p>
+                <strong>Neste projeto,</strong> você criará um aplicativo que permite desenhar como um caleidoscópio.<br />
+                <img class="indent" src="/bjc-r/img/1-introduction/topic1-kaleidoscópio.gif" alt="Atividade do Caleidoscópio"/>
+            </p>
+        </div>
+        <p>Um sprite está seguindo o mouse. Três outros sprites refletem o movimento desse sprite de maneiras ligeiramente diferentes.</p>
+        <div class="forYouToDo">
+			<ol>
+                <li><div class="newProject"><span class="text">"Caleidoscópio U2"</span><img src="/bjc-r/img/icons/new-project-called.png" alt="Criar um novo projeto chamado U2-Kaleidoscópio" title="Criar um novo projeto chamado U2-Kaleidoscópio" /></div></li>
+
+                <li>
+                    <img class="imageRight" src="/bjc-r/img/2-complexity/draggable-check-box.png" alt="caixa arrastável marcada" title="caixa arrastável marcada">
+                    Primeiro, crie e teste o código para fazer o primeiro sprite seguir o mouse e desenhar uma linha traçando seu caminho.
+                    <ol>
+                        <li>Use um <em>evento</em> para acionar o comportamento do caleidoscópio para que os usuários não precisem abrir cada sprite e clicar em cada script para iniciar o desenho.</li>
+                        <li>Faça o sprite desenhar apenas quando o mouse estiver pressionado (você precisará desmarcar a caixa "arrastável" para que o Snap<em>!</em> não pense que você está tentando arrastar o sprite ao clicar. )</li>
+                    </ol>
+                    <div class="endnote">
+                        <p><a href="#hint-mousedown" data-toggle="collapse" title="Precisa de um lembrete sobre como fazer o primeiro sprite seguir o mouse, detectar um evento ou desenhar apenas quando o mouse está pressionado?"> Precisa de um lembrete?</a></p>
+                        <div id="hint-mousedown" class="collapse">
+                            <p>Você aprendeu como fazer o sprite seguir o mouse em <a href="/bjc-r/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.html?topic= nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 1 Laboratório 5 Página 1: Sprite seguindo o mouse">Unidade 1 Laboratório 5 Página 1: Sprite seguindo o mouse</a>. Você aprendeu como detectar um evento em <a href="/bjc-r/cur/programming/1-introduction/1-building-an-app/2-start-your-first-snap-app.html?topic= nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 1 Laboratório 1 Página 2: Programando um jogo">Unidade 1 Laboratório 1 Página 2: Programando um jogo</a>. E você aprendeu como desenhar apenas quando o mouse está pressionado usando <code>if else</code> com <code>mouse down?</code> em <a href="/bjc-r/cur/programming/2- complex/3-predicates/1-what-is-predicate.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 2 Laboratório 3 Página 1: O que é um predicado?">Unidade 2 Laboratório 3 Página 1: O que é um predicado?</a>.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    Crie um segundo sprite que espelhe o movimento do primeiro.
+                    <div class="endnote">
+                        <p>Uma maneira de criar o segundo sprite é duplicar o primeiro e modificá-lo. Clique com o botão direito no botão do sprite no curral de sprites (no canto inferior direito da janela Snap<em>!</em>) e selecione "duplicar" no menu de contexto que aparece. O novo sprite terá os mesmos scripts do original, por isso a duplicação é mais fácil do que criar novos sprites do zero.</p>
+                        <p><a href="#hint-second-sprite" data-toggle="collapse" title="Precisa de uma dica sobre como fazer o segundo sprite espelhar o primeiro?">Precisa de uma dica sobre como fazer o segundo sprite espelhar o primeiro?</a></p>
+                        <div id="hint-second-sprite" class="collapse">
+                            <p>Você vai querer que o segundo sprite <em>ou</em> vá para a mesma posição <em>x</em> e para a posição <em>y</em> inversa <em>ou </em> para ir para a posição <em>x</em> inversa e para a mesma posição <em>y</em>.</p>
+                            <a href="#hint-second-sprite-second-hint" data-toggle="collapse" title="Precisa de outra dica sobre o segundo sprite que espelha o primeiro?">Precisa de outra dica?</a>
+                            <div id="hint-second-sprite-second-hint" class="collapse">
+                                <p>Use <img src="/bjc-r/img/2-complexity/inverse-mouse-x.png" alt="(-1) × (mouse x)" title="(-1) × ( mouse x)" /> dentro de <img src="/bjc-r/img/blocks/go-to-x-y.png" alt="vá para x: () y: ()" title="vá para x: () e: ()" />.</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    Teste seu código e depure quaisquer problemas.
+                    <div class="endnote">Você pode querer usar um evento (como pressionar a tecla "c") para dizer ao programa para limpar o palco e parar todos os scripts. Isso facilitará o teste e a depuração.</div>
+                </li>
+                <li>
+                    Crie mais dois sprites que espelhem os dois que você tem.
+                    <div class="endnote">
+                        <p>Se o seu segundo sprite espelhar o primeiro horizontalmente, o terceiro e o quarto sprites deverão espelhar esses sprites verticalmente e vice-versa.</p>
+                    </div>
+                </li>
+			</ol>
+		</div>
+
+        <div class="ifTime">
+            <ol start="6">
+                <li>Experimente algumas das ideias a seguir ou faça suas próprias alterações no caleidoscópio.
+                    <ul>
+                        <li>
+                            Troque as canetas:
+                            <ul>
+                                <div class="sidenoteBig">Você aprendeu sobre <code>definir a cor da caneta</code> e <code>definir o tamanho da caneta</code> em <a href="/bjc-r/cur/programming/1-introduction /3-drawing/1-exploring-motion.html?topic=nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 1 Laboratório 3 Página 1: Explorando o movimento">Unidade 1 Laboratório 3 Página 1: Explorando o movimento</a>.</div>
+                                <li>Adicione algumas cores.</li>
+                                <li>Ajuste os tamanhos das canetas.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Crie mais sprites:
+                            <ul>
+                                <li>Adicione novos sprites que usam <code>mouse x</code> como entrada <em>y</em> e <code>mouse y</code> como entrada <em>x</em>. </li>
+                                <li>Adicione novos sprites que estejam afastados de outro sprite.</li>
+                            </ul>
+                        </li>
+                        <li>Crie suas próprias variações.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+
+
+    </body>
+</html>

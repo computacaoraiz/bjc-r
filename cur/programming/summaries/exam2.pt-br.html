@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Unidade 2 no exame AP</title>
+	</head>
+
+	<body>
+        <h2>Unidade 2: Abstração</h2>
+        <h3>Laboratório 1: Jogos</h3>
+<div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.html?topic=nyc_bjc/2- condicionais-abstração.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.html">2.1.1</a> </strong>
+    <div class="ap-standard">AAP-1.B.2</div>
+    <div class="pseudop">
+        <img class="inline" src="/bjc-r/img/2-complexity/set-secret-number-to-7.png" alt="definir (número secreto) para (7)" title="definir (número secreto) para (7)" /> seria escrito como <pre class="inline">secretNumber &leftarrow; 7</pre> ou <img class="nopadtb" src="/bjc-r/img/2-complexity/secret-number-assignment-blocktran.png" alt="um retângulo branco arredondado contendo o texto 'secretNumber &leftarrow ; 7'" title="um retângulo branco arredondado contendo o texto 'secretNumber &leftarrow; 7'" />.
+    </div>
+</div>
+<div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.html?topic=nyc_bjc/2 -conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.html">2.1.2</a </strong>
+    <div class="pseudop">
+        O código <img class="inline" src="/bjc-r/img/2-complexity/chicken-script.png" alt="ask (Por que a galinha atravessou a rua?) e espere; set (resposta do usuário ) para (resposta)" title="perguntar (Por que a galinha atravessou a rua?) e esperar; definir (resposta do usuário) para (resposta)" />
+        seria escrito como
+        <div class="pre-container"><pre class="inline">DISPLAY("Por que a galinha atravessou a rua?")
+resposta do usuário &leftarrow; INPUT()</pre></div> ou
+        <img class="inline" src="/bjc-r/img/2-complexity/chicken-script-blocktran.png" alt="um retângulo arredondado branco contendo dois retângulos arredondados brancos menores: o primeiro contém primeiro a palavra 'DISPLAY' em letras maiúsculas e, em seguida, um retângulo branco menor contendo o texto citado 'Por que a galinha atravessou a rua?'. O segundo contém o texto 'userResponse &leftarrow; INPUT()'" title="um retângulo arredondado branco contendo dois retângulos arredondados brancos menores: O primeiro contém primeiro a palavra 'DISPLAY' em letras maiúsculas e depois um retângulo branco menor contendo o texto citado 'Por que a galinha atravessou a rua?'. O segundo contém o texto 'userResponse &leftarrow; ENTRADA()'" />.
+    </div>
+    <div class="ap-standard">AAP-3.A.8, AAP-3.A.9</div>
+    <div class="pseudop">Observe que o procedimento <pre class="inline">INPUT()</pre> aceita o valor do usuário e retorna esse valor de entrada, que é então atribuído à variável <pre class= "inline">userResponse</pre> com a sintaxe <pre class="inline">&leftarrow;</pre>. No Snap<em>!</em>, é exatamente como <code>answer</code> aceita um valor do usuário e o reporta, e esse relatório é o que o computador <code>configura</code>s a variável <var>resposta do usuário</var> para.</div>
+</div>
+<div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/4-keeping-score.html?topic=nyc_bjc/2-conditionals -abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/1-variables-games/4-keeping-score.html">2.1.4</a></strong >
+    <div class="pseudop">
+        <img class="inline nopadtb" src="/bjc-r/img/2-complexity/change-score-by-1.png" height="26" alt="alterar (pontuação) por (1)" título ="alterar (pontuação) por (1)" /> (o que significa <img src="/bjc-r/img/2-complexity/set-score-to-score-plus-one.png" height="40 " alt="set(score) to (score+1)" title="set(score) to (score+1)">) seria escrito como <pre class="inline">score &leftarrow; pontuação + 1</pre> ou <img class="inline" src="/bjc-r/img/2-complexity/score-increment-blocktran.png" alt="pontuação ← pontuação + 1" title="pontuação ← pontuação + 1" />.
+    </div>
+</div>
+<div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/5-choosing-avatar.html?topic=nyc_bjc/2-conditionals -abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/1-variables-games/5-choosing-avatar.html">2.1.5</a></strong >
+<div class="ap-standard">AAP-2.N.1 marcador 1</div>
+<div class="pseudop">
+A expressão de lista <img class="inline" src="/bjc-r/img/2-complexity/item-2-of-costumes.png" alt="item (2) of (fantasias)" title="item (2) de (fantasias)" /> seria escrito como <pre class="inline">fantasias[2]</pre> ou <img class="inline" src="/bjc-r/img/2- complexidade/accessing-blocktran.png" alt="costumes[2]" title="costumes[2]" />. Todas as três versões deste código reportariam/retornariam a fantasia de pinguim (se apenas a linguagem AP tivesse fantasias como tipo de dados):<br />
+<img class="indent" src="/bjc-r/img/2-complexity/item-2-of-costumes-reporting-penguin.png" alt="item (2) de (fantasias) relatando uma foto de a fantasia de pinguim" title="item (2) de (fantasias) relatando uma foto da fantasia de pinguim" />
+</div>
+</div>
+<div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/5-choosing-avatar.html?topic=nyc_bjc/2-conditionals -abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/1-variables-games/5-choosing-avatar.html">2.1.5</a></strong >
+<div class="ap-standard">AAP-2.N.1 marcador 7</div>
+<div class="pseudop">
+A expressão <img class="inline" src="/bjc-r/img/2-complexity/example-length.png" alt="comprimento de (lista de palavras)" title="comprimento de (lista de palavras)" / > seria escrito como <pre class="inline">LENGTH(wordsList)</pre> ou <img class="inline" src="/bjc-r/img/2-complexity/length-blocktran.png" alt ="LENGTH(listadepalavras)" title="LENGTH(listadepalavras)" />.
+</div>
+</div>
+<h3>Laboratório 2: Fazendo listas</h3>
+<div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html?topic=nyc_bjc /2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html">2.2. 1</a></strong>
+             <div class="ap-standard">Segunda frase AAP-1.C.1, AAP-1.D.7</div>
+             <div class="pseudop">A expressão de lista <img class="inline" src="/bjc-r/img/1-introduction/list-from-who.png" alt="list{Señora, Sra. C , meu gato, Hannah, Jake}" title="list{Señora, Sra. C, meu gato, Hannah, Jake}" /> seria escrito como <pre class="inline">[Señora, Sra. C, meu gato, Hannah, Jake]</pre>. Os itens são posicionados na lista na ordem em que aparecem no texto: "Señora" possui índice 1, "Sra. C" possui índice 2 e assim por diante.</div>
+         </div>
+<div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html?topic=nyc_bjc /2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html">2.2. 1</a></strong>
+             <div class="ap-standard">AAP-1.D.7 marcador 2</div>
+             <div class="pseudop">A instrução de atribuição <img class="inline" src="/bjc-r/img/2-complexity/example-blank-list-assignment.png" alt="set (lista de compras) to (list)" title="set (shopping list) to (list)" /> seria escrito como <pre class="inline">shoppingList &leftarrow; []</pre> ou <img class="" src="/bjc-r/img/2-complexity/shoppinglist-empty-list-assignment-blocktran.png" alt="shoppingList ← []" title=" lista de compras ← []" />.</div>
+             <div class="ap-standard">AAP-1.D.7 marcador 1</div>
+             <div class="pseudop">A instrução de atribuição <img class="inline" src="/bjc-r/img/2-complexity/example-list-assignment.png" alt="set (lista de compras) para { maçãs, pão, cenoura, arroz, macarrão}" title="set (lista de compras) para {maçãs, pão, cenoura, arroz, macarrão}" /> seria escrito como <pre class="inline">shoppingList &leftarrow; [maçãs, pão, cenoura, arroz, macarrão]</pre> ou <img class="" src="/bjc-r/img/2-complexity/shoppinglist-full-list-assignment-blocktran.png" alt= "shoppingList ← [maçãs, pão, cenoura, arroz, macarrão]" title="shoppingList ← [maçãs, pão, cenoura, arroz, macarrão]" />. (Neste aplicativo, você deseja que a <code>lista de compras</code> comece vazia e, em seguida, o usuário <code>adicionar</code> ou <code>inserir</code> itens de mercearia adicionais, um de cada uma vez.)</div>
+         </div>
+<div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html?topic=nyc_bjc /2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html">2.2. 1</a></strong>
+             <div class="ap-standard">AAP-2.N.1 marcador 4</div>
+             <div class="pseudop"><img class="inline" src="/bjc-r/img/2-complexity/insert-tomatoes-at-2-of-shopping-list.png" alt="inserir ( tomates) em (2) de (lista de compras)" title="inserir (tomates) em (2) de (lista de compras)" /> seria escrito como <pre class="inline">INSERT(shoppingList, 2, " tomates")</pre> ou <img class="inline" src="/bjc-r/img/2-complexity/insert-blocktran.png" alt="INSERT(shoppingList, 2, 'tomatoes')" título ="INSERT(shoppingList, 2, 'tomates')" />.</div>
+             <div class="ap-standard">AAP-2.N.1 marcador 5</div>
+             <div class="pseudop"><img class="inline" src="/bjc-r/img/2-complexity/add-tomatoes-to-shopping-list.png" alt="adicionar (tomates) a ( lista de compras)" title="add (tomatoes) to (shopping list)" /> seria escrito como <pre class="inline">APPEND(shoppingList, "tomatoes")</pre> ou <img class="inline " src="/bjc-r/img/2-complexity/add-blocktran.png" alt="APPEND(shoppingList, 'tomatoes')" title="APPEND(shoppingList, 'tomatoes')" />.</ div>
+         </div>
+<div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html?topic=nyc_bjc /2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html">2.2. 1</a></strong>
+             <div class="pseudop">
+                 <div class="ap-standard">AAP-2.N.1 marcador 6</div>
+                 <img class="inline" src="/bjc-r/img/2-complexity/delete-item-2-of-shopping-list.png" alt="excluir item (2) de (lista de compras)" título ="excluir item (2) de (lista de compras)" /> seria escrito como <pre class="inline">REMOVE(shoppingList, 2)</pre> ou <img class="inline" src="/bjc -r/img/2-complexity/remove-blocktran.png" alt="REMOVE(shoppingList, 2)" title="REMOVE(shoppingList, 2)" />.
+             </div>
+         </div>
+         <div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html?topic=nyc_bjc /2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html">2.2. 1</a></strong>
+            <div class="pseudop">
+                Os itens em uma lista são <em>valores</em>, então <strong>você pode usar <code>item de</code> em qualquer lugar onde possa usar qualquer outra expressão</strong>. Por exemplo:
+                <ul>
+                    <div class="ap-standard">AAP-2.N.1 marcadores 2 e 3</div>
+                    <li>
+                        Você pode atribuir um item de lista a uma variável.
+                        <a href="#hint-assigning-element-to-variable" data-toggle="collapse" title="Você pode atribuir um item da lista a uma variável. No exame...">No exame... </a>
+                        <div id="hint-assigning-element-to-variable" class="collapse">
+                            <ul>
+                                <li><img class="inline" src="/bjc-r/img/2-complexity/assigning-element-to-variable.png" alt="set (minha comida favorita) para o item (3) de ( lista de compras)" title="definir (minha comida favorita) para o item (3) de (lista de compras)" /> seria escrito como <pre class="inline">myFavoriteFood &leftarrow; shoppingList[3]</pre> ou <img class="inline" src="/bjc-r/img/2-complexity/assigning-element-to-variable-blocktran.png" alt="myFavoriteFood &leftarrow; shoppingList[ 3]" title="myFavoriteFood &leftarrow; shoppingList[3]" /></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        Você pode atribuir <em>qualquer</em> valor a um item da lista (um número, uma string, um sprite, uma fantasia, um script, outra lista, etc.). <a href="#hint-assigning-anything-to-element" data-toggle="collapse" title="Você pode atribuir <em>qualquer</em> valor a um item da lista (um número, uma string, um sprite, uma fantasia, um roteiro, outra lista, etc.). No exame...">No exame...</a>
+                        <div id="hint-assigning-anything-to-element" class="collapse">
+                            <ul>
+                                <li>
+                                    <img class="inline" src="/bjc-r/img/2-complexity/assigning-variable-to-element.png" alt="substitua o item (2) de (lista de compras) por (sua comida favorita) " title="substitua o item (2) de (lista de compras) por (sua comida favorita)" /> seria escrito como <pre class="inline">shoppingList[2] &leftarrow; suaComidaFavorita</pre> ou <img class="inline" src="/bjc-r/img/2-complexity/assigning-variable-to-element-blocktran.png" alt="shoppingList[2] &leftarrow; suaComidaFavorita" title="shoppingList[2] &leftarrow; sua comida favorita" />.
+                                </li>
+                                <li>
+                                    <img class="inline" src="/bjc-r/img/2-complexity/assigning-element-to-element.png" alt="substitua o item (1) de (lista de compras) por (item (3) of (lista de compras))" title="substituir item (1) de (lista de compras) por (item (3) de (lista de compras))" /> seria escrito como <pre class="inline">shoppingList[1 ] &seta esquerda; shoppingList[3]</pre> ou <img class="inline" src="/bjc-r/img/2-complexity/assigning-element-to-element-blocktran.png" alt="shoppingList[1] &leftarrow ; listadecompras[3]" title="listadecompras[1] &leftarrow; listadecompras[3]" />.
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html?topic=nyc_bjc /2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.html">2.2. 1</a></strong>
+            <p>
+                Quando você executa esse script no Snap<em>!</em>, a segunda linha do código atribui à <var>lista de compras 2</var> o valor de <var>lista de compras</var> (ou seja, o mesma lista, não uma cópia). Portanto, a terceira linha do código modifica <em>ambas</em> variáveis: <br />
+                <img class="indent" src="/bjc-r/img/2-complexity/example-list-by-reference.png" alt="set(lista de compras) para (list(apple)(banana))
+definir (lista de compras 2) para (lista de compras)
+adicione (cenoura) a (lista de compras)" title="definir(lista de compras) a (lista(maçã)(banana))
+definir (lista de compras 2) para (lista de compras)
+adicione (cenoura) a (lista de compras)" />
+                <img class="indent" src="/bjc-r/img/2-complexity/example-list-by-reference-stage.png" alt="observador de lista de compras mostrando o conteúdo da variável como maçã, banana , cenoura; e o observador da lista de compras 2 mostrando o conteúdo da variável como maçã, banana, cenoura" title="observador da lista de compras 2 mostrando o conteúdo da variável como maçã, banana, cenoura; e o observador da lista de compras 2 mostrando o conteúdo da variável será maçã, banana, cenoura" /><br />
+            </p>
+            <div class="ap-standard">AAP-1.D.7 marcador 3, AAP-2.N.2</div>
+            <div class="pseudop">No entanto, no exame, a afirmação <pre class="inline">shoppingList2 &leftarrow; shoppingList</pre> faz uma <em>cópia</em> da lista. Portanto, modificar um deles <em>não</em> modifica o outro.</div>
+            <p>As regras sobre como usar listas e como elas se comportam diferem dependendo da linguagem de programação que você está usando.</p>
+        </div>
+<div class="examSummary" somente AP"><strong> <a href="/bjc-r/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.html?topic =nyc_bjc/2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.html">2.2. 3</a></strong>
+            <div class="ap-standard">AAP-2.O.3</div>
+            <div class="pseudop">
+                <div class="sidenote">O procedimento <pre class="inline">goto()</pre> não está embutido na linguagem do AP, portanto é escrito em letras minúsculas como outros procedimentos definidos pelo programador.</ div>
+                O roteiro
+                <img class="inline" src="/bjc-r/img/2-complexity/example-for-each-point.png" alt="para cada (ponto) de (meu desenho) (vá para (ponto) )" title="para cada (ponto) de (meu desenho) (vá para (ponto))" />
+                seria escrito como
+                <div class="pre-container"><pre class="inline">PARA CADA ponto do myDrawing
+{
+    ir para (ponto)
+}</pre></div> ou <img class="inline" src="/bjc-r/img/2-complexity/for-each-blocktran.png" alt="PARA CADA ponto do myDrawing
+{
+    ir para (ponto)
+}" title="PARA CADA ponto do myDrawing
+{
+    ir para (ponto)
+}" />.
+            </div>
+        </div>
+        <h3>Laboratório 3: Tomando decisões</h3>
+        <div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/3-predicates/1-what-is-predicate.html?topic=nyc_bjc/2-conditionals -abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/3-predicates/1-what-is-predicate.html">2.3.1</a></strong >
+                     <div class="ap-standard">AAP-2.E.2</div>
+                     <div class="pseudop">
+                         Você pode ver estes cinco operadores relacionais: <pre class="inline">=, &gt;, &lt;, &ge;, &le;</pre> bem como um sexto: <pre class="inline">&ne;< /pre>, que significa "diferente" e reporta <code>false</code> se as duas entradas forem iguais e caso contrário reporta <code>true</code> (se não forem iguais). Quando você escreve o <img class="inline" src="/bjc-r/img/2-complexity/not-equal.png" alt="() not equal ()" title="() not equal () " />, funcionará assim:<br />
+                         <img class="indent" src="/bjc-r/img/2-complexity/not-equal-reporting-true.png" alt="(3) diferente (4) reportando verdadeiro" title="(3 ) diferente (4) reportando verdadeiro" />
+                         <img class="indent" src="/bjc-r/img/2-complexity/not-equal-reporting-false.png" alt="(3) diferente (3) reportando falso" title="(3 ) diferente (3) reportando falso" />
+                     </div>
+                     <p>Todos esses seis operadores relacionais informam um valor booleano (<code>true</code> ou <code>false</code>).</p>
+                 </div>
+        <div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/3-predicates/2-combining-predicates.html?topic=nyc_bjc/2-conditionals-abstraction .topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/3-predicates/2-combining-predicates.html">2.3.2</a></strong>
+                     <div class="ap-standard">AAP-2.F.1</div>
+                     <div class="pseudop">O <img src="/bjc-r/img/blocks/and-full-size.png" alt="() e ()" title="() e ()" / >, <img src="/bjc-r/img/blocks/or.png" alt="() ou ()" title="() ou ()" /> e <img src="/bjc- r/img/blocks/not.png" alt="not ()" title="not ()" /> os blocos aparecerão como <pre class="inline">AND</pre>, <pre class="inline ">OR</pre> e <pre class="inline">NÃO</pre> e funcionarão exatamente da mesma maneira que no Snap<em>!</em>.</div>
+                 </div>
+                 <h3>Laboratório 4: Fazendo computadores fazerem matemática</h3>
+                 <div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.html?topic=nyc_bjc /2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.html">2.4. 1</a></strong>
+                              <div class="pseudop">
+                                  <div class="sidenote">Diferentes linguagens de programação têm maneiras diferentes de lidar com entradas negativas para a função mod. Portanto, você não verá nenhum número negativo usado com mod no exame.</div>
+                                  <strong>O operador <code>mod</code>:</strong> A expressão <img class="inline nopadtb" src="/bjc-r/img/1-introduction/17-mod-5.png" alt="(17) mod (5)" title="(17) mod (5)" /> seria escrito como <pre class="inline">17 MOD 5</pre> no exame. Se você vir uma expressão com variáveis como entrada para <code>mod</code>, como <pre class="inline">a MOD b</pre>, você pode assumir que <var>a</var> é zero ou positivo, e <var>b</var> é estritamente positivo (porque você não pode dividir por 0).
+                              </div>
+                              <div class="ap-standard">AAP-2.B.5, AAP-2.C.1, AAP-2.C.2, AAP-2.C.3, AAP-2.C.4< /div>
+                              <div class="pseudop">No exame, você poderá ver estes quatro operadores aritméticos: <pre class="inline">+</pre>, <pre class="inline">-</pre>, <pre class="inline">*</pre>, <pre class="inline">/</pre> (mais, menos, vezes, divisão), bem como <pre class="inline">MOD</pre> . Os operadores aritméticos fazem parte da maioria das linguagens de programação. (A maioria dos idiomas de texto usa <pre class="inline">*</pre> em vez de <pre class="inline">&times;</pre> para multiplicação porque <pre class="inline">&times</pre> não está na maioria dos teclados e porque se parece muito com a letra x.)</div>
+                              <div class="ap-standard">AAP-2.L.2</div>
+                              <div class="pseudop"><strong>Ordem das operações:</strong> Em uma linguagem de blocos, o aninhamento dos blocos determina a ordem das operações. Por exemplo, em <img class="inline nopadtb" src="/bjc-r/img/6-computers/3-times(5+4).png" alt="3 × (5 + 4)" title= "3 × (5 + 4)" /> você pode <em>ver</em> que o bloco <code>+</code> é uma entrada para o bloco <code>&times;</code>, então o expressão significa 3×(5+4). Da mesma forma, <img class="inline nopadtb" src="/bjc-r/img/6-computers/(3-times-5)+4.png" alt="(3 × 5) + 4" title=" (3 × 5) + 4" /> significa (3×5)+4. No Snap<em>!</em>, é como se houvesse parênteses em torno de <em>cada</em> operação. Mas em idiomas de texto, você pode escrever <pre class="inline">3 * 4 + 5</pre>
+                              sem parênteses, então eles precisam das regras que você aprende na aula de matemática (multiplicação antes da adição e assim por diante). O operador <code>mod</code> é como multiplicação e divisão; isso acontece <em>antes</em> da adição e da subtração. Por exemplo, <pre class="inline">7 + 5 MOD 2 - 6</pre> significa <pre class="inline">7 + 1 - 6</pre>, que é, obviamente, 2. </div>
+                          </div>
+                          <div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.html?topic=nyc_bjc /2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.html">2.4. 1</a></strong>
+                            <div class="ap-standard">AAP-2.H.2</div>
+                            <div class="sidenote">
+                                <div class="pseudop">Os procedimentos <pre class="inline">move()</pre> e <pre class="inline">turn_clockwise()</pre> não estão integrados na linguagem do AP portanto, eles são escritos em letras minúsculas, como outros procedimentos definidos pelo programador.</div>
+                            </div>
+                            <div class="pseudop">
+                                A expressão condicional
+                                <img class="inline" src="/bjc-r/img/2-complexity/if-example-preview-fractal-art.png" alt="if (tamanho> 15) {repetir (4) {mover ( tamanho) passos, gire no sentido horário (90) graus}}" title="if (tamanho > 15) {repita (4) {mover (tamanho) passos, gire no sentido horário (90) graus}}" />
+                                seria escrito como
+                                <div class="pre-container"><pre class="inline">
+               SE (tamanho > 15)
+               {
+                    REPETIR 4 VEZES
+                    {
+                        mover (tamanho)
+                        gire no sentido horário(90)
+                    }
+               }</pré>
+                                </div>
+                                ou
+                                <img class="inline" src="/bjc-r/img/2-complexity/if-blocktran.png" alt="IF(tamanho &gt; 15)
+               {
+                    REPETIR 4 VEZES
+                    {
+                        mover (tamanho)
+                        gire no sentido horário (90)
+                    }
+               }" title="SE(tamanho > 15)
+               {
+                    REPETIR 4 VEZES
+                    {
+                        mover (tamanho)
+                        gire no sentido horário (90)
+                    }
+               }" />
+                            </div>
+                            <p>Como no Snap<em>!</em>, se a condição <code>(</code><var>tamanho</var><code>) &gt; 15</code> for <code>true</code>, o código dentro da instrução <code>if</code> será executado; se a condição for <code>false</code>, o código não será executado.</p>
+                        </div>
+                        <div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.html?topic =nyc_bjc/2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.html ">2.4.3</a></strong>
+                            <div class="ap-standard">AAP-3.C.2</div>
+                            <div class="sidenote">Você viu a definição do procedimento para um comando em <a href="/bjc-r/cur/programming/1-introduction/3-drawing/4-modify-your-pinwheel.html?topic =nyc_bjc%2F1-intro-loops.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 1 Laboratório 3 Página 4: Modifique seu cata-vento" target="_blank">Unidade 1 Laboratório 3 Página 4: Modifique seu catavento</a>. </div>
+                            <div class="pseudop">
+                                A definição de um repórter se parece muito com a definição de um comando, exceto que inclui um <pre class="inline">RETURN</pre> (como <code>report</code>). Por exemplo, esta definição<br />
+                                <div class="sidenote">
+                                    <p>Em muitos idiomas (incluindo Snap<em>!</em>) as variáveis devem ser <em>declaradas</em> de alguma forma (no Snap<em>!</em>, você pode clicar no botão "Make uma variável" ou use o bloco <code>variáveis de script</code>). Mas a linguagem do AP não inclui declarações de variáveis, então você não as verá no exame. </p>
+                                </div>
+                                <img class="indent" src="/bjc-r/img/3-lists/square-roots-definition.png" alt="raízes quadradas de (número) {variáveis de script (raiz positiva), conjunto (raiz positiva) ) para ((sqrt) de (número))), relatório (lista (raiz positiva) ((-1) × raiz positiva))" title="raízes quadradas de (número) {variáveis de script (raiz positiva), conjunto ( raiz positiva) para ((sqrt) de (número))), relatório (lista (raiz positiva) ((-1) × raiz positiva))" /><br />
+                                seria escrito como
+                                <div class="pre-container"><pre class="inline">
+               PROCEDIMENTO Raízes quadradas(número)
+               {
+                    raiz positiva &leftarrow; quadrado(número)
+                    RETURN([raizpositiva, -1 *raizpositiva])
+               }</pre></div>
+               ou <img src="/bjc-r/img/3-lists/square-roots-definition-blocktran.png" alt="raízes quadradas de (número) {variáveis de script (raiz positiva), defina (raiz positiva) para ((sqrt) de (número))), relatório (lista (raiz positiva) (() - raiz positiva))" title="raízes quadradas de (número) {variáveis de script (raiz positiva), definir (raiz positiva) para ((sqrt) de (número))), relatório (lista (raiz positiva) (() - raiz positiva))" />
+               <div class="ap-standard">AAP-3.A.7</div>
+               <div class="pseudop">Assim como acontece com <code>report</code> no Snap<em>!</em>, quando uma instrução <pre class="inline">RETURN</pre> é executada, o fluxo do controle retorna para o local do seu código onde o procedimento foi chamado, e o procedimento retorna o valor da expressão dentro do comando <pre class="inline">RETURN</pre> ou do bloco <code>report</code> .</div>
+               <div class="endnote">
+                   <div class="pseudop">Além disso, o procedimento <pre class="inline">sqrt</pre> não está embutido na linguagem do AP, portanto é escrito em letras minúsculas como outros procedimentos definidos pelo programador.</ div>
+               </div>
+           </div>
+       </div>
+       <div class="examSummary" ><strong> <a href="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.html?topic =nyc_bjc/2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.html ">2.4.3</a></strong>
+        <div class="ap-standard">AAP-2.H.3</div>
+        <div class="pseudop">A expressão condicional <img class="inline" src="/bjc-r/img/2-complexity/ge-ifelse-no-hat.png" alt="if (a &gt; b) {
+relatar verdadeiro
+} outro {
+relatório (a = b)
+}" title="if (a &gt; b) {
+relatar verdadeiro
+} outro {
+relatório (a = b)
+}" /> seria escrito como <div class="pre-container"><pre class="inline">IF(a &gt; b)
+{
+RETORNAR(verdadeiro)
+}
+OUTRO
+{
+RETORNO(a = b)
+}</pre></div> ou <img class="inline" src="/bjc-r/img/2-complexity/if-else-blocktran.png" alt="IF(a &gt; b)
+{
+RETORNAR(verdadeiro)
+}
+OUTRO
+{
+RETORNO(a = b)
+}" title="SE(a &gt; b)
+{
+RETORNAR(verdadeiro)
+}
+OUTRO
+{
+RETORNO(a = b)
+}" /></div>
+        <div class="pseudop">Como no Snap<em>!</em>, se a condição <pre class="inline">a &gt; b</pre> for verdadeiro, o código no primeiro bloco de instruções será executado; se for falso, o código no segundo bloco de instruções será executado.</div>
+    </div>
+</body>
+</html>
