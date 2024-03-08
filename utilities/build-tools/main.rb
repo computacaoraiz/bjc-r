@@ -11,12 +11,13 @@ require_relative 'selfcheck'
 
 # TODO: Include BJCHelpers - figure out which config stuff belongs there.
 VALID_LANGUAGES = %w[en es de].freeze
-TEMP_FOLDER = 'summaries~'
+TEMP_FOLDER = 'review'
 
 I18n.load_path = Dir['**/*.yml']
 I18n.backend.load_translations
 
 class Main
+  include BJCHelpers
   attr_reader :course, :parentDir
   attr_accessor :skip_test_prompt, :course_file
 
@@ -36,13 +37,16 @@ class Main
     @classStr = ''
     @subClassStr = ''
     @labFileName = ''
+    @content = content
     @course_file = course
     @course = BJCCourse.new(root: @rootDir, course: @course_file, language:)
-    @vocab = Vocab.new(@parentDir, language)
-    @self_check = SelfCheck.new(@parentDir, language)
-    @atwork = AtWork.new(@parentDir, language)
+    @vocab = Vocab.new(@parentDir, language, content, @course)
+    @self_check = SelfCheck.new(@parentDir, language, content, @course)
+    @atwork = AtWork.new(@parentDir, language, content)
     @testingFolder = false
+    @topic_folder = ""
   end
+
 
   def language_ext
     @language_ext ||= @language == 'en' ? '' : ".#{@language}"
@@ -75,7 +79,7 @@ class Main
   end
 
   def topic_files_in_course
-    @topic_files_in_course ||= course.list_topics
+    @topic_files_in_course ||= course.list_topics.filter { |file| file.match(/\d+-\w+/)}
   end
 
   def clear_review_folder
@@ -106,7 +110,7 @@ class Main
   end
 
   def review_folder
-    @review_folder ||= "#{@parentDir}/#{TEMP_FOLDER}"
+    @review_folder ||= "#{@parentDir}#{TEMP_FOLDER}"
   end
 
   def deleteReviewFolder
@@ -115,8 +119,16 @@ class Main
     # TODO: should filter en/es separately.
     files = list_files("#{language_ext}.html")
     files.each do |file|
-      File.delete(file)
+      begin
+        File.open(file, mode: 'r') do |f|
+          f.close
+          File.delete(f)
+        end
+      rescue Errno::EACCES
+      end
     end
+    
+    FileUtils.rm_rf(review_folder)
   end
 
   def createNewReviewFolder
@@ -160,23 +172,59 @@ class Main
     filename.match(/\d+/) && (fileLanguage(file) == @language)
   end
 
+  def delete_existing_summaries(topic_file)
+    all_lines = File.readlines(topic_file)
+    new_lines = ""
+    all_lines.each do |line|
+     
+      if line.match(/Unit \d+ Review/) || line.match(/Unidad \d+ Revision/)
+        return File.write(topic_file, new_lines.strip)
+      elsif line != '}' and line != '\n'
+        new_lines += line
+      end
+    end
+  end
+
+
   # Adds the summary content and links to the topic.topic file
-  def addSummariesToTopic(topic_file)
-    linkMatch = @parentDir.match(%r{/bjc-r.+}).to_s
-    linkMatchWithoutBracket = linkMatch.split(/\]/)
-    link = linkMatchWithoutBracket.join.to_s
+  def addSummariesToTopic(topic_file, curr_lab_folder)
+    topic_folder(topic_file.split("/")[0])
+    topic_file_path = "#{@rootDir}/topic/#{topic_file}"
+    delete_existing_summaries(topic_file_path)
+    link_match = "/bjc-r/#{@content}"
+    unit = File.readlines(topic_file_path).find { |line| line.match?(link_match) }
+    link = extract_unit_path(unit, false, true)
+    list = [@vocab.vocab_file_name, 
+            @self_check.exam_file_name, 
+            @self_check.self_check_file_name].map {|f_name| f_name.gsub!(/\d+/, @unitNum)}
+
+    topic_resource = ["\tresource: (NEW) #{I18n.t('vocab')} [#{link}/#{list[0]}]",
+                    "\n\tresource: (NEW) #{I18n.t('on_ap_exam')} [#{link}/#{list[1]}]",
+                    "\n\tresource: (NEW) #{I18n.t('self_check')} [#{link}/#{list[2]}]"]
     topic_content = <<~TOPIC
       heading: (NEW) #{I18n.t('unit_review', num: @unitNum)}
-        resource: (NEW) #{I18n.t('vocab')} [#{link}#{@vocab.vocab_file_name}]
-        resource: (NEW) #{I18n.t('on_ap_exam')} [#{link}#{@self_check.exam_file_name}]
-        resource: (NEW) #{I18n.t('self_check')} [#{link}#{@self_check.self_check_file_name}]
     TOPIC
-    add_content_to_topic_file(topic_file, topic_content)
+    is_empty_review = true
+    list.length.times do |index|
+      if File.exist?("#{review_folder}/#{list[index]}")
+        topic_content += topic_resource[index]
+        is_empty_review = false
+      end
+    end
+    add_content_to_file(topic_file_path, "\n#{topic_content}\n}") if !is_empty_review
+
   end
 
   def isSummary(line)
     !line.nil? && !@currUnit.nil? && line.match(@currUnit)
   end
+
+  #Writing new function to parse using the topic.rb file
+  #def parse_topic_page(file)
+  #  path = "#{@rootDir}/topic/#{file}"
+  #  topic_runner = BJCTopic.new(path)
+  #  topic_json = topic_runner.parse
+  #end
 
   # Parses through the data of the topic page and generates and adds content to a topics.txt
   # file that will be parsed later on to generate summaries
@@ -184,6 +232,7 @@ class Main
   # TODO: This shouldn't write to a file, but return some hash/object
   def parse_rawTopicPage(file)
     full_path = "#{@rootDir}/topic/#{file}"
+    get_topic_course(get_prev_folder(file), @course_file)
     currUnit(nil)
     allLines = File.readlines(full_path)
     topicURLPattern = %r{/bjc-r.+\.\w+}
@@ -200,7 +249,6 @@ class Main
       summaryExists = true if (index > 1) && isSummary(line)
       line = removeComment(oldline) if isComment(line)
       if line.match(/\}/) && !summaryExists
-        allLines[index] = addSummariesToTopic(file)
         summaryExists = true
       elsif isTopic(line)
         if line.match(headerPattern)
@@ -249,7 +297,10 @@ class Main
                'heading: Unidad',
                'resource: Vocabulario',
                'resource: En el examen AP',
-               'resource: Preguntas de Autocomprobacion']
+               'resource: Preguntas de Autocomprobacion',
+              "#{I18n.t('self_check')}",
+              "#{I18n.t('vocab')}",
+              "#{I18n.t('on_ap_exam')}"]
     topicLine = /(\s+)?(\w+)+(\s+)?/
     bool = true
     kludges.each do |item|
@@ -260,12 +311,9 @@ class Main
   end
 
   def add_content_to_file(filename, data)
-    if File.exist?(filename)
-      File.write(filename, data, mode: 'a')
-    else
-      File.new(filename, 'w')
-      File.write(filename, data)
-    end
+    File.exist?(filename) ? f = File.open(filename, 'a') : f = File.new(filename, 'w')
+    f.write(data)
+    f.close
   end
 
   # TODO: - if we have a BJCTopic class, this probably belongs there.
@@ -345,6 +393,7 @@ class Main
     local.join.to_s
   end
 
+ 
   def extractTopicLink(line)
     labNamePattern = /----- /
     linkMatch = line.split(labNamePattern)
@@ -355,14 +404,11 @@ class Main
           else
             link.match(/(\w+-?)+\.html/)
           end
-    # folder = "#{localPath()}#{link[0]}"
-    # link =
-    # Dir.chdir(folder)
     lab.to_s
-    # lab = link.match(/(\w+-?)+\.\w+\.html/).to_s
+
   end
 
-  def extractTopicLinkFolder(line)
+  def extractTopicLinkFolder(line, use_root=true)
     labNamePattern = /----- /
     linkMatch = line.split(labNamePattern)
     link = if @language != 'en'
@@ -370,24 +416,44 @@ class Main
            else
              linkMatch[1].split(/(\w+-?)+\.html/)
            end
-    folder = "#{localPath}#{link[0]}"
-    # if link.size > 1
-    Dir.chdir(folder)
-    # end
+    use_root ? "#{localPath}#{link[0]}" : link[0]
+
   end
+
+
+  def extract_unit_path(line, use_root=true, is_topic=true)
+    if is_topic
+      bracket_removed = line.split(/.+\[/)
+      match = bracket_removed[1].split(/\]/).join.to_s
+    else
+      match = line
+    end
+    link_with_lab = if @language != 'en'
+             match.split(/(\w+-?)+\.\w+\.html/)
+           else
+             match.split(/(\w+-?)+\.html/)
+           end
+    list = link_with_lab[0].split("/")
+    link = list.map { |elem, output = ""| output += ("/#{elem}") if list.index(elem) < list.length - 1}.join
+    link = link[1..link.length] if link[1] == "/" #get rid of extra slash, otherwise appears as //bjc-r
+    use_root ? "#{localPath}#{link}" : link
+  end
+
 
   def copyFiles
     list = [@vocab.vocab_file_name, @self_check.self_check_file_name, @self_check.exam_file_name]
+    currentDir = Dir.pwd
     FileUtils.cd('..')
-    # src = "#{review_folder}/#{@vocab}"
-    # dst = "#{Dir.getwd}/#{@vocab.vocab_file_name}"
+
     list.each do |file|
       src = "#{review_folder}/#{file}"
       dst = "#{Dir.getwd}/#{file}"
       File.delete(dst) if File.exist?(dst)
       # TODO: use nokogiri to refomat the file.
       FileUtils.copy_file(src, dst) if File.exist?(src)
+
     end
+    Dir.chdir(currentDir)
   end
 
   # Inputs is the topics.txt file that is created earlier from the .topic file.
@@ -396,49 +462,41 @@ class Main
   # function to began to create or add onto the vocab pages
   def parse_units(topicsFile)
     # make sure i am in summaries directory first
+    topics_index = 0
     Dir.chdir(@parentDir)
     f = File.open(topicsFile, 'r')
     labNamePattern = /-----/
     unitNamePattern = /title: /
     endUnitPattern = /END OF UNIT/
+    current_lab_folder = ""
     i = 0
     f.each do |line|
       if line.match(endUnitPattern)
-        currentPath = Dir.getwd
+        current_unit_folder = current_lab_folder.split("/")[-2]
+        addSummariesToTopic(topic_files_in_course[topics_index], current_unit_folder)
         copyFiles
-        FileUtils.cd(currentPath)
+        topics_index += 1
       end
       if !line.match(labNamePattern).nil?
-        # labNum = line.match(/\d+\s+/).to_s
-        # labFile = findLabFile(labNum, Dir.getwd())
         labFile = extractTopicLink(line)
+        root = @rootDir.split("/bjc-r")[0]
+        lab_path = "#{root}#{line.split(labNamePattern)[-1].split(" ")[-1]}"
         if labFile != ''
-          extractTopicLinkFolder(line)
-          @vocab.labPath(Dir.getwd)
-          @vocab.read_file(labFile)
-          @self_check.read_file(labFile)
-          @atwork.read_file(labFile)
+          current_lab_folder = extractTopicLinkFolder(line)
+          if File.exist?(lab_path)
+            Dir.chdir(current_lab_folder)
+            @vocab.labPath(Dir.getwd)
+            @vocab.read_file(labFile)
+            @self_check.read_file(labFile)
+            @atwork.read_file(labFile)
+          end
         end
-
-      # pass to function that will open correct file
-      # elsif line.match(labTopicPattern)
-      # if line.match(/^(heading: [a-zA-Z]+)/)
-      #	labNum = /optional-project/
-      # else
-      #	labNum = line.match(/\d+/).to_s
-      # end
-      # labFolder = getFolder(labNum, unitFolder)
-      # Dir.chdir(labFolder)
-      # change lab folder
       elsif line.match(unitNamePattern)
         unitNum(line.match(/\d+/).to_s)
-        unitName = line.match(/Unit.+/)
+        unitName = line.match(/#{I18n.t('unit', num: @unitNum)}.+/)
         @vocab.currUnitName(unitName.to_s)
         @self_check.currUnitName(unitName.to_s)
         @atwork.currUnitName(unitName.to_s)
-      # unitFolder = getFolder(@unitNum, @parentDir)
-      # Dir.chdir(unitFolder)
-      # change unit folder
       elsif isEndofTopicPage(line)
         @vocab.add_HTML_end
         @self_check.add_HTML_end
@@ -446,6 +504,7 @@ class Main
       end
       i += 1
     end
+    f.close
   end
 
   def isEndofTopicPage(line)
@@ -491,5 +550,9 @@ class Main
 
   def currUnit(str)
     @currUnit = str
+  end
+
+  def topic_folder(name)
+    @topic_folder = name
   end
 end

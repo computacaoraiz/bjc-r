@@ -1,9 +1,10 @@
 require 'fileutils'
 require 'i18n'
 
+require_relative 'course'
 require_relative 'bjc_helpers'
 
-TEMP_FOLDER = 'summaries~'
+TEMP_FOLDER = 'review'
 
 I18n.load_path = Dir['**/*.yml']
 I18n.backend.load_translations
@@ -11,9 +12,11 @@ I18n.backend.load_translations
 class SelfCheck
   include BJCHelpers
 
-  def initialize(path, language)
+  def initialize(path, language, content, course)
     @parentPath = path
     @currUnit = nil
+    @content = content
+    @course = course
     @isNewUnit = true
     @currUnitNum = 0
     @currLab = ''
@@ -22,6 +25,7 @@ class SelfCheck
     @language = language
     @language_ext = language_ext(language)
     I18n.locale = @language.to_sym
+    @box_num = 0
   end
 
   def review_folder
@@ -69,6 +73,10 @@ class SelfCheck
     "unit-#{@currUnitNum}-exam-reference#{@language_ext}.html"
   end
 
+  def box_num(num)
+    @box_num = num
+  end
+
   def read_file(file)
     return unless File.exist?(file)
 
@@ -97,7 +105,6 @@ class SelfCheck
   def parse_assessmentData(file)
     doc = File.open(file) { |f| Nokogiri::HTML(f) }
     selfcheckSet = doc.xpath("//div[@class = 'assessment-data']")
-    # header = parse_vocab_header(doc.xpath(""))
     selfcheckSet.each do |node|
       child = node.children
       child.before(add_unit_to_header)
@@ -110,11 +117,10 @@ class SelfCheck
   def parse_examData(file)
     doc = File.open(file) { |f| Nokogiri::HTML(f) }
     examSet = doc.xpath("//div[@class = 'examFullWidth']")
-    # header = parse_vocab_header(doc.xpath(""))
     examSet.each do |node|
       child = node.children
+      node.kwattr_add("style", "width: 95%")
       child.before(add_unit_to_header)
-      # node.content.gsub(/\n\n/, "\n")
     end
     return if examSet.empty?
 
@@ -143,7 +149,7 @@ class SelfCheck
       end
       i += 1
     end
-    File.write(fileName, "<h2>#{@currUnit}</h2>\n", mode: 'a')
+    File.write(fileName, "<h2>#{@currUnitName}</h2>\n", mode: 'a')
     File.write(fileName, "<h3>#{currLab}</h3>\n", mode: 'a')
   end
 
@@ -154,16 +160,12 @@ class SelfCheck
     return unless File.exist?(exam_file_name)
 
     File.write(exam_file_name, ending, mode: 'a')
-
-    # doesexam_file_name exist?
-    # File.write(exam_file_name, ending, mode: "a")
   end
 
   def add_content_to_file(filename, data, type)
     lab = @currLab
     data = data.gsub(/&amp;/, '&')
     data.delete!("\n\n\\")
-    # data = data.gsub(/\n(\s+)?\n/, "\n")
     if File.exist?(filename)
       File.write(filename, "<h3>#{currLab}</h3>\n", mode: 'a') if lab != currLab
     else
@@ -172,9 +174,21 @@ class SelfCheck
     File.write(filename, data, mode: 'a')
   end
 
+  def topic_files_in_course
+    @topic_files_in_course ||= @course.list_topics_no_path.filter { |file| file.match(/\d+-\w+/)}
+  end
+
+  def get_topic_file
+    unit_reference = return_unit(@currUnit)
+    unit_num = unit_reference.match(/\d+/).to_s
+    topic_files = topic_files_in_course.filter {|f| f.match(unit_num)}[0]
+  end
+
   def add_unit_to_header
     unitNum = return_unit(@currUnit)
-    " <a href=\"#{get_url(@currFile)}\">#{unitNum}</a>"
+    box_num(@box_num + 1)
+    suffix = generate_url_suffix(TOPIC_COURSE[0], get_topic_file, TOPIC_COURSE[-1])
+    " <a href=\"#{get_url(@currFile)}#{suffix}#box#{@box_num}\"><b>#{unitNum}</b></a>"
   end
 
   # need something to call this function and parse_unit
@@ -195,6 +209,5 @@ class SelfCheck
     localPath = Dir.getwd
     linkPath = localPath.match(/bjc-r.+/).to_s
     result = "/#{linkPath}/#{file}"
-    # add_content_to_file('urlLinks.txt', result)
   end
 end
