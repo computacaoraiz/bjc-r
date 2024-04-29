@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <script src="/bjc-r/llab/loader.js"></script>
+		<title>Unidade 2 Laboratório 4: Fazendo computadores fazerem matemática, página 1</title>
+    </head>
+
+    <body>
+        <h2>O Operador <code>Mod (modulo)</code></h2>
+        <div class="learn">
+            <p><strong>Neste laboratório,</strong> você irá programar procedimentos para realizar tarefas matemáticas.</p>
+            <p><strong>Nesta página,</strong> você irá criar um predicado para verificar se um número é divisível por outro.</p>
+        </div>
+        <div class="forYouToDo">
+            <ol>
+                <li><div class="newProject inline"><span class="text">"U2L4-BibliotecaMatematica"</span><img src="/bjc-r/img/icons/new-project-called.png" alt="Iniciar um Novo Projeto chamado U2L4-BibliotecaMatematica" title="Iniciar um Novo Projeto chamado U2L4-BibliotecaMatematica" /></div></li>
+                <li>
+                    Experimente com o bloco <img class="inline" src="/bjc-r/img/blocks/mod.png" alt="() mod ()" title="() mod ()"/>.
+                    <ol style="list-style-type:lower-roman;">
+                        <li><strong>Tente várias entradas</strong>.</li>
+                        <li><strong>Mantenha o segundo número constante</strong> e tente várias entradas para o primeiro número.</li>
+                        <li><strong>Formule uma hipótese.</strong> O que você percebe?</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+        <div class="takeNote">O bloco <code>mod</code> <strong>relata o restante</strong> quando a primeira entrada é dividida pela segunda. Por exemplo, <img src="/bjc-r/img/1-introduction/17-mod-5.png" alt="(17) mod (5)" title="(17) mod (5)" /> relata 2 porque quando 17 é dividido por 5, o resto é 2. Quando um número divide outro igualmente, o resto é 0. Então, por exemplo, <img src="/bjc-r/img/1-introduction/15-mod-5.png" alt="(15) mod (5)" title="(15) mod (5)" /> reporta 0.</div>
+         <div vlass="examFullWidth">
+             <div class="pseudop">
+                 <div class="sidenote">Diferentes linguagens de programação têm maneiras diferentes de lidar com entradas negativas para a função mod. Portanto, você não verá nenhum número negativo usado com mod no exame.</div>
+                 <strong>O operador <code>mod</code>:</strong> A expressão <img class="inline nopadtb" src="/bjc-r/img/1-introduction/17-mod-5.png" alt="(17) mod (5)" title="(17) mod (5)" /> seria escrito como <pre class="inline">17 MOD 5</pre> no exame. Se você vir uma expressão com variáveis como entrada para <code>mod</code>, como <pre class="inline">a MOD b</pre>, você pode assumir que <var>a</var> é zero ou positivo, e <var>b</var> é estritamente positivo (porque você não pode dividir por 0).
+             </div>
+             <div class="ap-standard">AAP-2.B.5, AAP-2.C.1, AAP-2.C.2, AAP-2.C.3, AAP-2.C.4</div>
+             <div class="pseudop">No exame, você poderá ver estes quatro operadores aritméticos: <pre class="inline">+</pre>, <pre class="inline">-</pre>, <pre class="inline">*</pre>, <pre class="inline">/</pre> (mais, menos, vezes, divisão), bem como <pre class="inline">MOD</pre> . Os operadores aritméticos fazem parte da maioria das linguagens de programação. (A maioria dos idiomas de texto usa <pre class="inline">*</pre> em vez de <pre class="inline">&times;</pre> para multiplicação porque <pre class="inline">&times</pre> não está na maioria dos teclados e porque se parece muito com a letra x.)</div>
+             <div class="ap-standard">AAP-2.L.2</div>
+             <div class="pseudop"><strong>Ordem das operações:</strong> Em uma linguagem de blocos, o aninhamento dos blocos determina a ordem das operações. Por exemplo, em <img class="inline nopadtb" src="/bjc-r/img/6-computers/3-times(5+4).png" alt="3 × (5 + 4)" title= "3 × (5 + 4)" /> você pode <em>ver</em> que o bloco <code>+</code> é uma entrada para o bloco <code>&times;</code>, então o expressão significa 3×(5+4). Da mesma forma, <img class="inline nopadtb" src="/bjc-r/img/6-computers/(3-times-5)+4.png" alt="(3 × 5) + 4" title=" (3 × 5) + 4" /> significa (3×5)+4. No Snap<em>!</em>, é como se houvesse parênteses em torno de <em>cada</em> operação. Mas em idiomas de texto, você pode escrever <pre class="inline">3 * 4 + 5</pre>
+             sem parênteses, então eles precisam das regras que você aprende na aula de matemática (multiplicação antes da adição e assim por diante). O operador <code>mod</code> é como multiplicação e divisão; isso acontece <em>antes</em> da adição e da subtração. Por exemplo, <pre class="inline">7 + 5 MOD 2 - 6</pre> significa <pre class="inline">7 + 1 - 6</pre>, que é, obviamente, 2. </div>
+         </div>
+
+         <div class="forYouToDo">
+			<ol start="3">
+                <div class="sidenote">
+                    Em um laboratório posterior, você poderá usar o bloco <code>even?</code> para desenhar uma <a href="/bjc-r/cur/programming/3-lists/1-abstraction/4-brick-wall.pt-br.html?topic=nyc_bjc%2F2-conditionals-abstraction.pt-br.topic&course=bjc4nyc.pt-br.html&novideo&noassignment" title="Brick Wall">brick wall</a> porque as linhas pares e ímpares são diferentes. <br />
+                    <img class="inline" src="/bjc-r/img/abstraction/new-brickwall/wall.png" alt="Exemplo de imagem de parede de tijolos" title="Exemplo de imagem de parede de tijolos" />
+                </div>
+                <li>
+                    Use <code>mod</code> para construir um <img class="nopadtb" src="/bjc-r/img/2-complexity/divisible-by.png" alt="é () divisível por ()? " title="é () divisível por () ?" /> predicado que testa a divisibilidade.<br />
+                    <img class="indent" src="/bjc-r/img/2-complexity/15-divisible-by-3-reporting-true.png" alt="é (15) divisível por (3)? reportando verdadeiro "title="é (15) divisível por (3)? relatando verdadeiro" />
+                    <img class="indent" src="/bjc-r/img/2-complexity/15-divisible-by-6-reporting-false.png" alt="é (15) divisível por (6)? relatando falso "title="é (15) divisível por (6)? relatando falso" />
+                </li>
+                <li>
+                    Use este predicado <code>divisible by?</code> para construir um predicado que testa se sua entrada é par (divisível por 2).<br />
+                    <img class="indent" src="/bjc-r/img/2-complexity/even--22-reporting-true.png" alt="até? (-22) reportando verdadeiro" title="até? (-22) reportando verdadeiro" />
+                    <img class="indent" src="/bjc-r/img/2-complexity/even-7-reporting-false.png" alt="até? (7) reportando falso" title="até? (7) reportando falso" />
+                </li>
+                <li><img class="inline" src="/bjc-r/img/icons/save-now.png" alt="Salve seu trabalho" title="Salve seu trabalho" /></li>
+            </ol>
+        </div>
+
+
+        <div class="atworkFullWidth">
+            <img class="noshadow imageRight" height="200px" src="/bjc-r/img/atwork/Katherine_Johnson.jpg" alt="foto de Katherine Johnson" title="foto de Katherine Johnson" />
+            <p>Katherine Johnson (1918&ndash;2020) foi uma tecnóloga aeroespacial com doutorado. em matemática que trabalhou para a NASA calculando o movimento de espaçonaves. Johnson, originalmente contratado como computador humano, verificou os cálculos de computadores digitais, ajudou a calcular a trajetória da Apollo 11 (a primeira vez que os humanos caminharam na Lua), trabalhou nos planos para uma missão a Marte e incentivou os estudantes a seguirem carreiras em ciência, tecnologia, engenharia e matemática.</p>
+            <p><a href="https://www.youtube.com/watch?v=nKxgieXQ82w" title="Vídeo memorial da NASA: 'Katherine Johnson: An American Hero'" target="_blank">Vídeo memorial da NASA: "Katherine Johnson: uma heroína americana"</a></p>
+        </div>
+
+    <div class="examFullWidth">
+        <div class="ap-standard">AAP-2.H.2</div>
+        <div class="sidenote">
+            <div class="pseudop">Os procedimentos <pre class="inline">move()</pre> e <pre class="inline">turn_clockwise()</pre> não estão integrados na linguagem do AP portanto, eles são escritos em letras minúsculas, como outros procedimentos definidos pelo programador.</div>
+        </div>
+        <div class="pseudop">
+            A expressão condicional
+            <img class="inline" src="/bjc-r/img/2-complexity/if-example-preview-fractal-art.png" alt="se (tamanho> 15) {repetir (4) {mover ( tamanho) passos, gire no sentido horário (90) graus}}" title="se (tamanho > 15) {repita (4) {mover (tamanho) passos, gire no sentido horário (90) graus}}" />
+            seria escrito como
+            <div class="pre-container"><pre class="inline">
+SE (&gt; 15)
+{
+REPETIR 4 VEZES
+{
+    mover (tamanho)
+    gire no sentido horário(90)
+}
+}</pré>
+            </div>
+            ou
+            <img class="inline" src="/bjc-r/img/2-complexity/if-blocktran.png" alt="SE(tamanho &gt; 15)
+{
+REPETIR 4 VEZES
+{
+    mover (tamanho)
+    gire no sentido horário (90)
+}
+}" title="SE(&gt; 15)
+{
+REPETIR 4 VEZES
+{
+    mover (tamanho)
+    gire no sentido horário (90)
+}
+}" />
+        </div>
+        <p>Como no Snap<em>!</em>, se a condição <code>(</code><var>tamanho</var><code>) &gt; 15</code> for <code>true</code>, o código dentro da instrução <code>if</code> será executado; se a condição for <code>false</code>, o código não será executado.</p>
+    </div>
+
+    <div class="forYouToDo">
+        <ol start="6">
+            <li>
+                <!-- Question 6 -->
+                <div class="assessment-data" type="multiplechoice" identifier="What's the missing condition for an ODD? predicate?"
+                    hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri2" shuffle="false">
+                    <div class="prompt">
+                        <div class="ap-standard">AAP-2.L.2</div>
+                        Algoritmos que parecem iguais podem ter resultados diferentes. O seguinte fragmento de código incompleto foi concebido para testar se <pre class="inline">o número</pre> é ímpar:<br />
+                        <pre>SE (CONDIÇÃO EM FALTA)
+                            {
+                            EXIBIR "É estranho".
+}</pre><br />
+                    Qual das seguintes opções pode ser utilizada em vez da condição MISSING?
+                    </div>
+                    <div class="choice" identifier="c1">
+                        <div class="text"><pre class="inline">número MOD 1 = 0</pre><!--<img class="inline" src="/bjc-r/img/2-complexity/quiz-mod-1.png" alt="((number) mod (1)) = (0)" title="((number) mod (1)) = (0)" />--></div>
+                        <div class="feedback">
+                            <pre class="inline">MOD</pre> devolve o resto quando a primeira entrada é dividida pela segunda. O facto de um número ser par ou ímpar depende da divisibilidade por 2.
+                        </div>
+                    </div>
+                    <div class="choice" identifier="c2">
+                        <div class="text"><pre class="inline">número MOD 1 = 1</pre><!--<img class="inline" src="/bjc-r/img/2-complexity/quiz-mod-2.png" alt="((number) mod (1)) = (1)" title="((number) mod (1)) = (1)" />--></div>
+                        <div class="feedback">
+                            <pre class="inline">MOD</pre> devolve o resto quando a primeira entrada é dividida pela segunda. O facto de um número ser par ou ímpar depende da divisibilidade por 2.
+                        </div>
+                    </div>
+                    <div class="choice" identifier="c3">
+                        <div class="text"><pre class="inline">Número MOD 2 = 0</pre><!--<img class="inline" src="/bjc-r/img/2-complexity/quiz-mod-3.png" alt="((number) mod (2)) = (0)" title="((number) mod (2)) = (0)" />--></div>
+                        <div class="feedback">
+                            <pre class="inline">número MOD 2</pre> devolve o resto quando <pre class="inline">número</pre>é dividido por 2. Se o resto for zero, o número é par ou ímpar?
+                        </div>
+                    </div>
+                    <div class="choice" identifier="c4">
+                        <div class="text"><pre class="inline">número MOD 2 = 1</pre><!--<img class="inline" src="/bjc-r/img/2-complexity/quiz-mod-4.png" alt="((number) mod (2)) = (1)" title="((number) mod (2)) = (1)" />--></div>
+                        <div class="feedback">
+                            Correto! <pre class="inline">número MOD 2</pre> devolve o resto quando <pre class="inline">número</pre> é dividido por 2. Se <pre class="inline">número MOD 2</pre> é 1, então o número é ímpar.
+                        </div>
+                    </div>
+                    <div class="responseDeclaration" identifier="ri2">
+                        <div class="correctResponse" identifier="c4"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <!-- Question 7 -->
+                <div class="assessment-data" type="multiplechoice" identifier="What's the value of 11 MOD (2 + 3)?"
+                    hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri3" shuffle="true">
+                    <div class="prompt">
+                        Qual é o valor de<img class="inline" src="/bjc-r/img/2-complexity/11mod2+3.png" alt="11 mod (2 + 3)" title="11 mod (2 + 3)" />?
+                    </div>
+                    <div class="choice" identifier="c1">
+                        <div class="text">1</div>
+                        <div class="feedback">
+                            Correto!
+                        </div>
+                    </div>
+                    <div class="choice" identifier="c2">
+                        <div class="text">0.2</div>
+                        <div class="feedback">
+                            Os restos são sempre números inteiros.
+                        </div>
+                    </div>
+                    <div class="choice" identifier="c3">
+                        <div class="text">2</div>
+                        <div class="feedback">
+                            <code>Mod</code> dá-lhe o resto, não o quociente.
+                        </div>
+                    </div>
+                    <div class="choice" identifier="c4">
+                        <div class="text">2.2</div>
+                        <div class="feedback">
+                            É verdade que a divisão e mod têm algumas semelhanças, mas mod dá-nos apenas o resto.
+                        </div>
+                    </div>
+
+                    <div class="responseDeclaration" identifier="ri3">
+                        <div class="correctResponse" identifier="c1"></div>
+                    </div>
+                </div>
+            </li>
+            <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Fale com seu parceiro" title="Fale com seu parceiro" /> É verdade que (12 MOD 2)&gt; (11 MOD 2)? Explique seu raciocínio.</li>
+        </ol>
+    </div>
+
+    <div class="ifTime">
+        <ol start="9">
+            <li>
+                Construa um predicado que teste se sua entrada é um número inteiro. Você pode encontrar <img src="/bjc-r/img/blocks/round-a-number.png" alt="round ()" title="round ()"> útil.<br />
+                <img class="indent" src="/bjc-r/img/2-complexity/integer-4(with-result-true).png" alt="inteiro? (4) reportando verdadeiro" title="inteiro? (4) reportando verdadeiro" />
+                <img class="indent" src="/bjc-r/img/2-complexity/integer-4-point-1(with-result-false).png" alt="inteiro? (4.1) reportando falso" title="inteiro? (4.1) reportando falso" />
+            </li>
+        </ol>
+    </div>
+    <!--<div class="endnote">You can <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/3-importing-exporting.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment">import</a> your <code>integer?</code>, <code>between?</code>, and <code>even?</code> predicates into other projects when you need them.</div>-->
+<div class="takeItFurther">
+    <p>Abre o teu
+        projeto <strong>U2L3-Dots</strong> e salve-o novamente como <strong>U2L4-DotsTIF</strong>. Lembre-se de como as imagens são determinadas pela expressão booleana usada.
+          <ol type="A">
+            <li>
+                Invente expressões booleanas para estas imagens:<br />
+                <ol class="horizontal">
+                    <li><img src="/bjc-r/img/2-complexity/x-div-100-mod-10.png" alt=" O palco é quase inteiramente laranja, exceto por cinco finas listras verticais roxas uniformemente espaçadas ." title="O palco é quase inteiramente laranja, exceto por cinco finas listras verticais roxas espaçadas uniformemente." /></li>
+                    <li><img src="/bjc-r/img/2-complexity/div-100-mod-2-x=y.png" alt="Um padrão xadrez ou roxo e laranja. Ao redor do eixo x há cinco quadrados, com roxo nas bordas esquerda e direita e no centro. Em torno do eixo y, há três quadrados completos e dois quadrados parciais nas bordas; os quadrados parciais e o quadrado central são roxos, e os dois quadrados restantes são laranja .As duas cores se alternam em toda a área como um tabuleiro de xadrez." title="Um padrão xadrez ou roxo e laranja. Em torno do eixo x há cinco quadrados, com roxo nas bordas esquerda e direita e no centro. Em torno do eixo y, há três quadrados completos e dois quadrados parciais nas bordas; os quadrados parciais e o quadrado central são roxos e os dois quadrados restantes são laranja. As duas cores se alternam em toda a área como um tabuleiro de xadrez. /></li>
+                    <li><img src="/bjc-r/img/2-complexity/div-100-mod-3-x=y.png" alt="Um tabuleiro de xadrez como ii, exceto que em cada linha os quadrados alternam dois laranja, um roxo. Portanto, a linha superior (parcial) é laranja, roxo, laranja, laranja, roxo. A segunda linha é roxa, laranja, laranja, roxo, laranja. A linha do meio é laranja, laranja, roxo, laranja, laranja . A quarta linha é laranja, roxo, laranja, laranja, roxo. E a linha parcial inferior é roxa, laranja, laranja, roxo, laranja." title="Um tabuleiro de xadrez como ii, exceto que em cada linha os quadrados alternam dois laranja, um roxo. Portanto, a linha superior (parcial) é laranja, roxo, laranja, laranja, roxo. A segunda linha é roxa, laranja, laranja, roxo, laranja. A linha do meio é laranja, laranja, roxo, laranja, laranja. A quarta linha é laranja, roxo, laranja, laranja, roxo. E a linha parcial inferior é roxa, laranja, laranja, roxo, laranja." /></li>
+                    <li><img src="/bjc-r/img/2-complexity/dir-div-20-mod-2.png" alt="Há uma maçã no centro. Irradiando do centro estão 18 fatias, alternando a cor laranja e roxa." title="Há uma maçã no centro. Irradiando do centro estão 18 fatias, alternando na cor laranja e roxa." /></li>
+                    <li><img src="/bjc-r/img/2-complexity/dist-div-20-mod-2.png" alt="Há uma maçã no centro. Atrás da maçã há um pequeno círculo laranja. Em seguida, vem uma pequena faixa circular roxa ao redor do círculo laranja. Depois, uma pequena faixa circular laranja e assim por diante, trabalhando para fora. title="Há uma maçã no centro. Atrás da maçã há um pequeno círculo laranja. Em seguida, vem uma pequena faixa circular roxa ao redor do círculo laranja. Depois, uma pequena faixa circular laranja e assim por diante, trabalhando para fora." /></li>
+                    <li><img class="inline" src="/bjc-r/img/icons/tough-stuff-mini.png" alt="Coisas difíceis" title="Coisas difíceis" /><img src="/bjc-r/img/2-complexity/dist-gt-dir.png" alt="Imagine uma linha descendo diretamente de uma maçã no centro do palco. Imagine também uma espiral que começa na origem e espirala para fora no sentido horário , passando um pouco pelo terceiro quadrante, depois pelo segundo quadrante e finalmente atingindo a borda direita do palco no primeiro quadrante. A área acima e à esquerda da linha e da espiral é roxa; a área abaixo e para o certo é laranja." title="Imagine uma linha descendo diretamente de uma maçã no centro do palco. Imagine também uma espiral que começa na origem e espirala para fora no sentido horário, passando um pouco pelo terceiro quadrante, depois pelo segundo quadrante e finalmente atingindo a borda direita do palco no primeiro quadrante. A área acima e à esquerda da linha e espiral é roxa; a área abaixo e à direita é laranja." /></li>
+                </ol>
+                <div class="endnote" style="clear: both;">
+                    <a href="#hint-tif" data-toggle="collapse" title="Click for a hint.">Clique para obter uma dica.</a>
+                    <div id="hint-tif" class="collapse">
+                        Algumas delas incluem expressões no formato <img src="/bjc-r/img/2-complexity/hint-script.png" alt="((round (() / 20)) mod 2)" title=" ((round (() / 20)) mod 2)"> com algo como <img src="/bjc-r/img/blocks/x-position.png" alt="x position" title="x position" /> no slot de entrada vazio e talvez números diferentes no lugar de 20 e 2.
+                    </div>
+                </div>
+            </li>
+  </ol>
+</div>
+
+
+</body>
+</html>

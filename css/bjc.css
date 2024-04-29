@@ -117,6 +117,10 @@ h3 {
   margin: 0px;
 }
 
+.teacher-guide .topic > section > ol {
+  list-style: disc;
+}
+
 img.imageLeft {
   margin-bottom: 0px;
 }
@@ -729,7 +733,7 @@ html[lang="pt-br"] .vocabSummary:before {
   content: "Vocabulário";
 }
 
-html[lang="es"] .dialogue:before {
+html[lang="pt-br"] .dialogue:before {
   content: "Pensando en voz alta";
 }
 
@@ -768,10 +772,20 @@ div.newProject span.text {
 
 html[lang="es"] div.newProject span.text {
   position: absolute;
-  margin-left: 353px;
-  padding-top: 1.13em;
+  margin-left: 445px;
+  padding-top: 1.18em;
   z-index: 2;
   color: #333;
+}
+
+/* Gifffer Library */
+
+img[data-gifffer] {
+	padding: 0px !important;
+}
+
+img.buffer {
+	padding: 6px;
 }
 
 /* Other Random Things added by Mary NEEDS ATTENTION*/
@@ -984,6 +998,7 @@ table.videos td {
   h4 {
     font-size: 1em;
   }
+
   .sidenote,
   .sidenoteBig,
   .endnote,
@@ -1012,6 +1027,7 @@ table.videos td {
   .commentBig {
     display: none;
   }
+  /* End media print */
 }
 
 /* Tables with Grids */
@@ -1044,6 +1060,7 @@ table.videos td {
 }
 
 /* Expansion Menus - Snap! Crash Course */
+/* TODO: Refactor to use bs collapse + delete arrows */
 a.expansion-menu h4,
 a.expansion-menu {
   color: #2a6496;
@@ -1090,10 +1107,6 @@ div.map-links a {
 div.index-letter-target p {
   padding-top: 20px;
   font-size: 2em;
-}
-
-a.openInSnap {
-  display: block;
 }
 
 div.index-letter-target li {

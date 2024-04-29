@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+	    <title>Unidade 2 Laboratório 1: Jogos, Página 5</title>
+	</head>
+
+    <body>
+        <h2>Escolhendo uma Fantasia</h2>
+        <div class="learn">
+            <p>No Click Alonzo, o jogo alternava entre duas versões diferentes da fantasia do Alonzo para informar ao jogador se eles clicaram com sucesso no Alonzo. <strong>Nesta página,</strong> você permitirá ao usuário do seu programa Click Alonzo escolher a fantasia do sprite.</p>
+        </div>
+
+        <div class="forYouToDo" id="first">
+			<ol>
+                <div class="sidenote">Você aprendeu como adicionar fantasias em <a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.pt-br.html?topic=nyc_bjc%2F1-intro-loops.pt-br.topic&course=bjc4nyc.pt-br.html&novideo&noassignment" title="Unidade 1 Laboratório 2 Página 3: Personalização e Depuração">Unidade 1 Laboratório 2 Página 3: Personalização e Depuração</a>.</div>
+                <li>Se ainda não estiver aberto, abra o seu projeto U2L1-ClickAlonzo.</li>
+				<li>
+                    Configure o que você precisa para esta nova versão:
+                    <ol>
+                        <li>Adicione várias fantasias.</li>
+                        <li>Exclua a fantasia de Alonzo de costas.</li>
+                        <li>Remova o código no programa que altera a fantasia quando você clica no sprite.</li>
+                    </ol>
+                </li>
+				<li>Experimente o bloco <img class="inline nopadtb" src="/bjc-r/img/blocks/switch-to-costume.png" alt="mudar para a fantasia []" title="mudar para a fantasia []" /> usando entradas diferentes para alternar manualmente a fantasia do sprite algumas vezes.</li>
+			</ol>
+		</div>
+
+		<div class="takeNote">Se <em>você</em> estiver jogando o seu jogo e quiser mudar a fantasia, pode simplesmente escolher a fantasia que deseja pelo nome, no menu suspenso do bloco <code>mudar para a fantasia</code>. No entanto, imagine que você está dando este jogo para um amigo não programador jogar. Você quer <em>programar</em> a seleção de uma nova fantasia dentro do jogo, para que seu amigo não precise saber nada sobre blocos.</div>
+
+        <p>
+            Quando você usou <code>item de</code> antes (por exemplo, dentro de <code>quem</code> e <code>faz o quê</code>), você estava acessando itens da lista de forma <em>aleatória</em>. Mas você também pode selecionar um item específico especificando sua <em>posição</em>.
+        </p>
+        <div class="vocabFullWidth">: <strong>Índice</strong>
+            <p>
+                O número da posição é chamado de <strong>índice</strong> do item na lista.  <br />
+                <img class="indent" src="/bjc-r/img/3-lists/item-2-of-list-reporting.png" alt="item (2) de (lista (maçã) (melão) (banana)) reportando 'melão'" title="item (2) de (lista (maçã) (melão) (banana)) reportando 'melão'" /><br />
+				Nesta lista, 1 é o índice do item "maçã", 2 é o índice do item "melão" e assim por diante.
+            </p>
+            <div class="ap-standard">AAP-1.D.8</div>
+            <p>No Snap<em>!</em> e no exame AP, o índice é sempre um número inteiro (1, 2, 3, 4, etc.). É um erro usar um índice menor que 1 ou maior que o comprimento da lista.</p>
+        </div>
+
+        <p>
+            <!--<img class="imageRight" src="/bjc-r/img/2-complexity/my-menu.png" alt="my (neighbors) com menu suspenso aberto mostrando: vizinhos, si mesmo, outros sprites, clones, partes, âncora, palco, filhos, pai, nome, fantasias, sons, pendurado?, arrastável?, rotação x, rotação y, centro x, centro y" title="my (neighbors) com menu suspenso aberto mostrando: vizinhos, si mesmo, outros sprites, clones, partes, âncora, palco, filhos, pai, nome, fantasias, sons, pendurado?, arrastável?, rotação x, rotação y, centro x, centro y" />-->
+            Listas podem conter qualquer coisa: letras ou palavras, fantasias, outras listas ou até mesmo blocos. Você pode usar <code>meu</code> para relatar uma lista de fantasias para o seu sprite.<br />
+            <div class="sidenote">O bloco <code>meu</code> parece <img class="inline" src="/bjc-r/img/blocks/my-neighbors.png" alt="meu (vizinhos)" title="meu (vizinhos)" /> até você selecionar "fantasias" no menu suspenso dele.</div>
+            <img class="indent" src="/bjc-r/img/2-complexity/my-costumes-reporting.png" alt="meu (fantasias) reportando uma lista de três fantasias: uma garota com afro, um pinguim e um unicórnio" title="meu (fantasias) reportando uma lista de três fantasias: uma garota com afro, um pinguim e um unicórnio" />
+        </p>
+        <p>E você pode usar <code>item de</code> junto com <code>meu</code> para selecionar uma fantasia em uma posição específica na lista.</p>
+
+        <div class="endnote">
+            Alguns blocos (como <code>item de</code>) têm espaços de entrada que esperam uma lista. Você pode perceber isso porque o espaço de entrada se parece com uma lista:<br />
+            <img class="indent" src="/bjc-r/img/blocks/item.png" alt="item (1) de 'espaço de entrada de lista'" title="item (1) de 'espaço de entrada de lista'" />
+            <img class="indent" src="/bjc-r/img/2-complexity/listpic.png" alt="imagem de lista com 2 itens">
+        </div>
+
+        <div class="forYouToDo">
+            <ol start="4">
+                <div class="ap-standard">AAP-2.N parte a</div>
+                <li>
+                    Pratique usando o <em>índice</em> das fantasias em sua lista para alternar a fantasia do sprite algumas vezes.
+                    <div class="narrower">
+                        <p>
+                            Você pode arrastar blocos para o espaço de entrada de <code>mudar para a fantasia</code> mesmo que seja um menu suspenso.<br />
+                            <img class="indent" src="/bjc-r/img/blocks/switch-to-costume.png" alt="mudar para a fantasia []" title="mudar para a fantasia []" />
+							<img class="indent" src="/bjc-r/img/2-complexity/switch-to-costume(item-of).png" alt="mudar para a fantasia (item (1) de 'espaço de entrada de lista')" title="mudar para a fantasia (item (1) de 'espaço de entrada de lista')" />
+                        </p>
+                    </div>
+                </li>
+                <div class="ap-standard">AAP-2.N parte a</div>
+                <div class="sidenote">Você usou <code>pergunte</code> e <code>resposta</code> em <a href="/bjc-r/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="">Unidade 2 Laboratório 1 Página 2: Verificando o Palpite do Jogador</a>.</div>
+				<li>
+                    Modifique seu código para que o jogador possa selecionar a fantasia do sprite:
+                    <ol type="a">
+                        <li>Use uma variável de script <var>fantasias</var> para armazenar a lista de fantasias do sprite.</li>
+                        <li>Use <img class="inline nopadtb" src="/bjc-r/img/blocks/show-variable-full-size.png" alt="mostrar variável []" title="mostrar variável []" /> para mostrar o conteúdo dessa variável.</li>
+                        <li><code>Pergunte</code> ao jogador "Qual número da fantasia você deseja?"</li>
+                        <li>Mude para a fantasia com o número de índice na <code>resposta</code> do jogador.</li>
+						<li>Oculte a lista de fantasias.</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+        <div class="examFullWidth">
+            <div class="ap-standard">AAP-2.N.1 ponto 1</div>
+            <div class="pseudop">
+                A expressão <img class="inline" src="/bjc-r/img/2-complexity/item-2-of-costumes.png" alt="item (2) de (fantasias)" title="item (2) de (fantasias)" /> seria escrita como <pre class="inline">fantasias[2]</pre> ou <img class="inline" src="/bjc-r/img/2-complexity/accessing-blocktran.png" alt="fantasias[2]" title="fantasias[2]" />. As três versões deste código reportariam/retornariam a fantasia do pinguim (se apenas a linguagem AP tivesse fantasias como um tipo de dado):<br />
+                <img class="indent" src="/bjc-r/img/2-complexity/item-2-of-costumes-reporting-penguin.png" alt="item (2) de (fantasias) reportando uma imagem da fantasia do pinguim" title="item (2) de (fantasias) reportando uma imagem da fantasia do pinguim" />
+            </div>
+        </div>
+
+        <div class="forYouToDo">
+			<ol start="6">
+                <li>
+                    <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Converse com seu parceiro" title="Converse com seu parceiro" />
+                    <strong>Sem usar o Snap<em>!</em></strong>, preveja o que cada uma das seguintes expressões irá reportar:
+                    <ol>
+                        <li><img class="inline" src="/bjc-r/img/2-complexity/list-length-quiz-list.png" alt="comprimento de ( lista (abacaxi) (morango) (kiwi) (manga))" title="comprimento de ( lista (abacaxi) (morango) (kiwi) (manga))" /></li>
+                        <li><img class="inline" src="/bjc-r/img/2-complexity/list-length-quiz-join.png" alt="comprimento de ( juntar (abacaxi) (morango) (kiwi) (manga))" title="comprimento de ( juntar (abacaxi) (morango) (kiwi) (manga))" /></li>
+                        <li><img class="inline" src="/bjc-r/img/2-complexity/list-length-quiz-nested.png" alt="comprimento de ( lista (lista (abacaxi) (morango) (kiwi)) (manga))" title="comprimento de ( lista (lista (abacaxi) (morango) (kiwi)) (manga))" /></li>
+                        <div class="ap-standard">AAP-2.N parte b</div>
+                        <li><img class="inline" src="/bjc-r/img/2-complexity/list-length-quiz-item-of-nested.png" alt="comprimento de (item (1) de (lista (lista (abacaxi) (morango) (kiwi)) (manga)))" title="comprimento de (item (1) de (lista (lista (abacaxi) (morango) (kiwi)) (manga)))" /></li>
+                    </ol>
+                </li>
+                <li>Experimente no Snap<em>!</em> para verificar suas previsões.</li>
+				<li>
+                    <!-- Questão 1-->
+                    <div class="assessment-data" type="multiplechoice" identifier="length3" hasinlinefeedback="true" maxchoices="3" responseIdentifier="ri1" shuffle="true">
+                        <div class="prompt">
+                            <p>
+                                <div class="ap-standard">AAP-2.N parte b</div>
+                                Quais dos seguintes blocos irão reportar <strong>uma lista com comprimento 3</strong>?
+                                Escolha <strong>todas</strong> as opções aplicáveis.
+                             </p>
+                         </div>
+                         <div class="choice" identificador="c1">
+                             <div class="texto">
+                                 <img border="0" src="/bjc-r/img/3-lists/check1length3c1.png" alt="lista (abacaxi e morango kiwi)" title="lista (abacaxi e morango kiwi)">
+                             </div>
+                             <div class="feedback">
+                                 Não, isso cria uma lista de um item, mesmo que tenha mais de uma palavra.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text">
+                                <img border="0" src="/bjc-r/img/3-lists/check1length3c4.png" alt="item 3 of {abacaxi, morango, kiwi}" title="item 3 of {abacaxi, morango, kiwi}">
+                            </div>
+                            <div class="feedback">
+                                No, item 3 of the list is the word "kiwi" which isn't a list at all.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c3">
+                            <div class="text">
+                                <img border="0" src="/bjc-r/img/3-lists/check1length3c5.png" alt="item 2 de {limão, {abacaxi, morango, kiwi}}" title="item 2 de {limão, {abacaxi, morango, kiwi}}">
+                            </div>
+                            <div class="feedback">
+                                Esta é uma das duas respostas corretas.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c4">
+                            <div class="text">
+                                <img border="0" src="/bjc-r/img/3-lists/check1length3c7.png" alt="lista () (abacaxi) ()" title="lista () (abacaxi) ()">
+                            </div>
+                            <div class="feedback">
+                                Esta é uma das duas respostas corretas.
+                            </div>
+                        </div>
+                        <div class="responseDeclaration" identifier="ri1">
+                            <div class="correctResponse" identifier="c3"></div>
+                            <div class="correctResponse" identifier="c4"></div>
+                        </div>
+                    </div>
+                </li>
+			</ol>
+		</div>
+
+        <div class="examFullWidth">
+            <div class="ap-standard">AAP-2.N.1 bullet 7</div>
+            <div class="pseudop">
+                A expressão <img class="inline" src="/bjc-r/img/2-complexity/example-length.png" alt="comprimento de (lista de palavras)" title="comprimento de (lista de palavras)" /> seria escrito como <pre class="inline">COMPRIMENTO(lista de palavras)</pre> ou <img class="inline" src="/bjc-r/img/2-complexity/length-blocktran.png" alt ="COMPRIMENTO(lista de palavras)" title="COMPRIMENTO(lista de palavras)" />.
+            </div>
+        </div>
+
+
+     </body>
+</html>

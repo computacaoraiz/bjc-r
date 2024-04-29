@@ -1,0 +1,63 @@
+title: Unidade 2: Abstrações
+
+{
+
+heading: Lab 1: Jogos games
+	quiz: Iniciando um jogo de adivinhação de números [/bjc-r/cur/programming/2-complexity/1-variables-games/1-number-guessing-game.pt-br.html]
+	quiz: Verificando o palpite do jogador [/bjc-r/cur/programming/2-complexity/1-variables-games/2-checking-player-guess.pt-br.html]
+	resource: Depurando e ampliando seu jogo de adivinhação de números [/bjc-r/cur/programming/2-complexity/1-variables-games/3-debugging-extending.pt-br.html]
+	resource: Mantendo a pontuação com variáveis globais [/bjc-r/cur/programming/2-complexity/1-variables-games/4-keeping-score.pt-br.html]
+	resource: Escolhendo uma fantasia [/bjc-r/cur/programming/2-complexity/1-variables-games/5-choosing-avatar.pt-br.html]
+	//resource: Mantendo um diário [/bjc-r/cur/programming/2-complexity/1-variables-games/6-keeping-a-journal.pt-br.html]
+
+	raw-html: <img class="imageRight noshadow" src="/bjc-r/img/2-complexity/U2ImageVideoAddendum_img/tri-color-bjc.gif" alt="usando o mouse para escrever em três cores no palco" height="300" title="usando o mouse para escrever em três cores no palco" />
+
+heading: Lab 2: Criando Listas
+    resource: Aplicativo de Lista de Compras [/bjc-r/cur/programming/2-complexity/2-data-structures-art/1-shopping-list-app.pt-br.html]
+    resource: Planejando um Aplicativo de Quiz [/bjc-r/cur/programming/2-complexity/2-data-structures-art/2-quizzes.pt-br.html]
+    quiz: Verificação de Cada Resposta de Quiz [/bjc-r/cur/programming/2-complexity/2-data-structures-art/3-traversing-list.pt-br.html]
+    //resource: programação funcional [/bjc-r/cur/programming/2-complexity/2-data-structures-art/functional-programming.pt-br.html]
+
+
+heading: Lab 3: Tomando Decisões
+    resource: O que é um predicado? [/bjc-r/cur/programming/2-complexity/3-predicates/1-what-is-predicate.pt-br.html]
+    resource: Combinando Predicados [/bjc-r/cur/programming/2-complexity/3-predicates/2-combining-predicates.pt-br.html]
+    resource: Combinando Condicionais [/bjc-r/cur/programming/2-complexity/3-predicates/3-combining-conditionals.pt-br.html]
+	resource: Experimentos de expressão booleana [/bjc-r/cur/programming/2-complexity/3-predicates/4-boolean-experiments.pt-br.html]
+    resource: <code>Manter</code>itens de uma lista [/bjc-r/cur/programming/2-complexity/3-predicates/5-keeping-list-items.pt-br.html]
+	resource: Resolvendo um quebra-cabeça de palavras [/bjc-r/cur/programming/2-complexity/3-predicates/6-solving-word-puzzle.pt-br.html]
+
+heading: Lab 4: Fazendo computadores fazerem matemática
+    resource: O operador <code>Mod</code> [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/1-mod-operator.pt-br.html]
+    resource: Fazendo uma biblioteca matemática [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.pt-br.html]
+    resource: Mais repórteres matemáticos [/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/3-other-math-reporters.pt-br.html]
+
+heading: Lab 5: Direitos Autorais
+	resource: Direitos Autorais [/bjc-r/cur/programming/2-complexity/5-copyrights/1-copyright.pt-br.html]
+	resource: Uso Justo [/bjc-r/cur/programming/2-complexity/5-copyrights/2-fairuse.pt-br.html]
+	resource: O Acordo Social [/bjc-r/cur/programming/2-complexity/5-copyrights/3-bargain.pt-br.html]
+	resource: Direitos Autorais e Computadores [/bjc-r/cur/programming/2-complexity/5-copyrights/4-digital.pt-br.html]
+	resource: Software como Aplicação de Direitos Autorais [/bjc-r/cur/programming/2-complexity/5-copyrights/5-drm.pt-br.html]
+
+	raw-html: <img class="imageRight" src="/bjc-r/img/2-complexity/EgyptianMotif_img/multiColorPinwheelwithRectangles.png" height="250" alt="Catavento multicolorido com retângulos" title="Catavento multicolorido com retângulos""/>
+
+heading: Projetos Opcionais
+	resource: Adivinhador Automatizado do Futuro [/bjc-r/cur/programming/2-complexity/optional-projects/1-magic8ball.pt-br.html]
+	resource: Motivo Egípcio [/bjc-r/cur/programming/2-complexity/optional-projects/2-egyptian-motif.pt-br.html]
+	resource: Jogo Mastermind [/bjc-r/cur/programming/2-complexity/optional-projects/3-mastermind.pt-br.html]
+	resource: Modelagem da Linguagem: Plurais, Parte 1 [/bjc-r/cur/programming/2-complexity/optional-projects/4-plurals1.pt-br.html]
+	resource: Modelagem da Linguagem: Plurais, Parte 2 [/bjc-r/cur/programming/2-complexity/optional-projects/5-plurals2.pt-br.html]
+    resource: Criando um Caleidoscópio [/bjc-r/cur/programming/2-complexity/optional-projects/6-kaleidoscope.pt-br.html]
+    raw-html: <div class="todo">Brian e Mary concordaram em mudar "clique para acumular pontos" (veja páginas <a href="/bjc-r/cur/programming/2-complexity/optional-projects/future/2-data-types.pt-br.html">1</a>, <a href="/bjc-r/cur/programming/2-complexity/optional-projects/future/3-click-points.pt-br.html">2</a>, e <a href="/bjc-r/cur/programming/2-complexity/optional-projects/future/4-the-for-each-block.pt-br.html">3</a>) e <a href="/bjc-r/cur/programming/2-complexity/optional-projects/future/7-diagonal-design.pt-br.html?topic=nyc_bjc%2F2-conditionals-abstraction.pt-br.topic&course=bjc4nyc.html&novideo&noassignment">Desenho Diagonal</a> nos projetos opcionais, mas eles precisarão ser adaptados para remover a reintrodução aos "ADTs" e ao "FOR EACH". --MF, 7/5/19</div>
+
+    //quiz: Processando cada item em uma lista [/bjc-r/cur/programming/2-complexity/optional-projects/future/4-the-for-each-block.pt-br.html]
+	//resource: Tipos de dados abstratos [/bjc-r/cur/programming/2-complexity/optional-projects/future/2-data-types.pt-br.html]
+	//resource: Capturando cliques para desenhar [/bjc-r/cur/programming/2-complexity/optional-projects/future/3-click-points.pt-br.html]
+    //resource: Desenho Diagonal [/bjc-r/cur/programming/2-complexity/optional-projects/future/7-diagonal-design.pt-br.html]
+
+
+heading: Revisão da Unidade 2
+	resource: Vocabulário [/bjc-r/cur/programming/summaries/vocab2.pt-br.html]
+	resource: No exame AP [/bjc-r/cur/programming/summaries/exam2.pt-br.html]
+	resource: Perguntas de autoverificação [/bjc-r/cur/programming/summaries/assessment-data2.pt-br.html]
+}

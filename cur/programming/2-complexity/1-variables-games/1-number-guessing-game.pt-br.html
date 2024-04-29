@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+	    <title>Unidade 2 Laboratório 1: Jogos, Página 1</title>
+    </head>
+
+    <body>
+        <h2>Iniciando um jogo de adivinhação de números</h2>
+
+        <div class="learn">
+            <p>
+                <strong>Neste laboratório,</strong> você usará <em>variáveis</em> locais e globais para armazenar informações.
+                <!--<ul>
+                    <li><em>Variáveis de script</em> (um tipo de variável <em>local</em>) que pode ser usada somente dentro de um único script, e</li>
+                    <li><em>Variáveis globais</em> que podem ser definidas, usadas ou alteradas em qualquer lugar do programa.</li>
+                </ul-->
+            </p>
+            <p><strong>Nesta página,</strong> você começará a desenvolver um jogo de adivinhação de números que usa uma <em>variável local</em> para rastrear um número secreto.</p>
+        </div>
+
+        <!--<h3>Usando uma variável de script (uma variável local)</h3>-->
+        <div class="forYouToDo" id="first">
+        	<ol>Crie um novo projeto chamado U2L1-NumberGuessing" title="Crie um novo projeto chamado U2L1-NumberGuessing" /></div></li>
+                <li>Comece a construir um novo bloco de comando chamado <code>jogo de adivinhação de números</code> que conterá o código do jogo. Deixe o Editor de Blocos aberto.</li>
+            </ol>
+        </div>
+
+
+        <p>
+            In a number-guessing game, the player tries to guess the computer's secret number. The computer needs a way to store the secret number in a <em>variable</em> so that it can compare it to the player's guesses.<br />
+            <img class="indent" src="/bjc-r/img/2-complexity/script-variables-secret-number.png" alt="variáveis de script (número secreto)" title="variáveis de script (número secreto)" />
+        </p>
+        <div class="vocabFullWidth">: <strong>Variável</strong>
+            <div class="ap-standard">AAP-1.A.1</div>
+            <p>A <strong>Variável</strong> é como uma caixa rotulada que pode conter um valor por vez, como uma palavra, uma fantasia ou uma lista (que pode conter muitas coisas). Você pode ver o que tem dentro quantas vezes quiser.</p>
+            <div class="endnote">Sobre <a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.pt-br.html?topic=nyc_bjc%2F1-intro-loops.pt-br.topic&course=bjc4nyc.pyt-br.html&novideo&noassignment" title="Unidade 1 Laboratório 2 Página 2: Fazendo os programas falarem">Unidade 1 Laboratório 2 Página 2: Fazendo os programas falarem</a>, você aprendeu sobre <em>abstração processual:</em> dar nomes a scripts colocando-os em novos blocos. Aqui, estamos começando a olhar para a <em>abstração de dados</em>, dando nomes a números, textos, listas, etc. Quando você dá um nome a algo, você pode se referir a ele sem saber exatamente qual é o valor.</div>
+        </div>
+
+
+		<div class="forYouToDo" style="clear: right;">
+			<ol start="3">
+                <li>
+                    Crie uma variável de script chamada <var>número secreto</var> para armazenar o número que o jogador tentará adivinhar (instruções abaixo).
+                     <div class="mais estreito">
+                         <h4><strong>Criando uma variável de script</strong></h4>
+                         <ol type="a">
+                             <li>
+                                 <strong>Mova um bloco de <code>variáveis de script</code> para a área de script.</strong> Você pode encontrá-lo na paleta Variáveis.<br />
+                                 <img class="indent" src="/bjc-r/img/prog/scriptvar.png" alt="variáveis de script" title="variáveis de script" />
+                             </li>
+                             <li><strong>Nomeie a variável</strong> clicando no <var>a</var> laranja no final e digitando o nome desejado. Aqui, deve ser chamado de <var>número secreto</var>.</li>
+                         </ol>
+                         <strong>Mais tarde, você usará a variável de script</strong> arrastando-a para fora do bloco <code>variáveis de script</code> (da mesma forma que você arrasta uma entrada) e colocando-a onde for necessária em seu código.
+                    </div>
+                </li>
+                <li>
+                    <div class="ap-standard">AAP-1.A, AAP-3.E</div>
+                    Use <img class="inline nopadtb" src="/bjc-r/img/blocks/set-empty.png" alt="definir () para ()" title="definir () para ()" /> para definir o valor inicial do <var>número secreto</var> como um número aleatório de 1 a 10. O menu <code>set</code> permite selecionar qual variável definir. <br />
+                    <div class="sidenoteBig">A variável <var>número secreto</var> está disponível no bloco <code>set</code> somente quando você a encaixa em algum lugar após o bloco <code>variáveis de script</code>.</div>
+                    <img class="indent" src="/bjc-r/img/2-complexity/set-secret-number-menu.jpg" alt="definir menu de bloco selecionando número secreto" title="definir menu de bloco selecionando número secreto "/>
+				</li>
+            </ol>
+        </div>
+
+        <div class="examFullWidth">
+            <div class="ap-standard">AAP-1.B.2</div>
+            <div class="pseudop">
+                <img class="inline" src="/bjc-r/img/2-complexity/set-secret-number-to-7.png" alt="definir (número secreto) para (7)" title="definir (número secreto) para (7)" /> would be written as <pre class="inline">secretNumber &leftarrow; 7</pre> or <img class="nopadtb" src="/bjc-r/img/2-complexity/secret-number-assignment-blocktran.png" alt="a white rounded rectangle containing the text 'secretNumber &leftarrow; 7'" title="a white rounded rectangle containing the text 'secretNumber &leftarrow; 7'" />.
+            </div>
+        </div>
+
+        <p>
+        	Variáveis de script são um tipo de <em>variável local</em>; eles funcionam apenas dentro do script onde foram criados. Se você arrastar um para um script diferente, não funcionará. Você já viu dois tipos de variáveis locais antes: entradas para blocos e <code>para</code> contadores.
+        </p>
+        <div class="endnote">
+            <p><a href="#hint-inputs" data-toggle="collapse" title="Exemplos que você já viu.">Exemplos que você já viu.</a></p>
+            <div id="hint-inputs" class="collapse">
+                <p>
+                    Você criou variáveis como entradas para blocos que criou:<br />
+                    <img class="indent noshadow" src="/bjc-r/img/2-complexity/input-variable-for-pinwheelbranches-commented.png" alt="definição de bloco para catavento e configuração da variável de entrada 'número de ramificações' para catavento" title="definição de bloco para catavento e configuração da variável de entrada 'número de ramificações' para catavento" />
+                </p>
+                <p>
+                    Você usou a variável contadora fornecida pelo bloco <code>for</code>:<br />
+                    <img class="indent noshadow" src="/bjc-r/img/2-complexity/local-variable-created-by-for-block-commented.png" alt="variável local criada por for block" title="variável local criada por for block" />
+                </p>
+            </div>
+        </div>
+
+        <div class="vocabFullWidth">: <strong>Variável local</strong>
+			<p>Uma <strong>variável local</strong> pode ser definida ou usada somente no ambiente em que está definida. Este termo inclui entradas para procedimentos e variáveis criadas pelo bloco <code>for</code> ou <code>variáveis de script</code>.</p>
+        </div>
+
+        <div class="endnote">
+            <p>Na álgebra, às vezes uma variável é usada para algo cujo valor você ainda não conhece, e o objetivo é descobrir seu valor. Na programação <em>você decide</em> os valores das variáveis.</p>
+        </div>
+
+        <div class="ap-standard">AAP-1.A.1</div>
+        <div class="sidenote">Você aprendeu sobre variáveis de entrada em <a href="/bjc-r/cur/programming/1-introduction/3-drawing/3-blocks-with-inputs.pt-br.html?topic=nyc_bjc%2F1-intro-loops.pt-br.topic&course=bjc4nyc.pt-br.html&novideo&noassignment" title="Unidade 1 Laboratório 3 Página 3: Blocos com Entradas">Unidade 1 Laboratório 3 Página 3: Blocos com Entradas</a>.</div>
+        <div class="pseudop">Quando você atribui um valor a uma variável, a variável mantém esse valor, não de onde ele veio. Por exemplo, se <var>maçãs</var> = 2 e você <img class="" src="/bjc-r/img/2-complexity/set-bananas-to-apples.png" alt="definir (bananas) para (maçãs)" title="definir (bananas) para (maçãs)" />, então <var>bananas</var> terá o valor 2 e não terá nenhuma memória de ter vindo de <var>maçãs</var>. É por isso que <pre class="inline">a &larr; a * 2</pre> significa alguma coisa. (Suponha que <var>a</var> = 8. Primeiro calcule o valor de <pre class="inline">a * 2</pre>, ou seja, 16, e depois substitua o valor antigo de <var>a</var> com 16). Até agora, as únicas variáveis que você usou foram variáveis de entrada, e você nunca atribui um valor a uma entrada porque o valor é fornecido pelo código que a chama. Mas uma variável de script não terá um valor até que você atribua um valor a ela com <code>set</code>.</div>
+
+        <div class="forYouToDo">
+			<ol start="5">
+				<div class="ap-standard">AAP-1.B, AAP-1.B.3</div>
+                <li>
+                    <!-- Question 1 -->
+                    <div class="assessment-data" type="multiplechoice" identifier="What value will this code return?"
+                        hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri1" shuffle="true">
+                        <div class="prompt">
+                            <div class="sidenote">Exemplos como este são úteis para testar sua compreensão da atribuição a variáveis, mas você não usaria uma sequência de atribuições como esta em um programa real.</div>
+                            Qual valor esse código exibirá?<br />
+                            <pre>a &leftarrow; 3
+b &leftarrow; a
+a &leftarrow; 4
+DISPLAY(b)</pre>
+                        </div>
+                        <div class="choice" identifier="c1">
+                            <div class="text">3</div>
+                            <div class="feedback">
+                                Correto! À variável <var>b</var> é atribuído o <strong>valor</strong> da variável <var>a</var> (que é 3 quando <pre class="inline">b &leftarrow; a</pré> está pronto).
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text">4</div>
+                            <div class="feedback">
+                                A variável <var>b</var> recebe o <strong>valor</strong> da variável <var>a</var> (que é 3 quando <pre class="inline">b &leftarrow; a</pré> está pronto); <var>b</var> não lembra que o 3 veio de <var>a</var> então não muda quando <var>a</var> é alterado.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c3">
+                            <div class="text">a</div>
+                            <div class="feedback">
+                                A variável <var>b</var> foi definida com o <strong>valor</strong> da variável <var>a</var>, e não com a letra "a" em si.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c4">
+                            <div class="text">b</div>
+                            <div class="feedback">
+                               O script exibirá o <strong>valor da variável <var>b</var></strong>, não a letra "b" em si.
+                            </div>
+                        </div>
+                        <div class="responseDeclaration" identifier="ri1">
+                            <div class="correctResponse" identifier="c1"></div>
+                        </div>
+                    </div>
+				</li>
+				<li>
+                    <!-- Question 2 -->
+                    <div class="assessment-data" type="multiplechoice" identifier="What value will this script report?"
+                        hasinlinefeedback="true" maxchoices="1" responseIdentifier="ri2" shuffle="true">
+                        <div class="prompt">
+                            Qual valor esse script reportará?<br />
+                            <img class="indent" src="/bjc-r/img/2-complexity/variable-assignment-quizlet.png" alt="definir m como 9, definir k como 5, definir m como (m + 1), definir k como (k - m), relatar k" title="definir m como 9, definir k como 5, definir m como (m + 1), defina k como (k - m), relate k" />
+                        </div>
+                        <div class="choice" identifier="c1">
+                            <div class="text">-5</div>
+                            <div class="feedback">
+                                Correto!
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c2">
+                            <div class="text">3</div>
+                            <div class="feedback">
+                                O valor da variável <var>m</var> é sempre maior que o valor da variável <var>k</var> neste script, portanto, subtrair <var>m</var> de <var>k</var> fornecerá um número negativo.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c3">
+                            <div class="text">-4</div>
+                            <div class="feedback">
+                                O valor da variável <var>m</var> é 9 no início, mas foi alterado no momento em que é subtraído de <var>k</var>.
+                            </div>
+                        </div>
+                        <div class="choice" identifier="c5">
+                            <div class="text">5</div>
+                            <div class="feedback">
+                                O último comando <code>set</code> define o valor da variável <var>k</var> para o valor <var>k</var> &ndash; <var>m</var>, não <var>m</var> &ndash; <var>k</var>.
+                            </div>
+                        </div>
+
+                        <div class="responseDeclaration" identifier="ri2">
+                            <div class="correctResponse" identifier="c1"></div>
+                        </div>
+                    </div>
+
+                </li>
+			</ol>
+		</div>
+
+
+	</body>
+</html>

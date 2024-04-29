@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<script type="text/javascript" src="/bjc-r/utilities/gifffer.min.js"></script>
+		<script type="text/javascript">window.onload = function() {Gifffer();}</script>
+        <link rel="stylesheet" type="text/css" href="/bjc-r/css/bjc-gifffer.css">
+        <title>Unidade 1 Laboratório 5: Siga o Líder, Página 1</title>
+    </head>
+    
+	<body>    
+		<h2>Unidade 1 Laboratório 5: Siga o Líder, Página 1</h2>
+        <div class="learn">
+            <p>Em muitos programas, os elementos visuais na tela precisam interagir — seguem uns aos outros, evitam uns aos outros, reagem de uma certa maneira quando se encontram, etc. <strong>Neste laboratório,</strong> você programará <em >dois</em> sprites. Um sprite seguirá seu mouse. O outro sprite perseguirá o primeiro. Quando eles se encontrarem, eles terão uma breve conversa.</p>
+            <img class="indent" data-gifffer="/bjc-r/img/1-introduction/leader-follower-animation.gif" alt="animação de um tigre de desenho animado perseguindo um morcego de desenho animado que está seguindo o ponteiro do mouse" title="animação de um tigre de desenho animado perseguindo um morcego de desenho animado que está seguindo o ponteiro do mouse"/>
+            <p><strong>Nesta página,</strong> você irá programar o primeiro sprite para seguir seu mouse e programar o segundo sprite para apontar na direção do primeiro sprite em preparação para segui-lo.</p>
+        </div>
+		
+        
+        <h3>Seguindo o Rato</h3>
+		<div class="forYouToDo" id="first">
+			<ol>
+				<li>
+                    <div class="newProject"><span class="text">"U1L5-SpriteChase"</span><img src="/bjc-r/img/icons/new-project-called.png" alt="Crie um novo projeto chamado U1L5-SpriteChase" title="Crie um novo projeto chamado U1L5-SpriteChase" /></div>
+                    <div class="narrower">
+                        <h4><strong>Criando um novo projeto Snap<em>!</em></strong></h4>
+                        <ol style="list-style-type:lower-alpha">
+                            <li>
+                                Abrir <a href="https://snap.berkeley.edu/run" title="Snap!" target="_blank">Snap<em>!</em></a>.
+                                <div class="endnote">
+                                    Se você já tiver o Snap<em>!</em> aberto e houver um projeto aberto, siga estas etapas primeiro:
+                                    <ol style="list-style-type:lower-roman">
+                                        <li>Se necessário, salve seu trabalho aberto no Snap<em>!</em>.</li>
+                                        <li>Escolha "Novo" no menu Snap<em>!</em> Arquivo, <img src="/bjc-r/img/1-introduction/file_button.png" alt="Botão do menu Arquivo" title= "Botão do menu Arquivo"/>.</li>
+                                        <li>Clique em "Sim" para abrir um novo projeto (e feche o aberto).</li>
+                                    </ol>
+                                </div>
+                            </li>
+                            <li>Escolha "Salvar como..." no menu Snap<em>!</em> Arquivo, <img src="/bjc-r/img/1-introduction/file_button.png" alt="Menu Arquivo botão" title="Botão do menu Arquivo"/>.</li>
+                            <li>Digite o nome do projeto.</li>
+                            <li>Clique no botão "Salvar".</li>
+                        </ol>
+                    </div>
+                </li>
+                <li>
+	                <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Converse com seu parceiro" title="Converse com seu parceiro" />
+                    Leia e pense sobre este script antes de construí-lo. O que você espera que ele faça?<br />
+                    <img class="indent" src="/bjc-r/img/1-introduction/follow-that-mouse.png" alt="quando a bandeira verde é clicada{para sempre{vá para x:(mouse x) y:(mouse y)}}" title="quando a bandeira verde é clicada{para sempre{vá para x:(mouse x) y:(mouse y)}}" />
+                </li>
+                <li>
+                    Agora construa o script e execute-o. Mova o mouse pelo palco enquanto o programa está em execução. O que o bloco <code>forever</code> faz?
+                    <div class="endnote">
+                        Para <em>parar</em> seu script, clique no sinal vermelho de parada: <img src="/bjc-r/img/1-introduction/stop_button.png" alt="botão de parada" title="botão de parada"/>
+                    </div>
+                </li>
+                <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner-mini.png" alt="Converse com seu parceiro" title="Converse com seu parceiro" />O programa funciona como você esperava?</li>
+			</ol>
+		</div>
+        
+		<div class="atworkFullWidth">
+			<!--<img class="noshadow imageRight" height="200px" src="/bjc-r/img/atwork/Diana_Macias.jpg" alt="photo of Diana Macias" title="photo of Diana Macias" />-->
+			<p>Diana Macias, americana nascida de pais mexicanos, gerencia uma equipe de 20 engenheiros que projetam elementos visuais para o Twitter (GIFs, stickers e enquetes). Ela é co-fundadora do Twitter Able, um grupo no Twitter para funcionários com deficiência e aliados, e atuou como co-presidente do grupo Latinx do Twitter, Twitter Alas. Macias tem um B.S. em Ciência da Computação e Matemática pela California State University, East Bay e mais de 15 anos de experiência em desenvolvimento de software com foco na experiência do usuário.</p>
+			<p><a href="https://www.lanacion.com.ar/tecnologia/los-20-latinos-mas-influyentes-en-tecnologia-de-2017-segun-cnet-nid2066888/" title="Artigo: Os 20 Latinos Mais Influentes em Tecnologia" target="_blank">Artigo: Os 20 Latinos Mais Influentes em Tecnologia (Espanhol)</a> (<a href="https://www-lanacion-com-ar.translate.goog/tecnologia/los-20-latinos-mas-influyentes-en-tecnologia-de-2017-segun-cnet-nid2066888/?_x_tr_sl=es&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp" title="Artigo: Os 20 latinos mais influentes em tecnologia" target="_blank">Inglês</a>)</p>
+		</div>
+        
+        <h3>Programando um Segundo Sprite</h3>        
+        <div class="forYouToDo">
+			<ol start="5">
+		        <li> 
+                    Crie um segundo sprite clicando no botão <img src="/bjc-r/img/1-introduction/add-a-new-turtle-sprite.png" alt="adicionar um novo sprite de tartaruga" title="adicionar um novo sprite de tartaruga" /> botão logo abaixo do palco. <a name="newTurtle" class="anchor">&nbsp;</a>
+                    <div class="endnote">O novo sprite, automaticamente nomeado <strong>Sprite(2)</strong>, aparece no palco. É novo, então não tem scripts. As imagens dos sprites abaixo do palco permitem que você selecione o sprite que deseja programar.</div>
+                </li>
+                <li>
+                    Para tornar seus nomes de sprites significativos, altere o nome de <strong>Sprite</strong> para <strong>Líder</strong> e altere <strong>Sprite(2)</strong> para <strong>Seguidor</strong >.
+                    <div class="narrower">
+                        <h4><strong>Mudando o nome de um Sprite</strong></h4> 
+                        <p>
+                            Procure o nome em uma caixa cinza acima da área de script. Clique dentro do nome e você poderá editá-lo.<br />
+                            <img class="indent" src="/bjc-r/img/1-introduction/change-sprite-name.jpg" alt="imagem do campo de entrada do nome do sprite acima da área de script e abaixo do nome do projeto" title="imagem do campo de entrada do nome do sprite acima da área de script e abaixo do nome do projeto" />
+                        </p>
+                    </div>
+                </li>
+                <li> 
+                    <div class="sidenoteBig">Enquanto um script está em execução, sua borda acende. Se o tempo de execução for curto, você pode não notar o breve flash. </div>
+                	Certifique-se de ter o sprite <strong>Seguidor</strong> selecionado. Escreva um script para <strong>Seguidor</strong> para que, uma vez que a bandeira verde seja clicada, ela aponte para <strong>Líder</strong> <code>para sempre</code>.<br />
+                    <img class="indent" src="/bjc-r/img/blocks/point-towards.png" alt="aponte em direção [ ]" title="aponte em direção [ ]" />
+                </li>
+                <li>
+    				<div class="sidenoteBig">Ambos os sprites têm scripts que usam <img class="inline" src="/bjc-r/img/blocks/when-green-flag-clicked-full-size.png" alt="Quando 'Bandeira Verde' clicou" title="Quando 'Bandeira Verde' clicou" />, então <em>ambos</em> desses scripts são executados quando <img src="/bjc-r/img/1-introduction/green-flag_button.png" alt="botão de bandeira verde" title="botão de bandeira verde"/> é clicado.</div>
+                    Click <img src="/bjc-r/img/1-introduction/green-flag_button.png" alt="botão de bandeira verde" title="botão de bandeira verde"/> e verifique se seus scripts fazem o que você pretendia:
+                    <ul> 
+                        <li><strong>Líder</strong> sempre segue o mouse quando você move o mouse.</li>
+                        <li><strong>Seguidor</strong> permanece em um lugar, mas sempre aponta para <strong>Líder</strong>.</li>
+                    </ul>
+				</li>
+		        <img class="inline" src="/bjc-r/img/icons/save-now.png" alt="Salve seu trabalho" title="Salve seu trabalho" />
+			</ol>
+		</div>
+        
+    
+    </body>
+</html>

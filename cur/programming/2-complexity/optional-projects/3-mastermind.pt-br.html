@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<<<<<<< HEAD
+    <head>
+		<meta charset="utf-8">
+        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Unidade 2 Projetos Opcionais, Página 3</title>
+    </head>
+
+    <body>
+        <!--<div class="todo">ST-Corrigir o problema de acesso do aluno devido ao hideControls</div>-->
+        <h2>Mastermind</h2>
+        <div class="todo">Se eu não estiver entendendo mal essas instruções, acho que é confuso fazer com que os alunos brinquem com duas sequências ao mesmo tempo (o que eu nunca vi antes) e depois construam o projeto com apenas uma sequência de cada vez (exceto para o TIF?). Acredito que deveria ser uma de cada vez, inclusive no exemplo "no papel". --MF</div>
+        <div class="todo">
+            <p>PG: Este projeto tem o mesmo potencial que TTT para ser um projeto multietapa (ao longo do ano). Eu elevaria isso, desde que um bom objetivo de aprendizado seja esclarecido.</p>
+            <p>BH: Que projeto fantástico! Deveríamos finalizá-lo com o computador adivinhando.</p>
+            <p>MF: Eu quero revisar esta página para reduzir a parede de texto e para que o restante da página se pareça mais com o conteúdo que já temos.</p>
+        </div>
+
+        <div class="learn">
+            <strong>Neste projeto,</strong> você começará a construir o jogo Mastermind&#8482;. Neste jogo, um jogador seleciona uma sequência de quatro cores secretas, e o outro jogador tenta adivinhar.</p>
+            <img class="indent" src="/bjc-r/img/1-introduction/mm-snapshot.png" width="250" alt="Captura de tela do jogo" title="Captura de tela do jogo"/>
+        </div>
+
+        <div class="forYouToDo" id="first">
+            <ol>
+                <li><a class="run" href="/bjc-r/prog/2-complexity/U2-Mastermind.xml"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!" title="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!"></a><br />Observe os scripts. Existem seis sprites, quatro para a suposição do jogador e dois para o feedback ao adivinhador.</li>
+                <div class="narrower">
+                    <p><strong>O feedback para o adivinhador</strong> são dois números (como mostrado em cada linha do jogo na imagem acima):
+                        <ul>
+                            <li>Quantas cores estão nas posições <em>corretas</em>? (O objetivo é ter todas as quatro corretas.)</li>
+                            <li>Quantas cores corretas estão em posições <em>incorretas</em>?</li>
+                        </ul>
+                    </p>
+                </div>
+                <li>Jogue uma partida de Mastermind com seu parceiro <em>no papel</em>.</li>
+                <div class="narrower">
+                    <h4><strong>Regras do Mastermind</strong></h4>
+                    <ul>
+                        <li>
+                            <strong>Cada jogador deve escrever uma sequência de quatro cores</strong> sem que o parceiro veja.
+                            <ul>
+                                <li>Para facilitar, você pode usar a primeira letra de cada nome de cor para representar essa cor: <strong><u>r</u></strong>ed, <strong><u>o</u></strong>range, <strong><u>y</u></strong>ellow, <strong><u>g</u></strong>reen, <strong><u>b</u></strong>lue, <strong><u>v</u></strong>ioleta. (Por enquanto, não use a mesma cor mais de uma vez, embora algumas pessoas também joguem assim.)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Alternem adivinhando as cores do parceiro</strong>. Quando seu parceiro faz uma suposição, dê dois números como feedback, conforme descrito acima.
+                            <ul>
+                                <li>Por exemplo, se suas cores secretas são <strong>royg</strong> e seu parceiro adivinha<strong> goby</strong>, você responde "um e dois", porque uma cor (laranja) está na posição correta, e duas cores (amarelo e verde) estão na sequência secreta, mas não nas posições corretas.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Use as informações de suposições anteriores</strong> para fazer as melhores suposições possíveis.
+                            <ul>
+                                <li>Por exemplo, após <strong>goby</strong> no exemplo acima, você pode pensar: "Uma das minhas cores está na posição correta, e outras duas cores estão corretas. Vou supor que o verde está na posição correta, e a laranja e azul estão em algum lugar na lista. Então, uma boa suposição seguinte seria <strong>grob</strong>, porque tem verde no mesmo lugar que antes, e laranja e azul se moveram." Seu parceiro responderá "zero e três", o que pode parecer um progresso negativo porque agora nenhum está na posição correta, mas não é, porque agora você tem certeza de que verde não era a cor na posição correta, então na próxima suposição você pode tentar laranja na segunda posição, e assim por diante.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <li>
+                    Você construirá o programa do Mastermind em etapas ao longo do ano. Agora, seu objetivo é apoiar dois jogadores humanos usando o computador como um bloco de notas para registrar suposições e feedback:
+                    <ul>
+                        <li>Descubra os nomes dos dois jogadores para que você possa usá-los para acompanhar de quem é a vez.</li>
+                        <li>
+                            Peça a um jogador que faça uma suposição (usando quatro letras como <strong>goby</strong> acima).<br />
+                            <img class="indent noshadow" src="/bjc-r/img/2-complexity/mm1.png" alt="interação da primeira suposição" title="interação da primeira suposição">
+                        </li>
+                        <li>
+                            Exiba essa suposição na tela.<br />
+                            <img class="indent noshadow" src="/bjc-r/img/2-complexity/mm2.png" alt="quatro cores exibidas" title="quatro cores exibidas">
+                        </li>
+                        <li>
+                            Peça ao outro jogador um feedback, como dois números.<br />
+                            <img class="indent noshadow" src="/bjc-r/img/2-complexity/mm3.png" alt="interação de pergunta" title="interação de pergunta">
+                            <img class="indent noshadow" src="/bjc-r/img/2-complexity/mm4.png" alt="quatro cores, 2 pontos" title="quatro cores, 2 pontos">
+                        </li>
+                        <li>Continue fazendo isso até que o adivinhador acerte a resposta correta.</li>
+                    </ul>
+                    <div class="endnote">
+                        Você achará útil para um script ser capaz de dizer a um sprite específico o que fazer. Há uma ferramenta para fazer isso: o bloco <img src="/bjc-r/img/1-introduction/tell.png" alt="tell (sprite) to (action)" title="tell (sprite) to (action)">. Por exemplo:<br />
+                        <img class="indent" src="/bjc-r/img/1-introduction/tell-alonzo.png" alt="tell (Alonzo) to (say ...)" title="tell (Alonzo) to (say ...)">
+                        <img class="indent" src="/bjc-r/img/1-introduction/tell-correct.png" alt="tell (posição correta) to (mostrar valor (# correto))" title="tell (posição correta) to (mostrar valor (# correto))">
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="takeItFurther">
+            <ol type="A">
+                <li>Em vez de pedir ao adivinhador para digitar quatro letras, você pode ter seis botões de cor que o adivinhador pode clicar na ordem. Para fazer isso, crie seis sprites adicionais, cada um com uma cor, e coloque-os na lateral do palco para que não se confundam com as suposições registradas. Você também deve ter um sprite "apagar" com esse caractere como traje: ⌫ e um sprite "ok", talvez com um marca de seleção: ✓. Certifique-se de que esses botões atualizem a exibição adequadamente.</li>
+                <li>Permita que ambos os jogadores tenham sequências de cores secretas e se alternem adivinhando as listas um do outro. Você terá que adicionar uma segunda coluna de suposições em direção ao lado direito do palco e um segundo conjunto de sprites. O jogo termina quando um dos jogadores acerta.</li>
+            </ol>
+        </div>
+
+    </body>
+=======
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+    <title>Projetos Opcionais da Unidade 2, Página 3</title>
+</head>
+
+<body>
+<!--<div class="todo">ST-Fix the student access issue due to hideControls</div>-->
+<h2>Mastermind</h2>
+<div class="todo">Se eu não estiver entendendo errado estas instruções, acho que é confuso fazer os estudantes brincarem com duas sequências ao mesmo tempo (o que nunca vi antes) e depois construir o projeto com apenas uma sequência de cada vez (exceto pelo TIF?). Acho que deveria ser uma de cada vez também no exemplo "no papel". --MF</div>
+<div class="todo">
+    <p>PG: Este projeto tem o mesmo potencial que o Jogo da Velha para ser um projeto multietapas (de um ano). Eu o elevaria, desde que um bom objetivo de aprendizado seja esclarecido.</p>
+    <p>BH: Que ótimo projeto! Deveríamos concluí-lo com o computador adivinhando.</p>
+    <p>MF: Quero revisar esta página para reduzir a parede de texto e tornar o restante da página mais parecido com o restante do nosso conteúdo.</p>
+</div>
+
+<div class="learn">
+    <strong>Neste projeto,</strong> você começará a construir o jogo Mastermind&#8482;. Neste jogo, um jogador seleciona uma sequência de quatro cores secretas, e o outro jogador tenta adivinhar.</br>
+    <img class="indent" src="/bjc-r/img/1-introduction/mm-snapshot.png" width="250" alt="Captura de tela do jogo" title="Captura de tela do jogo"/>
+</div>
+
+<div class="forYouToDo" id="first">
+    <ol>
+        <li><a class="run" href="/bjc-r/prog/2-complexity/U2-Mastermind.xml"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta do Snap!" title="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta do Snap!"></a><br />Olhe os scripts. Existem seis sprites, quatro para o palpite do jogador e dois para o feedback ao adivinhador.</li>
+        <div class="narrower">
+            <p><strong>O feedback ao adivinhador</strong> são dois números (como mostrado em cada linha do jogo na imagem acima):
+                <ul>
+                    <li>Quantas cores estão nas posições <em>corretas</em>? (O objetivo é ter todas as quatro corretas.)</li>
+                    <li>Quantas cores corretas estão em posições <em>incorretas</em>?</li>
+                </ul>
+            </p>
+        </div>
+        <li>Jogue uma partida de Mastermind com seu parceiro <em>no papel</em>.</li>
+        <div class="narrower">
+            <h4><strong>Regras do Mastermind</strong></h4>
+            <ul>
+                <li>
+                    <strong>Cada jogador deve escrever uma sequência de quatro cores</strong> sem deixar o parceiro ver.
+                    <ul>
+                        <li>Para facilitar, você pode usar a primeira letra do nome de cada cor para representar aquela cor: <strong><u>r</u></strong>ed, <strong><u>o</u></strong>range, <strong><u>y</u></strong>ellow, <strong><u>g</u></strong>reen, <strong><u>b</u></strong>lue, <strong><u>v</u></strong>iolet. (Por enquanto, não use a mesma cor mais de uma vez, embora algumas pessoas também joguem dessa forma.)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Alterne adivinhando as cores do seu parceiro</strong>. Quando seu parceiro faz um palpite, dê dois números como feedback, conforme descrito acima.
+                    <ul>
+                        <li>Por exemplo, se suas cores secretas são <strong>royg</strong> e seu parceiro adivinha<strong> goby</strong>, você responde "um e dois", porque uma cor (laranja) está na posição correta, e duas cores (amarelo e verde) estão na sequência secreta, mas não nas posições corretas. </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Use as informações que você tem dos palpites anteriores</strong> para fazer os melhores palpites que puder.
+                    <ul>
+                        <li>Por exemplo, após <strong>goby</strong> no exemplo acima, você pode pensar: "Uma das minhas cores está na posição correta, e duas outras cores estão corretas. Vou adivinhar que o verde está na posição correta, e laranja e azul estão em algum lugar na lista. Então, um bom palpite seria <strong>grob</strong> porque tem o verde no mesmo lugar de antes, e a laranja e o azul se moveram." Seu parceiro responderá "zero e três", o que parece um progresso negativo, pois agora nenhuma está no lugar correto, mas não é, porque agora você tem certeza de que o verde não era a cor na posição correta, então em seu próximo palpite, você pode tentar a laranja na segunda posição, e assim por diante.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <li>
+            Você construirá o programa Mastermind em etapas ao longo do ano. Agora, seu objetivo é apoiar dois jogadores humanos usando o computador como um bloco de anotações para registrar palpites e feedback:
+            <ul>
+                <li>Descubra os nomes dos dois jogadores para que você possa usá-los para acompanhar de quem é a vez.</li>
+                <li>
+                    Peça a um jogador para fazer um palpite (usando quatro letras como <strong>goby</strong> acima).<br />
+                    <img class="indent noshadow" src="/bjc-r/img/2-complexity/mm1.png" alt="interação do primeiro palpite" title="interação do primeiro palpite" >
+                </li>
+                <li>
+                    Exiba esse palpite na tela.<br />
+                    <img class="indent noshadow" src="/bjc-r/img/2-complexity/mm2.png" alt="quatro cores exibidas" title="quatro cores exibidas">
+                </li>
+                <li>
+                    Peça ao outro jogador o feedback, como dois números.<br />
+                    <img class="indent noshadow" src="/bjc-r/img/2-complexity/mm3.png" alt="interação de perguntar" title="interação de perguntar">
+                    <img class="indent noshadow" src="/bjc-r/img/2-complexity/mm4.png" alt="quatro cores 2 pontos" title="quatro cores 2 pontos">
+                </li>
+                <li>Continue fazendo isso até que o adivinhador acerte a resposta correta.</li>
+            </ul>
+            <div class="endnote">
+                Será útil para um script ser capaz de dizer a um sprite específico o que fazer. Há uma ferramenta para fazer isso: o bloco <img src="/bjc-r/img/1-introduction/tell.png" alt="dizer a (sprite) para (ação)" title="dizer a (sprite) para (ação)">. Por exemplo:<br />
+                <img class="indent" src="/bjc-r/img/1-introduction/tell-alonzo.png" alt="dizer (Alonzo) para (dizer ...)" title="dizer (Alonzo) para (dizer ...)">
+                <img class="indent" src="/bjc-r/img/1-introduction/tell-correct.png" alt="dizer (posição correta) para (mostrar valor (# correto))" title="dizer (posição correta) para (mostrar valor (# correto))">
+            </div>
+        </li>
+    </ol>
+</div>
+
+<div class="takeItFurther">
+    <ol type="A">
+        <li>Em vez de pedir ao adivinhador para digitar quatro letras, você pode ter seis botões de cores que o adivinhador pode clicar na ordem. Para fazer isso, crie mais seis sprites, cada um com uma cor, e coloque-os de lado no palco para que não sejam confundidos com os palpites registrados. Você também deve ter um sprite "apagar" com este caractere como seu traje: ⌫ e um sprite "ok", talvez com um marca de seleção: ✓. Certifique-se de que esses botões atualizem a exibição adequadamente.</li>
+        <li>Permita que ambos os jogadores tenham sequências de cores secretas e revezem-se adivinhando as listas um do outro. Você terá que adicionar uma segunda coluna de palpites no lado direito do palco e um segundo conjunto de sprites. O jogo termina quando um dos jogadores adivinha corretamente.</li>
+    </ol>
+</div>
+
+</body>
+>>>>>>> 66cef4b1dfaff534ac000aa1ea23616751581213
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Unidade 5 Laboratório 1: Algoritmos e Eficiência de Pesquisa, Página 2</title>
+	</head>
+
+	<body>
+        <h2>Quantas palavras de cinco letras existem?</h2>
+        <div class="todo">
+            <h3>TG e soluções precisam ser verificadas. --MF, 19/12/18</h3>
+        </div>
+        <div class="learn">
+            <p><strong>Nesta página</strong>, você verá quanto tempo leva para executar um algoritmo de <em>pesquisa linear</em>. </p>
+        </div>
+        <p>On <a href="/bjc-r/cur/programming/2-complexity/3-predicates/6-solving-word-puzzle.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment" title="Unidade 2 Laboratório 3 Página 6: Resolvendo um quebra-cabeça de palavras">Unidade 2 Laboratório 3 Página 6: Resolvendo um quebra-cabeça de palavras</a>, você construiu um <img class="inline nopadtb" src="/bjc-r/img/5-algorithms/does-word-have-number-letters.png" alt="faz () tem () letras?" title="tem () tem () letras?" /> e usei-o com <code>keep</code> para encontrar palavras de um comprimento específico em uma lista de palavras. <strong>Quanto tempo leva um processo como esse?</strong></p>
+
+        <div class="forYouToDo" id="first">
+			<ol>
+                <li>
+                    <a href="/bjc-r/prog/5-algorithms/U5L1-Spell-Checker.xml" class="run"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!." title="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!."></a>
+                    <div class="endnote">Este projeto fornece as variáveis ​​<var>1.000 palavras</var>, <var>10.000 palavras</var> e <var>100.000 palavras</var> (cada uma contendo uma lista de palavras) e uma cópia do <código >() tem () letras?</code> predicado.</div>
+                </li>
+<li>Quantas palavras de cinco letras há na lista de <var>10.000 palavras</var>?</li>
+                <li>Use o<img class="inline" src="/bjc-r/img/5-algorithms/computation-time-of.png" alt="tempo de cálculo do 'slot de entrada do anel cinza'" title="tempo de cálculo do 'slot de entrada do anel cinza'" /> bloco fornecido neste projeto para determinar quanto tempo leva para o computador responder a essa pergunta.</li >
+            </ol>
+        </div>
+
+        <p>
+            O bloco <code>tempo de cálculo</code> pega qualquer repórter (com suas entradas preenchidas), calcula o resultado, mas o ignora e, em vez disso, informa <em>quanto tempo levou</em> para fazer o cálculo (em milissegundos).<br />
+            <img class="indent" src="/bjc-r/img/5-algorithms/computation-time-reporting.png" alt="tempo de cálculo de (números de (1) a (1000)) reportando 27" title="tempo de cálculo de (números de (1) a (1000)) reportando 27" />
+        </p>
+        <p>Neste exemplo, foram necessários 27 milissegundos para calcular a lista de números inteiros de 1 a 1000. (O relatório que você verá dependerá da velocidade do seu computador e de quais outros programas estão sendo executados nele.)</p>
+        <p>Você pode olhar dentro do <code>tempo de cálculo</code> para ver como funciona: Clique com o botão direito (ou clique com a tecla Control pressionada no Mac) no bloco e selecione "editar..." no menu que aparece. </p>
+
+        <div class="forYouToDo">
+			<ol start="4">
+                <li>Clique na expressão <code>tempo de cálculo</code> que você acabou de usar para responder à pergunta anterior mais três vezes e anote o intervalo de respostas. Eles não são exatamente iguais por causa de outras coisas que seu computador está fazendo ao mesmo tempo, então você deve sempre considerar qualquer resultado que ele fornecer como <em>aproximado</em>.</li>
+                <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Fale com seu parceiro" title="Fale com seu parceiro" /> Quanto tempo você acha que levaria para contar palavras de cinco letras se a lista tivesse 100.000 palavras?</li>
+                <li>Use o <code>tempo de cálculo</code> para verificar usando a lista de <var>100.000 palavras</var>. </li>
+            </ol>
+        </div>
+
+		<p>Pesquisar todas as palavras de cinco letras em uma lista de palavras específica é um <em>exemplo</em> de um problema mais geral: pesquisar todas as palavras de qualquer comprimento específico.</p>
+        <div class="vocabFullWidth">: <strong>Problema</strong> e <strong>Instância de um problema</strong>
+            <div class="ap-standard">AAP-4.A.1</div>
+            <ul>
+                <li>Um <strong>problema</strong> é uma descrição geral de uma tarefa que pode (ou não) ser resolvida por meio de algoritmos.</li>
+                <li>Uma <strong>instância de um problema</strong> é um caso de problema, com entradas específicas.</li>
+            </ul>
+        </div>
+
+        <div class="forYouToDo">
+			<ol start="7">
+                <li>
+                    Suponha que, em vez disso, contemos as palavras de <em>sete</em>letras. Isso vai demorar...
+                    <img class="imageRight" src="/bjc-r/img/icons/write-out-thoughts.png" alt="Escreva seus pensamentos" title="Escreva seus pensamentos" />
+                    <ol>
+                        <li>Mais tempo porque sete letras são mais que cinco letras?</li>
+                        <li>Menos tempo porque há menos palavras de sete letras do que palavras de cinco letras?</li>
+                        <li>Ao mesmo tempo porque não é o comprimento da palavra que importa; é do tamanho do dicionário?</li>
+                    </ol>
+                    <div class="todo">Fiquei surpreso com o formato deste exercício e o reformulei como uma pergunta. --MF, 31/05/20<p>Isso deveria ser um questionário? Não tenho certeza... --MF, 13/07/20</p></div>
+                </li>
+                <li>
+                    Experimente para descobrir com certeza.
+                </li>
+</ol>
+</div>
+        <p>A única maneira de responder ao problema de "Quantas palavras..." é verificar cada palavra no dicionário. Portanto, se você tiver <strong>dez vezes mais</strong> palavras no dicionário, levará <strong>dez vezes mais</strong> para verificar todas elas. </p>
+        <div class="vocabFullWidth">: <strong>Pesquisa Linear</strong> ou <strong>Pesquisa Sequencial</strong>
+            <ul>
+                <li>Um algoritmo leva <strong>tempo linear</strong> se multiplicar o tamanho da entrada por dez multiplicar o tempo necessário por dez.<br />
+                <img class="indent noshadow" style="height:300px" src="/bjc-r/img/5-algorithms/size-vs-time.png" alt="gráfico de tamanho vs. tempo mostrando uma linha reta passando pela origem e acima à direita com os pontos para x=10.000 e x=100.000 marcados" title="gráfico de tamanho vs. tempo mostrando uma linha reta passando pela origem e à direita com os pontos para x=10.000 e x=100.000 marcados" />
+                </li>
+                <div class="ap-standard">AAP-2.O.5</div>
+                <li>Um algoritmo de <strong>pesquisa linear</strong> (ou <strong>pesquisa sequencial</strong>) verifica cada elemento de uma lista em ordem, um processo que leva <em>tempo linear</em>.< /li>
+            </ul>
+        </div>
+
+
+    </body>
+</html>

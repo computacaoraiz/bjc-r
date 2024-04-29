@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Unidade 1 Projetos Opcionais, Página 2 Pista</title>
+    </head>
+
+    <corpo>
+        <h2>Dicas para construir seu próprio relógio</h2>
+        <p>Repare que há uma marca no relógio a cada 6&deg;. Isso ocorre porque há 360&deg; em um círculo completo e há 60 segundos em um minuto, então há 60 marcas com 360&deg; / 60 = 6&deg; entre cada marca. </p>
+        <p>
+            Agora escreva o código de segunda mão. Primeiro, centralize o sprite do ponteiro dos segundos no meio da tela e certifique-se de que ele seja exibido na frente, acima dos ponteiros dos minutos e das horas. Em seguida, faça o ponteiro dos segundos apontar na direção apropriada com base no <code>segundo atual</code>: 6&deg; a cada segundo.<br />
+            <img class="indent" src="/bjc-r/img/1-introduction/Clock_img/secondsCodewithTick.en.png" width="420" alt="quando a bandeira verde é clicada{vá para x:( 0) y:(0); ir para a frente; para sempre{ apontar na direção(6Xatual(segundo)); tocar som (tick); esperar(1) segundos}}" title="quando a bandeira verde for clicada {ir para x:(0 ) y:(0); vá para a frente; para sempre{ aponte na direção(6Xatual(segundo)); toque o som (tick); espere (1) segundos}}"/>
+        </p>
+        <p>
+            Pode ser útil lembrar que no Snap<em>!</em> os ângulos positivos são medidos no sentido horário a partir de 0&deg; para cima:<br />
+            <img class="indent noshadow" src="/bjc-r/img/1-introduction/Clock_img/Directions.es.png" width="303" alt="Direções no Snap!: 0, 90, 180, 270 " title="Endereços no Snap!: 0, 90, 180, 270"/>
+        </p>
+        <p>No código dos segundos, você também deve se certificar de que o som do "tique-taque do relógio" seja tocado continuamente. O bloco <code>aguarde 1 segundo</code> existe para garantir que haja uma pausa após a reprodução do som e que seja executado uma vez a cada segundo.</p>
+        <div class="forYouToDo" id="first">
+            <ol>
+                <li>Agora, escreva você mesmo o código para os ponteiros dos minutos e das horas. O código será muito semelhante ao código de segunda mão e será ligeiramente diferente. Observe que apenas o ponteiro dos segundos precisa tocar o som do tique-taque.</li>
+            </ol>
+        </div>
+
+
+    </body>
+</html>

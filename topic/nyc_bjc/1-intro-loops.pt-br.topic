@@ -11,12 +11,12 @@ heading:  Lab 1: Jogo "Clique no Alonzo"
 	resource: Melhorar seu jogo [/bjc-r/cur/programming/1-introduction/1-building-an-app/5-finish-your-first-snap-app.pt-br.html]
 
 heading: Lab 2: Fofoca
-	raw-html: <img class="imageRight noshadow" src="/bjc-r/img/1-introduction/U1L2-Gossip.jpg" alt="Imagem do palco com dois personagens conversando. O primeiro diz: 'meu cato está em uma banda com o Jake'; o segundo diz: 'Oh, mas... o Sr. C adora meu gato.'" title="Imagem do palco com dois personagens conversando. O primeiro diz: 'meu cato está em uma banda com o Jake'; o segundo diz: 'Oh, mas... o Sr. C adora meu gato.'"/>
+	raw-html: <img class="imageRight noshadow" src="/bjc-r/img/1-introduction/U1L2-Gossip.jpg" alt="Imagem do palco com dois personagens conversando. O primeiro diz: 'meu gato está em uma banda com o Jake'; o outro diz: 'Oh, mas... o Sr. C adora meu gato.'" title="Imagem do palco com dois personagens conversando. O primeiro diz: 'meu cato está em uma banda com o Jake'; o segundo diz: 'Oh, mas... o Sr. C adora meu gato.'"/>
 	resource: Programação em pares [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/1-pair-programming.pt-br.html]
 	resource: Fazendo seus programas conversarem [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/2-gossip.pt-br.html]
-	resource: Customizing and Debugging [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.html]
-	resource: Making Your Own Block [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/4-making-a-new-block.html]
-	quiz: Adding Variety to <code>Gossip</code> [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.html]
+	resource: Personalizando e depurando [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.pt-br.html]
+	resource: Fazendo seu próprio bloco [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/4-making-a-new-block.pt-br.html]
+	quiz: Adicionando variedade a <code>Fofoca</code> [/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.pt-br.html]
 
 heading: Lab 3: Modern Art with Polygons
 	resource: Exploring Motion [/bjc-r/cur/programming/1-introduction/3-drawing/1-exploring-motion.html]
@@ -28,27 +28,27 @@ heading: Lab 3: Modern Art with Polygons
 	resource: Looping with a Counter [/bjc-r/cur/programming/1-introduction/3-drawing/6-the-for-block.html]
 	resource: Keeping a Programming Journal [/bjc-r/cur/programming/1-introduction/3-drawing/7-programming-journal.html]
 
-heading: Lab 4: Protecting Your Privacy
-	resource: Your Image in the Cloud [/bjc-r/cur/programming/1-introduction/4-privacy/1-your-image-in-the-cloud.html]
-	resource: Examining Privacy [/bjc-r/cur/programming/1-introduction/4-privacy/2-examining-privacy.html]
-	resource: Tanya Rider's Story [/bjc-r/cur/programming/1-introduction/4-privacy/3-tanya-rider.html]
-	resource: Innovations and Privacy [/bjc-r/cur/programming/1-introduction/4-privacy/4-privacy-affected.html]
+heading: Lab 4: Protegendo a sua privacidade
+	resource: Sua imagem na nuvem [/bjc-r/cur/programming/1-introduction/4-privacy/1-your-image-in-the-cloud.pt-br.html]
+	resource: Examinando sua privacidade [/bjc-r/cur/programming/1-introduction/4-privacy/2-examining-privacy.pt-br.html]
+	resource: A história de Tanya Rider [/bjc-r/cur/programming/1-introduction/4-privacy/3-tanya-rider.pt-br.html]
+	resource: Inovações e Privacidade [/bjc-r/cur/programming/1-introduction/4-privacy/4-privacy-affected.pt-br.html]
 
-heading: Lab 5: Follow the Leader
-	resource: Sprite Following the Mouse [/bjc-r/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.html]
-	resource: Sprite Following a Sprite [/bjc-r/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.html]
+heading: Lab 5: Siga o Líder
+	resource: Sprite seguindo o Rato [/bjc-r/cur/programming/1-introduction/5-follow-the-leader/1-following-sprites.pt-br.html]
+	resource: Sprite Seguindo um Sprite [/bjc-r/cur/programming/1-introduction/5-follow-the-leader/2-sprite-interaction.pt-br.html]
 
-	raw-html: <img class="imageRight noshadow" src="/bjc-r/img/1-introduction/Pong_img/pongAnimation.gif" width="250" alt="Game of Pong" title="Game of Pong"/>
-heading: Optional Projects
-	resource: Line Art Toy [/bjc-r/cur/programming/1-introduction/optional-projects/1-sprite-line-art.html]
-	resource: Row of Houses [/bjc-r/cur/programming/1-introduction/optional-projects/2-row-of-houses.html]
-	resource: The Game of Pong [/bjc-r/cur/programming/1-introduction/optional-projects/3-pong.html]
-	resource: Daisy Design [/bjc-r/cur/programming/1-introduction/optional-projects/4-daisy.html]
-	resource: Modeling Language [/bjc-r/cur/programming/1-introduction/optional-projects/5-sentence-builder.html]
+	raw-html: <img class="imageRight noshadow" src="/bjc-r/img/1-introduction/Pong_img/pongAnimation.gif" width="250" alt="Jogo do Pong" title="Jogo do Pong"/>
 
+heading: Projetos Opcionais
+	resource: Brinquedo Artístico [/bjc-r/cur/programming/1-introduction/optional-projects/1-sprite-line-art.pt-br.html]
+	resource: Fileira de Casas [/bjc-r/cur/programming/1-introduction/optional-projects/2-row-of-houses.pt-br.html]
+	resource: O Jogo de Pong [/bjc-r/cur/programming/1-introduction/optional-projects/3-pong.pt-br.html]
+	resource: Design Margarida [/bjc-r/cur/programming/1-introduction/optional-projects/4-daisy.pt-br.html]
+	resource: Linguagem de Modelagem [/bjc-r/cur/programming/1-introduction/optional-projects/5-sentence-builder.pt-br.html]
 
-heading: Unit 1 Review
-	resource: Vocabulary [/bjc-r/cur/programming/summaries/vocab1.html]
-	resource: On the AP Exam [/bjc-r/cur/programming/summaries/exam1.html]
-	resource: Self-Check Questions [/bjc-r/cur/programming/summaries/assessment-data1.html]
+heading: Unidade 1 Revisão
+	resource: Vocabulário [/bjc-r/cur/programming/summaries/vocab1.pt-br.html]
+	resource: No exame AP [/bjc-r/cur/programming/summaries/exam1.pt-br.html]
+	resource: Perguntas de autoverificação [/bjc-r/cur/programming/summaries/assessment-data1.pt-br.html]
 }

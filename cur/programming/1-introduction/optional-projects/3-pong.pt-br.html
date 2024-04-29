@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Unidade 1 Projetos Opcionais, Página 3</title>
+    </head>
+    
+    <body>
+		<h2>O Jogo do Pong</h2>
+        <div class="learn">
+        	<strong>Neste projeto,</strong> você vai modelar um jogo de computador chamado Pong, desenvolvido pela primeira vez pela Atari em 1972. Você escreverá o código para a raquete que permitirá que ela se mova para cima e para baixo com base na entrada do teclado do usuário e também escreva o código para a bola que permitirá que ela quique toda vez que atingir uma parede ou a raquete.<br />
+        	<img class="indent" src="/bjc-r/img/1-introduction/Pong_img/pongAnimation.gif" width="325" alt="Jogo de Pong" title="Jogo de Pong"/>
+        </div>
+        
+        <div class="forYouToDo" id="first">
+            <ol>
+                <!--<li>Jogue com o programa <a href="http://snap.berkeley.edu/snapsource/snap.html#present:Username=bjcsolutions&ProjectName=U1L5Pong_Teacher&hideControls" target="_blank"> vinculado aqui </ a>para ter uma ideia de como o jogo funciona. Use as setas para cima e para baixo para mover a raquete. O ângulo inicial em que a bola começa é aleatório, então se não for do seu agrado, você pode recarregar a página para um ângulo inicial diferente.</li>-->
+                 <li>
+                     <img class="imageRight" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Fale com seu parceiro" title="Fale com seu parceiro" />
+                     Discuta com seu parceiro a matemática por trás da bola quicando na raquete. Como a direção inicial da bola ao atingir a raquete se relaciona com a direção final da bola ao quicar na raquete? O diagrama a seguir pode ajudar. <br />
+                     <img class="indent" src="/bjc-r/img/1-introduction/Pong_img/Bounce.png" height="346" alt="Direções inicial e final da bola" title="Direções inicial e final da bola bola" />
+                 </li>
+                 <li>Crie os sprites da raquete e da bola e dê a eles suas fantasias (retângulo e círculo preenchidos).</li>
+                 <div class="sidenote">Faça isso por conta própria, mas se não conseguir, consulte estas <a href="/bjc-r/cur/programming/1-introduction/optional-projects/3b-pong-hints.pt-br.html" target="_blank" title="Dicas para o Jogo de Pong">dicas para o Jogo de Pong</a> sobre como proceder.</div>
+                 <li>Escreva o código para que a raquete se mova para cima e para baixo quando o usuário pressionar as teclas de seta para cima e para baixo. Não deixe a raquete ultrapassar as bordas do palco.</li>
+                 <li>Escreva o código para iniciar o movimento da bola quando a bandeira verde for clicada e para quicar nas bordas do palco e na raquete. Observe que há um bloco embutido para rebater nas bordas.</li>
+                 
+            </ol> 
+        </div>
+        
+        <div class="takeItFurther">
+            <ol type="A">
+                <li>
+                    Adicione pontuação ao seu jogo. Cada vez que as raquetes batem na bola, o jogador deve ganhar um ponto e cada vez que a bola atinge a parede certa, o jogador deve perder um ponto. Você pode criar uma variável para acompanhar a pontuação.<br />
+                    <img class="indent" src="/bjc-r/img/1-introduction/Pong_img/ScoreVariable.png" height="200" alt="Criar pontuação variável" title="Criar pontuação variável"/>
+                </li>
+                <li>
+                	Crie uma segunda raquete para permitir que o jogo se torne um jogo multijogador. Ajuste seu código para acomodar entrada de teclado de dois usuários.<br />
+                	<img class="indent" src="/bjc-r/img/1-introduction/Pong_img/TwoPlayer.png" width="325" alt="Pong Multijogador" title="Pong Multijogador" />
+                </li>
+                <li> 
+                    Crie uma segunda raquete (ou use a da parte B, se você fez isso) e deixe essa raquete ser acionada automaticamente pelo computador para uma versão do jogo "humano versus computador". Dica: Você pode automatizar a segunda remada usando o seguinte bloco do menu Sensing:<br />
+                    <img class="indent" src="/bjc-r/img/1-introduction/Pong_img/yPositionofBallSensing.png" alt="(posição y) de (bola)" title="(posição y) de (bola)" />
+                </li>
+                <!--<li> Você pode notar que, às vezes, quando a bola atinge a raquete em um ângulo agudo, a bola fica “presa”. Por que você acha que é assim? Qual parte do seu código é responsável por isso? Você pode melhorar seu código para que isso não aconteça?</li>-->
+            </ol>
+        </div>
+        
+        
+    </body>
+</html>

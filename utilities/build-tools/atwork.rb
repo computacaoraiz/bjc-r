@@ -2,9 +2,10 @@ require 'fileutils'
 require 'nokogiri'
 
 class AtWork
-  def initialize(path, language = 'en')
+  def initialize(path, language = 'en', content)
     @parentDir = path
     @language = language
+    @content = content
     @currUnit = nil
     @currFile = nil
     @isNewUnit = true
@@ -113,11 +114,7 @@ class AtWork
   def add_content_to_file(filename, data)
     currentDir = Dir.getwd
     linesList = File.readlines(@currFile)[0..15]
-    # puts currentDir
-    # puts @parentDir
     Dir.chdir("#{@parentDir}/review")
-    puts Dir.getwd
-    puts filename
     data = data.gsub(/&amp;/, '&')
     data.delete!("\n\n\\")
     createNewFile(filename, linesList) unless File.exist?(filename)
@@ -166,7 +163,6 @@ class AtWork
     localPath = Dir.getwd
     linkPath = localPath.match(/bjc-r.+/).to_s
     "/#{linkPath}/#{file}"
-    # add_content_to_file('urlLinks.txt', result)
   end
 
   def moveFile

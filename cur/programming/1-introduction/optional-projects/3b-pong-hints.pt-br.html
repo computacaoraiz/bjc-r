@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Unidade 1 Projetos Opcionais, Dica da Página 3</title>
+    </head>
+
+    <corpo>
+        <h2>Dicas para o jogo de Pong</h2>
+        <div class="forYouToDo" id="first">
+            <ol>
+                <li><a class="run" href="/bjc-r/prog/1-introduction/U1L5-pong-student.xml" target="_blank"><img class="inline" src="/bjc -r/img/icons/load-save.png" alt="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!." title="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!."></a><br /> Examine o arquivo inicial onde um sprite de remo retangular e um sprite de bola circular foram criados para você.< /li>
+                <li>
+                    Escreva o código para o remo primeiro. A raquete deve se mover apenas para cima e para baixo perto da borda direita da tela. Quando o usuário pressiona as teclas de seta para cima/para baixo no teclado, a raquete deve se mover para cima ou para baixo um certo valor, mas nunca deve sair das bordas da tela. Você pode achar os seguintes blocos úteis.<br />
+                    <img class="indent" src="/bjc-r/img/1-introduction/Pong_img/PaddleCodeHint.png" width="400" alt="Paddle code blocks: quando a bandeira verde é clicada, quando a seta para cima é pressionada, quando seta para baixo pressionada, vá para x: (230) y:(0), se estiver na borda, salte, altere y por (15), altere y por (-15)" title="Blocos de código de remo: quando a bandeira verde for clicada, quando a seta para cima pressionada, quando a seta para baixo pressionada, vá para x: (230) y:(0), se estiver na borda, salte, altere y por (15), altere y por (-15)"/>
+                </li>
+                <li>
+                    O código da bola é um pouco mais complicado devido ao salto da raquete.
+                    Inicialize a bola para aparecer no meio da tela e dê a ela uma direção aleatória. Em seguida, verifique se a bola está na borda da tela ou tocando na raquete. Em cada caso, a bola precisa quicar. Snap<em>!</em> já fornece um bloco para ricochetear nas bordas da tela.<br />
+                    <img class="indent" src="/bjc-r/img/1-introduction/Pong_img/edgeBounce.png" width="161" alt="se na borda, salta" title="se está na borda, salta" /><br/>
+                    Você pode escrever o código para a bola quicar na raquete percebendo que a bola quica na raquete com o negativo da direção em que ela atinge a raquete. Lembre-se que no Snap<em>!</em> os ângulos positivos são medidos no sentido horário a partir de 0°, direção para cima, e os ângulos negativos são medidos no sentido anti-horário a partir de 0°, direção para cima.<br/>
+                    <img class="indent" src="/bjc-r/img/1-introduction/Pong_img/Bounce.png" height="346" alt="Bola quicando com direção final igual ao negativo da direção inicial." title="Bola quicando com direção final igual ao negativo da direção inicial."/>
+                    <img src="/bjc-r/img/1-introduction/Pong_img/Directions.png" width="517" alt="Direções: 0, 90, 180, 270 e 0, -90, -180, -270 " title="Direções: 0, 90, 180, 270 e 0, -90, -180, -270"/><br/>
+                    Agora escreva o código para a bola. Você pode achar os seguintes blocos úteis.<br />
+                    <img class="indent" src="/bjc-r/img/1-introduction/Pong_img/BallCodeHint.png" width="400" alt="Blocos de código de bola: quando a bandeira verde é clicada, para sempre, se( ), (-1)X(direção), tocando(Remada)?, vá para x:(0) y:(0), aponte na direção (), se estiver na borda, pule, mova (5) passos, escolha aleatório (0 ) para (360)" title="Blocos de código de bola: quando a bandeira verde for clicada, para sempre, se( ), (-1)X(direção), tocando(Remada)?, vá para x:(0) y:(0 ), aponte na direção (), se estiver na borda, pule, mova (5) passos, escolha aleatório (0) para (360)"/>
+                </li>
+            </ol>
+        </div>
+        
+    
+    </body>
+</html>

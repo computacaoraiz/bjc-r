@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+	<head>
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+
+        <script type="text/javascript" src="/bjc-r/utilities/gifffer.min.js"></script>
+
+		<script type="text/javascript">window.onload = function() {Gifffer();}</script>
+
+        <link rel="stylesheet" type="text/css" href="/bjc-r/css/bjc-gifffer.css">
+
+		<title>Perguntas de Autoverificação da Unidade 1</title>
+	</head>
+	
+	<h2>Laboratório 2 da Unidade 1: Fofocas, Página 3</h2>
+	<h3>Laboratório 2: Fofocas</h3>
+	<div class="assessment-data" type="multiplechoice" identifier="Quais das seguintes frases poderiam ser relatadas por fofoca?" hasinlinefeedback="true" maxchoices="4" responseidentifier="ri1" shuffle="true"> <a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/3-customizing.pt-br.html">1.2.3</a>
+		<div class="prompt">
+			<div class="ap-standard">AAP-2.D</div>
+			Quais <em><strong>duas</strong></em> das seguintes frases poderiam ser relatadas por <code>fofoca</code>?<br>
+			<img class="indent" src="/bjc-r/img/1-introduction/gossip-definition.png" alt="fofoca: (reportar (juntar (quem) ( ) (faz o que) ( ) (quem)))" title="fofoca: (reportar (juntar (quem) ( ) (faz o que) ( ) (quem)))">
+			<div class="endnote">
+				Para referência:<br>
+				<img class="indent" src="/bjc-r/img/1-introduction/who-block-definition.png" height="77px" alt="definição do bloco repórter who: reportar (item (aleatório) da (lista (Señora) (Sra. C) (meu gato) (Hannah) (Jake)))" title="definição do bloco repórter who: reportar (item (aleatório) da (lista (Señora) (Sra. C) (meu gato) (Hannah) (Jake)))">
+				<img class="indent" src="/bjc-r/img/1-introduction/does-what-block-definition.png" height="89px" alt="definição do bloco repórter does what: reportar (item (aleatório) da (lista (ouviu) (adora) (fugiu de) (ajudou) (está em uma banda com)))" title="definição do bloco repórter does what: reportar (item (aleatório) da (lista (ouviu) (adora) (fugiu de) (ajudou) (está em uma banda com)))">
+			</div>
+		</div>
+		<div class="choice" identifier="c1">
+			<div class="text">Señora e Sra. C ajudaram.</div>
+			<div class="feedback">
+				É verdade que há duas pessoas (dois "quem"s) e uma ação (um "faz o que"), mas eles não estão na ordem correta. Além disso, a palavra "e" não está em nenhum lugar do programa.
+			</div>
+		</div>
+		<div class="choice" identifier="c2">
+			<div class="text">Señora fugiu do meu gato.</div>
+			<div class="feedback">
+				Correto! Isso segue o padrão: "quem", "faz o que", "quem".
+			</div>
+		</div>
+		<div class="choice" identifier="c3">
+			<div class="text">Hannah ouviu Hannah.</div>
+			<div class="feedback">
+				Correto! Isso segue o padrão: "quem", "faz o que", "quem".
+			</div>
+		</div>
+		<div class="choice" identifier="c4">
+			<div class="text">Jake ajudou.</div>
+			<div class="feedback">
+				Esta frase está faltando o segundo "quem".
+			</div>
+		</div>
+		<div class="responseDeclaration" identifier="ri1">
+			<div class="correctResponse" identifier="c2"></div>
+			<div class="correctResponse" identifier="c3"></div>
+		</div>
+	</div>
+	
+	<div class="assessment-data" type="multiplechoice" identifier="Com que frequência o who mais complicado escolherá a opção mais complicada?" hasinlinefeedback="true" maxchoices="1" responseidentifier="ri1" shuffle="false"> <a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.pt-br.html">1.2.5</a>
+		<div class="prompt">
+			<div class="ap-standard">AAP-3.E</div>
+			<img class="imageRight" src="/bjc-r/img/1-introduction/more-complicated-who-script.png" alt="who mais complicado {    se (aleatório (1) a (4)) = (3) {        reportar (juntar (quem) (', quem') (faz o que) ( ) (quem) (,))    } senão {        reportar (quem)    }}" title="who mais complicado {    se (aleatório (1) a (4)) = (3) {        reportar (juntar (quem) (', quem') (faz o que) ( ) (quem) (,))    } senão {        reportar (quem)    }">
+			Com que frequência <code>who mais complicado</code> escolherá a opção mais complicada?
+		</div>
+		<div class="choice" identifier="c1">
+			<div class="text">Metade do tempo</div>
+			<div class="feedback">Se um número for escolhido aleatoriamente entre 1, 2, 3 e 4, com que frequência esse número será 3?</div>
+		</div>
+		<div class="choice" identifier="c2">
+			<div class="text">Um terço do tempo</div>
+			<div class="feedback">Se um número for escolhido aleatoriamente entre 1, 2, 3 e 4, com que frequência esse número será 3?</div>
+		</div>
+		<div class="choice" identifier="c3">
+			<div class="text">Um quarto do tempo</div>
+			<div class="feedback">Correto!</div>
+		</div>
+		<div class="choice" identifier="c4">
+			<div class="text">Três quartos do tempo</div>
+			<div class="feedback">Se um número for escolhido aleatoriamente entre 1, 2, 3 e 4, com que frequência esse número será 3?</div>
+		</div>
+		<div class="responseDeclaration" identifier="ri1">
+			<div class="correctResponse" identifier="c3"></div>
+		</div>
+	</div>
+	
+	<div class="assessment-data" type="multiplechoice" identifier="Qual expressão retornaria um número par aleatório entre 1 e 10?" hasinlinefeedback="true" maxchoices="1" responseidentifier="ri3" shuffle="true"> <a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.pt-br.html">1.2.5</a>
+		<div class="prompt">
+			<div class="ap-standard">AAP-3.E</div>
+			<div class="sidenoteBig">
+				<a href="#hint-parity" data-toggle="collapse" title="Clique para uma revisão sobre números ímpares e pares.">Clique para uma revisão sobre números ímpares e pares.</a>
+				<div id="hint-parity" class="collapse">
+					<p>Um número <strong>par</strong> é um número inteiro que é divisível por 2 (como 2, 14, 0, -4, -6, -28 e -176).</p>
+					<p>Em contraste, números <strongímpares</strong> são inteiros <em>não</em> divisíveis por 2 (como 1, 3, 9, 17, -5, -33 e -221).</p>
+				</div>
+			</div>
+			Qual expressão retornará um número <em>par</em> aleatório entre 1 e 10?
+		</div>
+		<div class="choice" identifier="c1">
+			<div class="text"><pre class="inline">RANDOM(2, 10)</pre></div>
+			<div class="feedback">
+				<pre class="inline">RANDOM(2, 10)</pre> retornará 2, 3, 4, 5, 6, 7, 8, 9 ou 10.
+			</div>
+		</div>
+		<div class="choice" identifier="c2">
+			<div class="text"><pre class="inline">2 * RANDOM(1, 5)</pre></div>
+			<div class="feedback">
+				Correto! <pre class="inline">RANDOM(1, 5)</pre> retornará 1, 2, 3, 4 ou 5, então <pre class="inline">2 * RANDOM(1, 5)</pre> retornará 2, 4, 6, 8 ou 10.
+			</div>
+		</div>
+		<div class="choice" identifier="c3">
+			<div class="text"><pre class="inline">RANDOM(1, 10) / 2</pre></div>
+			<div class="feedback">
+				<pre class="inline">RANDOM(1, 10)</pre> retornará 1, 2, 3, 4, 5, 6, 7, 8, 9 ou 10, então <pre class="inline">RANDOM(1, 10) / 2</pre> retornará ½, 1, 1½, 2, 2½, 3, 3½, 4, 4½ ou 5.
+			</div>
+		</div>
+		<div class="choice" identifier="c4">
+			<div class="text"><pre class="inline">RANDOM(1, 5)</pre></div>
+			<div class="feedback">
+				<pre class="inline">RANDOM(1, 5)</pre> retornará 1, 2, 3, 4 ou 5.
+			</div>
+		</div>
+		<div class="responseDeclaration" identifier="ri3">
+			<div class="correctResponse" identifier="c2"></div>
+		</div>
+	</div>
+	
+	<div class="assessment-data" type="multiplechoice" identifier="Qual expressão simulará o lançamento de dois dados?" hasinlinefeedback="true" maxchoices="1" responseidentifier="ri4" shuffle="true"> <a href="/bjc-r/cur/programming/1-introduction/2-gossip-and-greet/5-if-else.pt-br.html">1.2.5</a>
+		<div class="prompt">
+			<div class="ap-standard">AAP-3.E</div>
+			Qual expressão simulará o lançamento de dois dados?
+		</div>
+		<div class="choice" identifier="c1">
+			<div class="text"><pre class="inline">RANDOM(1, 6) + RANDOM(1, 6)</pre></div>
+			<div class="feedback">
+				Correto! <pre class="inline">RANDOM(1, 6)</pre> retornará 1, 2, 3, 4, 5 ou 6 com igual probabilidade, simulando um dado, e então <pre class="inline">RANDOM(1, 6) + RANDOM(1, 6)</pre> retornará 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ou 12 com a mesma probabilidade de dois dados.
+			</div>
+		</div>
+		<div class="choice" identifier="c2">
+			<div class="text"><pre class="inline">2 * RANDOM(1, 6)</pre></div>
+			<div class="feedback">Você tem a ideia certa, usando <pre class="inline">RANDOM(1, 6)</pre> para o lançamento de um único dado. Mas essa expressão não lança dois dados; ela lança um dado e dobra o resultado. Portanto, <pre class="inline">2 * RANDOM(1, 6)</pre> retornará apenas 2, 4, 6, 8, 10 ou 12.</div>
+		</div>
+		<div class="choice" identifier="c3">
+			<div class="text"><pre class="inline">RANDOM(2, 12)</pre></div>
+			<div class="feedback">
+				<pre class="inline">RANDOM(2, 12)</pre> retornará 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ou 12 com igual frequência. Você consegue obter 2 como resultado ao lançar dois dados com essa expressão?
+			</div>
+		</div>
+		<div class="choice" identifier="c4">
+			<div class="text"><pre class="inline">RANDOM(1, 12)</pre></div>
+			<div class="feedback">
+				Você consegue obter um total de 1 ao lançar dois dados?
+			</div>
+		</div>
+		<div class="responseDeclaration" identifier="ri4">
+			<div class="correctResponse" identifier="c1"></div>
+		</div>
+	</div>

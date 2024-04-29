@@ -10,6 +10,8 @@ llab = llab || {};
 llab.loaded = llab.loaded || {};
 llab.DEVELOPER_CLASSES = '.todo, .comment, .commentBig, .ap-standard, .csta-standard'
 
+llab.PRODUCTION_SERVERS = [ 'bjc.berkeley.edu', 'bjc.edc.org', 'cs10.org' ]
+
 ////// TRANSLATIONS -- Shared Across All Files.
 llab.TRANSLATIONS = {
     'ifTime': {
@@ -91,7 +93,7 @@ llab.getSnapRunURL = function(targeturl, options) {
         origin += path;
     }
 
-    return `${snapURL}${origin}${targeturl}`;
+    return `${snapURL}${origin}${targeturl}?${new Date().toISOString()}`;
 };
 
 llab.pageLang = () => {
@@ -99,24 +101,30 @@ llab.pageLang = () => {
         return llab.CURRENT_PAGE_LANG;
     }
 
+    let urlLang = llab.determinLangFromURL();
     let htmlLang = $("html").attr('lang');
-    if (!htmlLang) {
-        htmlLang = llab.determineAltLang();
-        $("html").attr('lang', htmlLang);
+
+    if (urlLang) {
+        llab.CURRENT_PAGE_LANG = urlLang;
     }
-    llab.CURRENT_PAGE_LANG = htmlLang || 'en';
+
+    llab.CURRENT_PAGE_LANG = urlLang || htmlLang || 'en';
+
+    if (!htmlLang) {
+        $("html").attr('lang', llab.CURRENT_PAGE_LANG);
+    }
+
     return llab.CURRENT_PAGE_LANG;
 }
 
 // Use the filename of the HTML file or course file, or topic file to determine page language.
-llab.determineAltLang = () => {
-    let altLang = location.href.match(/\.(\w\w)\.(html|topic)/);
-    if (altLang) {
-        return altLang[1];
+llab.determinLangFromURL = () => {
+    let urlLang = location.href.match(/\.(\w\w)\.(html|topic)/);
+    if (urlLang) {
+        return urlLang[1];
     }
-    return 'en'
+    return null;
 }
-
 
 // very loosely mirror the Rails API
 llab.translate = (key, replacements) => {
@@ -130,7 +138,7 @@ llab.translate = (key, replacements) => {
     }
 
     Object.keys(replacements).forEach(rep => {
-      result = result.replaceAll(`%{${rep}}`, replacements[rep]);
+      result = result.replace(new RegExp(`%{${rep}}`,'g'), replacements[rep]);
     });
     return result;
 };
@@ -142,21 +150,94 @@ llab.t = llab.translate;
 llab.pageLangugeExtension = () => llab.pageLang() == 'en' ? '' : `.${llab.pageLang()}`;
 
 // Turn img.es.png into img.png
-llab.stripLangExtensions = (text) => text.replaceAll(`.${llab.pageLang()}.`, '.');
+llab.stripLangExtensions = (text) => text.replace(new RegExp(`\.${llab.pageLang()}\.`, 'g'), '.');
+
+/////// CONDITIONAL LOADING OF CONTENT
+/**
+ * A prelimary API for defining loading additional content based on triggers.
+ *  @{param} array TRIGGERS is an array of {selectors, libName, onload } objects.
+ *  If the selectors are valid, we load *one* CSS and JS file from llab.optionalLibs
+ *  An `onload` function can be supplied, which will be called when the JS file is loaded.
+ */
+// check that we only run this thing one.
+llab.conditional_setup_run = false;
+llab.conditionalSetup = triggers => {
+    if (llab.conditional_setup_run) { return true; }
+    triggers.forEach(obj => {
+        let selectors = obj.selectors, libName = obj.libName, onload = obj.onload;
+        if (document.querySelectorAll(selectors).length > 0) {
+          let files = llab.optionalLibs[libName];
+          if (!files && onload) {
+            onload();
+            return;
+          }
+          if (files.css) {
+            document.head.appendChild(llab.styleTag(files.css));
+          }
+          if (files.js) {
+            document.head.appendChild(llab.scriptTag(files.js, onload));
+          }
+        }
+    });
+    llab.conditional_setup_run = true;
+}
+
+// Call The Functions to HighlightJS to render
+llab.highlightSyntax = function() {
+  $('pre > code').each(function(i, block) {
+    block.innerHTML = block.innerHTML.trim();
+    if (typeof hljs !== 'undefined') {
+      hljs.highlightBlock(block);
+    }
+  });
+};
+
+llab.displayMathDivs = function () {
+  $('.katex, .katex-inline').each(function (_, elm) {
+     katex.render(elm.textContent, elm, {throwOnError: false});
+  });
+  $('.katex-block').each(function (_, elm) {
+    katex.render(elm.textContent, elm, {
+      displayMode: true, throwOnError: false
+    });
+  });
+};
+
+llab.handleError = (error) => {
+    console.warn("Something went wrong: ", error);
+    if (typeof Sentry !== "undefined") {
+    Sentry.captureException(error);
+  }
+};
 
 // TODO: jQuery3 -- these need to be migrated.
-llab.toggleDevComments = () => { $(llab.DEVELOPER_CLASSES).toggle() };
-llab.showAllDevComments = () => { $(llab.DEVELOPER_CLASSES).show() };
+llab.toggleDevComments = () => $(llab.DEVELOPER_CLASSES).toggle();
 
+// Staging is a dev environment + gh-pages, etc.
+llab.isStagingEnvironment = () => !llab.PRODUCTION_SERVERS.includes(location.host);
+
+// TODO: Rename this to "setupDevTools" something...
 llab.setUpDevComments = () => {
+    // Remove and re-add (necessary for dynamic navigations)
+    const rightSideButton = 'imageRight btn btn-sm'
+    $('.js-openProdLink, .js-commentBtn').remove();
+
+    // Specifically exclude public staging pages.
     if (llab.isLocalEnvironment()) {
-        if ($('.js-commentBtn').length < 1) {
-            let addToggle = $('<button class="imageRight btn btn-default js-commentBtn">')
-                .click(llab.toggleDevComments)
-                .text('Toggle developer todos/comments (red boxes)');
-            $(FULL).prepend(addToggle);
-        }
-        $(window).load(llab.showAllDevComments);
+        let addToggle = $(`<button class="${rightSideButton} btn-default js-commentBtn"
+            >Toggle developer comments</button>`)
+            .click(llab.toggleDevComments);
+        $(FULL).prepend(addToggle);
+        $(document).ready(llab.toggleDevComments);
+    }
+
+    if (llab.isStagingEnvironment()) {
+        let open_link = $(`
+            <a class="${rightSideButton} btn-info js-openProdLink"
+              target="_blank"
+              href=${location.href.replace(location.host, 'bjc.edc.org')}
+            >Open on edc.org</a>`)
+            $(FULL).prepend(open_link);
     }
 }
 
@@ -168,6 +249,12 @@ llab.getQueryParameter = function(paramName) {
     } else {
         return '';
     }
+};
+
+llab.isTopicFile = () => {
+    return [
+        llab.empty_topic_page_path, llab.topic_launch_page, llab.alt_topic_page
+      ].includes(llab.stripLangExtensions(location.pathname));
 };
 
 // TODO: Write a use this function.
@@ -200,7 +287,10 @@ if (llab.GACode) {
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', llab.GACode);
+    gtag('config', llab.GACode, {
+        // page_title: document && document.querySelector('title').textContent,
+        page_location: document.URL
+    });
 }
 
 /** Truncate a STR to an output of N chars.

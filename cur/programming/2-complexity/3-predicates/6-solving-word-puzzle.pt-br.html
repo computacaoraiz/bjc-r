@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+    <title>Unidade 2 Laboratório 3: Tomando Decisões, Página 6</title>
+</head>
+
+<body>
+    <h2>Resolvendo um Quebra-Cabeça de Palavras</h2>
+    <div class="todo">
+        <p>Ninguém precisaria perguntar a um computador "O espaguete tem 5 letras?" O bloco deveria ser renomeado para PALAVRA ( ) TEM ( ) LETRAS para parecer mais sensato. --bh</p>
+        <p>Depois leve essa mudança adiante para o 5.1 começando na página 2, editando arquivos iniciados, soluções e TG em ambas as unidades conforme necessário. --MF, 14/07/20</p>
+    </div>
+    <div class="learn">
+        <p><strong>Nesta página</strong>, você resolverá um quebra-cabeça de palavras cruzadas combinando predicados usando o bloco <code>and</code>. Em seguida, você usará os predicados resultantes com o bloco <code>keep</code> para encontrar palavras com características específicas.</p>
+        <img class="indent" src="/bjc-r/img/2-complexity/radiux.png" alt="mantendo palavras com 6 letras, com a 1ª letra r e a 3ª letra d" title="mantendo palavras com 6 letras, com a 1ª letra r e a 3ª letra d" />
+    </div>
+    <div class="forYouToDo" id="first">
+        <ol>
+            <li><a class="run" href="/bjc-r/prog/2-complexity/U2L3-WordPuzzleSolver.xml" target="_blank"><img class="inline" src="/bjc-r/img/icons/load-save.png" alt="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!" title="Clique aqui para carregar este arquivo. Em seguida, salve-o em sua conta Snap!" /></a></li>
+            <li>
+                Você já usou o bloco <img class="inline" src="/bjc-r/img/blocks/length-of-blank-operator.png" alt="comprimento de ()" title="comprimento de ()" /> na paleta de Operadores junto com <code>=</code> e <code>keep</code> para encontrar palavras de um certo comprimento na lista de <var>palavras</var>.
+                <ol>
+                    <li>Reorganize esse script para que você possa encontrar todas as palavras com 8 letras.</li>
+                    <li>Encontre todas as palavras com 11 letras.</li>
+                    <li>Agora você tem uma <em>expressão</em> que pode ser editada para testar qualquer palavra quanto ao número de letras. Isso é uma ferramenta útil. Crie e teste um bloco de predicado <em>que aceite</em> uma palavra e um número como entrada e funcione assim:<br />
+                        <img class="indent" src="/bjc-r/img/2-complexity/does-orange-6-letters-true.png" alt="a palavra (laranja) tem (6) letras? relatando verdadeiro" title="a palavra (laranja) tem (6) letras? relatando verdadeiro" />
+                        <img class="indent" src="/bjc-r/img/2-complexity/does-apple-7-letters-false.png" alt="a palavra (maçã) tem (7) letras? relatando falso" title="a palavra (maçã) tem (7) letras? relatando falso" />
+                    </li>
+                </ol>
+            </li>
+            <li>
+                Construa uma <em>expressão</em> usando o bloco <img class="inline" src="/bjc-r/img/blocks/letter-blank-of-blank.png" alt="letra () de ()" title="letra () de ()" /> com <code>=</code> e <code>keep</code> para encontrar palavras que tenham determinadas letras em determinados lugares.
+                <ol>
+                    <li>Use-o para encontrar todas as palavras que começam com a letra i.</li>
+                    <li>Encontre todas as palavras cuja quarta letra é r.</li>
+                    <div class="sidenote">O título do seu bloco pode ser diferente do mostrado aqui, desde que ele faça o mesmo trabalho.</div>
+                    <li>Se você ainda não transformou sua expressão em um bloco de predicado <em>bloco</em>, faça isso agora. Seu bloco deve funcionar assim: <br />
+                        <img class="indent" src="/bjc-r/img/2-complexity/is-letter-4-of-carrot-o-reporting-false.png" alt="a letra (4) da (cenoura) é a letra (o)? relatando falso" title="a letra (4) da (cenoura) é a letra (o)? relatando falso" />
+                        <img class="indent" src="/bjc-r/img/2-complexity/is-letter-2-of-giraffe-i-reporting-true.png" alt="a letra (2) da (girafa) é a letra (i)? relatando verdadeiro" title="a letra (2) da (girafa) é a letra (i)? relatando verdadeiro" />
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <strong>Trabalhe com outro par.</strong> Use seus predicados, junto com <code>and</code> e <code>keep</code>, para resolver <a href="https://drive.google.com/open?id=1x8ShDe58qUQJDK8n97xoQGY4J4rw9aDsJCmkY-6SQc0" target="_blank" title="Resolvendo um Quebra-Cabeça de Palavras">este Quebra-Cabeça de Palavras do Laboratório 3 da Unidade 2</a>.<br />
+                <div class="endnote">
+                    <div class="comment">Podemos dar uma dica?</div>
+                    Por exemplo, esta expressão busca palavras de 6 letras que começam com <var>r</var> e têm <var>d</var> como terceira letra:
+                    <img class="indent" src="/bjc-r/img/2-complexity/radiux.png" alt="mantendo palavras com 6 letras, com a 1ª letra r e a 3ª letra d" title="mantendo palavras com 6 letras, com a 1ª letra r e a 3ª letra d" />
+                </div>
+                <div class="AP-only">
+                    <div class="vocab">
+                        <p>Todas as palavras no quebra-cabeça estão relacionadas ao curso Princípios de Ciência da Computação do AP (O quebra cabeça está em inglês).</p>
+                    </div>
+                </div>
+                <a class="run" href="https://drive.google.com/open?id=1x8ShDe58qUQJDK8n97xoQGY4J4rw9aDsJCmkY-6SQc0" target="_blank"><img class="indent" src="/bjc-r/img/2-complexity/crossword.jpg" alt="Resolvendo um Quebra-Cabeça de Palavras" title="Resolvendo um Quebra-Cabeça de Palavras" /></a>
+            </li>
+            <img class="imageRight" src="/bjc-r/img/icons/save-now.png" alt="Salve o seu trabalho" title="Salve o seu trabalho" />
+        </ol>
+    </div>
+
+    <div class="takeItFurther">
+        <ol type="A">
+            <li>
+                Crie e teste um bloco de predicado que verifica se uma determinada letra está em uma palavra. Exemplos abaixo. Seu bloco deve:
+                <ul>
+                    <li>Aceitar duas entradas: uma <var>letra</var> para verificar e uma <var>palavra</var>, e</li>
+                    <li>Relatar se a <var>palavra</var> de entrada tem ou não a <var>letra</var> de entrada.</li>
+                </ul>
+                <img class="indent" src="/bjc-r/img/2-complexity/is-w-in-boston-reporting-false.png" alt="tem um (w) em (Boston)? relatando falso" title="tem um (w) em (Boston)? relatando falso" />
+                <img class="indent" src="/bjc-r/img/2-complexity/is-w-in-new-york-reporting-true.png" alt="tem um (w) em (Nova Iorque)? relatando verdadeiro" title="tem um (w) em (Nova Iorque)? relatando verdadeiro" />
+            </li>
+            <li><img class="inline" src="/bjc-r/img/icons/tough-stuff-mini.png" alt="Desafio" title="Desafio" /> Crie esse bloco:<br />
+            <img class="indent" src="/bjc-r/img/2-complexity/pattern-matcher.png" alt="palavras correspondendo a (-e-u--c--g) a partir de (lista de palavras)" title="palavras correspondendo a (-e-u--c--g) a partir de (lista de palavras)"><br />
+            A primeira entrada é um
+            <em>padrão,</em> que é uma palavra na qual algumas das letras foram substituídas por hifens (traços).<!-- A parte difícil será escrever um auxiliar<br />
+            <img src="/bjc-r/img/2-complexity/does-word-match-pattern.png" alt="a palavra (foo) coincide com o padrão (f-o)?" title="a palavra (foo) coincide com o padrão (f-o)?" /><br />
+            que verifica se cada letra no padrão é igual à letra correspondente da palavra de entrada ou um hífen. -->
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

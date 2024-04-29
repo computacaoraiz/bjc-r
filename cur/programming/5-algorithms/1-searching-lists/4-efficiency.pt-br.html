@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+    <title>Unidade 5 Laboratório 1: Algoritmos de Busca e Eficiência, Página 4</title>
+</head>
+
+<body>
+    <h2>Exatamente Quão Mais Rápida é a Busca Binária?</h2>
+    <div class="todo">
+        <h3>TG e soluções precisam ser verificados. --MF, 19/12/18</h3>
+    </div>
+    <div class="learn">
+        <p><strong>Nesta página</strong>, você irá comparar o tempo necessário para a busca binária e a busca linear.</p>
+        <div class="todo">TG: Os alunos comparam esses dois algoritmos de duas maneiras: empiricamente (com tempo de relógio) e contando operações (passos).</div>
+    </div>
+
+    <div class="forYouToDo" id="first">
+        <ol>
+            <li>
+                <div class="ap-standard">AAP-2.P.3</div>
+                Localize o bloco <img class="inline" src="/bjc-r/img/5-algorithms/linear-search.png" alt="busca linear por () em 'slot de entrada da lista'" title="busca linear por () em 'slot de entrada da lista'" /> incluído em seu projeto e analise-o. Compare-o com o algoritmo que você usou para contar o número de palavras com cinco ou sete letras. Esse bloco faz a mesma computação que o bloco de <code>busca binária</code>, mas usa o algoritmo linear.
+            </li>
+            <li>
+                Use <img class="inline" src="/bjc-r/img/5-algorithms/computation-time-of.png" alt="tempo de computação de 'slot de entrada de anel cinza'" title="tempo de computação de 'slot de entrada de anel cinza'" /> para testar quanto tempo a <code>busca linear</code> leva para encontrar a palavra "zebra" em cada lista de comprimento.
+                <table class="bordered center standard" summary="tabela parcialmente em branco mostrando o tempo para executar a BUSCA LINEAR para listas de diferentes comprimentos">
+                    <tr>
+                        <th scope="col">Comprimento da Lista</th>
+                        <th scope="col">Tempo da <code>Busca Linear</code></th>
+                    </tr>
+                    <tr>
+                        <td>1000</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10.000</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>100.000</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </li>
+            <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Converse com seu parceiro" title="Converse com seu parceiro" /> Olhe para a tabela. Como você descreveria o que acontece com o tempo conforme a entrada fica maior?</li>
+        </ol>
+    </div>
+    <p>
+        A quantidade real de tempo físico necessária para resolver um problema depende não apenas do seu algoritmo, mas também de quão rápido é o seu computador e de quais outros programas você está executando, etc. Portanto, cientistas da computação que desejam medir a velocidade de um algoritmo fazem isso em termos do número de <em>passos</em>. Por exemplo, o que realmente queremos saber sobre a eficiência do algoritmo de <code>busca linear</code> é quantas vezes o <var>item atual</var> é comparado com o <var>valor</var> (ou seja, quantas vezes <img class="inline nopadtb" src="/bjc-r/img/5-algorithms/current-item=value.png" alt="(item atual) = (valor)" title="(item atual) = (valor)" /> é chamado).
+    </p>
+    <div class="forYouToDo">
+        <ol start="4">
+            <li>
+                <div class="ap-standard">AAP-2.P.3</div>
+                Adicione outra coluna à sua tabela. Supondo que "zebra" seja a <em>última palavra</em> em cada lista de palavras, quantas comparações são feitas pelo algoritmo de <code>busca linear</code> para cada lista de comprimento?
+                <table class="bordered center standard" summary="tabela parcialmente em branco mostrando o tempo e agora também os passos para executar a BUSCA LINEAR para listas de diferentes comprimentos">
+                    <tr>
+                        <th scope="col" style="white-space: nowrap;">Comprimento da Lista</th>
+                        <th scope="col">Tempo da <code>Busca Linear</code></th>
+                        <th scope="col" style="white-space: nowrap;">Passos da <code>Busca Linear</code></th>
+                    </tr>
+                    <tr>
+                        <td>1000</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10.000</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>100.000</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </li>
+            <li><img class="imageRight" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Converse com seu parceiro" title="Converse com seu parceiro" /> Como você descreveria o que acontece com o número de <em>passos</em> à medida que a lista de entrada fica maior? Escreva sua hipótese sobre o padrão.</li>
+            <li>Os passos condizem com o que acontece com o tempo? Ou seja, você pode contar passos como medida de tempo?</li>
+        </ol>
+    </div>
+    <div class="vocabFullWidth">
+        <div class="ap-standard">AAP-4.A.3</div>
+        <p>A relação entre o tamanho da entrada e o número de passos necessários para resolver um problema é a <strong>eficiência</strong> do algoritmo usado para resolver o problema.</p>
+    </div>
+    <div class="ap-standard">AAP-4.A.4, AAP-4.A.5</div>
+    <p>Contar o número de passos, como você acabou de fazer, é uma maneira <em>informal</em>, mas perfeitamente válida de determinar a eficiência de um algoritmo. A medição <em>formal</em> de um algoritmo requer uma prova matemática.</p>
+
+    <div class="takeNote">Neste curso, você está lidando principalmente com problemas pequenos, então não importa o quão eficiente seja o algoritmo. Mas no mundo real, programadores lidam com listas de bilhões de itens, então a eficiência de um algoritmo pode fazer uma grande diferença.</div>
+
+    <div class="forYouToDo">
+        <ol start="7">
+            <li>
+                <div class="ap-standard">AAP-2.P parte a</div>
+                <div class="ap-standard">AAP-2.P.3</div>
+                Agora, teste quanto tempo a <code>busca binária</code> leva para encontrar a palavra "zebra" nas listas <em>ordenadas</em> e determine quantas comparações são feitas pelo algoritmo se "zebra" for a última palavra em cada lista de comprimento.
+                <table class="bordered center standard" summary="tabela parcialmente em branco mostrando o tempo e agora também os passos para executar a BUSCA BINÁRIA para listas de diferentes comprimentos">
+                    <tr>
+                        <th scope="col">Comprimento da Lista</th>
+                        <th scope="col">Tempo da <code>Busca Binária</code></th>
+                        <th scope="col">Passos da <code>Busca Binária</code></th>
+                    </tr>
+                    <tr>
+                        <td>1000</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10.000</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>100.000</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </li>
+            <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Converse com seu parceiro" title="Converse com seu parceiro" /> Descreva o que acontece com o tempo e o número de passos à medida que a lista de entrada fica maior. Registre sua hipótese.</li>
+            <li>
+                <div class="ap-standard">AAP-2.P.3, AAP-4.A.6</div>
+                Volte para suas tabelas do algoritmo de <code>busca linear</code> e do algoritmo de <code>busca binária</code> e compare os dois algoritmos de busca:
+                <ol>
+                    <li>Qual tem mais blocos em seu código?</li>
+                    <li>Qual é mais rápido para entradas grandes?</li>
+                    <li>Qual algoritmo é mais eficiente?</li>
+                </ol>
+            </li>
+            <li>
+                <div class="ap-standard">AAP-2.P parte b</div>
+                <img class="inline" src="/bjc-r/img/icons/write-out-thoughts.png" alt="Registre seus pensamentos" title="Registre seus pensamentos" />
+                Quais são os dois requisitos para usar uma busca binária?
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

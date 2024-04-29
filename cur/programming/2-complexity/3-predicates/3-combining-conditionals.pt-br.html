@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
+		<title>Unit 2 Lab 3: Making Decisions, Page 3</title>
+</head>
+<body>
+    <h2>Combinação de condicionais</h2>
+    <div class="learn">Nesta página, você aprenderá sobre declarações condicionais aninhadas.</div>
+
+    <div class="forYouToDo">
+        <ol>
+            <li>
+                <div class="ap-standard">AAP-2.E parte b, AAP-2.L, AAP-2.L.1, AAP-2.L.3, AAP-2.L.4, AAP-2.L.5</div>
+                <img class="inline" src="/bjc-r/img/icons/talk-with-your-partner-mini.png" alt="Converse com seu parceiro" title="Converse com seu parceiro" />
+                Aqui estão quatro maneiras possíveis de definir <code>≥</code>. Discuta as vantagens de cada estilo: <br />
+                <ol>
+                    <li>Todos eles funcionam corretamente?</li>
+                    <li>Quais parecem elegantes por serem curtos?</li>
+                    <li>Quais parecem elegantes por serem claros?</li>
+                    <li>Quais parecem elegantes porque os passos são simples?</li>
+                    <li>Qual é a abordagem mais próxima do que você pensa sobre ≥ na aula de matemática?</li>
+                    <li>Qual parece <em>mais clara para você</em>?</li>
+                </ol>
+                <img class="indent" src="/bjc-r/img/2-complexity/ge-ifelseelse.png" alt="a &ge; b {se (a &gt; b) {relate verdadeiro} senão {se (a = b) {relate verdadeiro} senão {relate falso}}}" title="a &ge; b {se (a &gt; b) {relate verdadeiro} senão {se (a = b) {relate verdadeiro} senão {relate falso}}}"/>
+                <img class="indent" src="/bjc-r/img/2-complexity/ge-ifelse.png" alt="a &ge; b {se (a &gt; b) {relate verdadeiro} senão {relate (a = b)}}" title="a &ge; b {se (a &gt; b) {relate verdadeiro} senão {relate (a = b)}}" />
+                <img class="indent" src="/bjc-r/img/2-complexity/ge-notless.png" alt="a &ge; b {relate (não (a &lt; b))}" title="a &ge; b {relate (não (a &lt; b))}" />
+                <img class="indent" src="/bjc-r/img/2-complexity/ge-or.png" alt="a &ge; b {relate ((a &gt; b) ou (a = b))}" title="a &ge; b {relate ((a &gt; b) ou (a = b))}" />
+            </li>
+        </ol>
+    </div>
+
+    <div class="vocabBig">
+        <div class="ap-standard">AAP-2.I.1</div>
+        <p>Uma <strong>declaração condicional aninhada</strong> é uma declaração <code>se</code> ou <code>se senão</code> dentro de outra declaração <code>se senão</code>.</p>
+    </div>
+    <p>Olhe novamente para os dois primeiros exemplos no problema anterior. Como a expressão predicativa <var>a</var> <code>=</code> <var>b</var> relatará verdadeiro quando eles forem iguais e falso caso contrário, não é necessário usar a declaração condicional aninhada no primeiro exemplo, e o segundo exemplo usando o predicado dentro da parte <code>senão</code> é suficiente. No entanto, às vezes (especialmente quando você não está construindo um predicado), pode ser útil usar declarações condicionais aninhadas.</p>
+    
+    <div class="forYouToDo">
+        <ol start="2">
+            <li>
+                <div class="ap-standard">AAP-2.I parte b</div>
+                <img class="imageRight" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Converse com seu parceiro" title="Converse com seu parceiro" /> Descreva o que este segmento de código fará.<br />
+                <img class="indent" src="/bjc-r/img/2-complexity/is-today-tuesday.png" alt="pergunte (Hoje é terça-feira?) e espere
+se (resposta = 'sim')
+{
+    diga (O restaurante de Mary Chung está fechado hoje.)
+}
+senão
+{
+    se (resposta = 'não')
+    {
+        diga (O restaurante de Mary Chung está aberto hoje.)
+    }
+    senão
+    {
+        diga (Você não respondeu sim ou não.)
+    }
+}" title="pergunte (Hoje é terça-feira?) e espere
+se (resposta = 'sim')
+{
+    diga (O restaurante de Mary Chung está fechado hoje.)
+}
+senão
+{
+    se (resposta = 'não')
+    {
+        diga (O restaurante de Mary Chung está aberto hoje.)
+    }
+    senão
+    {
+        diga (Você não respondeu sim ou não.)
+    }
+}" />
+            </li>
+            <div class="ap-standard">AAP-2.I parte a</div>
+            <li>Olhe para o seu código de escrita no palco em três cores. Se ele ainda não usa uma declaração condicional aninhada, copie o código e crie uma nova versão que o faça.</li>
+        </ol>
+		</div>
+
+
+	</body>
+</html>
